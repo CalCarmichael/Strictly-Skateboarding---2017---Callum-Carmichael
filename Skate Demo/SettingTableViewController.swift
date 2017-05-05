@@ -9,6 +9,12 @@
 import UIKit
 import ProgressHUD
 
+protocol SettingTableViewControllerDelegate {
+    
+    func updateUserInfo()
+    
+}
+
 class SettingTableViewController: UITableViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
@@ -18,11 +24,18 @@ class SettingTableViewController: UITableViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     
+    var delegate: SettingTableViewControllerDelegate?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     
         navigationItem.title = "Edit Profile"
+        
+        usernameTextField.delegate = self
+        
+        emailTextField.delegate = self
     
         getCurrentUser()
     
@@ -52,8 +65,12 @@ class SettingTableViewController: UITableViewController {
     
         if let profileImg = self.profileImage.image, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
             
+            ProgressHUD.show("Waiting...")
+            
         AuthService.updateUserInfo(username: usernameTextField.text!, email: emailTextField.text!, imageData: imageData, onSuccess: {
                 ProgressHUD.showSuccess("Success")
+            
+                self.delegate?.updateUserInfo()
             
             }, onError: { (errorMessage) in
                 
@@ -66,6 +83,16 @@ class SettingTableViewController: UITableViewController {
     }
     
     @IBAction func logoutButton_TouchUpInside(_ sender: Any) {
+    
+        AuthService.logout(onSuccess: {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
+            self.present(signInVC, animated: true, completion: nil)
+            
+        }) { (errorMessage) in
+            ProgressHUD.showError(errorMessage)
+        }
+    
     }
     
     @IBAction func changeProfilePhoto_TouchUpInside(_ sender: Any) {
@@ -93,6 +120,21 @@ extension SettingTableViewController: UIImagePickerControllerDelegate, UINavigat
         }
         
         dismiss(animated: true, completion: nil)
+        
+    }
+    
+}
+
+extension SettingTableViewController: UITextFieldDelegate {
+    
+    //When clicking return keyboard will dismiss
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        
+        textField.resignFirstResponder()
+        
+        return true
         
     }
     

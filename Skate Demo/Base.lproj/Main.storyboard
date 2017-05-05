@@ -194,7 +194,7 @@
         <scene sceneID="MFG-82-eNg">
             <objects>
                 <tableViewController id="GyK-AL-mdB" customClass="SettingTableViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Zv-XU-CC8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Zv-XU-CC8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -554,12 +554,6 @@
                         <barButtonItem key="leftBarButtonItem" image="Find User " id="OqU-Yz-wbL">
                             <connections>
                                 <segue destination="IlI-1Y-3Df" kind="show" id="pcp-mG-5SH"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="7bg-0C-vW1">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="logout_TouchUpInside:" destination="42j-Wr-x0U" id="eyd-FJ-ZpF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1813,6 +1807,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="81q-W9-GO8"/>
         <segue reference="4j9-rH-ahU"/>
-        <segue reference="ePP-dP-end"/>
+        <segue reference="vVR-Uv-ZER"/>
     </inferredMetricsTieBreakers>
 </document>

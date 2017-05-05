@@ -65,21 +65,15 @@ class ProfileViewController: UIViewController {
         })
     }
     
-    //Logout function. Also within AuthService
-    
-    @IBAction func logout_TouchUpInside(_ sender: Any) {
-        AuthService.logout(onSuccess: {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
-            self.present(signInVC, animated: true, completion: nil)
-            
-        }) { (errorMessage) in
-            ProgressHUD.showError(errorMessage)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Profile_SettingSegue" {
+            let settingVC = segue.destination as! SettingTableViewController
+            settingVC.delegate = self
         }
         
     }
+    
 }
-
 
 extension ProfileViewController: UICollectionViewDataSource {
     
@@ -135,6 +129,14 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width / 3 , height: collectionView.frame.size.width / 3)
+    }
+    
+}
+
+extension ProfileViewController: SettingTableViewControllerDelegate {
+    
+    func updateUserInfo() {
+        self.getUser()
     }
     
 }
