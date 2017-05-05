@@ -17,6 +17,9 @@ class SaveSpotViewController: UIViewController {
     
     @IBOutlet weak var pickerView: UIPickerView!
     
+    @IBOutlet weak var saveSpotPopUpView: UIView!
+    
+    
     var options = ["Select Type", "Skatepark", "Street Skating", "Personal Spots"]
     
     var skateparks = [Skatepark]()
@@ -30,9 +33,19 @@ class SaveSpotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        saveSpotPopUpView.layer.cornerRadius = 10
+        saveSpotPopUpView.layer.masksToBounds = true
+        
     
     }
+    
+    @IBAction func closeButton_TouchUpInside(_ sender: Any) {
+    
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 
     @IBAction func addPinAndSaveLocation(_ sender: Any) {
     
@@ -76,6 +89,8 @@ class SaveSpotViewController: UIViewController {
     
 
 }
+
+
 
 extension SaveSpotViewController: UIPickerViewDelegate {
     
