@@ -75,21 +75,34 @@ class AuthService {
     
     static func updateUserInfo(username: String, email: String, imageData: Data, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void ) {
         
-        let uid = Api.User.CURRENT_USER?.uid
-        
-        let storageRef = FIRStorage.storage().reference(forURL: Config.STORAGE_ROOT_REF).child("profile_image").child(uid!)
-        storageRef.put(imageData, metadata: nil, completion: { (metadata, error) in
-            
+        Api.User.CURRENT_USER?.updateEmail(email, completion: { (error) in
             if error != nil {
-                return
+                
+                onError(error!.localizedDescription)
+                
+            } else {
+                
+                let uid = Api.User.CURRENT_USER?.uid
+                
+                let storageRef = FIRStorage.storage().reference(forURL: Config.STORAGE_ROOT_REF).child("profile_image").child(uid!)
+                storageRef.put(imageData, metadata: nil, completion: { (metadata, error) in
+                    
+                    if error != nil {
+                        return
+                        
+                    }
+                    
+                    let profileImageUrl = metadata?.downloadURL()?.absoluteString
+                    
+                    self.updateDatabase(profileImageUrl: profileImageUrl!, username: username, email: email, onSuccess: onSuccess, onError: onError)
+                    
+                
+            
+        })
                 
             }
-            
-            let profileImageUrl = metadata?.downloadURL()?.absoluteString
-            
-            self.updateDatabase(profileImageUrl: profileImageUrl!, username: username, email: email, onSuccess: onSuccess, onError: onError)
-            
-            
+        
+        
         })
 
         
