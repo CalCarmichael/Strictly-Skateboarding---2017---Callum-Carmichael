@@ -368,6 +368,14 @@
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="1593.5532233883059"/>
         </scene>
+        <!--ExploreDetailViewController-->
+        <scene sceneID="1O3-V7-2Ag">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="ExploreDetailViewController" id="S48-Dd-ixE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khb-sl-Owi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="966"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="jGz-3m-xEb">
             <objects>
@@ -558,6 +566,7 @@
                     <connections>
                         <outlet property="collectionView" destination="mUK-Pi-ZAK" id="EgR-TN-IPz"/>
                         <segue destination="GyK-AL-mdB" kind="show" identifier="Profile_SettingSegue" id="vVR-Uv-ZER"/>
+                        <segue destination="S48-Dd-ixE" kind="show" identifier="Profile_ExpandSegue" id="l60-PI-ags"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROi-mv-o81" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1811,7 +1820,7 @@
         <!--Explore Detail View Controller-->
         <scene sceneID="wgI-5c-li7">
             <objects>
-                <viewController id="cMu-YU-2I6" customClass="ExploreDetailViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExploreDetailViewController" id="cMu-YU-2I6" customClass="ExploreDetailViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qEH-3l-q70"/>
                         <viewControllerLayoutGuide type="bottom" id="HRh-7C-Zmu"/>
@@ -1994,6 +2003,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="81q-W9-GO8"/>
         <segue reference="4j9-rH-ahU"/>
-        <segue reference="ePP-dP-end"/>
+        <segue reference="vVR-Uv-ZER"/>
     </inferredMetricsTieBreakers>
 </document>
