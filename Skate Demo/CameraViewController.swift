@@ -76,7 +76,11 @@ class CameraViewController: UIViewController {
         ProgressHUD.show("Waiting...", interaction: false)
         if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
             
-            HelperService.uploadDataToServer(data: imageData, caption: captionTextView.text!, onSuccess: {
+            print("size \(profileImg.size)")
+            
+            let ratio = profileImg.size.width / profileImg.size.height
+            
+            HelperService.uploadDataToServer(data: imageData, ratio: ratio, caption: captionTextView.text!, onSuccess: {
                 
                 self.clearPost()
                 self.tabBarController?.selectedIndex = 3

@@ -18,6 +18,7 @@ class Post {
     var likeCount: Int?
     var likes: Dictionary<String, Any>?
     var isLiked: Bool?
+    var ratio: CGFloat?
     
 }
 
@@ -40,6 +41,8 @@ extension Post {
         post.likeCount = dict["likeCount"] as? Int
         
         post.likes = dict["likes"] as? Dictionary<String, Any>
+        
+        post.ratio = dict["ratio"] as? CGFloat
         
         if let currentUserId = FIRAuth.auth()?.currentUser?.uid {
             

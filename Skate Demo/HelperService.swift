@@ -12,7 +12,7 @@ import Firebase
 
 class HelperService {
     
-    static func uploadDataToServer(data: Data, caption: String, onSuccess: @escaping () -> Void) {
+    static func uploadDataToServer(data: Data, ratio: CGFloat, caption: String, onSuccess: @escaping () -> Void) {
         
         //Creating UniqueID for photos users post
         
@@ -32,14 +32,14 @@ class HelperService {
             
             let photoUrl = metadata?.downloadURL()?.absoluteString
             
-            self.sendDataToFirebase(photoUrl: photoUrl!, caption: caption, onSuccess: onSuccess)
+            self.sendDataToFirebase(photoUrl: photoUrl!, ratio: ratio, caption: caption, onSuccess: onSuccess)
             
         }
     }
     
     //Send data to database with unqiue post id
     
-    static func sendDataToFirebase(photoUrl: String, caption: String, onSuccess: @escaping () -> Void) {
+    static func sendDataToFirebase(photoUrl: String, ratio: CGFloat, caption: String, onSuccess: @escaping () -> Void) {
         
         let newPostId = Api.Post.REF_POSTS.childByAutoId().key
         
@@ -50,7 +50,7 @@ class HelperService {
         }
         
         let currentUserId = currentUser.uid
-        newPostReference.setValue(["uid": currentUserId, "photoUrl": photoUrl, "caption": caption, "likeCount": 0], withCompletionBlock: {
+        newPostReference.setValue(["uid": currentUserId, "photoUrl": photoUrl, "caption": caption, "likeCount": 0, "ratio": ratio], withCompletionBlock: {
             (error, ref) in
             
             if error != nil {

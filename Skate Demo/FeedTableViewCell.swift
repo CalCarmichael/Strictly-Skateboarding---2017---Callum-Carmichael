@@ -54,6 +54,8 @@ class FeedTableViewCell: UITableViewCell {
         
         captionLabel.text = post?.caption
         
+        print("ratio: \(post?.ratio)")
+        
         //Getting photo url from database
         
         if let photoUrlString = post?.photoUrl {
