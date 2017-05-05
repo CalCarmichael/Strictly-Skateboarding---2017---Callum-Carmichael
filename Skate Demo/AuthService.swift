@@ -71,6 +71,51 @@ class AuthService {
         
     }
     
+    //If email is changed updating on authentication
+    
+    static func updateUserInfo(username: String, email: String, imageData: Data, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void ) {
+        
+        let uid = Api.User.CURRENT_USER?.uid
+        
+        let storageRef = FIRStorage.storage().reference(forURL: Config.STORAGE_ROOT_REF).child("profile_image").child(uid!)
+        storageRef.put(imageData, metadata: nil, completion: { (metadata, error) in
+            
+            if error != nil {
+                return
+                
+            }
+            
+            let profileImageUrl = metadata?.downloadURL()?.absoluteString
+            
+            self.updateDatabase(profileImageUrl: profileImageUrl!, username: username, email: email, onSuccess: onSuccess, onError: onError)
+            
+            
+        })
+
+        
+    }
+    
+   static func updateDatabase(profileImageUrl: String, username: String, email: String, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void ) {
+        
+        let dict = ["username": username, "username_lowercase": username.lowercased(), "email": email, "profileImageUrl": profileImageUrl]
+        
+        Api.User.REF_CURRENT_USER?.updateChildValues(dict, withCompletionBlock: { (error, ref) in
+            
+            if error != nil {
+                
+                onError(error!.localizedDescription)
+                
+            } else {
+                
+                onSuccess()
+                
+            }
+            
+        })
+        
+    }
+    
+    
     static func logout(onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void ) {
         do {
             

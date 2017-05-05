@@ -142,7 +142,7 @@ class SignUpViewController: UIViewController {
             
         } else {
             
-            ProgressHUD.showError("Profile Image must be chosen")
+            ProgressHUD.showError("Please select a profile image")
             
             
         }

@@ -221,6 +221,9 @@
                                         <constraint firstAttribute="width" constant="150" id="xcF-4j-YBP"/>
                                     </constraints>
                                     <state key="normal" title="Edit Profile Photo"/>
+                                    <connections>
+                                        <action selector="changeProfilePhoto_TouchUpInside:" destination="GyK-AL-mdB" eventType="touchUpInside" id="wX6-nh-KiN"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

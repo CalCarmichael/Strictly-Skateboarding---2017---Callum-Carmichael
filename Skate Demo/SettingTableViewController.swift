@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class SettingTableViewController: UITableViewController {
 
@@ -48,11 +49,51 @@ class SettingTableViewController: UITableViewController {
     }
     
     @IBAction func saveButton_TouchUpInside(_ sender: Any) {
+    
+        if let profileImg = self.profileImage.image, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
+            
+        AuthService.updateUserInfo(username: usernameTextField.text!, email: emailTextField.text!, imageData: imageData, onSuccess: {
+                ProgressHUD.showSuccess("Success")
+            
+            }, onError: { (errorMessage) in
+                
+                ProgressHUD.showError(errorMessage)
+                
+            })
+            
+        }
+    
     }
     
     @IBAction func logoutButton_TouchUpInside(_ sender: Any) {
     }
     
+    @IBAction func changeProfilePhoto_TouchUpInside(_ sender: Any) {
+    
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        present(pickerController, animated: true, completion: nil)
+    
+    
+    }
     
 
+}
+
+extension SettingTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        print("did finish pick")
+        
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            
+            profileImage.image = image
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 }
