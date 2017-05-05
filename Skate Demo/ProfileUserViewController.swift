@@ -79,6 +79,19 @@ class ProfileUserViewController: UIViewController {
        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        
+        if segue.identifier == "ProfileUser_ExpandSegue" {
+            let exploreDetailVC = segue.destination as! ExploreDetailViewController
+            let postId = sender as! String
+            exploreDetailVC.postId = postId
+            
+        }
+        
+    }
+    
+    
 
 }
 
@@ -93,7 +106,10 @@ extension ProfileUserViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
         //Display posts at certain array index on corresponding row
         let post = posts[indexPath.row]
+        
         cell.post = post
+        cell.delegate = self
+        
         return cell
     }
     
@@ -139,6 +155,16 @@ extension ProfileUserViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width / 3 , height: collectionView.frame.size.width / 3)
+    }
+    
+}
+
+extension ProfileUserViewController: PhotoCollectionViewCellDelegate {
+    
+    func goToDetailVC(postId: String) {
+        
+        performSegue(withIdentifier: "ProfileUser_ExpandSegue", sender: postId)
+        
     }
     
 }
