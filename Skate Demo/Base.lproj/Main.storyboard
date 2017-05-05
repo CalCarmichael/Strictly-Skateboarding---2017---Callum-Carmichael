@@ -1930,6 +1930,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cMu-YU-2I6" id="KQi-5k-tsB"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1940,6 +1943,9 @@
                             <constraint firstAttribute="trailing" secondItem="c4F-fr-FWv" secondAttribute="trailing" id="xl9-sg-ruf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="c4F-fr-FWv" id="Woi-vg-MkD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fis-4p-2DQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

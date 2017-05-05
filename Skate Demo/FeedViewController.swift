@@ -37,11 +37,11 @@ class FeedViewController: UIViewController {
         
         Api.Feed.observeFeed(withId: Api.User.CURRENT_USER!.uid) { (post) in
             
-                        guard let postId = post.uid else {
+                        guard let postUid = post.uid else {
                             return
                         }
             
-                        self.getUser(uid: postId, completed: {
+                        self.getUser(uid: postUid, completed: {
             
                             self.posts.append(post)
             
