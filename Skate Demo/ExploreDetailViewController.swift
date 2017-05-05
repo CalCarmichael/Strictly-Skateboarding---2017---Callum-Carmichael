@@ -56,6 +56,22 @@ class ExploreDetailViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ExploreDetail_CommentVC" {
+            let commentVC = segue.destination as! CommentViewController
+            let postId = sender as! String
+            commentVC.postId = postId
+        }
+        
+        if segue.identifier == "ExploreDetail_ProfileUserSegue" {
+            let profileVC = segue.destination as! ProfileUserViewController
+            let userId = sender as! String
+            profileVC.userId = userId
+        }
+        
+        
+    }
+    
  
 }
 
@@ -76,9 +92,21 @@ extension ExploreDetailViewController: UITableViewDataSource {
         
         cell.post = post
         cell.user = user
-        //cell.delegate = self
+        cell.delegate = self
         return cell
         
+    }
+    
+}
+
+extension ExploreDetailViewController: FeedTableViewCellDelegate {
+    
+    func goToCommentVC(postId: String) {
+        performSegue(withIdentifier: "ExploreDetail_CommentVC", sender: postId)
+    }
+    
+    func goToProfileUserVC(userId: String) {
+        performSegue(withIdentifier: "ExploreDetail_ProfileUserSegue", sender: userId)
     }
     
 }

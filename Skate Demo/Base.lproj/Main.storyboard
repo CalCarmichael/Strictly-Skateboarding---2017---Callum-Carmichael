@@ -1192,7 +1192,7 @@
         <!--Comment Controller Scene-->
         <scene sceneID="84D-jg-7nn">
             <objects>
-                <viewController id="LhZ-Cg-epj" userLabel="Comment Controller Scene" customClass="CommentViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentViewController" id="LhZ-Cg-epj" userLabel="Comment Controller Scene" customClass="CommentViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="09D-2j-31i"/>
                         <viewControllerLayoutGuide type="bottom" id="hsH-Ap-pdN"/>
@@ -1789,6 +1789,25 @@
             </objects>
             <point key="canvasLocation" x="5059" y="1332"/>
         </scene>
+        <!--CommentViewController-->
+        <scene sceneID="nRv-DB-8ZM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="CommentViewController" id="RmW-P5-5Vt" sceneMemberID="viewController">
+                    <string key="storyboardIdentifier">CommentViewController
+</string>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFG-fR-sxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5264" y="1621"/>
+        </scene>
+        <!--ProfileUserViewController-->
+        <scene sceneID="9fy-4J-ytH">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="ProfileUserViewController" id="aa5-bH-AMT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDh-sx-1Xw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5354" y="2009"/>
+        </scene>
         <!--Explore Detail View Controller-->
         <scene sceneID="wgI-5c-li7">
             <objects>
@@ -1945,6 +1964,8 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="c4F-fr-FWv" id="Woi-vg-MkD"/>
+                        <segue destination="RmW-P5-5Vt" kind="show" identifier="ExploreDetail_CommentVC" id="xR6-VI-zcp"/>
+                        <segue destination="aa5-bH-AMT" kind="show" identifier="ExploreDetail_ProfileUserSegue" id="xLw-0V-efq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fis-4p-2DQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1972,7 +1993,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="81q-W9-GO8"/>
-        <segue reference="7Vk-xB-DQx"/>
-        <segue reference="vVR-Uv-ZER"/>
+        <segue reference="4j9-rH-ahU"/>
+        <segue reference="ePP-dP-end"/>
     </inferredMetricsTieBreakers>
 </document>
