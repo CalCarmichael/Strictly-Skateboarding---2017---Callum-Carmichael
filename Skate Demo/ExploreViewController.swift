@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ExploreViewController: UIViewController {
     
@@ -24,23 +25,38 @@ class ExploreViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    @IBAction func refreshButton_TouchUpInside(_ sender: Any) {
+    
         loadPopularPosts()
-        
+    
     }
+    
     
     
     func loadPopularPosts() {
         
+        ProgressHUD.show("Loading Posts...", interaction: false)
+        
         self.posts.removeAll()
+        
+        self.exploreCollectionView.reloadData()
         
         Api.Post.observePopularPosts { (post) in
             
             self.posts.append(post)
             self.exploreCollectionView.reloadData()
             
+            ProgressHUD.dismiss()
+            
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Explore_DetailSegue" {
+            let exploreDetailVC = segue.destination as! ExploreDetailViewController
+            let postId = sender as! String
+            exploreDetailVC.postId = postId
         }
         
     }
@@ -60,6 +76,7 @@ extension ExploreViewController: UICollectionViewDataSource {
         //Display posts at certain array index on corresponding row
         let post = posts[indexPath.row]
         cell.post = post
+        cell.delegate = self 
         return cell
     }
     
@@ -82,4 +99,14 @@ extension ExploreViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionView.frame.size.width / 3 , height: collectionView.frame.size.width / 3)
     }
     
+}
+
+extension ExploreViewController: PhotoCollectionViewCellDelegate {
+   
+    func goToDetailVC(postId: String) {
+        
+        performSegue(withIdentifier: "Explore_DetailSegue", sender: postId)
+        
+    }
+   
 }

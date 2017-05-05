@@ -73,7 +73,7 @@ class PostApi {
                 
                 if let dict = child.value as? [String : Any] {
                     
-                    let post = Post.transformPostPhoto(dict: dict, key: snapshot.key)
+                    let post = Post.transformPostPhoto(dict: dict, key: child.key)
                     
                     completion(post)
                     

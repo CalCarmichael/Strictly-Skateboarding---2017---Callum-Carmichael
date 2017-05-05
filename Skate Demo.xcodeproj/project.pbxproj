@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F266AA91EBD1D7E000A4D2C /* ExploreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */; };
 		9F2B1E501EAA0ECA006BB363 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */; };
 		9F2B1E521EAA197E006BB363 /* HelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B1E511EAA197E006BB363 /* HelperService.swift */; };
 		9F2B1E571EAA2EB3006BB363 /* DiscoverUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B1E561EAA2EB3006BB363 /* DiscoverUserViewController.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		483438A8696DFED5EDC6AD7C /* Pods_Skate_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Skate_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDetailViewController.swift; sourceTree = "<group>"; };
 		9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F2B1E511EAA197E006BB363 /* HelperService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperService.swift; sourceTree = "<group>"; };
 		9F2B1E561EAA2EB3006BB363 /* DiscoverUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverUserViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				9FDDF8811EAB8CE50010198D /* ExploreViewController.swift */,
+				9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */,
 			);
 			name = Explore;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				9F34961A1EA8FF2F00D30285 /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				9F2B1E501EAA0ECA006BB363 /* PhotoCollectionViewCell.swift in Sources */,
 				9F3EE3DC1E9D099000D0BC69 /* User.swift in Sources */,
+				9F266AA91EBD1D7E000A4D2C /* ExploreDetailViewController.swift in Sources */,
 				9F2B1E5E1EAA3706006BB363 /* FollowApi.swift in Sources */,
 				9FB108671EA7C3A500AD5AF6 /* UserApi.swift in Sources */,
 				9FE94C181E796B75009B7B3F /* AppDelegate.swift in Sources */,
