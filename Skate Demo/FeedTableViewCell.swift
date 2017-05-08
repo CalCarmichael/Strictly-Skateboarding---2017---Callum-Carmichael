@@ -32,6 +32,10 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var volumeView: UIView!
+    
+    @IBOutlet weak var volumeButton: UIButton!
+    
     
     //DelegateCell = if reuse cell somewhere else dont need a switch implementation
     
@@ -94,6 +98,8 @@ class FeedTableViewCell: UITableViewCell {
             
             //How video is played and framed
             
+            self.volumeView.isHidden = false
+            
             player = AVPlayer(url: videoUrl)
             playerLayer = AVPlayerLayer(player: player)
             playerLayer?.frame = postImageView.frame
@@ -101,9 +107,12 @@ class FeedTableViewCell: UITableViewCell {
             
             self.contentView.layer.addSublayer(playerLayer!)
             
-            
+            self.volumeView.layer.zPosition = 1
             
             player?.play()
+            
+            player?.isMuted = true 
+            
         }
 
         //Observing the like button being changed and updating from other users
@@ -113,9 +122,12 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     
-        //Observing likes given the id of the post
-        
-      
+    @IBAction func volumeButton_TouchUpInside(_ sender: Any) {
+    }
+    
+    
+    
+    //Observing likes given the id of the post
     
     //Check if user has liked image before. If they have = like filled. If not = like
     

@@ -948,7 +948,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBP-vM-26u">
+                                                <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBP-vM-26u">
                                                     <rect key="frame" x="10" y="332" width="24" height="24"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-GK-ete">
@@ -958,11 +958,9 @@
                                                                 <constraint firstAttribute="width" constant="20" id="jMi-9G-0ms"/>
                                                             </constraints>
                                                             <state key="normal" image="Mute"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="10"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="volumeButton_TouchUpInside:" destination="zkM-uW-ZaO" eventType="touchUpInside" id="WDS-9x-PPF"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -972,6 +970,11 @@
                                                         <constraint firstAttribute="height" constant="24" id="kfB-1I-UDA"/>
                                                         <constraint firstAttribute="width" constant="24" id="pQO-ur-aT6"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -1022,6 +1025,8 @@
                                             <outlet property="profileImageView" destination="5bR-3l-3Uv" id="1mE-4f-CJa"/>
                                             <outlet property="shareView" destination="M1m-4m-lrh" id="gjy-0c-rg9"/>
                                             <outlet property="usernameLabel" destination="wHG-j8-Kc3" id="HuF-rf-Ewf"/>
+                                            <outlet property="volumeButton" destination="GHB-GK-ete" id="3Xq-TT-hu9"/>
+                                            <outlet property="volumeView" destination="JBP-vM-26u" id="8oM-mM-SmW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
