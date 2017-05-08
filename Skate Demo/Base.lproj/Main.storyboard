@@ -1857,7 +1857,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-3Y-aqD">
                                                     <rect key="frame" x="0.0" y="66" width="375" height="300"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="HLI-ia-K9I"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="300" id="HLI-ia-K9I"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like" highlightedImage="Like Filled" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-st-JkW">
@@ -1951,6 +1951,7 @@
                                             <outlet property="captionLabel" destination="x0V-0M-86w" id="rAV-Nu-qm7"/>
                                             <outlet property="commentView" destination="5Hd-hk-039" id="hUG-Lc-3sm"/>
                                             <outlet property="dislikeImageView" destination="1X9-u9-qSK" id="cvs-n9-pLY"/>
+                                            <outlet property="heightConstraint" destination="HLI-ia-K9I" id="Nji-GD-r5x"/>
                                             <outlet property="likeCountButton" destination="dMu-yG-gJp" id="I3T-E9-TLW"/>
                                             <outlet property="likeImageView" destination="KM7-st-JkW" id="h4o-7l-EeT"/>
                                             <outlet property="postImageView" destination="7D5-3Y-aqD" id="fNa-vy-0BI"/>

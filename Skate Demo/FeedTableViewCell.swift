@@ -46,7 +46,6 @@ class FeedTableViewCell: UITableViewCell {
             
             updateViewPost()
             
-            
         }
     }
     
@@ -98,6 +97,7 @@ class FeedTableViewCell: UITableViewCell {
             player = AVPlayer(url: videoUrl)
             playerLayer = AVPlayerLayer(player: player)
             playerLayer?.frame = postImageView.frame
+            playerLayer?.frame.size.width = UIScreen.main.bounds.width
             
             self.contentView.layer.addSublayer(playerLayer!)
             
