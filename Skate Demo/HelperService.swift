@@ -93,8 +93,6 @@ class HelperService {
     }
     
     
-    
-    
     //Send data to database with unqiue post id
     
     static func sendDataToFirebase(photoUrl: String, videoUrl: String? = nil, ratio: CGFloat, caption: String, onSuccess: @escaping () -> Void) {

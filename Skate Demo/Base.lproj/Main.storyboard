@@ -894,7 +894,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFE-GC-D9a">
                                                     <rect key="frame" x="0.0" y="66" width="375" height="300"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="eCq-dc-gxH"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="300" id="eCq-dc-gxH"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like" highlightedImage="Like Filled" translatesAutoresizingMaskIntoConstraints="NO" id="x7S-nk-354">

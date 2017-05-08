@@ -8,6 +8,7 @@
 
 import UIKit
 import ProgressHUD
+import AVFoundation
 
 //Declaring delegate protocol
 
@@ -35,6 +36,10 @@ class FeedTableViewCell: UITableViewCell {
     //DelegateCell = if reuse cell somewhere else dont need a switch implementation
     
     var delegate: FeedTableViewCellDelegate?
+    
+    var player: AVPlayer?
+    
+    var playerLayer: AVPlayerLayer?
     
     var post: Post? {
         didSet {
@@ -65,7 +70,13 @@ class FeedTableViewCell: UITableViewCell {
         
         if let ratio = post?.ratio {
             
+            print("frame post Image: \(postImageView.frame)")
+            
             heightConstraint.constant = UIScreen.main.bounds.width / ratio
+            
+            layoutIfNeeded()
+            
+            print("frame post Image: \(postImageView.frame)")
             
         }
         
@@ -76,6 +87,23 @@ class FeedTableViewCell: UITableViewCell {
             let photoUrl = URL(string: photoUrlString)
             postImageView.sd_setImage(with: photoUrl)
             
+        }
+        
+        if let videoUrlString = post?.videoUrl, let videoUrl = URL(string: videoUrlString) {
+            
+            print("videoUrlString: \(videoUrlString)")
+            
+            //How video is played and framed
+            
+            player = AVPlayer(url: videoUrl)
+            playerLayer = AVPlayerLayer(player: player)
+            playerLayer?.frame = postImageView.frame
+            
+            self.contentView.layer.addSublayer(playerLayer!)
+            
+            
+            
+            player?.play()
         }
 
         //Observing the like button being changed and updating from other users
@@ -202,6 +230,9 @@ class FeedTableViewCell: UITableViewCell {
         super.prepareForReuse()
         print("1111")
         profileImageView.image = UIImage(named: "placeholderImage")
+        
+        playerLayer?.removeFromSuperlayer()
+        player?.pause()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
