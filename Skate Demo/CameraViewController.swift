@@ -8,6 +8,7 @@
 
 import UIKit
 import ProgressHUD
+import AVFoundation
 
 class CameraViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var clearPostButton: UIBarButtonItem!
     
     var selectedImage: UIImage?
+    
+    var videoUrl: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +66,11 @@ class CameraViewController: UIViewController {
         
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
+        
+        //Picker can choose photos and video
+        
+        pickerController.mediaTypes = ["public.image", "public.movie"]
+        
         present(pickerController, animated: true, completion: nil)
         
     }
@@ -119,12 +127,52 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
         
         print("did finish pick")
         
+        print(info)
+        
+        //Converting media and saving url
+        
+        if let videoUrl = info["UIImagePickerControllerMediaURL"] as? URL {
+            
+            if let thumbnailVideo = self.thumbnailForVideoUrl(videoUrl) {
+                
+                selectedImage = thumbnailVideo
+                cameraImage.image = thumbnailVideo
+                self.videoUrl = videoUrl
+                
+            }
+            
+           
+            
+        }
+        
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             selectedImage = image
             cameraImage.image = image
         }
         
         dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func thumbnailForVideoUrl(_ fileUrl: URL) -> UIImage? {
+        
+        let asset = AVAsset(url: fileUrl)
+        
+        //Generate thumbnail image
+        
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        
+        do {
+            
+            let thumbnailCGImage = try imageGenerator.copyCGImage(at: CMTimeMake(6, 3), actualTime: nil)
+            
+            return UIImage(cgImage: thumbnailCGImage)
+            
+        } catch let err {
+            print(err)
+        }
+        
+        return nil
         
     }
     
