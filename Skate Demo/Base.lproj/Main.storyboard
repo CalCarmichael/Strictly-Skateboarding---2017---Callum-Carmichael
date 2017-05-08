@@ -202,7 +202,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="cKp-je-gHB">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="cKp-je-gHB">
                                     <rect key="frame" x="112" y="63" width="150" height="150"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="150" id="5Y2-g6-joL"/>
@@ -959,7 +959,7 @@
                                                             </constraints>
                                                             <state key="normal" image="Mute"/>
                                                             <connections>
-                                                                <action selector="volumeButton_TouchUpInside:" destination="zkM-uW-ZaO" eventType="touchUpInside" id="WDS-9x-PPF"/>
+                                                                <action selector="volumeButton_TouchUpInside:" destination="zkM-uW-ZaO" eventType="touchUpInside" id="9Wz-bv-Xht"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -1892,6 +1892,34 @@
                                                         <constraint firstAttribute="height" priority="999" constant="300" id="HLI-ia-K9I"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view hidden="YES" alpha="0.80000001192092896" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgH-uW-zuY">
+                                                    <rect key="frame" x="10" y="332" width="24" height="24"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-H8-6u5">
+                                                            <rect key="frame" x="2.5" y="2.5" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="RiO-ug-A9u"/>
+                                                                <constraint firstAttribute="height" constant="20" id="cFn-Pq-vAK"/>
+                                                            </constraints>
+                                                            <state key="normal" image="Mute"/>
+                                                            <connections>
+                                                                <action selector="volumeButton_TouchUpInside:" destination="wMK-oT-8oY" eventType="touchUpInside" id="8W7-ht-aq6"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="cLr-H8-6u5" firstAttribute="centerY" secondItem="sgH-uW-zuY" secondAttribute="centerY" id="BMR-Zf-VHA"/>
+                                                        <constraint firstItem="cLr-H8-6u5" firstAttribute="centerX" secondItem="sgH-uW-zuY" secondAttribute="centerX" id="Uod-kF-Lr9"/>
+                                                        <constraint firstAttribute="height" constant="24" id="dTP-FS-G8g"/>
+                                                        <constraint firstAttribute="width" constant="24" id="yRl-Gd-6qD"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like" highlightedImage="Like Filled" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-st-JkW">
                                                     <rect key="frame" x="15" y="381" width="30" height="30"/>
                                                     <constraints>
@@ -1960,6 +1988,7 @@
                                                 <constraint firstItem="x0V-0M-86w" firstAttribute="leading" secondItem="dMu-yG-gJp" secondAttribute="leading" id="Obq-re-Ivm"/>
                                                 <constraint firstItem="dMu-yG-gJp" firstAttribute="leading" secondItem="Baa-dW-D1X" secondAttribute="leading" id="Pyf-mz-8BL"/>
                                                 <constraint firstItem="1X9-u9-qSK" firstAttribute="leading" secondItem="KM7-st-JkW" secondAttribute="trailing" constant="8" symbolic="YES" id="RHr-Dm-U7z"/>
+                                                <constraint firstItem="sgH-uW-zuY" firstAttribute="leading" secondItem="7D5-3Y-aqD" secondAttribute="leading" constant="10" id="Tfh-8R-m6g"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="x0V-0M-86w" secondAttribute="bottom" constant="11" id="eAV-im-636"/>
                                                 <constraint firstItem="7D5-3Y-aqD" firstAttribute="leading" secondItem="o4N-mj-0eE" secondAttribute="leading" id="f5v-Se-ZNK"/>
                                                 <constraint firstItem="1X9-u9-qSK" firstAttribute="top" secondItem="KM7-st-JkW" secondAttribute="top" id="fSf-DK-3aW"/>
@@ -1974,6 +2003,7 @@
                                                 <constraint firstItem="F5k-x2-Dup" firstAttribute="leading" secondItem="5Hd-hk-039" secondAttribute="trailing" constant="8" symbolic="YES" id="oJ5-EV-Nvr"/>
                                                 <constraint firstItem="Baa-dW-D1X" firstAttribute="trailing" secondItem="7D5-3Y-aqD" secondAttribute="trailing" id="oer-uG-Zce"/>
                                                 <constraint firstAttribute="trailing" secondItem="Baa-dW-D1X" secondAttribute="trailing" id="rSb-bL-Wbm"/>
+                                                <constraint firstItem="sgH-uW-zuY" firstAttribute="bottom" secondItem="7D5-3Y-aqD" secondAttribute="bottom" constant="10" id="tAK-cf-qhU"/>
                                                 <constraint firstItem="x0V-0M-86w" firstAttribute="top" secondItem="dMu-yG-gJp" secondAttribute="bottom" constant="15" id="uk7-7q-7WC"/>
                                                 <constraint firstAttribute="bottom" secondItem="x0V-0M-86w" secondAttribute="bottom" constant="19" id="wsa-PM-uA2"/>
                                                 <constraint firstItem="F5k-x2-Dup" firstAttribute="bottom" secondItem="5Hd-hk-039" secondAttribute="bottom" id="xvz-Iy-VHv"/>
@@ -1990,6 +2020,8 @@
                                             <outlet property="profileImageView" destination="2d7-o8-cC5" id="Z8T-4Q-xxs"/>
                                             <outlet property="shareView" destination="F5k-x2-Dup" id="MeR-28-mZA"/>
                                             <outlet property="usernameLabel" destination="CJm-Rp-XQU" id="2uc-oj-Eku"/>
+                                            <outlet property="volumeButton" destination="cLr-H8-6u5" id="gdt-Wy-kdF"/>
+                                            <outlet property="volumeView" destination="sgH-uW-zuY" id="IZJ-HY-QJo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

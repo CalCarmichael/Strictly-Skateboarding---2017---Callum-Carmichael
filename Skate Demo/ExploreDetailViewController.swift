@@ -20,6 +20,9 @@ class ExploreDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.estimatedRowHeight = 521
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
        loadSpecificPost()
         
         

@@ -46,6 +46,13 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         
     }
     
+    override func awakeFromNib() {
+        
+        super.awakeFromNib()
+        clear()
+        
+    }
+    
     func updateView() {
             
             self.nameLabel.text = user!.username
@@ -80,8 +87,6 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         }
         
         
-        
-        
         //Checking is user is current user
         
         if user?.id == Api.User.CURRENT_USER?.uid {
@@ -102,6 +107,18 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         }
         
     }
+    
+    
+    func clear() {
+        
+        self.nameLabel.text = ""
+        self.userPostCountLabel.text = ""
+        self.followingCountLabel.text = ""
+        self.followerCounterLabel.text = ""
+        
+    }
+    
+    
     
     func goToSettingVC() {
         

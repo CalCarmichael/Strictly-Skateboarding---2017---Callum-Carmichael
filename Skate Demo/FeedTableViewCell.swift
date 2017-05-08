@@ -123,9 +123,8 @@ class FeedTableViewCell: UITableViewCell {
         
     }
     
+    @IBAction func volumeButton_TouchUpInside(_ sender: UIButton) {
     
-    @IBAction func volumeButton_TouchUpInside(_ sender: Any) {
-        
         if isMuted {
             
             //If is muted true flip to false
@@ -259,6 +258,9 @@ class FeedTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         print("1111")
+        
+        volumeView.isHidden = true 
+        
         profileImageView.image = UIImage(named: "placeholderImage")
         
         playerLayer?.removeFromSuperlayer()
