@@ -61,6 +61,8 @@ class FeedTableViewCell: UITableViewCell {
         }
     }
     
+    var isMuted = true
+    
     func updateViewPost() {
         
         captionLabel.text = post?.caption
@@ -111,7 +113,7 @@ class FeedTableViewCell: UITableViewCell {
             
             player?.play()
             
-            player?.isMuted = true 
+            player?.isMuted = isMuted
             
         }
 
@@ -123,6 +125,22 @@ class FeedTableViewCell: UITableViewCell {
     
     
     @IBAction func volumeButton_TouchUpInside(_ sender: Any) {
+        
+        if isMuted {
+            
+            //If is muted true flip to false
+            
+            isMuted = !isMuted
+            volumeButton.setImage(UIImage(named: "AudioWave"), for: UIControlState.normal)
+            
+        } else {
+            
+            isMuted = !isMuted
+            volumeButton.setImage(UIImage(named: "Mute"), for: UIControlState.normal)
+        }
+        
+        player?.isMuted = isMuted
+        
     }
     
     
