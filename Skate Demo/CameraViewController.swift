@@ -86,7 +86,7 @@ class CameraViewController: UIViewController {
                         
             let ratio = profileImg.size.width / profileImg.size.height
             
-            HelperService.uploadDataToServer(data: imageData, ratio: ratio, caption: captionTextView.text!, onSuccess: {
+            HelperService.uploadDataToServer(data: imageData, videoUrl : self.videoUrl, ratio: ratio, caption: captionTextView.text!, onSuccess: {
                 
                 self.clearPost()
                 self.tabBarController?.selectedIndex = 3

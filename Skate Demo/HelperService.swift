@@ -12,7 +12,63 @@ import Firebase
 
 class HelperService {
     
-    static func uploadDataToServer(data: Data, ratio: CGFloat, caption: String, onSuccess: @escaping () -> Void) {
+    static func uploadDataToServer(data: Data, videoUrl: URL? = nil, ratio: CGFloat, caption: String, onSuccess: @escaping () -> Void) {
+        
+        //If user shares video - video data sent to storage
+        
+        if let videoUrl = videoUrl {
+            
+            self.uploadVideoToFirebaseStorage(videoUrl: videoUrl, onSuccess: { (videoUrl) in
+                
+                uploadImageToFirebaseStorage(data: data, onSuccess: { (thumbnailImageUrl) in
+                    
+                    sendDataToFirebase(photoUrl: thumbnailImageUrl, videoUrl: videoUrl, ratio: ratio, caption: caption, onSuccess: onSuccess)
+                    
+                })
+                
+            })
+            
+           // self.sendatatodatabase
+            
+        } else {
+            
+            uploadImageToFirebaseStorage(data: data) { (photoUrl) in
+                
+                self.sendDataToFirebase(photoUrl: photoUrl, ratio: ratio, caption: caption, onSuccess: onSuccess)
+            
+        }
+        
+       
+            
+        }
+        
+        
+    }
+    
+    static func uploadVideoToFirebaseStorage(videoUrl: URL, onSuccess: @escaping (_ videoUrl: String) -> Void) {
+        
+        let videoIdString = NSUUID().uuidString
+        
+        let storageRef = FIRStorage.storage().reference(forURL: Config.STORAGE_ROOT_REF).child("posts").child(videoIdString)
+        
+        storageRef.putFile(videoUrl, metadata: nil) { (metadata, error) in
+            
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+                
+            }
+            
+            if let videoUrl = metadata?.downloadURL()?.absoluteString {
+                onSuccess(videoUrl)
+            }
+            
+        }
+
+        
+    }
+    
+    static func uploadImageToFirebaseStorage(data: Data, onSuccess: @escaping (_ imageUrl: String) -> Void) {
         
         //Creating UniqueID for photos users post
         
@@ -28,18 +84,20 @@ class HelperService {
                 
             }
             
-            //Send data to database
-            
-            let photoUrl = metadata?.downloadURL()?.absoluteString
-            
-            self.sendDataToFirebase(photoUrl: photoUrl!, ratio: ratio, caption: caption, onSuccess: onSuccess)
-            
+            if let photoUrl = metadata?.downloadURL()?.absoluteString {
+                onSuccess(photoUrl)
+            }
+
         }
+        
     }
+    
+    
+    
     
     //Send data to database with unqiue post id
     
-    static func sendDataToFirebase(photoUrl: String, ratio: CGFloat, caption: String, onSuccess: @escaping () -> Void) {
+    static func sendDataToFirebase(photoUrl: String, videoUrl: String? = nil, ratio: CGFloat, caption: String, onSuccess: @escaping () -> Void) {
         
         let newPostId = Api.Post.REF_POSTS.childByAutoId().key
         
@@ -50,7 +108,22 @@ class HelperService {
         }
         
         let currentUserId = currentUser.uid
-        newPostReference.setValue(["uid": currentUserId, "photoUrl": photoUrl, "caption": caption, "likeCount": 0, "ratio": ratio], withCompletionBlock: {
+        
+        //Dict to hold all data we need to database
+        
+        var dict = ["uid": currentUserId, "photoUrl": photoUrl, "caption": caption, "likeCount": 0, "ratio": ratio] as [String : Any]
+        
+        //If videoUrl is nil (nothing) otherwise add it to dictionary
+        
+        if let videoUrl = videoUrl {
+            
+            dict["videoUrl"] = videoUrl
+            
+        }
+        
+        //Dict posted in this new post reference now
+        
+        newPostReference.setValue(dict, withCompletionBlock: {
             (error, ref) in
             
             if error != nil {
