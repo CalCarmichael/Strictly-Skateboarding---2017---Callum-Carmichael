@@ -29,6 +29,9 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var likeCountButton: UIButton!
     @IBOutlet weak var captionLabel: UILabel!
     
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
+    
     //DelegateCell = if reuse cell somewhere else dont need a switch implementation
     
     var delegate: FeedTableViewCellDelegate?
@@ -54,6 +57,17 @@ class FeedTableViewCell: UITableViewCell {
         
         captionLabel.text = post?.caption
         
+        print("ratio \(post?.ratio)")
+        
+  //      ratio = widthPhoto / heightPhoto
+        
+  //      heightPhoto = widthPhoto / ratio
+        
+        if let ratio = post?.ratio {
+            
+            heightConstraint.constant = UIScreen.main.bounds.width / ratio
+            
+        }
         
         //Getting photo url from database
         

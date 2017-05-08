@@ -74,10 +74,8 @@ class CameraViewController: UIViewController {
         view.endEditing(true)
         
         ProgressHUD.show("Waiting...", interaction: false)
-        if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
-            
-            print("size \(profileImg.size)")
-            
+        if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.5) {
+                        
             let ratio = profileImg.size.width / profileImg.size.height
             
             HelperService.uploadDataToServer(data: imageData, ratio: ratio, caption: captionTextView.text!, onSuccess: {
