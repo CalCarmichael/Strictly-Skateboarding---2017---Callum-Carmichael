@@ -141,16 +141,18 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
                 
             }
             
-           
+            dismiss(animated: true, completion: nil)
+
             
         }
         
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             selectedImage = image
             cameraImage.image = image
+            dismiss(animated: true, completion: { 
+                self.performSegue(withIdentifier: "ImageToFilterSegue", sender: nil)
+            })
         }
-        
-        dismiss(animated: true, completion: nil)
         
     }
     
