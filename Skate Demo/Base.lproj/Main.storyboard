@@ -1271,19 +1271,19 @@
                                     <constraint firstItem="5oW-qp-0Gm" firstAttribute="centerY" secondItem="BB7-YJ-PDv" secondAttribute="centerY" id="zlx-iF-HQd"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-VR-JEZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-VR-JEZ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="371" id="gKW-2c-Fvu"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gDb-1y-59h">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gDb-1y-59h">
                                 <rect key="frame" x="0.0" y="465" width="375" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="4S4-aP-hd0"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KaC-fE-mW5">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KaC-fE-mW5">
                                     <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1296,7 +1296,21 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KOt-3v-12Y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="KOt-3v-12Y" firstAttribute="leading" secondItem="gou-GE-h5k" secondAttribute="leading" id="7Fb-pM-Gbh"/>
+                                            <constraint firstAttribute="bottom" secondItem="KOt-3v-12Y" secondAttribute="bottom" id="87y-fH-qZl"/>
+                                            <constraint firstAttribute="trailing" secondItem="KOt-3v-12Y" secondAttribute="trailing" id="Axb-rs-P8c"/>
+                                            <constraint firstItem="KOt-3v-12Y" firstAttribute="top" secondItem="gou-GE-h5k" secondAttribute="top" id="pFZ-ee-yBu"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="filterForPhoto" destination="KOt-3v-12Y" id="0mN-aX-2lh"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

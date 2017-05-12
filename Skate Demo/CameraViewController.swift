@@ -117,6 +117,16 @@ class CameraViewController: UIViewController {
         self.selectedImage = nil
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ImageToFilterSegue" {
+            
+            let filterVC = segue.destination as! CameraFilterViewController
+            
+            filterVC.selectedFilterImage = self.selectedImage
+            
+        }
+    }
+    
 }
 
 //Getting photo with image picker
