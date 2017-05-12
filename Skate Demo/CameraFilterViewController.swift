@@ -8,13 +8,33 @@
 
 import UIKit
 
+protocol CameraFilterViewControllerDelegate {
+    
+    func updatePhotoFilter(image: UIImage)
+    
+}
+
 class CameraFilterViewController: UIViewController {
     
     @IBOutlet weak var filterImage: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var delegate: CameraFilterViewControllerDelegate?
+    
     var selectedFilterImage: UIImage!
+    
+    var CIFilterName = [
+    
+        "CIPhotoEffectChrome",
+        "CIPhotoEffectFade",
+        "CIPhotoEffectInstant",
+        "CIPhotoEffectMono",
+        "CIPhotoEffectNoir"
+    
+    ]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +51,12 @@ class CameraFilterViewController: UIViewController {
     }
     
     @IBAction func nextButton_TouchUpInside(_ sender: Any) {
+    
+        dismiss(animated: true, completion: nil)
+    
+        delegate?.updatePhotoFilter(image: self.filterImage.image!)
+        
+    
     }
     
     //Resize collection view image so load is quicker
@@ -56,7 +82,9 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        //Filters from array
+        
+        return CIFilterName.count
         
     }
     
@@ -66,13 +94,11 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
         
         let newImage = resizeImage(image: selectedFilterImage, newWidth: 150)
         
-        print(newImage.size)
-        
         // Create a filter object from filter class - core image filter class
         
         let ciImage = CIImage(image: newImage)
         
-        let filter = CIFilter(name: "CISepiaTone")
+        let filter = CIFilter(name: CIFilterName[indexPath.item])
         
         //Specify corrosponding key so filter knows what putting in
         
@@ -91,6 +117,25 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
             
             
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+ 
+        
+        let ciImage = CIImage(image: selectedFilterImage)
+        
+        let filter = CIFilter(name: CIFilterName[indexPath.item])
+        
+        filter?.setValue(ciImage, forKey: kCIInputImageKey)
+        
+        if let filteredImage = filter?.value(forKey: kCIOutputImageKey) as? CIImage {
+            
+        self.filterImage.image = UIImage(ciImage: filteredImage)
         
     }
+        
+    }
+
+}
     

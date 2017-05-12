@@ -124,6 +124,8 @@ class CameraViewController: UIViewController {
             
             filterVC.selectedFilterImage = self.selectedImage
             
+            filterVC.delegate = self
+            
         }
     }
     
@@ -185,6 +187,16 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
         }
         
         return nil
+        
+    }
+    
+}
+
+extension CameraViewController: CameraFilterViewControllerDelegate {
+    
+    func updatePhotoFilter(image: UIImage) {
+        
+        self.cameraImage.image = image
         
     }
     
