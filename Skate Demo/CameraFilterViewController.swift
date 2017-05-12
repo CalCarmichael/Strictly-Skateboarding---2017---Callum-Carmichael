@@ -26,16 +26,24 @@ class CameraFilterViewController: UIViewController {
     
     var CIFilterName = [
     
+        "CIColorMap",
+        "CIColorMonochrome",
+        "CIFalseColor",
+        "CIMaximumComponent",
+        "CIMinimumComponent",
         "CIPhotoEffectChrome",
         "CIPhotoEffectFade",
         "CIPhotoEffectInstant",
         "CIPhotoEffectMono",
-        "CIPhotoEffectNoir"
-    
+        "CIPhotoEffectNoir",
+        "CIPhotoEffectProcess",
+        "CIPhotoEffectTonal",
+        "CIPhotoEffectTransfer",
+        "CISepiaTone",
+        "CIVignette",
+        "CIVignetteEffect"
     ]
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
