@@ -593,7 +593,7 @@
 			baseConfigurationReference = B4B012B0EBACD45EE8A005CB /* Pods-Skate Demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PB5S47GH58;
 				INFOPLIST_FILE = "Skate Demo/Info.plist";
@@ -610,7 +610,7 @@
 			baseConfigurationReference = BB0B8B619B04F5997E0BDF68 /* Pods-Skate Demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PB5S47GH58;
 				INFOPLIST_FILE = "Skate Demo/Info.plist";
