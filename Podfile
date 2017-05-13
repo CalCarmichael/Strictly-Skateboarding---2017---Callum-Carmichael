@@ -15,5 +15,6 @@ target 'Skate Demo' do
     pod 'Mapbox-iOS-SDK', '~> 3.5'
     pod 'ProgressHUD'
     pod 'SDWebImage', '~>3.8'
+    pod 'KILabel', '1.0.0'
 
 end

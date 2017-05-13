@@ -107,11 +107,30 @@ class HelperService {
         
         let currentUserId = currentUser.uid
         
+        //For Caption
+        
+        let words = caption.components(separatedBy: CharacterSet.whitespacesAndNewlines)
+        
+        for var word in words {
+            
+            if word.hasPrefix("#") {
+                
+            word = word.trimmingCharacters(in: CharacterSet.punctuationCharacters)
+            
+            let newHashtagRef = Api.Hashtag.REF_HASHTAG.child(word.lowercased())
+                
+                newHashtagRef.updateChildValues([newPostId: true])
+            
+            }
+        
+            
+        }
+        
         //Dict to hold all data we need to database
         
         var dict = ["uid": currentUserId, "photoUrl": photoUrl, "caption": caption, "likeCount": 0, "ratio": ratio] as [String : Any]
         
-        //If videoUrl is nil (nothing) otherwise add it to dictionary
+        //If videoUrl is nil otherwise add it to dictionary
         
         if let videoUrl = videoUrl {
             

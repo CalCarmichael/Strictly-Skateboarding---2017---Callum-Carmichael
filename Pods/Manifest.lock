@@ -48,6 +48,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - KILabel (1.0.0)
   - Mapbox-iOS-SDK (3.5.0)
   - ProgressHUD (2.4)
   - SDWebImage (3.8.2):
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - KILabel (= 1.0.0)
   - Mapbox-iOS-SDK (~> 3.5)
   - ProgressHUD
   - SDWebImage (~> 3.8)
@@ -79,11 +81,12 @@ SPEC CHECKSUMS:
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  KILabel: 84049969642d4ac1061ebe38ad4c0da37fed108b
   Mapbox-iOS-SDK: f0158f986ded5fd0b4034b1b8801aeeb5556a26a
   ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SidebarOverlay: b65f0a1d9331ce4bf81f82eea202b21cc8655c5a
 
-PODFILE CHECKSUM: d7d412ddc1aad82dfb2c4b1dfedd62f5ba79b3f7
+PODFILE CHECKSUM: 674246797deddb04b96dcb4a69786ea3b5bd2f8b
 
 COCOAPODS: 1.1.1

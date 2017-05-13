@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KILabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Skate Demo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,17 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0942809E9D71611CBA7768402B7412F9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>38443A8CF90C7817E09C65F514F8A57F</key>
+		<key>31556821F995E522C878FEA0D39BAD96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>95EEA53AEDD348D0BF361A15B0FE52D5</key>
+		<key>50D13B2D513DB5127A16B0AC0FBE1A20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEC7FF80EAFF4992EA0417F61AC1A155</key>
+		<key>A5D82373166B88054A7C35508BCD2838</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A8AFFB78FF61EBB9BFF099EF7BF75D6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -93,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB22481FCB97C4A7E1C36F58370F3754</key>
 		<dict>
 			<key>primary</key>
 			<true/>

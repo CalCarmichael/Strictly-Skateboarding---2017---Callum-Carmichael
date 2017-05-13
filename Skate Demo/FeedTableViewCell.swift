@@ -9,6 +9,7 @@
 import UIKit
 import ProgressHUD
 import AVFoundation
+import KILabel
 
 //Declaring delegate protocol
 
@@ -28,12 +29,9 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var commentView: UIImageView!
     @IBOutlet weak var shareView: UIImageView!
     @IBOutlet weak var likeCountButton: UIButton!
-    @IBOutlet weak var captionLabel: UILabel!
-    
+    @IBOutlet weak var captionLabel: KILabel!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var volumeView: UIView!
-    
     @IBOutlet weak var volumeButton: UIButton!
     
     

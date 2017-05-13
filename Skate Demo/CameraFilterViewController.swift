@@ -44,6 +44,10 @@ class CameraFilterViewController: UIViewController {
         "CIVignetteEffect"
     ]
     
+    
+    var context = CIContext(options: nil)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -102,6 +106,8 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
         
         let newImage = resizeImage(image: selectedFilterImage, newWidth: 150)
         
+
+        
         // Create a filter object from filter class - core image filter class
         
         let ciImage = CIImage(image: newImage)
@@ -114,7 +120,9 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
         
         if let filteredImage = filter?.value(forKey: kCIOutputImageKey) as? CIImage {
             
-            cell.filterForPhoto.image = UIImage(ciImage: filteredImage)
+            let result = context.createCGImage(filteredImage, from: filteredImage.extent)
+            
+            cell.filterForPhoto.image = UIImage(cgImage: result!)
 
             
         }
@@ -129,7 +137,7 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
- 
+        
         
         let ciImage = CIImage(image: selectedFilterImage)
         
@@ -139,7 +147,9 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
         
         if let filteredImage = filter?.value(forKey: kCIOutputImageKey) as? CIImage {
             
-        self.filterImage.image = UIImage(ciImage: filteredImage)
+            let result = context.createCGImage(filteredImage, from: filteredImage.extent)
+            
+            self.filterImage.image = UIImage(cgImage: result!)
         
     }
         
