@@ -18,5 +18,6 @@ target 'Skate Demo' do
     pod 'KILabel', '1.0.0'
     pod 'TKSubmitTransitionSwift3'
     pod 'MapboxDirections.swift', '~> 0.9'
+    pod 'TextFieldEffects'
 
 end

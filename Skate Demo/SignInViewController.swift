@@ -9,12 +9,19 @@
 import UIKit
 import ProgressHUD
 import TKSubmitTransitionSwift3
+import TextFieldEffects
 
 class SignInViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+
+    @IBOutlet weak var test: HoshiTextField!
+
+    
+    
     
     @IBOutlet weak var logo: UILabel!
     
@@ -176,7 +183,8 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
 //    }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return TKFadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
+        
+        return TKFadeInAnimator(transitionDuration: 0.3, startingAlpha: 0.8)
         
     }
         
