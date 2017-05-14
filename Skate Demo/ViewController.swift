@@ -9,8 +9,7 @@
 import UIKit
 import Firebase
 import Mapbox
-
-
+import MapboxDirections
 
 class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
@@ -23,10 +22,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     var user: FIRUser!
     
-    var locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     let locationsRef = FIRDatabase.database().reference(withPath: "locations")
     
+    let directions = Directions.shared
     
     //Filtering annotations for sidebar
     
@@ -63,11 +63,14 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         super.viewDidLoad()
         
         
-        //Initiates the mapView
+        //Map
+        
         
         mapView.delegate = self
         mapView.showsUserLocation = true
         
+       
+    
 
         //Sidebar
         
@@ -168,6 +171,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 //        
 //
 //    }
+    
+    
+    
+    
+    
     
 
     //Show the annotation callout

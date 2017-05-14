@@ -8,17 +8,26 @@
 
 import UIKit
 import ProgressHUD
+import TKSubmitTransitionSwift3
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var logo: UILabel!
+    
+    @IBOutlet weak var SignUp: UIButton!
+    
+    @IBOutlet weak var signInButton: TKTransitionSubmitButton!
+    
+    var btn: TKTransitionSubmitButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         btn = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
         
         //Editing the text fields UI
         
@@ -96,24 +105,84 @@ class SignInViewController: UIViewController {
     
     //Authorizing sign in button (within AuthService)
     
-    @IBAction func signInButton_TouchUpInside(_ sender: Any) {
+    @IBAction func signInButton(_ button: TKTransitionSubmitButton) {
         
         view.endEditing(true)
-       
-        AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
-            ProgressHUD.showSuccess("Success")
+        
+           button.animate(1, completion: { () -> () in
             
-            //Sending to main tabbar page when successful sign in
-            self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
+             self.leaveAnimation()
             
-        }, onError: { error in
-            ProgressHUD.showError(error!)
-           
+            AuthService.signIn(email: self.emailTextField.text!, password: self.passwordTextField.text!, onSuccess: {
+//                ProgressHUD.showSuccess("Success")
+                
+                //Sending to main tabbar page when successful sign in
+//                self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
+                
+                
+            }, onError: { error in
+                ProgressHUD.showError(error!)
+                
+                
+            })
             
         })
         
     }
     
+    func leaveAnimation() {
+        
+        emailTextField.alpha = 1
+        passwordTextField.alpha = 1
+        logo.alpha = 1
+        SignUp.alpha = 1
+    
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            
+            self.emailTextField.alpha = 0
+            self.passwordTextField.alpha = 0
+            self.logo.alpha = 0
+            self.SignUp.alpha = 0
+            
+            
+        }) { (finished) in
+            
+            self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
+            
+        }
+        
+    }
     
     
+    
+    
+//    @IBAction func signInButton_TouchUpInside(_ sender: Any) {
+//        
+//        view.endEditing(true)
+//       
+//        AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
+//            ProgressHUD.showSuccess("Success")
+//            
+//            //Sending to main tabbar page when successful sign in
+//            self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
+//            
+//        }, onError: { error in
+//            ProgressHUD.showError(error!)
+//           
+//            
+//        })
+//        
+//    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return TKFadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
+        
+    }
+        
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
+        
+}
+
 }

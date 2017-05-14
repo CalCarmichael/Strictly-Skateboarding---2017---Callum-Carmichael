@@ -16,5 +16,7 @@ target 'Skate Demo' do
     pod 'ProgressHUD'
     pod 'SDWebImage', '~>3.8'
     pod 'KILabel', '1.0.0'
+    pod 'TKSubmitTransitionSwift3'
+    pod 'MapboxDirections.swift', '~> 0.9'
 
 end

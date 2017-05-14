@@ -50,11 +50,15 @@ PODS:
   - GTMSessionFetcher/Core (1.1.9)
   - KILabel (1.0.0)
   - Mapbox-iOS-SDK (3.5.0)
+  - MapboxDirections.swift (0.9.0):
+    - Polyline (~> 4.1)
+  - Polyline (4.1.1)
   - ProgressHUD (2.4)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SidebarOverlay (4.1)
+  - TKSubmitTransitionSwift3 (0.5)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -64,9 +68,11 @@ DEPENDENCIES:
   - Firebase/Storage
   - KILabel (= 1.0.0)
   - Mapbox-iOS-SDK (~> 3.5)
+  - MapboxDirections.swift (~> 0.9)
   - ProgressHUD
   - SDWebImage (~> 3.8)
   - SidebarOverlay
+  - TKSubmitTransitionSwift3
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -83,10 +89,13 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   KILabel: 84049969642d4ac1061ebe38ad4c0da37fed108b
   Mapbox-iOS-SDK: f0158f986ded5fd0b4034b1b8801aeeb5556a26a
+  MapboxDirections.swift: 7ce85544621940cc94692e97ddbc36e48f1f6070
+  Polyline: 381d1e699fd12508f97cfc468478dfbab67edf1f
   ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SidebarOverlay: b65f0a1d9331ce4bf81f82eea202b21cc8655c5a
+  TKSubmitTransitionSwift3: fadd76eefa015542d0fe6d85424a43dd6f3354d2
 
-PODFILE CHECKSUM: 674246797deddb04b96dcb4a69786ea3b5bd2f8b
+PODFILE CHECKSUM: b2f85eba0caa737d8ff922f2b4d8c9c7466467ad
 
 COCOAPODS: 1.1.1
