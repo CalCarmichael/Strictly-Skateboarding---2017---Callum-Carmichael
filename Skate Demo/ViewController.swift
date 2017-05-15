@@ -172,15 +172,14 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 //
 //    }
     
+ 
     
-    
-    
-    
+
     
 
     //Show the annotation callout
 
- func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
     
     return true
     
@@ -192,7 +191,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         
-        mapView.deselectAnnotation(annotation, animated: false)
+        self.performSegue(withIdentifier: "Show", sender: view)
 
     }
     
@@ -200,7 +199,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
         
-        return UIButton(type: .detailDisclosure)
+        return UIButton(type: .contactAdd)
+        
+        
     
     }
 
@@ -211,5 +212,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         return nil
         
     }
+    
+    
 
 }

@@ -668,6 +668,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="vvy-cF-Es7" id="Q0o-2M-4V5"/>
+                        <segue destination="D7j-XG-fZp" kind="show" identifier="Show" id="ZcD-kk-PAi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2Y-8a-euS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -775,6 +776,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAP-SW-vWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2540" y="1593.5532233883059"/>
+        </scene>
+        <!--Invite View Controller-->
+        <scene sceneID="wb1-pq-qLN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ge-7E-XpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="D7j-XG-fZp" customClass="InviteViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V6J-Fp-seO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hyc-ew-wv4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tba-ms-joj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3028" y="2319"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VAn-Vq-Lwj">
