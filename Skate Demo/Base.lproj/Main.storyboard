@@ -1562,6 +1562,7 @@
                         <outlet property="sendButton" destination="EUT-20-ECr" id="QGD-5g-IG5"/>
                         <outlet property="tableView" destination="7V2-c2-4aG" id="bl1-pU-3z6"/>
                         <segue destination="qok-QD-MSm" kind="show" identifier="Comment_ProfileSegue" id="4j9-rH-ahU"/>
+                        <segue destination="1U5-CI-Q0v" kind="show" identifier="Comment_HashtagSegue" id="BZk-ix-VcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8X-J3-51h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2298,7 +2299,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EXs-0K-k08"/>
-        <segue reference="7Vk-xB-DQx"/>
+        <segue reference="BZk-ix-VcM"/>
+        <segue reference="4j9-rH-ahU"/>
         <segue reference="l60-PI-ags"/>
         <segue reference="vVR-Uv-ZER"/>
     </inferredMetricsTieBreakers>

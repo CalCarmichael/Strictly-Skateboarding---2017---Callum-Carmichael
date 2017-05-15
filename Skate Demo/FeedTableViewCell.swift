@@ -64,27 +64,25 @@ class FeedTableViewCell: UITableViewCell {
     
     func updateViewPost() {
         
+        //Hashtag within Post
+        
         captionLabel.text = post?.caption
         
         captionLabel.hashtagLinkTapHandler = { label, string, range in
         
-            print(string)
-            
             let tag = String(string.characters.dropFirst())
             
             self.delegate?.goToHashtag(tag: tag)
         
         }
         
+        //Captions within posts
+        
         captionLabel.userHandleLinkTapHandler =  { label, string, range in
-        
-        print(string)
-        
+
         let mention = String(string.characters.dropFirst())
-        
-        print(mention)
             
-        Api.User.observeUserByUsername(username: mention, completion: { (user) in
+        Api.User.observeUserByUsername(username: mention.lowercased(), completion: { (user) in
             
             self.delegate?.goToProfileUserVC(userId: user.id!)
         

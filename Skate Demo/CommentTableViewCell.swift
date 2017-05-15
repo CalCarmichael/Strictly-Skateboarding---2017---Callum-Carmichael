@@ -11,6 +11,7 @@ import KILabel
 
 protocol CommentTableViewCellDelegate {
     func goToProfileUserVC(userId: String)
+    func goToHashtag(tag: String)
 }
 
 class CommentTableViewCell: UITableViewCell {
@@ -42,7 +43,33 @@ class CommentTableViewCell: UITableViewCell {
     }
     
     func updateViewComment() {
-        commentLabel.text = comment?.commentText
+        
+         commentLabel.text = comment?.commentText
+        
+        commentLabel.hashtagLinkTapHandler = { label, string, range in
+            
+            let tag = String(string.characters.dropFirst())
+            
+            self.delegate?.goToHashtag(tag: tag)
+            
+        }
+        
+        commentLabel.userHandleLinkTapHandler =  { label, string, range in
+            
+            print(string)
+            
+            let mention = String(string.characters.dropFirst())
+            
+            print(mention)
+            
+            Api.User.observeUserByUsername(username: mention.lowercased(), completion: { (user) in
+                
+                self.delegate?.goToProfileUserVC(userId: user.id!)
+                
+            })
+            
+        }
+        
     }
     
     func setUserInfo() {
