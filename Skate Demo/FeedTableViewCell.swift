@@ -66,8 +66,6 @@ class FeedTableViewCell: UITableViewCell {
         
         captionLabel.text = post?.caption
         
-        //
-        
         captionLabel.hashtagLinkTapHandler = { label, string, range in
         
             print(string)
@@ -78,8 +76,24 @@ class FeedTableViewCell: UITableViewCell {
         
         }
         
-        print("ratio \(post?.ratio)")
+        captionLabel.userHandleLinkTapHandler =  { label, string, range in
         
+        print(string)
+        
+        let mention = String(string.characters.dropFirst())
+        
+        print(mention)
+            
+        Api.User.observeUserByUsername(username: mention, completion: { (user) in
+            
+            self.delegate?.goToProfileUserVC(userId: user.id!)
+        
+            
+        })
+            
+            
+    }
+    
         
         if let ratio = post?.ratio {
             

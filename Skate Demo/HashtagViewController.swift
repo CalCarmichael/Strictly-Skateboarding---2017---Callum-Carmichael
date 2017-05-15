@@ -19,6 +19,7 @@ class HashtagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         navigationItem.title = "\(tag)"
         
         collectionView.dataSource = self
@@ -89,7 +90,7 @@ extension HashtagViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 3 - 1 , height: collectionView.frame.size.width / 3 - 1)
+        return CGSize(width: collectionView.frame.size.width / 3, height: collectionView.frame.size.width / 3 )
     }
     
 }
