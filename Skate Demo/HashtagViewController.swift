@@ -35,6 +35,8 @@ class HashtagViewController: UIViewController {
                 
                 self.posts.append(post)
                 
+                self.collectionView.reloadData()
+                
             })
             
         }
