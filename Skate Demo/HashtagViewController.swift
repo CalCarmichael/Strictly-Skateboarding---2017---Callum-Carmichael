@@ -19,6 +19,8 @@ class HashtagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "\(tag)"
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -41,6 +43,17 @@ class HashtagViewController: UIViewController {
             
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "HashtagDetail_Segue" {
+            let exploreDetailVC = segue.destination as! ExploreDetailViewController
+            let postId = sender as! String
+            exploreDetailVC.postId = postId
+        }
+        
+    
     }
 
  
