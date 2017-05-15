@@ -22,7 +22,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     var user: FIRUser!
     
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     
     let locationsRef = FIRDatabase.database().reference(withPath: "locations")
     
@@ -199,7 +199,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     //Information button - turn this into 360 image
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        
         return UIButton(type: .detailDisclosure)
+    
     }
 
     //Image for Annotation - Change this for Skatepark/StreetSkating
