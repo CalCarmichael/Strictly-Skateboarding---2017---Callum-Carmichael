@@ -141,7 +141,6 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
         
         emailTextField.alpha = 1
         passwordTextField.alpha = 1
-        logo.alpha = 1
         SignUp.alpha = 1
     
         
@@ -149,7 +148,6 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
             
             self.emailTextField.alpha = 0
             self.passwordTextField.alpha = 0
-            self.logo.alpha = 0
             self.SignUp.alpha = 0
             
             

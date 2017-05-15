@@ -192,6 +192,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         
         self.performSegue(withIdentifier: "Show", sender: view)
+        
 
     }
     
