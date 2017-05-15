@@ -126,9 +126,16 @@ class HelperService {
             
         }
         
+        //Timestamping uploaded photos
+        
+        let timestamp = Int(Date().timeIntervalSince1970)
+        
+        print(timestamp)
+        
+        
         //Dict to hold all data we need to database
         
-        var dict = ["uid": currentUserId, "photoUrl": photoUrl, "caption": caption, "likeCount": 0, "ratio": ratio] as [String : Any]
+        var dict = ["uid": currentUserId, "photoUrl": photoUrl, "caption": caption, "likeCount": 0, "ratio": ratio, "timestamp": timestamp] as [String : Any]
         
         //If videoUrl is nil otherwise add it to dictionary
         

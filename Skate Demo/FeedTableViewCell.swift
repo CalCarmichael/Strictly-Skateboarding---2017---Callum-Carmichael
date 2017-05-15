@@ -35,6 +35,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var volumeView: UIView!
     @IBOutlet weak var volumeButton: UIButton!
     
+    @IBOutlet weak var timeLabel: UILabel!
+    
     
     //DelegateCell = if reuse cell somewhere else dont need a switch implementation
     
@@ -136,10 +138,70 @@ class FeedTableViewCell: UITableViewCell {
             player?.isMuted = isMuted
             
         }
+        
+        //Timestamp for post
+        
+        if let timestamp = post?.timestamp {
+            
+            print(timestamp)
+            
+            let timestampDate = Date(timeIntervalSince1970: Double(timestamp))
+            
+            let now = Date()
+            
+            let components = Set<Calendar.Component>([.second, .minute, .hour, .day, .weekOfMonth])
+            
+            let diff = Calendar.current.dateComponents(components, from: timestampDate, to: now)
+            
+        
+            var timeText = ""
+            
+            if diff.second! <= 0 {
+                
+                timeText = "Now"
+                
+            }
+            
+            if diff.second! > 0 && diff.minute! == 0 {
+                
+                timeText = (diff.second == 1) ? "\(diff.second!) second ago" :  "\(diff.second!) seconds ago"
+            }
+            
+            if diff.minute! > 0 && diff.hour! == 0 {
+                
+                timeText = (diff.minute == 1) ? "\(diff.minute!) minute ago" :  "\(diff.minute!) minute ago"
+                
+            }
+            
+            if diff.hour! > 0 && diff.day! == 0 {
+                
+                timeText = (diff.hour == 1) ? "\(diff.hour!) hour ago" :  "\(diff.hour!) hour ago"
+                
+            }
+
+            if diff.day! > 0 && diff.weekOfMonth! == 0 {
+                
+                timeText = (diff.day == 1) ? "\(diff.day!) day ago" :  "\(diff.hour!) day ago"
+                
+            }
+            
+            if diff.weekOfMonth! > 0 {
+                
+                timeText = (diff.weekOfMonth == 1) ? "\(diff.weekOfMonth!) week ago" :  "\(diff.weekOfMonth!) week ago"
+                
+            }
+            
+           
+            
+            timeLabel.text = timeText
+            
+            }
+        
 
         //Observing the like button being changed and updating from other users
         
         self.updateLike(post: self.post!)
+        
         
     }
     
@@ -162,6 +224,7 @@ class FeedTableViewCell: UITableViewCell {
         
     }
     
+   
     
     
     //Observing likes given the id of the post
