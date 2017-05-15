@@ -137,6 +137,10 @@ extension FeedViewController: FeedTableViewCellDelegate {
         performSegue(withIdentifier: "Home_ProfileSegue", sender: userId)
     }
     
+    func goToHashtag(tag: String) {
+        performSegue(withIdentifier: "Feed_HashtagSegue", sender: tag)
+    }
+    
 }
 
 

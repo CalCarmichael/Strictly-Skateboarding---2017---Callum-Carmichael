@@ -16,6 +16,7 @@ import KILabel
 protocol FeedTableViewCellDelegate {
     func goToCommentVC(postId: String)
     func goToProfileUserVC(userId: String)
+    func goToHashtag(tag: String)
 }
 
 class FeedTableViewCell: UITableViewCell {
@@ -65,11 +66,20 @@ class FeedTableViewCell: UITableViewCell {
         
         captionLabel.text = post?.caption
         
+        //
+        
+        captionLabel.hashtagLinkTapHandler = { label, string, range in
+        
+            print(string)
+            
+            let tag = String(string.characters.dropFirst())
+            
+            self.delegate?.goToHashtag(tag: tag)
+        
+        }
+        
         print("ratio \(post?.ratio)")
         
-  //      ratio = widthPhoto / heightPhoto
-        
-  //      heightPhoto = widthPhoto / ratio
         
         if let ratio = post?.ratio {
             

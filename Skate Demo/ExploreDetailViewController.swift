@@ -112,4 +112,8 @@ extension ExploreDetailViewController: FeedTableViewCellDelegate {
         performSegue(withIdentifier: "ExploreDetail_ProfileUserSegue", sender: userId)
     }
     
+    func goToHashtag(tag: String) {
+        performSegue(withIdentifier: "ExploreDetail_HashtagSegue", sender: tag)
+    }
+    
 }

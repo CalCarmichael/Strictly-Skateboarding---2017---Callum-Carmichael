@@ -1087,11 +1087,30 @@
                         <outlet property="tableView" destination="Bd3-pk-HWT" id="tSG-Hd-J8c"/>
                         <segue destination="LhZ-Cg-epj" kind="show" identifier="CommentSegue" id="wOr-ZF-i53"/>
                         <segue destination="qok-QD-MSm" kind="show" identifier="Home_ProfileSegue" id="7Vk-xB-DQx"/>
+                        <segue destination="1U5-CI-Q0v" kind="show" identifier="Feed_HashtagSegue" id="4Mx-Nn-IZR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wl3-lh-H2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4408.8000000000002" y="877.51124437781118"/>
+        </scene>
+        <!--Hashtag View Controller-->
+        <scene sceneID="iZx-x7-XZl">
+            <objects>
+                <viewController storyboardIdentifier="HashtagViewController" id="1U5-CI-Q0v" customClass="HashtagViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PUp-8k-mwe"/>
+                        <viewControllerLayoutGuide type="bottom" id="3y0-iL-TuR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEJ-CW-aGy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehX-OG-12Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5206" y="878"/>
         </scene>
         <!--Explore-->
         <scene sceneID="WeL-PL-AFs">
@@ -1167,7 +1186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWa-AH-5hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5306" y="878"/>
+            <point key="canvasLocation" x="6193" y="878"/>
         </scene>
         <!--ProfileUserViewController-->
         <scene sceneID="Yqh-J1-rwm">
@@ -1175,7 +1194,7 @@
                 <viewControllerPlaceholder referencedIdentifier="ProfileUserViewController" id="sJL-V5-aRY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57C-go-MaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6073" y="471"/>
+            <point key="canvasLocation" x="7165" y="371"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="LKF-eh-PuR">
@@ -1265,7 +1284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfv-0B-Ntb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6087" y="878"/>
+            <point key="canvasLocation" x="7017" y="878"/>
         </scene>
         <!--Camera Filter View Controller-->
         <scene sceneID="o75-zG-6W3">
@@ -1774,7 +1793,7 @@
                     </connections>
                 </tableView>
             </objects>
-            <point key="canvasLocation" x="5306" y="188"/>
+            <point key="canvasLocation" x="5689" y="119"/>
         </scene>
         <!--Profile User View Controller-->
         <scene sceneID="bU4-IC-mp0">
@@ -1987,7 +2006,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFG-fR-sxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5264" y="1621"/>
+            <point key="canvasLocation" x="5903" y="2081"/>
+        </scene>
+        <!--HashtagViewController-->
+        <scene sceneID="Lnq-Yw-aia">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="HashtagViewController" id="Lg8-DP-JMl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hN0-sq-6Et" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6850" y="1891"/>
         </scene>
         <!--ProfileUserViewController-->
         <scene sceneID="9fy-4J-ytH">
@@ -1995,7 +2022,7 @@
                 <viewControllerPlaceholder referencedIdentifier="ProfileUserViewController" id="aa5-bH-AMT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDh-sx-1Xw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5354" y="2009"/>
+            <point key="canvasLocation" x="6512" y="2081"/>
         </scene>
         <!--Explore Detail View Controller-->
         <scene sceneID="wgI-5c-li7">
@@ -2105,7 +2132,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0V-0M-86w" userLabel="Comment">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0V-0M-86w" userLabel="Comment" customClass="KILabel">
                                                     <rect key="frame" x="15" y="481" width="345" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -2156,7 +2183,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="captionLabel" destination="x0V-0M-86w" id="rAV-Nu-qm7"/>
+                                            <outlet property="captionLabel" destination="x0V-0M-86w" id="5fh-FG-G6C"/>
                                             <outlet property="commentView" destination="5Hd-hk-039" id="hUG-Lc-3sm"/>
                                             <outlet property="dislikeImageView" destination="1X9-u9-qSK" id="cvs-n9-pLY"/>
                                             <outlet property="heightConstraint" destination="HLI-ia-K9I" id="Nji-GD-r5x"/>
@@ -2188,11 +2215,12 @@
                         <outlet property="tableView" destination="c4F-fr-FWv" id="Woi-vg-MkD"/>
                         <segue destination="RmW-P5-5Vt" kind="show" identifier="ExploreDetail_CommentVC" id="xR6-VI-zcp"/>
                         <segue destination="aa5-bH-AMT" kind="show" identifier="ExploreDetail_ProfileUserSegue" id="xLw-0V-efq"/>
+                        <segue destination="Lg8-DP-JMl" kind="show" identifier="ExploreDetail_HashtagSegue" id="tmA-at-3oL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fis-4p-2DQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6085.6000000000004" y="1629.5352323838083"/>
+            <point key="canvasLocation" x="6193" y="1621"/>
         </scene>
     </scenes>
     <resources>
