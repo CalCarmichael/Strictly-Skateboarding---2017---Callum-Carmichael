@@ -9,27 +9,82 @@
 import UIKit
 
 class HashtagViewController: UIViewController {
-
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var posts: [Post] = []
+    
+    var tag = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        loadPosts()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadPosts() {
+        
+        Api.Hashtag.fetchPostHashtag(withTag: tag) { (postId) in
+            
+            Api.Post.observePost(withId: postId, completion: { (post) in
+                
+                self.posts.append(post)
+                
+            })
+            
+        }
+        
     }
-    */
 
+ 
+}
+
+extension HashtagViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
+        //Display posts at certain array index on corresponding row
+        let post = posts[indexPath.row]
+        
+        cell.post = post
+        cell.delegate = self
+        
+        return cell
+    }
+
+}
+
+extension HashtagViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width / 3 - 1 , height: collectionView.frame.size.width / 3 - 1)
+    }
+    
+}
+
+extension HashtagViewController: PhotoCollectionViewCellDelegate {
+    
+    func goToDetailVC(postId: String) {
+        
+        performSegue(withIdentifier: "HashtagDetail_Segue", sender: postId)
+        
+    }
+    
 }

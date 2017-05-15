@@ -13,6 +13,16 @@ class HashtagApi {
     
     var REF_HASHTAG = FIRDatabase.database().reference().child("hashtags")
     
+    func fetchPostHashtag(withTag tag: String, completion: @escaping (String) -> Void) {
     
+        REF_HASHTAG.child(tag.lowercased()).observe(.childAdded, with: {
+            
+            snapshot in
+            
+            completion(snapshot.key)
+            
+        })
     
+    }
+
 }

@@ -88,6 +88,13 @@ class FeedViewController: UIViewController {
         }
         
         
+        if segue.identifier == "Feed_HashtagSegue" {
+            let hashtagVC = segue.destination as! HashtagViewController
+            let tag = sender as! String
+            hashtagVC.tag = tag
+        }
+        
+        
     }
     
 

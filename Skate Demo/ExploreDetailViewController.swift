@@ -73,6 +73,13 @@ class ExploreDetailViewController: UIViewController {
         }
         
         
+        if segue.identifier == "ExploreDetail_HashtagSegue" {
+            let hashtagVC = segue.destination as! HashtagViewController
+            let tag = sender as! String
+            hashtagVC.tag = tag
+        }
+        
+        
     }
     
  
