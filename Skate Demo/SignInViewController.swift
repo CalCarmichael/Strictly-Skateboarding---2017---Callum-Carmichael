@@ -11,19 +11,11 @@ import ProgressHUD
 import TKSubmitTransitionSwift3
 import TextFieldEffects
 
-class SignInViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class SignInViewController: UIViewController, UIViewControllerTransitioningDelegate, UITextFieldDelegate {
     
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-
-    @IBOutlet weak var test: HoshiTextField!
-
-    
-    
-    
-    @IBOutlet weak var logo: UILabel!
     
     @IBOutlet weak var SignUp: UIButton!
     
@@ -33,6 +25,10 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        
+        passwordTextField.delegate = self
         
          btn = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
         
@@ -109,6 +105,14 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
         signInButton.isEnabled = true
         
     }
+    
+    func textFieldShouldReturn(_ emailTextField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        return true
+    }
+    
+    
+    
     
     //Authorizing sign in button (within AuthService)
     

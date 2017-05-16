@@ -29,6 +29,7 @@
 		9F56A68B1E929BD900E8EDB9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56A68A1E929BD900E8EDB9 /* SignInViewController.swift */; };
 		9F56A68D1E929C8100E8EDB9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56A68C1E929C8100E8EDB9 /* SignUpViewController.swift */; };
 		9F67A36A1EACD46400AE606E /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67A3691EACD46400AE606E /* ProfileUserViewController.swift */; };
+		9F88E2881ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */; };
 		9F8D373C1E82A7DD003E36CB /* Skatepark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D373B1E82A7DD003E36CB /* Skatepark.swift */; };
 		9F9EAFA41E9E63BD00921147 /* SaveSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */; };
 		9FB108611EA7973600AD5AF6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB108601EA7973600AD5AF6 /* Comment.swift */; };
@@ -82,6 +83,7 @@
 		9F56A68A1E929BD900E8EDB9 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9F56A68C1E929C8100E8EDB9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9F67A3691EACD46400AE606E /* ProfileUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
+		9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSaveSpotViewController.swift; sourceTree = "<group>"; };
 		9F8D373B1E82A7DD003E36CB /* Skatepark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skatepark.swift; sourceTree = "<group>"; };
 		9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveSpotViewController.swift; sourceTree = "<group>"; };
 		9FB108601EA7973600AD5AF6 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				9FE94C191E796B75009B7B3F /* ViewController.swift */,
 				9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */,
+				9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */,
 				9FC52C3E1ECA2DC100E3CCC9 /* InviteViewController.swift */,
 			);
 			name = Map;
@@ -483,6 +486,7 @@
 				9F442A5D1EB61A5B00C5D6F0 /* SettingTableViewController.swift in Sources */,
 				9FE05BFB1EC6150F00FFF597 /* CameraFilterViewController.swift in Sources */,
 				9F2B1E601EAA67D2006BB363 /* FeedApi.swift in Sources */,
+				9F88E2881ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift in Sources */,
 				9FDDF8821EAB8CE50010198D /* ExploreViewController.swift in Sources */,
 				9FE47D791E9693830030E817 /* FeedTableViewCell.swift in Sources */,
 				9FB1086B1EA7C65300AD5AF6 /* CommentApi.swift in Sources */,

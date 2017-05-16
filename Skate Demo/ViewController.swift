@@ -20,6 +20,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     var skateparks = [Skatepark]()
     
+    var skatepark: Skatepark?
+    
     var user: FIRUser!
     
     var locationManager = CLLocationManager()
@@ -130,13 +132,15 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     func addAnnotation(park: Skatepark) {
 
-        let point = MGLPointAnnotation()
+        let point = SkateAnnotation()
         
         point.coordinate = park.coordinate
 
         point.title = park.name
         
         point.subtitle = park.subtitle
+        
+        point.canEdit = park.editable
         
         mapView.addAnnotation(point)
         
@@ -181,29 +185,42 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
     
-    return true
+        return true
     
 
     }
-    
     
     //Hide the callout view
     
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         
         self.performSegue(withIdentifier: "Show", sender: view)
-        
 
     }
+    
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        
+        guard let skateAnnotation = annotation as? SkateAnnotation else { return nil }
+       
+        if skateAnnotation.canEdit {
+            return UIButton(type: .detailDisclosure)
+        }
+        
+        return nil
+        
+        
+    }
+    
+    
+    
+    
     
     //Information button - turn this into 360 image
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
         
         return UIButton(type: .contactAdd)
-        
-        
-    
+
     }
 
     //Image for Annotation - Change this for Skatepark/StreetSkating
@@ -215,5 +232,14 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     }
     
     
-
 }
+
+
+
+class SkateAnnotation: MGLPointAnnotation {
+    
+    var canEdit = false
+    
+    
+}
+

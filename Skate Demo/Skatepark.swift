@@ -15,12 +15,15 @@ enum SkateType: Int {
     case park = 0, street, own
 }
 
+
+
 class Skatepark {
     
     let coordinate: CLLocationCoordinate2D!
     let name: String!
     let subtitle: String!
     let type: SkateType
+    var editable: Bool!
     
     init(snapshot: FIRDataSnapshot) {
         let snapshotValue = snapshot.value as! [String: Any]
@@ -28,6 +31,9 @@ class Skatepark {
         subtitle = snapshotValue["subtitle"] as! String
         coordinate = CLLocationCoordinate2D(latitude: snapshotValue["lat"] as! Double, longitude: snapshotValue["lng"] as! Double)
         type = SkateType(rawValue: snapshotValue["type"] as! Int)!
+        
+        editable = snapshotValue["editable"] as! Bool
+        
     
     }
 
