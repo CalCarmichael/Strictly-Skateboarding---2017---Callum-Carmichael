@@ -76,7 +76,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 
         //Sidebar
         
-        sideBar = SideBar(sourceView: self.view, skateItems: ["All Skate Spots", "Skateparks", "Street Skating", "Personal Spots"])
+        sideBar = SideBar(sourceView: self.view, skateItems: ["All Skate Spots", "Skateparks", "Street Skating", "Favourite Spots"])
         sideBar.delegate = self
         
         
@@ -176,11 +176,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 //
 //    }
     
- 
     
-
     
-
+  
     //Show the annotation callout
 
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
@@ -194,7 +192,10 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         
+        
         self.performSegue(withIdentifier: "Show", sender: view)
+        
+        
 
     }
     
@@ -211,15 +212,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         
     }
     
-    
-    
-    
-    
+
     //Information button - turn this into 360 image
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
         
         return UIButton(type: .contactAdd)
+        
 
     }
 
@@ -230,15 +229,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         return nil
         
     }
-    
-    
-}
-
-
-
-class SkateAnnotation: MGLPointAnnotation {
-    
-    var canEdit = false
     
     
 }

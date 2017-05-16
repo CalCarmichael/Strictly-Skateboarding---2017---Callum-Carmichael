@@ -82,15 +82,20 @@
                                 <rect key="frame" x="0.0" y="387" width="375" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRZ-sb-DPj" customClass="TKTransitionSubmitButton" customModule="TKSubmitTransitionSwift3">
-                                        <rect key="frame" x="20" y="40" width="335" height="42"/>
-                                        <color key="backgroundColor" red="0.85098039215686272" green="0.11764705882352941" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="21" y="40" width="335" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="RMf-ZI-0u9"/>
+                                            <constraint firstAttribute="height" constant="40" id="RMf-ZI-0u9"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signInButton:" destination="uK5-T7-6m1" eventType="touchUpInside" id="djH-d3-Cb8"/>
                                         </connections>
@@ -99,9 +104,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="uRZ-sb-DPj" firstAttribute="top" secondItem="E8j-f0-De1" secondAttribute="top" constant="40" id="F1X-ww-6T5"/>
-                                    <constraint firstAttribute="trailing" secondItem="uRZ-sb-DPj" secondAttribute="trailing" constant="20" id="GUU-og-y9a"/>
-                                    <constraint firstItem="uRZ-sb-DPj" firstAttribute="leading" secondItem="E8j-f0-De1" secondAttribute="leading" constant="20" id="Os1-Yy-pB1"/>
-                                    <constraint firstAttribute="bottom" secondItem="uRZ-sb-DPj" secondAttribute="bottom" constant="40" id="xcQ-ph-GGK"/>
+                                    <constraint firstAttribute="trailing" secondItem="uRZ-sb-DPj" secondAttribute="trailing" constant="19" id="GUU-og-y9a"/>
+                                    <constraint firstItem="uRZ-sb-DPj" firstAttribute="leading" secondItem="E8j-f0-De1" secondAttribute="leading" constant="21" id="Os1-Yy-pB1"/>
+                                    <constraint firstAttribute="bottom" secondItem="uRZ-sb-DPj" secondAttribute="bottom" constant="42" id="xcQ-ph-GGK"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjC-ZS-f9Z">

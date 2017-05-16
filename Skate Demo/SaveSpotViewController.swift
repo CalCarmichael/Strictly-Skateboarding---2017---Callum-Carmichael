@@ -20,7 +20,7 @@ class SaveSpotViewController: UIViewController {
     @IBOutlet weak var saveSpotPopUpView: UIView!
     
     
-    var options = ["Select Type", "Skatepark", "Street Skating", "Personal Spots"]
+    var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
     
     var skateparks = [Skatepark]()
     

@@ -32,6 +32,7 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
         
          btn = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
         
+        
         //Editing the text fields UI
         
 //        emailTextField.backgroundColor = UIColor.clear
