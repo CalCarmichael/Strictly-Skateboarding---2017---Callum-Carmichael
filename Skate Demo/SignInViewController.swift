@@ -78,7 +78,11 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
             
             self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
             
+        } else {
+            
         }
+        
+        
         
     }
     
@@ -125,10 +129,14 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
              self.leaveAnimation()
             
             AuthService.signIn(email: self.emailTextField.text!, password: self.passwordTextField.text!, onSuccess: {
+                
+                
+                
+                
 //                ProgressHUD.showSuccess("Success")
                 
                 //Sending to main tabbar page when successful sign in
-//                self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
+              self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
                 
                 
             }, onError: { error in
