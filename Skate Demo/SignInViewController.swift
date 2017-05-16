@@ -33,6 +33,9 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
          btn = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
         
         
+       
+        
+        
         //Editing the text fields UI
         
 //        emailTextField.backgroundColor = UIColor.clear
@@ -119,9 +122,12 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     
     
+    
     //Authorizing sign in button (within AuthService)
     
     @IBAction func signInButton(_ button: TKTransitionSubmitButton) {
+        
+        
         
         view.endEditing(true)
         
@@ -131,16 +137,13 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
             
             AuthService.signIn(email: self.emailTextField.text!, password: self.passwordTextField.text!, onSuccess: {
                 
-                
-                
-                
-//                ProgressHUD.showSuccess("Success")
-                
+             
                 //Sending to main tabbar page when successful sign in
               self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
                 
                 
             }, onError: { error in
+                
                 ProgressHUD.showError(error!)
                 
                 

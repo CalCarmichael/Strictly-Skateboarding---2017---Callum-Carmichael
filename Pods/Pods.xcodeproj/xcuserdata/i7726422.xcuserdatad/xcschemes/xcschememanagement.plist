@@ -24,7 +24,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GlidingCollection.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImagePicker-ImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImagePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,7 +92,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B5FFE4F0ED2E5C0D6763394E24A7A86</key>
+		<key>09A62655F66AE53A474D64E42E6E9DF9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,17 +102,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1ECBAB25F189E62AF9AE7570BD64F537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2479E9AB3E362A53A6CBDCC0C46152E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>26F4BAE073090FD717993DCE0CC3751A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F30FFBE1692B502258DB28C7822BE6A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>430DDC94642BE70CEBE20E4E685EB5E1</key>
+		<key>3BFF9F651824EF6D7159B996DAA71D25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,7 +127,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77718CEF47AB05588665E115D554B52D</key>
+		<key>61DBBCB629AEF6FD023864DF8B62ED02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72501AE6979BE477584D68104484FD06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C4C106544662D1781F080B7F277A889</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +162,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C85371828468E389CD3FC6246F0D1FA5</key>
+		<key>CE7AD6EAAA38D6E2099FB80A88C378CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,7 +172,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F336CAADD7B6A080ABA0E820B857F82D</key>
+		<key>F2378258FF522F7F159459621FDDDF78</key>
 		<dict>
 			<key>primary</key>
 			<true/>

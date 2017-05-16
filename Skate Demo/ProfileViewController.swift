@@ -9,10 +9,16 @@
 import UIKit
 import ProgressHUD
 
+
 class ProfileViewController: UIViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+
+    @IBOutlet weak var coverPhoto: UIImageView!
+
+    
     
     var user: User!
     
@@ -27,7 +33,12 @@ class ProfileViewController: UIViewController {
         getUser()
         getUserPosts()
         
+        
+
+        
     }
+    
+    
     
     //Getting user info and attributes from PHCRView
     
@@ -164,3 +175,5 @@ extension ProfileViewController: PhotoCollectionViewCellDelegate {
     }
     
 }
+
+

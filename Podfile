@@ -19,5 +19,7 @@ target 'Skate Demo' do
     pod 'TKSubmitTransitionSwift3'
     pod 'MapboxDirections.swift', '~> 0.9'
     pod 'TextFieldEffects'
+    pod 'GlidingCollection'
+    pod 'ImagePicker'
 
 end

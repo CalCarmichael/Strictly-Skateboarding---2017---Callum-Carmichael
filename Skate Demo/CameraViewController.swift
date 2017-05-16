@@ -9,6 +9,7 @@
 import UIKit
 import ProgressHUD
 import AVFoundation
+import ImagePicker
 
 class CameraViewController: UIViewController {
     
