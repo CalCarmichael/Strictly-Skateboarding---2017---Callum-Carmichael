@@ -192,9 +192,15 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         
-        
-        self.performSegue(withIdentifier: "Show", sender: view)
-        
+        if control.tag == 100 {
+            
+            self.performSegue(withIdentifier: "EditSaveSpotSegue", sender: view)
+            
+        } else if control.tag == 101 {
+            
+            self.performSegue(withIdentifier: "Show", sender: view)
+            
+        }
         
 
     }
@@ -204,7 +210,10 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         guard let skateAnnotation = annotation as? SkateAnnotation else { return nil }
        
         if skateAnnotation.canEdit {
-            return UIButton(type: .detailDisclosure)
+            
+            let button = UIButton(type: .detailDisclosure)
+            button.tag = 100
+            return button
         }
         
         return nil
@@ -217,7 +226,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
         
-        return UIButton(type: .contactAdd)
+        let button = UIButton(type: .contactAdd)
+        button.tag = 101
+        return button
         
 
     }
