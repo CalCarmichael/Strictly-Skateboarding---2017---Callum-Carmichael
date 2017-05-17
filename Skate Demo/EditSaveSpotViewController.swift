@@ -37,40 +37,64 @@ class EditSaveSpotViewController: UIViewController {
         // Do any additional setup after loading the view.
         print(parkId)
         
+        
+      
+        
     }
 
+    
+   
+    
   
     @IBAction func updateSkateSpot(_ sender: Any) {
         
+        guard let skateNameText = skateTitleText.text, let skateStyle = skateStyleText.text else { return }
         
+        guard skateNameText.characters.count > 0, skateStyle.characters.count > 0 else {
+            
+            print("Complete all fields")
+            
+            return
+            
+        }
+        
+    }
+    
+    
+    
+        
+        
+//    let uid = FIRAuth.auth()?.currentUser?.uid
 //        
+//      //  let skateList = Skatepark(name: skateNameText, subtitle: skateStyle)
 //        
-//    
-//        skateTitleText.text = skatepark?.name
+//    let skateList: [String: Any] = ["name": skateNameText, "subtitle": skateStyle]
 //        
-//        skateStyleText.text = skatepark?.subtitle
+//    let skatepark = skateList
 //        
+//    let key = self.skatepark.ref?.key
 //        
+//    let editItem = locationRef.child("users").child(uid!).child("/personalLocations/\(key)")
 //        
-//        let selected = pickerView.selectedRow(inComponent: 0)
+////        editItem.updateChildValues(skateList.toAnyObject()) 
+//        {
 //        
-//        guard selected > 0 else {
-//            print("select a type")
-//            return
+//            (error, _) in
+//            
+//            if let error = error {
+//                
+//                print("error")
+//                
+//                
+//            } else {
+//                
+//                print("success")
+//                
+//            }
+//            
 //        }
 //
-//        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
-//        
-//        guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
-//            
-//            return
-//            
-//        }
-//        
-//        locationRef.setValue(["name": skateTitleText, "subtitle": skateStyleText, "type": (selected - 1), "editable": true])
-        
-
-    }
+//    }
     
     
     @IBAction func deleteSkateSpot(_ sender: Any) {

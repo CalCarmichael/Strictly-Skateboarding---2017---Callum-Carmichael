@@ -64,8 +64,18 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        imageView.contentMode = .scaleAspectFit
+//        
+//        let image = UIImage(named: "SNav")
+//        imageView.image = image
+//        navigationItem.titleView = imageView
         
         //Map
+        
         
         
         mapView.delegate = self

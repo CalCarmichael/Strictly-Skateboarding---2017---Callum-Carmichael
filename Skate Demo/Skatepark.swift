@@ -25,26 +25,49 @@ class Skatepark {
     let type: SkateType
     var editable: Bool!
     var id: String!
+    var ref: FIRDatabaseReference?
     
     init(snapshot: FIRDataSnapshot) {
         
         let snapshotValue = snapshot.value as! [String: Any]
         id = snapshot.key
+        ref = snapshot.ref
         name = snapshotValue["name"] as! String
         subtitle = snapshotValue["subtitle"] as! String
         coordinate = CLLocationCoordinate2D(latitude: snapshotValue["lat"] as! Double, longitude: snapshotValue["lng"] as! Double)
         type = SkateType(rawValue: snapshotValue["type"] as! Int)!
-        
         editable = snapshotValue["editable"] as! Bool
         
     
     }
+    
+    
+//
+//    init(name: String, subtitle: String, key: String = "") {
+//        
+//        self.name = name
+//        self.subtitle = subtitle
+//        self.id = key
+//        self.ref = FIRDatabase.database().reference()
+//       
+//        
+//        
+//    }
+//    
+//    func toAnyObject() -> [String: AnyObject] {
+//        
+//        return ["name": name as AnyObject, "subtitle": subtitle as AnyObject]
+//        
+//    }
+//    
+//}
+
+    
+    
+
+
+
+
 
 }
-
-
-
-
-
-
 
