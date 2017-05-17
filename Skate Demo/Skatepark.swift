@@ -41,33 +41,29 @@ class Skatepark {
     
     }
     
+    init(coordinate: CLLocationCoordinate2D, name: String, subtitle: String, type: SkateType, editable: Bool)
+    {
+        self.coordinate = coordinate
+        self.name = name
+        self.subtitle = subtitle
+        self.type = type
+        self.editable = editable
+    }
     
-//
-//    init(name: String, subtitle: String, key: String = "") {
-//        
-//        self.name = name
-//        self.subtitle = subtitle
-//        self.id = key
-//        self.ref = FIRDatabase.database().reference()
-//       
-//        
-//        
-//    }
-//    
-//    func toAnyObject() -> [String: AnyObject] {
-//        
-//        return ["name": name as AnyObject, "subtitle": subtitle as AnyObject]
-//        
-//    }
-//    
-//}
-
+    var dictionary: [String:Any]
+    {
+        return
+            [
+                "lat": coordinate.latitude,
+                "lng": coordinate.longitude,
+                "name": name,
+                "subtitle": subtitle,
+                "type": type,
+                "editable": editable
+        ]
+    }
     
     
-
-
-
-
 
 }
 

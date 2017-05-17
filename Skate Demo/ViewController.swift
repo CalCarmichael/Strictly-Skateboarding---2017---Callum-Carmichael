@@ -66,6 +66,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         
         navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
 
 //        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
 //        imageView.contentMode = .scaleAspectFit
@@ -117,7 +119,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         let userLocationsRef = FIRDatabase.database().reference(withPath: "users/\(uid)/personalLocations")
         
         userLocationsRef.observe(.value, with: { snapshot in
-            print(snapshot)
+            
             
             for item in snapshot.children {
                 guard let snapshot = item as? FIRDataSnapshot else { continue }

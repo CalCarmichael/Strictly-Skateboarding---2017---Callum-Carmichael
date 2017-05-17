@@ -34,7 +34,17 @@ class ProfileViewController: UIViewController {
         getUserPosts()
         
         
-
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        flow.sectionInset = UIEdgeInsetsMake(3, 0, 0, 0)
+        
+        
         
     }
     
@@ -144,17 +154,20 @@ extension ProfileViewController: ProfileHeaderCollectionReusableViewDelegateSwit
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 3 , height: collectionView.frame.size.width / 3)
+        return CGSize(width: collectionView.frame.size.width / 3 - 2 , height: collectionView.frame.size.width / 3 - 2 )
     }
+    
+   
     
 }
 

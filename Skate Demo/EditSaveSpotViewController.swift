@@ -26,7 +26,7 @@ class EditSaveSpotViewController: UIViewController {
     
     var parkId: String!
     
-    let locationRef = FIRDatabase.database().reference(withPath: "personalLocations")
+    let locationRef = FIRDatabase.database().reference()
     
     var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
     
@@ -35,10 +35,9 @@ class EditSaveSpotViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(parkId)
         
         
-      
+        
         
     }
 
@@ -55,46 +54,15 @@ class EditSaveSpotViewController: UIViewController {
             print("Complete all fields")
             
             return
-            
-        }
+    
+    
+    }
         
     }
     
-    
-    
-        
-        
-//    let uid = FIRAuth.auth()?.currentUser?.uid
-//        
-//      //  let skateList = Skatepark(name: skateNameText, subtitle: skateStyle)
-//        
-//    let skateList: [String: Any] = ["name": skateNameText, "subtitle": skateStyle]
-//        
-//    let skatepark = skateList
-//        
-//    let key = self.skatepark.ref?.key
-//        
-//    let editItem = locationRef.child("users").child(uid!).child("/personalLocations/\(key)")
-//        
-////        editItem.updateChildValues(skateList.toAnyObject()) 
-//        {
-//        
-//            (error, _) in
-//            
-//            if let error = error {
-//                
-//                print("error")
-//                
-//                
-//            } else {
-//                
-//                print("success")
-//                
-//            }
-//            
-//        }
-//
-//    }
+
+
+
     
     
     @IBAction func deleteSkateSpot(_ sender: Any) {

@@ -164,30 +164,30 @@ class FeedTableViewCell: UITableViewCell {
             
             if diff.second! > 0 && diff.minute! == 0 {
                 
-                timeText = (diff.second == 1) ? "\(diff.second!) second ago" :  "\(diff.second!) seconds ago"
+                timeText = (diff.second == 1) ? "\(diff.second!) seconds ago" :  "\(diff.second!) seconds ago"
             }
             
             if diff.minute! > 0 && diff.hour! == 0 {
                 
-                timeText = (diff.minute == 1) ? "\(diff.minute!) minute ago" :  "\(diff.minute!) minute ago"
+                timeText = (diff.minute == 1) ? "\(diff.minute!) minutes ago" :  "\(diff.minute!) minutes ago"
                 
             }
             
             if diff.hour! > 0 && diff.day! == 0 {
                 
-                timeText = (diff.hour == 1) ? "\(diff.hour!) hour ago" :  "\(diff.hour!) hour ago"
+                timeText = (diff.hour == 1) ? "\(diff.hour!) hours ago" :  "\(diff.hour!) hours ago"
                 
             }
 
             if diff.day! > 0 && diff.weekOfMonth! == 0 {
                 
-                timeText = (diff.day == 1) ? "\(diff.day!) day ago" :  "\(diff.hour!) day ago"
+                timeText = (diff.day == 1) ? "\(diff.day!) days ago" :  "\(diff.hour!) days ago"
                 
             }
             
             if diff.weekOfMonth! > 0 {
                 
-                timeText = (diff.weekOfMonth == 1) ? "\(diff.weekOfMonth!) week ago" :  "\(diff.weekOfMonth!) week ago"
+                timeText = (diff.weekOfMonth == 1) ? "\(diff.weekOfMonth!) weeks ago" :  "\(diff.weekOfMonth!) weeks ago"
                 
             }
             
@@ -233,7 +233,7 @@ class FeedTableViewCell: UITableViewCell {
     
     func updateLike(post: Post) {
         
-        let imageName = post.likes == nil  || !post.isLiked! ? "Like" : "Like Filled"
+        let imageName = post.likes == nil  || !post.isLiked! ? "Like1" : "Like Filled1"
         
         likeImageView.image = UIImage(named: imageName)
         
@@ -247,11 +247,11 @@ class FeedTableViewCell: UITableViewCell {
         
         if count != 0 {
             
-            likeCountButton.setTitle("\(count) Like", for: UIControlState.normal)
+            likeCountButton.setTitle("\(count) Respect", for: UIControlState.normal)
             
         } else {
             
-            likeCountButton.setTitle("Like this first!", for: UIControlState.normal)
+            likeCountButton.setTitle("Respect this first!", for: UIControlState.normal)
             
         }
         
