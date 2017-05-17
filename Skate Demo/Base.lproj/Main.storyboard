@@ -683,7 +683,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="vvy-cF-Es7" id="Q0o-2M-4V5"/>
-                        <segue destination="D7j-XG-fZp" kind="presentation" identifier="Show" id="ZcD-kk-PAi"/>
+                        <segue destination="D7j-XG-fZp" kind="presentation" identifier="InviteUserSegue" id="ZcD-kk-PAi"/>
                         <segue destination="kfl-S4-ZgT" kind="show" identifier="EditSaveSpotSegue" id="sbx-3a-dNU"/>
                     </connections>
                 </viewController>

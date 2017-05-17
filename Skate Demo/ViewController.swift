@@ -198,7 +198,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
             
         } else if control.tag == 101 {
             
-            self.performSegue(withIdentifier: "Show", sender: view)
+            self.performSegue(withIdentifier: "InviteUserSegue", sender: view)
             
         }
         
