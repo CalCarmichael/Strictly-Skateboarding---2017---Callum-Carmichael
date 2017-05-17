@@ -13,6 +13,6 @@ import Mapbox
 class SkateAnnotation: MGLPointAnnotation {
     
     var canEdit = false
-    
+    var id: String!
     
 }

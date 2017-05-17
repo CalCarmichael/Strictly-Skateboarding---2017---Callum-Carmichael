@@ -231,7 +231,6 @@
 		9F8D37391E8295DD003E36CB /* Side Bar Menu */ = {
 			isa = PBXGroup;
 			children = (
-				9F8D373B1E82A7DD003E36CB /* Skatepark.swift */,
 				9FBCA91A1E7C470700ADE283 /* SideBarTableViewController.swift */,
 				9FBCA91C1E7C4B6700ADE283 /* SideBar.swift */,
 			);
@@ -245,6 +244,7 @@
 				9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */,
 				9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */,
 				9FC52C3E1ECA2DC100E3CCC9 /* InviteViewController.swift */,
+				9F8D373B1E82A7DD003E36CB /* Skatepark.swift */,
 				9FCED96D1ECB592F009447E0 /* SkateAnnotation.swift */,
 			);
 			name = Map;

@@ -138,6 +138,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 
         point.title = park.name
         
+        point.id = park.id
+        
         point.subtitle = park.subtitle
         
         point.canEdit = park.editable
@@ -193,8 +195,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         
         if control.tag == 100 {
+            guard let annotation = annotation as? SkateAnnotation else { return }
             
-            self.performSegue(withIdentifier: "EditSaveSpotSegue", sender: view)
+            
+            self.performSegue(withIdentifier: "EditSaveSpotSegue", sender: annotation.id)
+            
             
         } else if control.tag == 101 {
             
@@ -203,6 +208,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         }
         
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditSaveSpotSegue" {
+            let destination = segue.destination as! EditSaveSpotViewController
+            destination.parkId = sender as! String
+        }
     }
     
     func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {

@@ -24,9 +24,12 @@ class Skatepark {
     let subtitle: String!
     let type: SkateType
     var editable: Bool!
+    var id: String!
     
     init(snapshot: FIRDataSnapshot) {
+        
         let snapshotValue = snapshot.value as! [String: Any]
+        id = snapshot.key
         name = snapshotValue["name"] as! String
         subtitle = snapshotValue["subtitle"] as! String
         coordinate = CLLocationCoordinate2D(latitude: snapshotValue["lat"] as! Double, longitude: snapshotValue["lng"] as! Double)
