@@ -31,6 +31,7 @@ class DiscoverUserViewController: UIViewController {
                 user.isFollowing = value
                 
                 self.users.append(user)
+                
                 self.tableView.reloadData()
                 
             })

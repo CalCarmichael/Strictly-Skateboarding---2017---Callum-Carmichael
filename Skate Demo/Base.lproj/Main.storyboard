@@ -161,9 +161,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tg6-qv-RRF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tg6-qv-RRF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiscoverUserTableViewCell" rowHeight="77" id="j0I-yF-rj1" customClass="DiscoverUserTableViewCell" customModule="Skate_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="77"/>
@@ -187,7 +187,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulY-G6-41L">
                                                     <rect key="frame" x="90" y="28" width="43" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-yf-fkX">
@@ -197,7 +197,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <state key="normal" title="Follow">
-                                                        <color key="titleColor" red="0.0" green="0.4839373911321081" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.1311698718" green="0.1311698718" blue="0.1311698718" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -210,6 +210,7 @@
                                                 <constraint firstItem="ulY-G6-41L" firstAttribute="leading" secondItem="D7k-qv-ZjD" secondAttribute="trailing" constant="15" id="rgi-bC-BBU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="followButton" destination="Axb-yf-fkX" id="nf0-Mf-5RN"/>
                                             <outlet property="nameLabel" destination="ulY-G6-41L" id="3Oa-Hy-oRf"/>
@@ -605,7 +606,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jLV-yO-a4v">
-                        <barButtonItem key="leftBarButtonItem" title="View" id="OqU-Yz-wbL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="OqU-Yz-wbL">
                             <inset key="imageInsets" minX="0.0" minY="-6" maxX="0.0" maxY="5"/>
                             <connections>
                                 <segue destination="IlI-1Y-3Df" kind="show" id="pcp-mG-5SH"/>
@@ -1238,7 +1239,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhr-HP-t87">
-                                                    <rect key="frame" x="334" y="25.5" width="33" height="16"/>
+                                                    <rect key="frame" x="334" y="26" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1687,7 +1688,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7V2-c2-4aG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7V2-c2-4aG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1999,7 +2000,7 @@
         <scene sceneID="TK2-Uq-gEs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QpT-Lx-dI7" userLabel="Camera Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="camera-7" selectedImage="camera-7" id="6E2-bu-EkH">
+                    <tabBarItem key="tabBarItem" image="CameraT" selectedImage="CameraT" id="6E2-bu-EkH">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -2401,7 +2402,7 @@
                                                     <rect key="frame" x="10" y="332" width="24" height="24"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-H8-6u5">
-                                                            <rect key="frame" x="2.5" y="2.5" width="20" height="20"/>
+                                                            <rect key="frame" x="2" y="2" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="RiO-ug-A9u"/>
                                                                 <constraint firstAttribute="height" constant="20" id="cFn-Pq-vAK"/>
@@ -2477,7 +2478,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTW-R8-ECA">
-                                                    <rect key="frame" x="336" y="26.5" width="31" height="14.5"/>
+                                                    <rect key="frame" x="336" y="26" width="31" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -2565,6 +2566,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CameraT" width="25" height="25"/>
         <image name="Dislike Filled-50" width="50" height="50"/>
         <image name="Forward Punch-50" width="50" height="50"/>
         <image name="Like" width="50" height="50"/>
@@ -2576,7 +2578,6 @@
         <image name="Speech Bubble-50" width="50" height="50"/>
         <image name="Upload Filled-50" width="50" height="50"/>
         <image name="Upload-50" width="50" height="50"/>
-        <image name="camera-7" width="30" height="30"/>
         <image name="contacts" width="32" height="32"/>
         <image name="image-placeholder" width="500" height="500"/>
         <image name="pic_fields_albums" width="32" height="32"/>
@@ -2586,9 +2587,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="81q-W9-GO8"/>
-        <segue reference="vVR-Uv-ZER"/>
+        <segue reference="4j9-rH-ahU"/>
+        <segue reference="BZk-ix-VcM"/>
         <segue reference="l60-PI-ags"/>
-        <segue reference="4Mx-Nn-IZR"/>
-        <segue reference="7Vk-xB-DQx"/>
+        <segue reference="vVR-Uv-ZER"/>
     </inferredMetricsTieBreakers>
 </document>

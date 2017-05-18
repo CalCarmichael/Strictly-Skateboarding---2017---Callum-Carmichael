@@ -69,6 +69,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        
+        UITabBar.appearance().tintColor = UIColor.red
+        
+        
 
 //        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
 //        imageView.contentMode = .scaleAspectFit

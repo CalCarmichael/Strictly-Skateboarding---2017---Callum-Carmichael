@@ -21,5 +21,6 @@ target 'Skate Demo' do
     pod 'TextFieldEffects'
     pod 'GlidingCollection'
     pod 'ImagePicker'
+    pod 'ShadowImageView'
 
 end

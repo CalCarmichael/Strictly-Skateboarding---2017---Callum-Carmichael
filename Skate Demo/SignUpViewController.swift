@@ -8,6 +8,7 @@
 
 import UIKit
 import ProgressHUD
+import ShadowImageView
 
 class SignUpViewController: UIViewController {
     

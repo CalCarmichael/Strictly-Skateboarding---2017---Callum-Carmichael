@@ -60,6 +60,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - ShadowImageView (1.2.0)
   - SidebarOverlay (4.1)
   - TextFieldEffects (1.3.2)
   - TKSubmitTransitionSwift3 (0.5)
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - MapboxDirections.swift (~> 0.9)
   - ProgressHUD
   - SDWebImage (~> 3.8)
+  - ShadowImageView
   - SidebarOverlay
   - TextFieldEffects
   - TKSubmitTransitionSwift3
@@ -102,10 +104,11 @@ SPEC CHECKSUMS:
   Polyline: 381d1e699fd12508f97cfc468478dfbab67edf1f
   ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  ShadowImageView: ae863bf755f1ed849b501de0697e0ba5bf8b4348
   SidebarOverlay: b65f0a1d9331ce4bf81f82eea202b21cc8655c5a
   TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
   TKSubmitTransitionSwift3: fadd76eefa015542d0fe6d85424a43dd6f3354d2
 
-PODFILE CHECKSUM: 75a5f559cb68f9fb38b8c5b04357caf88dff3708
+PODFILE CHECKSUM: 6198423723a32a96325c50fdc844f056f532aa11
 
 COCOAPODS: 1.1.1

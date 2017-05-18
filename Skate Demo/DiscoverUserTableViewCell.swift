@@ -69,11 +69,11 @@ class DiscoverUserTableViewCell: UITableViewCell {
             //UI Button
             
             followButton.layer.borderWidth = 1
-            followButton.layer.borderColor = UIColor(red: 226/255, green: 228/255, blue: 232.255, alpha: 1).cgColor
+            followButton.layer.borderColor = UIColor(red: 255/255, green: 0/0, blue: 0/0, alpha: 1).cgColor
             followButton.layer.cornerRadius = 5
             followButton.clipsToBounds = true
-            followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-            followButton.backgroundColor = UIColor(red: 69/255, green: 142/255, blue: 255/255, alpha: 1)
+            followButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+            followButton.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
             
             followButton.setTitle("Follow", for: UIControlState.normal)
             followButton.addTarget(self, action: #selector(self.followAction), for: UIControlEvents.touchUpInside)
