@@ -242,8 +242,8 @@
 			children = (
 				9FE94C191E796B75009B7B3F /* ViewController.swift */,
 				9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */,
-				9F8D373B1E82A7DD003E36CB /* Skatepark.swift */,
 				9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */,
+				9F8D373B1E82A7DD003E36CB /* Skatepark.swift */,
 				9FC52C3E1ECA2DC100E3CCC9 /* InviteViewController.swift */,
 				9FCED96D1ECB592F009447E0 /* SkateAnnotation.swift */,
 			);

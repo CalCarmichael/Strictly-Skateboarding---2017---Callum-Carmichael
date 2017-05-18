@@ -33,9 +33,8 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var followButton: UIButton!
     
-
     
-    
+   
     
     
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
@@ -56,7 +55,6 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         clear()
         
     }
-    
     
     
     

@@ -30,6 +30,7 @@ class Skatepark {
     init(snapshot: FIRDataSnapshot) {
         
         let snapshotValue = snapshot.value as! [String: Any]
+        
         id = snapshot.key
         ref = snapshot.ref
         name = snapshotValue["name"] as! String
@@ -41,29 +42,37 @@ class Skatepark {
     
     }
     
-    init(coordinate: CLLocationCoordinate2D, name: String, subtitle: String, type: SkateType, editable: Bool)
-    {
-        self.coordinate = coordinate
-        self.name = name
-        self.subtitle = subtitle
-        self.type = type
-        self.editable = editable
-    }
-    
-    var dictionary: [String:Any]
-    {
-        return
-            [
-                "lat": coordinate.latitude,
-                "lng": coordinate.longitude,
-                "name": name,
-                "subtitle": subtitle,
-                "type": type,
-                "editable": editable
-        ]
-    }
     
     
+//    init(name: String, subtitle: String, key: String = "")
+//    {
+//        
+//        
+//        self.name = name
+//        self.subtitle = subtitle
+//        self.id = key
+//        self.ref = FIRDatabase.database().reference()
+//        
+//    }
+
+
+//    var dictionary: [String:Any]
+//    {
+//        return
+//            [
+//                "lat": coordinate.latitude,
+//                "lng": coordinate.longitude,
+//                "name": name,
+//                "subtitle": subtitle,
+//                "type": type,
+//                "editable": editable
+//        ]
+//    }
+//    
+//    
+
 
 }
+
+
 

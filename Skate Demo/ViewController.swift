@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import Mapbox
 import MapboxDirections
+import MapKit
 
 class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
@@ -24,7 +25,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     var user: FIRUser!
     
-    var locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     let locationsRef = FIRDatabase.database().reference(withPath: "locations")
     
@@ -82,6 +83,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         
         mapView.delegate = self
         mapView.showsUserLocation = true
+        
+        
+        //Directions
+        
+        
         
        
     

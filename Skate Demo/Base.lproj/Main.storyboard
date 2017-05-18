@@ -415,7 +415,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQJ-5S-W8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="226" y="1630"/>
+            <point key="canvasLocation" x="224.80000000000001" y="1629.5352323838083"/>
         </scene>
         <!--ExploreDetailViewController-->
         <scene sceneID="1O3-V7-2Ag">
@@ -2585,9 +2585,9 @@
         <image name="skatepark-405864_1920" width="1920" height="1273"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EXs-0K-k08"/>
-        <segue reference="l60-PI-ags"/>
+        <segue reference="81q-W9-GO8"/>
         <segue reference="vVR-Uv-ZER"/>
+        <segue reference="l60-PI-ags"/>
         <segue reference="4Mx-Nn-IZR"/>
         <segue reference="7Vk-xB-DQx"/>
     </inferredMetricsTieBreakers>

@@ -19,6 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var signUpButton: UIButton!
     
+    
     var selectedImage: UIImage?
     
     
@@ -66,6 +67,7 @@ class SignUpViewController: UIViewController {
         profileImage.addGestureRecognizer(tapGesture)
         profileImage.isUserInteractionEnabled = true
         
+        
         //Button only works when all fields have inputs
         
         signUpButton.isEnabled = false
@@ -104,6 +106,7 @@ class SignUpViewController: UIViewController {
         
     }
     
+ 
     //User profile image picker
     
     func handleSelectProfileImage() {
@@ -158,13 +161,18 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+       
+        
         
         print("did finish pick")
         
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             selectedImage = image
             profileImage.image = image
+            
         }
         
         dismiss(animated: true, completion: nil)

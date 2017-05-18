@@ -26,7 +26,7 @@ class EditSaveSpotViewController: UIViewController {
     
     var parkId: String!
     
-    let locationRef = FIRDatabase.database().reference()
+    var ref: FIRDatabaseReference!
     
     var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
     
@@ -39,27 +39,47 @@ class EditSaveSpotViewController: UIViewController {
         
         
         
+        
+        
     }
-
     
-   
+
+  
+    
     
   
     @IBAction func updateSkateSpot(_ sender: Any) {
         
-        guard let skateNameText = skateTitleText.text, let skateStyle = skateStyleText.text else { return }
+       
+        let selected = pickerView.selectedRow(inComponent: 0)
         
-        guard skateNameText.characters.count > 0, skateStyle.characters.count > 0 else {
-            
-            print("Complete all fields")
+        guard selected > 0 else {
+            print("select a type")
+            return
+        }
+        
+        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
+        
+        guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
             
             return
-    
-    
-    }
+            
+        }
+
         
-    }
+//        let uid = FIRAuth.auth()!.currentUser!.uid
+//        
+//        let key = skatepark.ref!.key
+//        
+//        //Have to get in the data name, subtitle type editable and location
+//        
+//        let skateUpdate = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations/\(key)")
+//        
+//        skateUpdate.observe(.value, with: { snapshot in
+//        
+//    }
     
+    }
 
 
 
