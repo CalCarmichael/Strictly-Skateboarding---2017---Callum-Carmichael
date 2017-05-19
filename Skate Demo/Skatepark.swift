@@ -13,6 +13,20 @@ import CoreLocation
 
 enum SkateType: Int {
     case park = 0, street, own
+    
+    func getString() -> String {
+        switch self {
+        case .own:
+            return "Favourite Spots"
+        case .street:
+            return "Street Skating"
+        case .park:
+            return "Skatepark"
+        default:
+            return "Street Skating"
+        }
+    }
+    
 }
 
 
