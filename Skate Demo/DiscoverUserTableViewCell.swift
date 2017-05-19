@@ -90,7 +90,7 @@ class DiscoverUserTableViewCell: UITableViewCell {
             followButton.layer.cornerRadius = 5
             followButton.clipsToBounds = true
             followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-            followButton.backgroundColor = UIColor(red: 66/255, green: 244/255, blue: 75/255, alpha: 1)
+            followButton.backgroundColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
             
             followButton.setTitle("Following", for: UIControlState.normal)
             followButton.addTarget(self, action: #selector(self.unfollowAction), for: UIControlEvents.touchUpInside)

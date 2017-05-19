@@ -31,6 +31,10 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     let directions = Directions.shared
     
+    var annotation = MGLAnnotationView()
+    
+    var pointAnnotation = MGLPointAnnotation()
+    
     //Filtering annotations for sidebar
     
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
@@ -71,8 +75,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         self.tabBarController?.tabBar.barTintColor = UIColor.black
         
         
+        let logo = UIImage(named: "SkateHeaderIcon1")
+        let imageView = UIImageView(image: logo)
+        self.navigationItem.titleView = imageView
         
         
+        let SkateIcon = MGLPointAnnotation()
+        mapView.addAnnotation(SkateIcon)
         
 
 //        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -271,11 +280,30 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     //Image for Annotation - Change this for Skatepark/StreetSkating
     
      func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+        
+        
       
-        return nil
+        var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "SkateIcon")
+        
+        if annotationImage == nil {
+            
+            var image = UIImage(named: "SkateIcon")
+            
+            
+            image = image?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: (image?.size.height)!/2, right: 0))
+            
+            annotationImage = MGLAnnotationImage(image: image!, reuseIdentifier: "SkateIcon")
+           
+            
+            
+            
+            
+        }
+        
+        return annotationImage
         
     }
     
-    
+
 }
 
