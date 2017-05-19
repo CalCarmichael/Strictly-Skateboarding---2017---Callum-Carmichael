@@ -23,7 +23,6 @@ class SaveSpotViewController: UIViewController {
     
     @IBOutlet weak var closeButton: UIButton!
     
-
     @IBOutlet weak var gradientView: UIImageView!
     
     var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
@@ -32,6 +31,8 @@ class SaveSpotViewController: UIViewController {
     
     var user: FIRUser!
     
+    var effect: UIVisualEffect!
+    
     var locationManager = CLLocationManager()
     
     let locationsRef = FIRDatabase.database().reference(withPath: "locations")
@@ -39,6 +40,7 @@ class SaveSpotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        saveSpotPopUpView.alpha = 0
         
         saveSpotPopUpView.layer.cornerRadius = 10
         saveSpotPopUpView.layer.masksToBounds = true
@@ -49,7 +51,7 @@ class SaveSpotViewController: UIViewController {
         addButton.layer.cornerRadius = 5
         addButton.clipsToBounds = true
         addButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        addButton.backgroundColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
+        addButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         
         closeButton.layer.borderWidth = 1
         closeButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0.255, alpha: 1).cgColor
@@ -66,7 +68,32 @@ class SaveSpotViewController: UIViewController {
         super.viewDidAppear(animated)
         
         
+        
         animateBackgroundGradient()
+        
+        animateVisualEffect()
+        
+    }
+    
+    //Animating pop up in and visual effect
+    
+    func animateVisualEffect() {
+        
+      
+        saveSpotPopUpView.center = self.saveSpotPopUpView.center
+        saveSpotPopUpView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
+        
+        
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseIn, animations: {
+            
+            
+            self.saveSpotPopUpView.alpha = 1
+            self.saveSpotPopUpView.transform = CGAffineTransform.identity
+
+            
+        }, completion: nil)
+        
         
     }
     
@@ -96,6 +123,8 @@ class SaveSpotViewController: UIViewController {
     
 
     @IBAction func addPinAndSaveLocation(_ sender: Any) {
+        
+       
     
         let userLocationCoordinates = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
         

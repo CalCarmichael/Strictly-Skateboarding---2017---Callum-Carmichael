@@ -691,7 +691,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <segue destination="nlc-38-EC9" kind="presentation" id="1Pp-zI-taA"/>
+                                    <segue destination="nlc-38-EC9" kind="presentation" animates="NO" id="1Pp-zI-taA"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -811,7 +811,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="b9u-Aa-mUn" firstAttribute="trailing" secondItem="yln-uP-1db" secondAttribute="trailing" id="3Qu-GE-2WX"/>
                                     <constraint firstItem="b9u-Aa-mUn" firstAttribute="leading" secondItem="uDb-Du-Rbw" secondAttribute="leading" id="6Bl-6x-P80"/>
@@ -827,7 +827,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="leading" secondItem="gO9-85-U6P" secondAttribute="leadingMargin" id="ETQ-tJ-iSL"/>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="top" secondItem="p8M-Kh-6jW" secondAttribute="bottom" constant="159" id="R63-eh-yqL"/>
@@ -847,7 +847,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAP-SW-vWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2540" y="1593.5532233883059"/>
+            <point key="canvasLocation" x="2500" y="1630"/>
         </scene>
         <!--Edit Save Spot View Controller-->
         <scene sceneID="xGN-QT-6gF">

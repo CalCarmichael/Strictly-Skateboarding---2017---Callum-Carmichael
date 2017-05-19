@@ -35,8 +35,8 @@ class Skatepark {
     
     let coordinate: CLLocationCoordinate2D!
     var name: String!
-    let subtitle: String!
-    let type: SkateType
+    var subtitle: String!
+    var type: SkateType
     var editable: Bool!
     var id: String!
     var ref: FIRDatabaseReference?

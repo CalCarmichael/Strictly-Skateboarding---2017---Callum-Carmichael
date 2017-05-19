@@ -35,10 +35,12 @@ class EditSaveSpotViewController: UIViewController {
         super.viewDidLoad()
 
         
-        let uid = FIRAuth.auth()?.currentUser
+       // let uid = FIRAuth.auth()!.currentUser!.uid
         
+     //   ref = FIRDatabase.database().reference(withPath: "users").child(uid).child("personalLocations/\(parkId)")
+
       
-        ref = FIRDatabase.database().reference(withPath: "users").child("dKq0eabTZnRdaHlJ7KO3NF5UE7T2").child("personalLocations/-KkWF-_3qKlEBB9GNwRO")
+       ref = FIRDatabase.database().reference(withPath: "users").child("dKq0eabTZnRdaHlJ7KO3NF5UE7T2").child("personalLocations/-KkWUK4RzCBgEWSrcXmQ")
        
         ref.observe(.value, with: { [unowned self] snapshot in
             self.skatepark = Skatepark(snapshot: snapshot)
@@ -81,6 +83,11 @@ class EditSaveSpotViewController: UIViewController {
         
         skatepark.name = skateTitleText.text!
         
+        skatepark.subtitle = skateStyleText.text!
+        
+       
+        
+        
 //        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
 //        
 //        guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
@@ -91,17 +98,7 @@ class EditSaveSpotViewController: UIViewController {
         
         ref.setValue(skatepark.dictionaryValues())
         
-//        let uid = FIRAuth.auth()!.currentUser!.uid
-//        
-//        let key = skatepark.ref!.key
-//        
-//        //Have to get in the data name, subtitle type editable and location
-//        
-//        let skateUpdate = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations/\(key)")
-//        
-//        skateUpdate.observe(.value, with: { snapshot in
-//        
-//    }
+
     
     }
 

@@ -17,6 +17,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     @IBOutlet weak var mapView: MGLMapView!
     
+
+    
+    
     var sideBar: SideBar = SideBar()
     
     var skateparks = [Skatepark]()
