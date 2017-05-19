@@ -1012,9 +1012,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KD5-gf-IaA" kind="relationship" relationship="viewControllers" id="8TR-Sd-SWL"/>
                         <segue destination="I1n-T5-NKp" kind="relationship" relationship="viewControllers" id="Yvt-nY-kxI"/>
                         <segue destination="QpT-Lx-dI7" kind="relationship" relationship="viewControllers" id="KHU-Or-18C"/>
+                        <segue destination="KD5-gf-IaA" kind="relationship" relationship="viewControllers" id="8TR-Sd-SWL"/>
                         <segue destination="aG7-ZR-o4W" kind="relationship" relationship="viewControllers" id="mZR-At-rdp"/>
                         <segue destination="cLQ-fh-HqB" kind="relationship" relationship="viewControllers" id="qxi-hG-fyC"/>
                     </connections>
@@ -1958,7 +1958,7 @@
         <scene sceneID="PnZ-ZD-3Km">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I1n-T5-NKp" userLabel="Profile Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="contacts" id="tey-8l-kaA">
+                    <tabBarItem key="tabBarItem" title="" image="SkateProfileTabBar" id="tey-8l-kaA">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1979,7 +1979,7 @@
         <scene sceneID="uSD-kv-oMf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KD5-gf-IaA" userLabel="Map Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title=" " image="Map2" id="kOc-aO-1qp">
+                    <tabBarItem key="tabBarItem" title=" " image="SkateTabBar" id="kOc-aO-1qp">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -2000,7 +2000,7 @@
         <scene sceneID="TK2-Uq-gEs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QpT-Lx-dI7" userLabel="Camera Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="CameraT" selectedImage="CameraT" id="6E2-bu-EkH">
+                    <tabBarItem key="tabBarItem" image="CameraTabBar-1" id="6E2-bu-EkH">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -2021,7 +2021,7 @@
         <scene sceneID="eom-9H-jYh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aG7-ZR-o4W" userLabel="Feed Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="pic_fields_albums" id="hhP-dX-5Fy">
+                    <tabBarItem key="tabBarItem" title="" image="SkateIconPhoto1" id="hhP-dX-5Fy">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -2042,7 +2042,7 @@
         <scene sceneID="930-NH-IF2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cLQ-fh-HqB" userLabel="Search Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="SearchMag" selectedImage="SearchMag" id="O7g-55-3dS">
+                    <tabBarItem key="tabBarItem" title="" image="GnarlyIcon" id="O7g-55-3dS">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -2566,21 +2566,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CameraT" width="25" height="25"/>
+        <image name="CameraTabBar-1" width="25" height="25"/>
         <image name="Dislike Filled-50" width="50" height="50"/>
         <image name="Forward Punch-50" width="50" height="50"/>
+        <image name="GnarlyIcon" width="25" height="19"/>
         <image name="Like" width="50" height="50"/>
         <image name="Like Filled" width="50" height="50"/>
-        <image name="Map2" width="25" height="25"/>
         <image name="Mute" width="50" height="50"/>
-        <image name="SearchMag" width="26" height="26"/>
+        <image name="SkateIconPhoto1" width="25" height="25"/>
+        <image name="SkateProfileTabBar" width="11" height="24"/>
+        <image name="SkateTabBar" width="18" height="24"/>
         <image name="Speech Bubble Filled-50" width="50" height="50"/>
         <image name="Speech Bubble-50" width="50" height="50"/>
         <image name="Upload Filled-50" width="50" height="50"/>
         <image name="Upload-50" width="50" height="50"/>
-        <image name="contacts" width="32" height="32"/>
         <image name="image-placeholder" width="500" height="500"/>
-        <image name="pic_fields_albums" width="32" height="32"/>
         <image name="placeholderImage" width="250" height="250"/>
         <image name="skateboarding-1149507_1920" width="1920" height="1280"/>
         <image name="skatepark-405864_1920" width="1920" height="1273"/>
