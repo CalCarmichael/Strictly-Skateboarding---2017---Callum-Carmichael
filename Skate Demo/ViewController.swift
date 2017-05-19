@@ -83,6 +83,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         self.navigationItem.titleView = imageView
         
         
+        
         let SkateIcon = MGLPointAnnotation()
         mapView.addAnnotation(SkateIcon)
         
@@ -279,34 +280,34 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         
 
     }
+    
+    
 
     //Image for Annotation - Change this for Skatepark/StreetSkating
     
      func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
         
-        return nil
+     //   return nil
       
-//        var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "SkateIcon")
-//        
-//        if annotationImage == nil {
-//            
-//            var image = UIImage(named: "SkateIcon")
-//            
-//            
-//            image = image?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: (image?.size.height)!/2, right: 0))
-//            
-//            annotationImage = MGLAnnotationImage(image: image!, reuseIdentifier: "SkateIcon")
-//           
-//            
-//            
-//            
-//            
-//        }
-//        
-//        return annotationImage
-//        
+        var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "SkateAnnotation1")
+        
+        if annotationImage == nil {
+            
+            var image = UIImage(named: "SkateAnnotation1")!
+            
+            
+            image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: image.size.height / 2, right: 0))
+            
+            annotationImage = MGLAnnotationImage(image: image, reuseIdentifier: "SkateAnnotation1")
+            
+            
+            
+        }
+        
+        return annotationImage
+        
     }
     
-
 }
+
 
