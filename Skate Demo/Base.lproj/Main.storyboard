@@ -172,6 +172,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAD-Qi-lk8">
+                                                    <rect key="frame" x="0.0" y="-92" width="375" height="169"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Ixi-Ix-oaj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="601" height="77"/>
+                                                </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D7k-qv-ZjD">
                                                     <rect key="frame" x="15" y="8" width="60" height="60"/>
                                                     <constraints>
@@ -202,12 +209,20 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="zAD-Qi-lk8" firstAttribute="top" secondItem="3lH-2I-AiZ" secondAttribute="top" constant="-92" id="3wp-cd-f4y"/>
                                                 <constraint firstItem="D7k-qv-ZjD" firstAttribute="top" secondItem="3lH-2I-AiZ" secondAttribute="top" constant="8" id="7ls-Lj-DQc"/>
                                                 <constraint firstItem="D7k-qv-ZjD" firstAttribute="leading" secondItem="3lH-2I-AiZ" secondAttribute="leading" constant="15" id="BoY-Kz-2oA"/>
+                                                <constraint firstItem="zAD-Qi-lk8" firstAttribute="leading" secondItem="3lH-2I-AiZ" secondAttribute="leading" id="E7Y-jv-Rr0"/>
+                                                <constraint firstItem="Ixi-Ix-oaj" firstAttribute="top" secondItem="3lH-2I-AiZ" secondAttribute="top" id="JTA-AT-IzY"/>
                                                 <constraint firstItem="ulY-G6-41L" firstAttribute="centerY" secondItem="D7k-qv-ZjD" secondAttribute="centerY" id="Pqc-UH-d1E"/>
                                                 <constraint firstItem="Axb-yf-fkX" firstAttribute="centerY" secondItem="D7k-qv-ZjD" secondAttribute="centerY" id="QHY-Kw-Udi"/>
+                                                <constraint firstAttribute="trailing" secondItem="zAD-Qi-lk8" secondAttribute="trailing" id="T1C-qz-YpI"/>
+                                                <constraint firstItem="Ixi-Ix-oaj" firstAttribute="leading" secondItem="3lH-2I-AiZ" secondAttribute="leading" id="aQK-bA-J9c"/>
+                                                <constraint firstAttribute="bottom" secondItem="zAD-Qi-lk8" secondAttribute="bottom" id="bI6-G4-eJh"/>
                                                 <constraint firstAttribute="trailing" secondItem="Axb-yf-fkX" secondAttribute="trailing" constant="15" id="ezM-rL-FL4"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ixi-Ix-oaj" secondAttribute="bottom" id="nLA-S8-VGJ"/>
                                                 <constraint firstItem="ulY-G6-41L" firstAttribute="leading" secondItem="D7k-qv-ZjD" secondAttribute="trailing" constant="15" id="rgi-bC-BBU"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ixi-Ix-oaj" secondAttribute="trailing" constant="-226" id="sbz-lN-aTQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -706,6 +721,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrn-8W-1a3">
                                 <rect key="frame" x="16" y="179" width="343" height="308"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GradientPopUp" translatesAutoresizingMaskIntoConstraints="NO" id="BZ9-OU-C8c">
+                                        <rect key="frame" x="-10" y="-11" width="2113" height="328"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skate Spot Style:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7Z-tN-9mM">
                                         <rect key="frame" x="0.0" y="46" width="343" height="30"/>
                                         <nil key="textColor"/>
@@ -783,6 +802,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gradientView" destination="BZ9-OU-C8c" id="dsW-gh-AjX"/>
                         <outlet property="pickerView" destination="b9u-Aa-mUn" id="ZAJ-Yg-DmG"/>
                         <outlet property="saveSpotPopUpView" destination="qrn-8W-1a3" id="0kN-ng-1Y9"/>
                         <outlet property="skateStyleText" destination="o7Z-tN-9mM" id="MOe-50-l3S"/>
@@ -1393,7 +1413,7 @@
             </objects>
             <point key="canvasLocation" x="5206" y="878"/>
         </scene>
-        <!--Explore-->
+        <!--Top Posts-->
         <scene sceneID="WeL-PL-AFs">
             <objects>
                 <viewController id="6Gc-Z7-vM8" customClass="ExploreViewController" customModule="Skate_Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -1448,7 +1468,7 @@
                             <constraint firstAttribute="trailing" secondItem="HWe-hA-0o9" secondAttribute="trailing" id="x3V-Oc-Fa3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Explore" id="9yu-Gl-fxc">
+                    <navigationItem key="navigationItem" title="Top Posts" id="9yu-Gl-fxc">
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="zZ7-aj-Rj8">
                             <connections>
                                 <action selector="refreshButton_TouchUpInside:" destination="6Gc-Z7-vM8" id="56w-eF-p0M"/>
@@ -2570,6 +2590,8 @@
         <image name="Dislike Filled-50" width="50" height="50"/>
         <image name="Forward Punch-50" width="50" height="50"/>
         <image name="GnarlyIcon" width="25" height="19"/>
+        <image name="Gradient" width="1000" height="100"/>
+        <image name="GradientPopUp" width="1000" height="500"/>
         <image name="Like" width="50" height="50"/>
         <image name="Like Filled" width="50" height="50"/>
         <image name="Mute" width="50" height="50"/>
@@ -2586,10 +2608,10 @@
         <image name="skatepark-405864_1920" width="1920" height="1273"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="81q-W9-GO8"/>
+        <segue reference="vVR-Uv-ZER"/>
+        <segue reference="EXs-0K-k08"/>
         <segue reference="4j9-rH-ahU"/>
         <segue reference="BZk-ix-VcM"/>
         <segue reference="l60-PI-ags"/>
-        <segue reference="vVR-Uv-ZER"/>
     </inferredMetricsTieBreakers>
 </document>

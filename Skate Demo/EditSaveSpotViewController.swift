@@ -43,10 +43,6 @@ class EditSaveSpotViewController: UIViewController {
         
     }
     
-
-  
-    
-    
   
     @IBAction func updateSkateSpot(_ sender: Any) {
         

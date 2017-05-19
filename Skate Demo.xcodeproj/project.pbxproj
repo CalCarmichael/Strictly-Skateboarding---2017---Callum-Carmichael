@@ -250,6 +250,13 @@
 			name = Map;
 			sourceTree = "<group>";
 		};
+		9F938D851ECF1E78002818EC /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Designables;
+			sourceTree = "<group>";
+		};
 		9FDDF8801EAB775E0010198D /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +325,7 @@
 				9FDDF8801EAB775E0010198D /* Search */,
 				9FDDF8831EAB8CEE0010198D /* Explore */,
 				9F4763751E93F42A00D74370 /* Camera */,
+				9F938D851ECF1E78002818EC /* Designables */,
 				9F34896D1E9650D9003A85BE /* Feed */,
 				9FE94C1B1E796B75009B7B3F /* Main.storyboard */,
 				9FE94C1E1E796B75009B7B3F /* Assets.xcassets */,

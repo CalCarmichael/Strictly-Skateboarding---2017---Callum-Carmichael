@@ -14,6 +14,7 @@ protocol DiscoverUserTableViewCellDelegate {
 
 class DiscoverUserTableViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -150,5 +151,7 @@ class DiscoverUserTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

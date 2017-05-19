@@ -19,6 +19,8 @@ class SaveSpotViewController: UIViewController {
     
     @IBOutlet weak var saveSpotPopUpView: UIView!
     
+
+    @IBOutlet weak var gradientView: UIImageView!
     
     var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
     
@@ -37,8 +39,35 @@ class SaveSpotViewController: UIViewController {
         saveSpotPopUpView.layer.cornerRadius = 10
         saveSpotPopUpView.layer.masksToBounds = true
         
+        
+        
+        
     
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        animateBackgroundGradient()
+        
+    }
+    
+    
+    func animateBackgroundGradient() {
+        
+        UIView.animate(withDuration: 15, delay: 0, options: [.autoreverse, .curveLinear, .repeat], animations: {
+            
+            let x = -(self.gradientView.frame.width - self.view.frame.width)
+            
+            self.gradientView.transform = CGAffineTransform(translationX: x, y: 0)
+            
+        })
+        
+        
+    }
+    
+    
     
     @IBAction func closeButton_TouchUpInside(_ sender: Any) {
     
