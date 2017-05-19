@@ -1067,6 +1067,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="I1n-T5-NKp" kind="relationship" relationship="viewControllers" id="Yvt-nY-kxI"/>
                         <segue destination="QpT-Lx-dI7" kind="relationship" relationship="viewControllers" id="KHU-Or-18C"/>
