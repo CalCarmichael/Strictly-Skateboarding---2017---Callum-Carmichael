@@ -20,7 +20,7 @@ enum SkateType: Int {
 class Skatepark {
     
     let coordinate: CLLocationCoordinate2D!
-    let name: String!
+    var name: String!
     let subtitle: String!
     let type: SkateType
     var editable: Bool!
@@ -71,6 +71,22 @@ class Skatepark {
 //    
 //    
 
+    func dictionaryValues() -> [String: Any] {
+        
+        var data = [String: Any]()
+        
+        data = [
+            "lat": coordinate.latitude,
+            "lng": coordinate.longitude,
+            "name": name,
+            "subtitle": subtitle,
+            "type":type.rawValue,
+            "editable": editable
+        ]
+        
+        return data
+        
+    }
 
 }
 

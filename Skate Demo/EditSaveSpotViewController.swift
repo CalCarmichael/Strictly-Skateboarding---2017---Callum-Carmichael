@@ -34,9 +34,16 @@ class EditSaveSpotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let uid = FIRAuth.auth()!.currentUser!.uid
+
+        ref = FIRDatabase.database().reference(withPath: "users").child("dKq0eabTZnRdaHlJ7KO3NF5UE7T2").child("personalLocations/-KkWF-_3qKlEBB9GNwRO")
+       
+        ref.observe(.value, with: { [unowned self] snapshot in
+            self.skatepark = Skatepark(snapshot: snapshot)
+            self.skateTitleText.text = self.skatepark.name
+        })
         
-        
+    
         
         
         
@@ -49,19 +56,22 @@ class EditSaveSpotViewController: UIViewController {
        
         let selected = pickerView.selectedRow(inComponent: 0)
         
-        guard selected > 0 else {
-            print("select a type")
-            return
-        }
+//        guard selected > 0 else {
+//            print("select a type")
+//            return
+//        }
         
-        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
+        skatepark.name = skateTitleText.text!
         
-        guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
-            
-            return
-            
-        }
-
+//        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
+//        
+//        guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
+//            
+//            return
+//            
+//        }
+        
+        ref.setValue(skatepark.dictionaryValues())
         
 //        let uid = FIRAuth.auth()!.currentUser!.uid
 //        
