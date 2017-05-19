@@ -98,6 +98,8 @@ class UserApi {
                 if let dict = child.value as? [String : Any] {
                     
                     let user = User.transformUser(dict: dict, key: child.key)
+                    
+                    
                         
                         completion(user)
                         

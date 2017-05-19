@@ -71,7 +71,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         self.tabBarController?.tabBar.barTintColor = UIColor.black
         
         
-        UITabBar.appearance().tintColor = UIColor.red
+        
         
         
 
