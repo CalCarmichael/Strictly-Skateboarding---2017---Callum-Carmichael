@@ -282,7 +282,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
      func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
         
         return nil
-//      
+      
 //        var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "SkateIcon")
 //        
 //        if annotationImage == nil {
@@ -301,7 +301,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 //        }
 //        
 //        return annotationImage
-        
+//        
     }
     
 

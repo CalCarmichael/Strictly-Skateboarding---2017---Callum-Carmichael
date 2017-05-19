@@ -19,6 +19,10 @@ class SaveSpotViewController: UIViewController {
     
     @IBOutlet weak var saveSpotPopUpView: UIView!
     
+    @IBOutlet weak var addButton: UIButton!
+    
+    @IBOutlet weak var closeButton: UIButton!
+    
 
     @IBOutlet weak var gradientView: UIImageView!
     
@@ -40,7 +44,20 @@ class SaveSpotViewController: UIViewController {
         saveSpotPopUpView.layer.masksToBounds = true
         
         
+        addButton.layer.borderWidth = 1
+        addButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0.255, alpha: 1).cgColor
+        addButton.layer.cornerRadius = 5
+        addButton.clipsToBounds = true
+        addButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        addButton.backgroundColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
         
+        closeButton.layer.borderWidth = 1
+        closeButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0.255, alpha: 1).cgColor
+        closeButton.layer.cornerRadius = 5
+        closeButton.clipsToBounds = true
+        closeButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        closeButton.backgroundColor = UIColor(red: 204/255, green: 0/255, blue: 0/255, alpha: 1)
+
         
     
     }
@@ -66,6 +83,8 @@ class SaveSpotViewController: UIViewController {
         
         
     }
+    
+    
     
     
     
@@ -109,6 +128,9 @@ class SaveSpotViewController: UIViewController {
         
         
     }
+    
+    
+    
     
     @IBAction func addButton_TouchUpInside(_ sender: Any) {
     
