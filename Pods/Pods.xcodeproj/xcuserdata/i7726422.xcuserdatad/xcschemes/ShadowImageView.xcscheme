@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '83AFDA8B96D4557FC3D031EC0F26C9E2'
+               BlueprintIdentifier = '50B3368303F6F5F4407670253E1975B2'
                BlueprintName = 'ShadowImageView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ShadowImageView.framework'>

@@ -22,5 +22,7 @@ target 'Skate Demo' do
     pod 'GlidingCollection'
     pod 'ImagePicker'
     pod 'ShadowImageView'
+    pod 'IBAnimatable'
+    pod 'Material', '~> 2.0'
 
 end

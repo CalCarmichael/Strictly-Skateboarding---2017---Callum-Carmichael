@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F007651AB3300876BCAC062E595EA9E3'
+               BlueprintIdentifier = '36DBE4D15BDDE618191135885BB9AE7F'
                BlueprintName = 'SidebarOverlay'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SidebarOverlay.framework'>

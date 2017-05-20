@@ -164,24 +164,24 @@ class FeedTableViewCell: UITableViewCell {
             
             if diff.second! > 0 && diff.minute! == 0 {
                 
-                timeText = (diff.second == 1) ? "\(diff.second!) seconds ago" :  "\(diff.second!) seconds ago"
+                timeText = (diff.second == 1) ? "\(diff.second!) second ago" :  "\(diff.second!) seconds ago"
             }
             
             if diff.minute! > 0 && diff.hour! == 0 {
                 
-                timeText = (diff.minute == 1) ? "\(diff.minute!) minutes ago" :  "\(diff.minute!) minutes ago"
+                timeText = (diff.minute == 1) ? "\(diff.minute!) minute ago" :  "\(diff.minute!) minutes ago"
                 
             }
             
             if diff.hour! > 0 && diff.day! == 0 {
                 
-                timeText = (diff.hour == 1) ? "\(diff.hour!) hours ago" :  "\(diff.hour!) hours ago"
+                timeText = (diff.hour == 1) ? "\(diff.hour!) hour ago" :  "\(diff.hour!) hours ago"
                 
             }
 
             if diff.day! > 0 && diff.weekOfMonth! == 0 {
                 
-                timeText = (diff.day == 1) ? "\(diff.day!) days ago" :  "\(diff.hour!) days ago"
+                timeText = (diff.day == 1) ? "\(diff.day!) day ago" :  "\(diff.hour!) days ago"
                 
             }
             
