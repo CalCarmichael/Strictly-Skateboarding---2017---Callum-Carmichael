@@ -25,6 +25,9 @@ class SaveSpotViewController: UIViewController {
     
     @IBOutlet weak var gradientView: UIImageView!
     
+    @IBOutlet weak var visualEffect: UIVisualEffectView!
+    
+    
     var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
     
     var skateparks = [Skatepark]()
@@ -71,7 +74,23 @@ class SaveSpotViewController: UIViewController {
         
         animateBackgroundGradient()
         
+        animateVisualEffectView()
+        
         animateVisualEffect()
+        
+        
+        
+    }
+    
+    
+    func animateVisualEffectView() {
+        
+        UIView.animate(withDuration: 0.5) { 
+            
+            self.visualEffect.alpha = 1
+            self.visualEffect.transform = CGAffineTransform.identity
+            
+        }
         
     }
     

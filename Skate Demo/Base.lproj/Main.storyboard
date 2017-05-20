@@ -718,6 +718,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXv-7T-rHy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Chr-sZ-Q5o">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3c2-8S-6br">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="JGd-LM-2Ng">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrn-8W-1a3">
                                 <rect key="frame" x="16" y="179" width="343" height="308"/>
                                 <subviews>
@@ -829,9 +850,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xXv-7T-rHy" secondAttribute="trailing" id="DSd-7y-PKX"/>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="leading" secondItem="gO9-85-U6P" secondAttribute="leadingMargin" id="ETQ-tJ-iSL"/>
+                            <constraint firstItem="xXv-7T-rHy" firstAttribute="top" secondItem="gO9-85-U6P" secondAttribute="top" id="LP3-Cw-6jE"/>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="top" secondItem="p8M-Kh-6jW" secondAttribute="bottom" constant="159" id="R63-eh-yqL"/>
+                            <constraint firstItem="Nmn-yg-hhJ" firstAttribute="top" secondItem="xXv-7T-rHy" secondAttribute="bottom" id="W3H-Nw-mUc"/>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="trailing" secondItem="gO9-85-U6P" secondAttribute="trailingMargin" id="YSy-MU-4tv"/>
+                            <constraint firstItem="xXv-7T-rHy" firstAttribute="leading" secondItem="gO9-85-U6P" secondAttribute="leading" id="jK2-II-HPY"/>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="centerY" secondItem="gO9-85-U6P" secondAttribute="centerY" id="sQC-6P-NIl"/>
                         </constraints>
                     </view>
@@ -843,11 +868,12 @@
                         <outlet property="saveSpotPopUpView" destination="qrn-8W-1a3" id="0kN-ng-1Y9"/>
                         <outlet property="skateStyleText" destination="o7Z-tN-9mM" id="MOe-50-l3S"/>
                         <outlet property="skateTitleText" destination="veW-xh-NnX" id="SDu-ld-3FK"/>
+                        <outlet property="visualEffect" destination="xXv-7T-rHy" id="HpI-3r-bdc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAP-SW-vWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="1630"/>
+            <point key="canvasLocation" x="2500" y="1629.5352323838083"/>
         </scene>
         <!--Edit Save Spot View Controller-->
         <scene sceneID="xGN-QT-6gF">
