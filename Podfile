@@ -24,5 +24,6 @@ target 'Skate Demo' do
     pod 'ShadowImageView'
     pod 'IBAnimatable'
     pod 'Material', '~> 2.0'
+    pod 'WCLShineButton'
 
 end

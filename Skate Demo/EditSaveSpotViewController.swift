@@ -35,12 +35,12 @@ class EditSaveSpotViewController: UIViewController {
         super.viewDidLoad()
 
         
-       // let uid = FIRAuth.auth()!.currentUser!.uid
+        let uid = FIRAuth.auth()!.currentUser!.uid
         
-     //   ref = FIRDatabase.database().reference(withPath: "users").child(uid).child("personalLocations/\(parkId)")
+        ref = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations/\(parkId)")
 
       
-       ref = FIRDatabase.database().reference(withPath: "users").child("dKq0eabTZnRdaHlJ7KO3NF5UE7T2").child("personalLocations/-KkWUK4RzCBgEWSrcXmQ")
+    //   ref = FIRDatabase.database().reference(withPath: "users").child("dKq0eabTZnRdaHlJ7KO3NF5UE7T2").child("personalLocations/-KkWUK4RzCBgEWSrcXmQ")
        
         ref.observe(.value, with: { [unowned self] snapshot in
             self.skatepark = Skatepark(snapshot: snapshot)

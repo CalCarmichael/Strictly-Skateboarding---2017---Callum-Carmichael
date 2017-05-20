@@ -68,6 +68,7 @@ PODS:
   - SidebarOverlay (4.1)
   - TextFieldEffects (1.3.2)
   - TKSubmitTransitionSwift3 (0.5)
+  - WCLShineButton (1.0.5)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -88,6 +89,7 @@ DEPENDENCIES:
   - SidebarOverlay
   - TextFieldEffects
   - TKSubmitTransitionSwift3
+  - WCLShineButton
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -116,7 +118,8 @@ SPEC CHECKSUMS:
   SidebarOverlay: b65f0a1d9331ce4bf81f82eea202b21cc8655c5a
   TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
   TKSubmitTransitionSwift3: fadd76eefa015542d0fe6d85424a43dd6f3354d2
+  WCLShineButton: 44371dea1bd1bb5b81cec5958d6280170c178059
 
-PODFILE CHECKSUM: 0c0f6a98f9fc4e88d1d9028f612e567b6342aeb5
+PODFILE CHECKSUM: dd0446ac7d5f79740314a35a015e9af190b1d737
 
 COCOAPODS: 1.1.1

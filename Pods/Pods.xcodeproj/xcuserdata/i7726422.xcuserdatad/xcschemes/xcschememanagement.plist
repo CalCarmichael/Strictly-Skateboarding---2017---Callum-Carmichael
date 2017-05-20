@@ -114,9 +114,19 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>WCLShineButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00261E85C1110AF9F2BA97854564520C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>09A62655F66AE53A474D64E42E6E9DF9</key>
 		<dict>
 			<key>primary</key>
@@ -127,27 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16B1939B1CC2EDF0399658EC08C65810</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1FA4BC99A5474AF0C08BDB7AFB0C96E4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2479E9AB3E362A53A6CBDCC0C46152E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>26F4BAE073090FD717993DCE0CC3751A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>36DBE4D15BDDE618191135885BB9AE7F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,12 +167,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4DB37FDD6D9682249FC26FBD3DF9EBE9</key>
+		<key>4D761D2B145B8CF3281B95FFB6BEA388</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50B3368303F6F5F4407670253E1975B2</key>
+		<key>4DB37FDD6D9682249FC26FBD3DF9EBE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -187,7 +182,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A592244F33407A5743B3EFA7F3FF1DFD</key>
+		<key>A4B721CC54FB749E2194F164740F7DB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -197,7 +192,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A68EEDA96206CDD56B53F34D72B34493</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BC5000D645EEAF961C85907CDC796FE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD77A71E45D50BF99A5F0546B86C3842</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -212,17 +217,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD0C4E71B8B7893F94776D650F5611A9</key>
+		<key>D9808E2A8CE1B1909BA61BE4179941F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DAEE0FAC751AFC7247E6053FBC6B7784</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE258BBCBC0DA1769789850286438B78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E4B0470193B8A39639E86D028A36AE34</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F87B641168DA8B1C848173F62C9EA8ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>

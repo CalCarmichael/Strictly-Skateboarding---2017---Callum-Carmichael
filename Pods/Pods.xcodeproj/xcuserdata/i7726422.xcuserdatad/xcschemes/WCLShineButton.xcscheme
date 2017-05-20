@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '00261E85C1110AF9F2BA97854564520C'
-               BlueprintName = 'ShadowImageView'
+               BlueprintIdentifier = 'DE258BBCBC0DA1769789850286438B78'
+               BlueprintName = 'WCLShineButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ShadowImageView.framework'>
+               BuildableName = 'WCLShineButton.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
