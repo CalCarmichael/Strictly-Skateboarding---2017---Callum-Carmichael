@@ -61,7 +61,7 @@ class SaveSpotViewController: UIViewController {
         closeButton.layer.cornerRadius = 5
         closeButton.clipsToBounds = true
         closeButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        closeButton.backgroundColor = UIColor(red: 204/255, green: 0/255, blue: 0/255, alpha: 1)
+        closeButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
 
         
     
@@ -69,7 +69,6 @@ class SaveSpotViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         
         
         animateBackgroundGradient()
@@ -80,7 +79,12 @@ class SaveSpotViewController: UIViewController {
         
         
         
+        
+        
     }
+    
+  
+   
     
     
     func animateVisualEffectView() {
@@ -132,11 +136,27 @@ class SaveSpotViewController: UIViewController {
     
     
     
+    func dismissAnimation(){
+        
+        
+    }
+    
+    
     
     
     @IBAction func closeButton_TouchUpInside(_ sender: Any) {
     
-        dismiss(animated: true, completion: nil)
+       dismiss(animated: true, completion: nil)
+
+        
+//        let transition: CATransition = CATransition()
+//        transition.duration = 1
+//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        transition.type = kCATransitionReveal
+//        transition.subtype = kCATransitionFade
+//        self.view.window!.layer.add(transition, forKey: nil)
+//        self.dismiss(animated: false, completion: nil)
+
         
     }
     
