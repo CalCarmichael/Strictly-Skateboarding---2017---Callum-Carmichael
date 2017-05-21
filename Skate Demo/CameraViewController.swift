@@ -75,6 +75,8 @@ class CameraViewController: UIViewController {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         
+        pickerController.allowsEditing = true
+        
         //Picker can choose photos and video
         
         pickerController.mediaTypes = ["public.image", "public.movie"]

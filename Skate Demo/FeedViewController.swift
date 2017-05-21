@@ -28,6 +28,9 @@ class FeedViewController: UIViewController {
         tableView.dataSource = self
         loadPosts()
         
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
         
     }
     
