@@ -80,7 +80,7 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
         
         if Api.User.CURRENT_USER != nil {
             
-            self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
+    //        self.performSegue(withIdentifier: "signInToTabbarVC", sender: nil)
             
         } else {
             

@@ -18,6 +18,10 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var clearPostButton: UIBarButtonItem!
     
+    
+    
+    
+    
     var selectedImage: UIImage?
     
     var videoUrl: URL?
@@ -35,6 +39,9 @@ class CameraViewController: UIViewController {
         super.viewWillAppear(animated)
         handleImagePost()
     }
+    
+    
+    
     
     //Checks if photo is in UIImage. Post button change colour dependant on this.
     
@@ -75,6 +82,24 @@ class CameraViewController: UIViewController {
         present(pickerController, animated: true, completion: nil)
         
     }
+    
+    
+    @IBAction func snapImage(_ sender: Any) {
+        
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        
+        pickerController.allowsEditing = false
+        pickerController.sourceType = UIImagePickerControllerSourceType.camera
+        pickerController.cameraCaptureMode = .photo
+        pickerController.modalPresentationStyle = .fullScreen
+        present(pickerController,animated: true,completion: nil)
+        
+        
+    }
+    
+    
+    
     
     //Sharing photo
     
