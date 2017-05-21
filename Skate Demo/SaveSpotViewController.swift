@@ -50,19 +50,17 @@ class SaveSpotViewController: UIViewController {
         saveSpotPopUpView.layer.masksToBounds = true
         
         
-//        addButton.layer.borderWidth = 1
-//        addButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0.255, alpha: 1).cgColor
-//        addButton.layer.cornerRadius = 5
-//        addButton.clipsToBounds = true
-//        addButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        addButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-//        
-//        closeButton.layer.borderWidth = 1
-//        closeButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0.255, alpha: 1).cgColor
-//        closeButton.layer.cornerRadius = 5
-//        closeButton.clipsToBounds = true
-//        closeButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        closeButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        addButton.layer.borderWidth = 1
+        addButton.layer.cornerRadius = 5
+        addButton.clipsToBounds = true
+        addButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        addButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        
+        closeButton.layer.borderWidth = 1
+        closeButton.layer.cornerRadius = 5
+        closeButton.clipsToBounds = true
+        closeButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        closeButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
 
         
     

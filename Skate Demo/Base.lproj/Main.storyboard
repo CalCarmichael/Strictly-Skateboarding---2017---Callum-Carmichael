@@ -759,7 +759,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDb-Du-Rbw">
                                         <rect key="frame" x="8" y="263" width="327" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToZ-j4-svr" customClass="AnimatableButton" customModule="IBAnimatable">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToZ-j4-svr" customClass="ButtonBounce" customModule="Skate_Demo" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="7" width="46" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="cBW-81-o9e"/>
@@ -781,7 +781,7 @@
                                                     <action selector="addPinAndSaveLocation:" destination="nlc-38-EC9" eventType="touchUpInside" id="sZ5-Xa-Z0G"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oho-f3-Y8t" customClass="AnimatableButton" customModule="IBAnimatable">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oho-f3-Y8t" customClass="ButtonBounce" customModule="Skate_Demo" customModuleProvider="target">
                                                 <rect key="frame" x="175" y="7" width="46" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="Kdc-Sz-SQe"/>
@@ -2139,7 +2139,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jlf-jj-gR9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jlf-jj-gR9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
