@@ -33,16 +33,15 @@ class EditSaveSpotViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-      //  let uid = FIRAuth.auth()!.currentUser!.uid
-        
-      //  ref = FIRDatabase.database().reference(withPath: "users").child(uid).child("personalLocations/\(parkId)")
-
-      
-        ref = FIRDatabase.database().reference(withPath: "users").child("dKq0eabTZnRdaHlJ7KO3NF5UE7T2").child("personalLocations/-KkWUK4RzCBgEWSrcXmQ")
+        ref = FIRDatabase.database().reference(withPath: "users").child(Api.User.CURRENT_USER!.uid).child("personalLocations/\(parkId!)")
        
         ref.observe(.value, with: { [unowned self] snapshot in
+            
+            
+            //let value = snapshot.value as? NSDictionary
+            
+
             self.skatepark = Skatepark(snapshot: snapshot)
             
             
@@ -52,10 +51,6 @@ class EditSaveSpotViewController: UIViewController {
             self.setPickerView()
             
         })
-        
-    
-        
-        
         
         
     }

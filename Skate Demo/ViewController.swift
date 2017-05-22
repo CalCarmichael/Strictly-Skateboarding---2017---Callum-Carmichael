@@ -17,9 +17,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     @IBOutlet weak var mapView: MGLMapView!
     
-
-    
-    
     var sideBar: SideBar = SideBar()
     
     var skateparks = [Skatepark]()
@@ -112,7 +109,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
 
         //Sidebar
         
-        sideBar = SideBar(sourceView: self.view, skateItems: ["All Skate Spots", "Skateparks", "Street Skating", "Favourite Spots"])
+        
+        
+        
+        
+        
+        
+        sideBar = SideBar(sourceView: self.view, skateItems: ["All Skate Spots", "Skateparks", "Street Skating", "Favourites"])
         sideBar.delegate = self
         
         
@@ -185,6 +188,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         mapView.selectAnnotation(point, animated: true)
         
     }
+    
+    
+
     
     
 //    //User can save their location

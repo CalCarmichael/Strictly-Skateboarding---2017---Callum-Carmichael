@@ -25,9 +25,6 @@ class InviteViewController: UIViewController {
         
     }
     
- 
-    
-    
     
     func loadUsers() {
         

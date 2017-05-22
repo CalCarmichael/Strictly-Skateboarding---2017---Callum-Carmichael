@@ -17,6 +17,7 @@ class InviteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var inviteButton: UIButton!
     
+    
     var user: User? {
         
         didSet {
