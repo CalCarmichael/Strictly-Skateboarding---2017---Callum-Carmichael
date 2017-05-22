@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1FA1C11ED359C3009DB1D5 /* FollowingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FA1C01ED359C3009DB1D5 /* FollowingTableViewController.swift */; };
 		9F266AA91EBD1D7E000A4D2C /* ExploreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */; };
 		9F2B1E501EAA0ECA006BB363 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */; };
 		9F2B1E521EAA197E006BB363 /* HelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B1E511EAA197E006BB363 /* HelperService.swift */; };
@@ -41,8 +42,6 @@
 		9FBCA91B1E7C470700ADE283 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCA91A1E7C470700ADE283 /* SideBarTableViewController.swift */; };
 		9FBCA91D1E7C4B6700ADE283 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCA91C1E7C4B6700ADE283 /* SideBar.swift */; };
 		9FC52C331EC9CCAD00E3CCC9 /* HashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC52C321EC9CCAD00E3CCC9 /* HashtagViewController.swift */; };
-		9FC52C3F1ECA2DC100E3CCC9 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC52C3E1ECA2DC100E3CCC9 /* InviteViewController.swift */; };
-		9FC52C411ECA2DE600E3CCC9 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC52C401ECA2DE600E3CCC9 /* InviteTableViewCell.swift */; };
 		9FCED96E1ECB592F009447E0 /* SkateAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCED96D1ECB592F009447E0 /* SkateAnnotation.swift */; };
 		9FD114FF1ED1E181007A9E58 /* ButtonBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD114FE1ED1E181007A9E58 /* ButtonBounce.swift */; };
 		9FD9D0A31E79711600CE3FA4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD9D0A21E79711600CE3FA4 /* MapKit.framework */; };
@@ -63,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		483438A8696DFED5EDC6AD7C /* Pods_Skate_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Skate_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1FA1C01ED359C3009DB1D5 /* FollowingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingTableViewController.swift; sourceTree = "<group>"; };
 		9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDetailViewController.swift; sourceTree = "<group>"; };
 		9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F2B1E511EAA197E006BB363 /* HelperService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperService.swift; sourceTree = "<group>"; };
@@ -97,8 +97,6 @@
 		9FBCA91A1E7C470700ADE283 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		9FBCA91C1E7C4B6700ADE283 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		9FC52C321EC9CCAD00E3CCC9 /* HashtagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagViewController.swift; sourceTree = "<group>"; };
-		9FC52C3E1ECA2DC100E3CCC9 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
-		9FC52C401ECA2DE600E3CCC9 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
 		9FCED96D1ECB592F009447E0 /* SkateAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkateAnnotation.swift; sourceTree = "<group>"; };
 		9FD114FE1ED1E181007A9E58 /* ButtonBounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBounce.swift; sourceTree = "<group>"; };
 		9FD9D0A21E79711600CE3FA4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -246,8 +244,8 @@
 				9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */,
 				9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */,
 				9F8D373B1E82A7DD003E36CB /* Skatepark.swift */,
-				9FC52C3E1ECA2DC100E3CCC9 /* InviteViewController.swift */,
 				9FCED96D1ECB592F009447E0 /* SkateAnnotation.swift */,
+				9F1FA1C01ED359C3009DB1D5 /* FollowingTableViewController.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -286,7 +284,6 @@
 				9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */,
 				9F2B1E5A1EAA2EFA006BB363 /* DiscoverUserTableViewCell.swift */,
 				9FE05BFC1EC6186C00FFF597 /* FilterCollectionViewCell.swift */,
-				9FC52C401ECA2DE600E3CCC9 /* InviteTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -475,6 +472,7 @@
 				9F2B1E571EAA2EB3006BB363 /* DiscoverUserViewController.swift in Sources */,
 				9FE94C1A1E796B75009B7B3F /* ViewController.swift in Sources */,
 				9F56A68D1E929C8100E8EDB9 /* SignUpViewController.swift in Sources */,
+				9F1FA1C11ED359C3009DB1D5 /* FollowingTableViewController.swift in Sources */,
 				9F2B1E5B1EAA2EFA006BB363 /* DiscoverUserTableViewCell.swift in Sources */,
 				9F9EAFA41E9E63BD00921147 /* SaveSpotViewController.swift in Sources */,
 				9F67A36A1EACD46400AE606E /* ProfileUserViewController.swift in Sources */,
@@ -486,7 +484,6 @@
 				9FD114FF1ED1E181007A9E58 /* ButtonBounce.swift in Sources */,
 				9FDDF87F1EAB775B0010198D /* SearchViewController.swift in Sources */,
 				9F56A68B1E929BD900E8EDB9 /* SignInViewController.swift in Sources */,
-				9FC52C411ECA2DE600E3CCC9 /* InviteTableViewCell.swift in Sources */,
 				9F2B1E521EAA197E006BB363 /* HelperService.swift in Sources */,
 				9FB1086D1EA7C8C900AD5AF6 /* Post_CommentApi.swift in Sources */,
 				9FBCA91D1E7C4B6700ADE283 /* SideBar.swift in Sources */,
@@ -507,7 +504,6 @@
 				9FE47D791E9693830030E817 /* FeedTableViewCell.swift in Sources */,
 				9FB1086B1EA7C65300AD5AF6 /* CommentApi.swift in Sources */,
 				9F54FBE91EA661C800CDAEA1 /* CommentTableViewCell.swift in Sources */,
-				9FC52C3F1ECA2DC100E3CCC9 /* InviteViewController.swift in Sources */,
 				9FB108691EA7C59300AD5AF6 /* Api.swift in Sources */,
 				9F47636E1E93C00200D74370 /* Config.swift in Sources */,
 				9F4763691E93AE1E00D74370 /* ProfileViewController.swift in Sources */,

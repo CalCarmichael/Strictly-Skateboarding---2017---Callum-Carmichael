@@ -57,7 +57,7 @@ class UserApi {
     }
     
     
-    //Loading users in withinn Discover User
+    //Loading users in within Discover User
     
     func observeLoadUsers(completion: @escaping (User) -> Void) {
         

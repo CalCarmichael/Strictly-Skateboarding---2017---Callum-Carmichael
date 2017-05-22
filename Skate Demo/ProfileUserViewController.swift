@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileUserViewController: UIViewController {
     
@@ -19,12 +20,18 @@ class ProfileUserViewController: UIViewController {
     
     var userId = ""
     
+    var skatepark: Skatepark!
+    
+    var ref: FIRDatabaseReference!
+    
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
+    
+    var REF_USERS = FIRDatabase.database().reference().child("users")
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("userId: \(userId)")
+       // print("userId: \(userId)")
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -78,6 +85,42 @@ class ProfileUserViewController: UIViewController {
         }
        
     }
+    
+    
+    //Download the user you are visiting locations here
+    
+    //Get the user id whos profile you are visiting T
+    //Then go into their personal locations
+    //Send to current user personal location
+    //Download spots like how you download locations spots?
+    
+    
+    @IBAction func getUserSpots(_ sender: Any) {
+    
+        
+    ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations")
+        
+        ref.observe(.value, with: { (snapshot) in
+            
+            
+            
+            //send this information to user
+            
+            
+            print(snapshot)
+            
+            
+        })
+        
+        
+        
+        
+    
+        
+            
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 

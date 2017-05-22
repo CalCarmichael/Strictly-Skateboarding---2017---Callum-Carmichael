@@ -100,19 +100,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         
         
-        //Directions
-        
+       
         
         
        
     
 
         //Sidebar
-        
-        
-        
-        
-        
         
         
         sideBar = SideBar(sourceView: self.view, skateItems: ["All Skate Spots", "Skateparks", "Street Skating", "Favourites"])

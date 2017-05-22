@@ -81,8 +81,6 @@ class FollowApi {
                 
                 completed(true)
                 
-                
-                
             }
             
             
