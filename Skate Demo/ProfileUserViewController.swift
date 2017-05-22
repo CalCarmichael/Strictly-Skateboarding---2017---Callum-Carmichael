@@ -104,9 +104,6 @@ class ProfileUserViewController: UIViewController {
             
             
             
-            //send this information to user
-            
-            
             print(snapshot)
             
             

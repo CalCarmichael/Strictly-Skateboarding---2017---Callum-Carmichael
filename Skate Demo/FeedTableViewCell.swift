@@ -95,17 +95,17 @@ class FeedTableViewCell: UITableViewCell {
     }
     
         
-        if let ratio = post?.ratio {
-            
-            print("frame post Image: \(postImageView.frame)")
-            
-            heightConstraint.constant = UIScreen.main.bounds.width / ratio
-            
-            layoutIfNeeded()
-            
-            print("frame post Image: \(postImageView.frame)")
-            
-        }
+//        if let ratio = post?.ratio {
+//            
+//            print("frame post Image: \(postImageView.frame)")
+//            
+//            heightConstraint.constant = UIScreen.main.bounds.width / ratio
+//            
+//            layoutIfNeeded()
+//            
+//            print("frame post Image: \(postImageView.frame)")
+//            
+//        }
         
         //Getting photo url from database
         
