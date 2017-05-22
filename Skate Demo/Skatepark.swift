@@ -56,34 +56,6 @@ class Skatepark {
     
     }
     
-    
-    
-//    init(name: String, subtitle: String, key: String = "")
-//    {
-//        
-//        
-//        self.name = name
-//        self.subtitle = subtitle
-//        self.id = key
-//        self.ref = FIRDatabase.database().reference()
-//        
-//    }
-
-
-//    var dictionary: [String:Any]
-//    {
-//        return
-//            [
-//                "lat": coordinate.latitude,
-//                "lng": coordinate.longitude,
-//                "name": name,
-//                "subtitle": subtitle,
-//                "type": type,
-//                "editable": editable
-//        ]
-//    }
-//    
-//    
 
     func dictionaryValues() -> [String: Any] {
         

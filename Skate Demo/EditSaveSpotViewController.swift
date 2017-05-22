@@ -38,17 +38,19 @@ class EditSaveSpotViewController: UIViewController {
        
         ref.observe(.value, with: { [unowned self] snapshot in
             
-            
-            //let value = snapshot.value as? NSDictionary
-            
+        
 
             self.skatepark = Skatepark(snapshot: snapshot)
             
             
             self.skateTitleText.text = self.skatepark.name
             self.skateStyleText.text = self.skatepark.subtitle
-        
+            
+            
+            
             self.setPickerView()
+            
+            
             
         })
         
@@ -71,16 +73,18 @@ class EditSaveSpotViewController: UIViewController {
        
         let selected = pickerView.selectedRow(inComponent: 0)
         
-//        guard selected > 0 else {
-//            print("select a type")
-//            return
-//        }
+        guard selected > 0 else {
+            print("select a type")
+            return
+        }
         
         skatepark.name = skateTitleText.text!
         
         skatepark.subtitle = skateStyleText.text!
         
-       
+        
+        
+        
         
         
 //        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
@@ -90,10 +94,11 @@ class EditSaveSpotViewController: UIViewController {
 //            return
 //            
 //        }
+            
         
         ref.setValue(skatepark.dictionaryValues())
         
-
+   
     
     }
 
