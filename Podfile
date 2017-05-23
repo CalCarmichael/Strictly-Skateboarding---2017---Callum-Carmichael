@@ -21,9 +21,9 @@ target 'Skate Demo' do
     pod 'TextFieldEffects'
     pod 'GlidingCollection'
     pod 'ImagePicker'
-    pod 'ShadowImageView'
     pod 'IBAnimatable'
     pod 'Material', '~> 2.0'
     pod 'WCLShineButton'
+    pod 'ShadowImageView'
 
 end

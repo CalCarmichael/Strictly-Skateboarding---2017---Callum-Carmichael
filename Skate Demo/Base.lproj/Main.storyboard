@@ -1261,9 +1261,9 @@
                                                     <rect key="frame" x="8" y="10" width="359" height="450"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvd-yn-P54" userLabel="Comment" customClass="KILabel">
-                                                            <rect key="frame" x="8" y="369" width="343" height="21"/>
+                                                            <rect key="frame" x="8" y="375" width="343" height="17"/>
                                                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tcB-ZC-V4A">
@@ -1298,10 +1298,10 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="tcB-ZC-V4A" firstAttribute="leading" secondItem="VoI-Av-xbJ" secondAttribute="leading" constant="8" id="5Jr-K2-YVD"/>
-                                                        <constraint firstItem="tcB-ZC-V4A" firstAttribute="top" secondItem="Jvd-yn-P54" secondAttribute="bottom" constant="19" id="BZF-L4-yVh"/>
+                                                        <constraint firstItem="tcB-ZC-V4A" firstAttribute="top" secondItem="Jvd-yn-P54" secondAttribute="bottom" constant="17" id="BZF-L4-yVh"/>
                                                         <constraint firstAttribute="trailing" secondItem="Jvd-yn-P54" secondAttribute="trailing" constant="8" id="HA4-26-jpX"/>
                                                         <constraint firstAttribute="bottom" secondItem="tcB-ZC-V4A" secondAttribute="bottom" constant="11" id="M7e-w1-XtO"/>
                                                         <constraint firstAttribute="height" constant="450" id="ahy-pd-mOF"/>
@@ -1310,6 +1310,32 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEV-zy-wjO">
+                                                    <rect key="frame" x="16" y="69" width="343" height="300"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFE-GC-D9a">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <integer key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="08o-tV-JUt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jFE-GC-D9a" secondAttribute="trailing" id="AJJ-jG-NpP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jFE-GC-D9a" secondAttribute="bottom" id="HeP-mo-5wv"/>
+                                                        <constraint firstItem="jFE-GC-D9a" firstAttribute="top" secondItem="LEV-zy-wjO" secondAttribute="top" id="KqQ-aO-F9C"/>
+                                                        <constraint firstItem="jFE-GC-D9a" firstAttribute="leading" secondItem="LEV-zy-wjO" secondAttribute="leading" id="Q1L-6B-gw3"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                                            <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -1322,17 +1348,6 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="20"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFE-GC-D9a">
-                                                    <rect key="frame" x="16" y="66" width="343" height="300"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="5YW-gP-rQV"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -1355,7 +1370,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBP-vM-26u">
-                                                    <rect key="frame" x="23" y="334" width="24" height="24"/>
+                                                    <rect key="frame" x="23" y="337" width="24" height="24"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-GK-ete">
                                                             <rect key="frame" x="2" y="2" width="20" height="20"/>
@@ -1378,26 +1393,25 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="wHG-j8-Kc3" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="topMargin" constant="22" id="1TS-HD-lgs"/>
-                                                <constraint firstItem="jFE-GC-D9a" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="16" id="2G6-CX-r7d"/>
-                                                <constraint firstItem="Jvd-yn-P54" firstAttribute="top" secondItem="jFE-GC-D9a" secondAttribute="bottom" constant="13" id="2V8-cc-Bxm"/>
                                                 <constraint firstItem="Ght-Ob-Ltp" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="15" id="6jT-vl-4EX"/>
                                                 <constraint firstAttribute="trailing" secondItem="VoI-Av-xbJ" secondAttribute="trailing" constant="8" id="8PE-rk-fTn"/>
                                                 <constraint firstAttribute="trailing" secondItem="Fhr-HP-t87" secondAttribute="trailing" constant="15" id="9b6-bw-TgU"/>
                                                 <constraint firstItem="wHG-j8-Kc3" firstAttribute="leading" secondItem="5bR-3l-3Uv" secondAttribute="trailing" constant="10" id="GUM-J1-ZDp"/>
                                                 <constraint firstItem="Fhr-HP-t87" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="top" constant="30" id="HWc-qh-u6O"/>
+                                                <constraint firstItem="LEV-zy-wjO" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="16" id="Myq-aD-DPl"/>
                                                 <constraint firstItem="VoI-Av-xbJ" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="8" id="NQF-cK-OwV"/>
                                                 <constraint firstItem="5bR-3l-3Uv" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="15" id="Q8h-hx-1FB"/>
                                                 <constraint firstItem="5bR-3l-3Uv" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="top" constant="18" id="QBG-2I-j29"/>
                                                 <constraint firstAttribute="bottom" secondItem="VoI-Av-xbJ" secondAttribute="bottom" constant="14" id="T7F-n3-Ms7"/>
-                                                <constraint firstItem="jFE-GC-D9a" firstAttribute="top" secondItem="5bR-3l-3Uv" secondAttribute="bottom" constant="8" id="TE2-1R-Yfu"/>
                                                 <constraint firstItem="VoI-Av-xbJ" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="top" constant="10" id="UfZ-On-j7D"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ght-Ob-Ltp" secondAttribute="bottom" constant="53" id="XyH-eD-ET0"/>
+                                                <constraint firstItem="LEV-zy-wjO" firstAttribute="top" secondItem="5bR-3l-3Uv" secondAttribute="bottom" constant="11" id="bl0-8Z-v3g"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ght-Ob-Ltp" secondAttribute="trailing" constant="15" id="dv3-er-Enf"/>
-                                                <constraint firstAttribute="bottom" secondItem="JBP-vM-26u" secondAttribute="bottom" constant="116" id="kkG-xj-bWs"/>
-                                                <constraint firstAttribute="trailing" secondItem="jFE-GC-D9a" secondAttribute="trailing" constant="16" id="naN-Dp-DWK"/>
+                                                <constraint firstAttribute="trailing" secondItem="LEV-zy-wjO" secondAttribute="trailing" constant="16" id="f0C-S5-FT8"/>
+                                                <constraint firstAttribute="bottom" secondItem="JBP-vM-26u" secondAttribute="bottom" constant="113" id="kkG-xj-bWs"/>
                                                 <constraint firstItem="Ght-Ob-Ltp" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="top" constant="412" id="pCC-Qi-3HV"/>
                                                 <constraint firstItem="JBP-vM-26u" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="23" id="rVG-0a-zkG"/>
                                             </constraints>
@@ -1409,10 +1423,13 @@
                                             <outlet property="likeImageView" destination="x7S-nk-354" id="7eB-16-52B"/>
                                             <outlet property="postImageView" destination="jFE-GC-D9a" id="nxu-AZ-hyU"/>
                                             <outlet property="profileImageView" destination="5bR-3l-3Uv" id="1mE-4f-CJa"/>
+                                            <outlet property="seperateLine" destination="Ght-Ob-Ltp" id="9jL-M2-LUb"/>
+                                            <outlet property="shadowView" destination="LEV-zy-wjO" id="oJw-3Q-WHi"/>
                                             <outlet property="timeLabel" destination="Fhr-HP-t87" id="B0X-3J-PoI"/>
                                             <outlet property="usernameLabel" destination="wHG-j8-Kc3" id="HuF-rf-Ewf"/>
                                             <outlet property="volumeButton" destination="GHB-GK-ete" id="3Xq-TT-hu9"/>
                                             <outlet property="volumeView" destination="JBP-vM-26u" id="8oM-mM-SmW"/>
+                                            <outlet property="wholeCellShadow" destination="VoI-Av-xbJ" id="Qmy-bh-jGG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2100,7 +2117,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Kf-0Z-jam">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Kf-0Z-jam">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2121,7 +2138,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jlf-jj-gR9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jlf-jj-gR9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2142,7 +2159,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wsc-IJ-4ax">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wsc-IJ-4ax">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2163,7 +2180,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5vc-Gj-J0o">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5vc-Gj-J0o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2184,7 +2201,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="68S-Rk-1Rg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="68S-Rk-1Rg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

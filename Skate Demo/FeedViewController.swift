@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SDWebImage
+import ShadowImageView
 
 class FeedViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     
     var posts = [Post]()
     var users = [User]()
@@ -32,7 +34,12 @@ class FeedViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         
+        
     }
+    
+   
+    
+    
     
     //Retrieving the posts from the database with child added - updates only what we want not everything
     
