@@ -287,7 +287,7 @@ class CommentViewController: UIViewController {
         removeCommentView()
         
         
-        //dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
         
         
     }
