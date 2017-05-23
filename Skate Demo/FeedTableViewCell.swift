@@ -43,6 +43,7 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var wholeCellShadow: UIView!
     
+
     
     
     //DelegateCell = if reuse cell somewhere else dont need a switch implementation
