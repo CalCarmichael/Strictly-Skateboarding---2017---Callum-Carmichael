@@ -20,6 +20,14 @@ class CommentViewController: UIViewController {
     
     @IBOutlet weak var commentConstrainToBottom: NSLayoutConstraint!
     
+    
+    @IBOutlet var commentView: UIView!
+
+ 
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    
+    
     var postId: String!
     
     var comments = [Comment]()
@@ -34,6 +42,9 @@ class CommentViewController: UIViewController {
         empty()
         handleTextField()
         loadComments()
+        
+        commentView.alpha = 0
+        
         
         //Keyboard for comments page. Showing and hiding and functions for animations 
         
@@ -66,6 +77,60 @@ class CommentViewController: UIViewController {
   // }
         
   //  }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        animateCommentView()
+        
+    }
+    
+    
+    func removeCommentView() {
+        
+        
+        commentView.transform = CGAffineTransform.identity
+        commentView.alpha = 1
+        
+        
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 2, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            
+            
+            self.commentView.transform = CGAffineTransform(translationX: 0, y: 400)
+            self.commentView.alpha = 0
+            
+        }, completion: nil)
+
+        
+        
+    }
+    
+    
+    func animateCommentView() {
+        
+        
+        commentView.transform = CGAffineTransform(translationX: 0, y: 400)
+        commentView.alpha = 0
+        
+        
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 2, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            
+            
+            self.commentView.transform = CGAffineTransform.identity
+            self.commentView.alpha = 1
+            
+        }, completion: nil)
+        
+        
+    }
+    
+    
+    
+    
+    
     
     func loadComments() {
         
@@ -219,7 +284,10 @@ class CommentViewController: UIViewController {
     @IBAction func dismissCommentVC(_ sender: Any) {
         
         
-        dismiss(animated: true, completion: nil)
+        removeCommentView()
+        
+        
+        //dismiss(animated: true, completion: nil)
         
         
     }

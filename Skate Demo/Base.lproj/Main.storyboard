@@ -677,11 +677,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="FJ5-RQ-Wis">
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="a4a-p8-wAX">
-                            <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9GB-E3-WmQ">
-                                <rect key="frame" x="295" y="-10" width="64" height="64"/>
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
+                                <state key="normal" image="ic_add_location_white_48pt"/>
                                 <connections>
                                     <segue destination="nlc-38-EC9" kind="presentation" animates="NO" id="1Pp-zI-taA"/>
                                 </connections>
@@ -1433,7 +1434,7 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="90t-fQ-88h" id="w3N-7r-s1X"/>
                         <outlet property="tableView" destination="Bd3-pk-HWT" id="tSG-Hd-J8c"/>
-                        <segue destination="LhZ-Cg-epj" kind="presentation" identifier="CommentSegue" id="wOr-ZF-i53"/>
+                        <segue destination="LhZ-Cg-epj" kind="presentation" identifier="CommentSegue" animates="NO" id="wOr-ZF-i53"/>
                         <segue destination="qok-QD-MSm" kind="show" identifier="Home_ProfileSegue" id="7Vk-xB-DQx"/>
                         <segue destination="1U5-CI-Q0v" kind="show" identifier="Feed_HashtagSegue" id="4Mx-Nn-IZR"/>
                     </connections>
@@ -1801,11 +1802,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7V2-c2-4aG">
-                                <rect key="frame" x="0.0" y="263" width="375" height="354"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7V2-c2-4aG">
+                                <rect key="frame" x="0.0" y="263" width="375" height="305"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="354" id="fIL-D2-rGX"/>
+                                    <constraint firstAttribute="height" constant="305" id="fIL-D2-rGX"/>
                                 </constraints>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1813,7 +1814,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jR9-f4-5Bq" id="foF-g1-3kd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-1B-beg">
@@ -1922,7 +1923,7 @@
                             <constraint firstItem="7V2-c2-4aG" firstAttribute="top" secondItem="Hxo-qF-gj5" secondAttribute="bottom" id="CMQ-i6-V4v"/>
                             <constraint firstItem="Hxo-qF-gj5" firstAttribute="top" secondItem="09D-2j-31i" secondAttribute="bottom" constant="205" id="G2b-OZ-PHw"/>
                             <constraint firstAttribute="trailing" secondItem="b6D-LI-SN7" secondAttribute="trailing" id="Ojn-Y6-Nrp"/>
-                            <constraint firstItem="hsH-Ap-pdN" firstAttribute="top" secondItem="7V2-c2-4aG" secondAttribute="bottom" constant="50" id="U2F-dO-cOd"/>
+                            <constraint firstItem="hsH-Ap-pdN" firstAttribute="top" secondItem="7V2-c2-4aG" secondAttribute="bottom" constant="99" id="U2F-dO-cOd"/>
                             <constraint firstAttribute="trailing" secondItem="7V2-c2-4aG" secondAttribute="trailing" id="dQB-ED-orI"/>
                             <constraint firstItem="7V2-c2-4aG" firstAttribute="leading" secondItem="Hxo-qF-gj5" secondAttribute="leading" id="h7D-LY-ksJ"/>
                             <constraint firstItem="b6D-LI-SN7" firstAttribute="leading" secondItem="xDj-O0-1Lf" secondAttribute="leading" id="hGN-iT-SqY"/>
@@ -1931,7 +1932,9 @@
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cancelButton" destination="bej-12-g3O" id="kN1-PP-QR4"/>
                         <outlet property="commentTextField" destination="sp9-Ha-CAR" id="8kg-cw-fHF"/>
+                        <outlet property="commentView" destination="xDj-O0-1Lf" id="0kf-Nh-66E"/>
                         <outlet property="sendButton" destination="EUT-20-ECr" id="QGD-5g-IG5"/>
                         <outlet property="tableView" destination="7V2-c2-4aG" id="bl1-pU-3z6"/>
                         <segue destination="qok-QD-MSm" kind="show" identifier="Comment_ProfileSegue" id="4j9-rH-ahU"/>
@@ -2730,6 +2733,7 @@
         <image name="Speech Bubble-50" width="50" height="50"/>
         <image name="Upload Filled-50" width="50" height="50"/>
         <image name="Upload-50" width="50" height="50"/>
+        <image name="ic_add_location_white_48pt" width="48" height="48"/>
         <image name="ic_close_white_48pt" width="72" height="72"/>
         <image name="ic_volume_up_white_48pt" width="48" height="48"/>
         <image name="image-placeholder" width="500" height="500"/>
