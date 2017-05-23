@@ -102,10 +102,20 @@ class ProfileUserViewController: UIViewController {
         
         ref.observe(.value, with: { (snapshot) in
             
+            for item in snapshot.children {
+                
+                
+                guard let snapshot = item as? FIRDataSnapshot else { continue }
+                
+                
+                
+                print(snapshot)
+                
+                
+            }
             
             
-            
-          print(snapshot)
+          
             
             
         })
@@ -113,6 +123,7 @@ class ProfileUserViewController: UIViewController {
         
         
     }
+    
     
     
     

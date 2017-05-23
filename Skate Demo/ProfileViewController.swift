@@ -15,10 +15,6 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-
-
-
-    
     
     var user: User!
     

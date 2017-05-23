@@ -487,9 +487,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="262"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-Wu-64U">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
-                                        </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1sB-em-fUv">
                                             <rect key="frame" x="150" y="27" width="75" height="75"/>
                                             <constraints>
@@ -589,16 +586,12 @@
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="top" secondItem="yC1-vp-qp0" secondAttribute="topMargin" constant="19" id="BbF-uN-Inc"/>
                                         <constraint firstItem="5Ws-Sg-77N" firstAttribute="top" secondItem="KZz-Hp-bNJ" secondAttribute="bottom" constant="7" id="EED-Qu-hop"/>
                                         <constraint firstAttribute="trailing" secondItem="zei-FA-t6A" secondAttribute="trailing" id="KJr-P9-Iqz"/>
-                                        <constraint firstItem="yUU-Wu-64U" firstAttribute="top" secondItem="yC1-vp-qp0" secondAttribute="top" id="QIP-ft-1TY"/>
                                         <constraint firstItem="KZz-Hp-bNJ" firstAttribute="centerX" secondItem="5Ws-Sg-77N" secondAttribute="centerX" id="X0e-Iv-wYm"/>
                                         <constraint firstItem="zei-FA-t6A" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" id="bPz-W6-uQs"/>
-                                        <constraint firstAttribute="trailing" secondItem="yUU-Wu-64U" secondAttribute="trailing" id="cR9-TC-gTa"/>
                                         <constraint firstItem="KZz-Hp-bNJ" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leadingMargin" id="dh0-We-goL"/>
                                         <constraint firstItem="5Ws-Sg-77N" firstAttribute="leading" secondItem="1sB-em-fUv" secondAttribute="leading" id="f5A-dP-GeK"/>
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="centerX" secondItem="zei-FA-t6A" secondAttribute="centerX" id="feB-Vd-Gj3"/>
                                         <constraint firstAttribute="bottom" secondItem="zei-FA-t6A" secondAttribute="bottom" id="fjh-33-hxz"/>
-                                        <constraint firstAttribute="bottom" secondItem="yUU-Wu-64U" secondAttribute="bottom" constant="59" id="oBG-sO-OGO"/>
-                                        <constraint firstItem="yUU-Wu-64U" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" id="oYP-bV-9GE"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="followButton" destination="5Ws-Sg-77N" id="iOv-qh-RJB"/>
