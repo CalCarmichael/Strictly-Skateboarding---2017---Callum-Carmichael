@@ -1263,7 +1263,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvd-yn-P54" userLabel="Comment" customClass="KILabel">
                                                             <rect key="frame" x="8" y="369" width="343" height="21"/>
                                                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tcB-ZC-V4A">
@@ -1332,7 +1332,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHG-j8-Kc3" userLabel="Username">
-                                                    <rect key="frame" x="73" y="30" width="28" height="15.5"/>
+                                                    <rect key="frame" x="65" y="30" width="28" height="15.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1381,7 +1381,7 @@
                                                 <constraint firstItem="Ght-Ob-Ltp" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="15" id="6jT-vl-4EX"/>
                                                 <constraint firstAttribute="trailing" secondItem="VoI-Av-xbJ" secondAttribute="trailing" constant="8" id="8PE-rk-fTn"/>
                                                 <constraint firstAttribute="trailing" secondItem="Fhr-HP-t87" secondAttribute="trailing" constant="15" id="9b6-bw-TgU"/>
-                                                <constraint firstItem="wHG-j8-Kc3" firstAttribute="leading" secondItem="5bR-3l-3Uv" secondAttribute="trailing" constant="18" id="GUM-J1-ZDp"/>
+                                                <constraint firstItem="wHG-j8-Kc3" firstAttribute="leading" secondItem="5bR-3l-3Uv" secondAttribute="trailing" constant="10" id="GUM-J1-ZDp"/>
                                                 <constraint firstItem="Fhr-HP-t87" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="top" constant="30" id="HWc-qh-u6O"/>
                                                 <constraint firstItem="VoI-Av-xbJ" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="8" id="NQF-cK-OwV"/>
                                                 <constraint firstItem="5bR-3l-3Uv" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="15" id="Q8h-hx-1FB"/>
@@ -2116,7 +2116,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jlf-jj-gR9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jlf-jj-gR9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2737,10 +2737,10 @@
         <image name="skateboarding-1224234_1920" width="1920" height="1440"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BZk-ix-VcM"/>
         <segue reference="81q-W9-GO8"/>
-        <segue reference="l60-PI-ags"/>
         <segue reference="vVR-Uv-ZER"/>
-        <segue reference="7Vk-xB-DQx"/>
-        <segue reference="4Mx-Nn-IZR"/>
+        <segue reference="l60-PI-ags"/>
+        <segue reference="4j9-rH-ahU"/>
     </inferredMetricsTieBreakers>
 </document>
