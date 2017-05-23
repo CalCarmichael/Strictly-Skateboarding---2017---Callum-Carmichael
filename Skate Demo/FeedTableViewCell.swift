@@ -212,12 +212,12 @@ class FeedTableViewCell: UITableViewCell {
             //If is muted true flip to false
             
             isMuted = !isMuted
-            volumeButton.setImage(UIImage(named: "AudioWave"), for: UIControlState.normal)
+            volumeButton.setImage(UIImage(named: "ic_volume_up_white_48pt"), for: UIControlState.normal)
             
         } else {
             
             isMuted = !isMuted
-            volumeButton.setImage(UIImage(named: "Mute"), for: UIControlState.normal)
+            volumeButton.setImage(UIImage(named: "ic_volume_off_white_48pt"), for: UIControlState.normal)
         }
         
         player?.isMuted = isMuted

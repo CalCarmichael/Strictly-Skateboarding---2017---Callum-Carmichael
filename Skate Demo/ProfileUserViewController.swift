@@ -104,17 +104,14 @@ class ProfileUserViewController: UIViewController {
             
             
             
-            print(snapshot)
+            
+          print(snapshot)
             
             
         })
         
         
         
-        
-    
-        
-            
     }
     
     

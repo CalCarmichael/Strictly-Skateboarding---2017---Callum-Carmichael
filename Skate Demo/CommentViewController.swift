@@ -37,9 +37,9 @@ class CommentViewController: UIViewController {
         
         //Keyboard for comments page. Showing and hiding and functions for animations 
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+   //     NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+   //     NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -47,25 +47,25 @@ class CommentViewController: UIViewController {
     }
 
     
-    func keyboardWillShow(_ notification: NSNotification) {
-        print(notification)
-        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-        print(keyboardFrame)
-        UIView.animate(withDuration: 0.25) {
+ //   func keyboardWillShow(_ notification: NSNotification) {
+ //       print(notification)
+  //      let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+  //      print(keyboardFrame)
+  //      UIView.animate(withDuration: 0.25) {
             
-            self.commentConstrainToBottom.constant = keyboardFrame!.height
-            self.view.layoutIfNeeded()
-        }
+  //          self.commentConstrainToBottom.constant = keyboardFrame!.height
+  //          self.view.layoutIfNeeded()
+  //      }
         
-    }
+//    }
     
-    func keyboardWillHide(_ notification: NSNotification) {
-        UIView.animate(withDuration: 0.25) {
-            self.commentConstrainToBottom.constant = 0
-            self.view.layoutIfNeeded()
-    }
+  //  func keyboardWillHide(_ notification: NSNotification) {
+     //   UIView.animate(withDuration: 0.25) {
+       //     self.commentConstrainToBottom.constant = 0
+   //         self.view.layoutIfNeeded()
+  // }
         
-    }
+  //  }
     
     func loadComments() {
         
@@ -214,6 +214,16 @@ class CommentViewController: UIViewController {
         
         
     }
+    
+    
+    @IBAction func dismissCommentVC(_ sender: Any) {
+        
+        
+        dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
     
     
 }
