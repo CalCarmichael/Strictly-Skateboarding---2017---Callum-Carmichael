@@ -104,6 +104,7 @@ class FeedTableViewCell: UITableViewCell {
     
         //Shadows for Images
         
+        
         shadowView.layer.shadowColor = UIColor.black.cgColor
         shadowView.layer.shadowOpacity = 0.3
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 5)
