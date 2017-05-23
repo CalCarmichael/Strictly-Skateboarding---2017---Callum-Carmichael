@@ -1326,10 +1326,15 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFE-GC-D9a">
-                                                    <rect key="frame" x="8" y="66" width="359" height="300"/>
+                                                    <rect key="frame" x="16" y="66" width="343" height="300"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="300" id="5YW-gP-rQV"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHG-j8-Kc3" userLabel="Username">
                                                     <rect key="frame" x="65" y="30" width="28" height="15.5"/>
@@ -1350,7 +1355,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBP-vM-26u">
-                                                    <rect key="frame" x="15" y="334" width="24" height="24"/>
+                                                    <rect key="frame" x="23" y="334" width="24" height="24"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-GK-ete">
                                                             <rect key="frame" x="2" y="2" width="20" height="20"/>
@@ -1376,7 +1381,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="wHG-j8-Kc3" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="topMargin" constant="22" id="1TS-HD-lgs"/>
-                                                <constraint firstItem="jFE-GC-D9a" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="8" id="2G6-CX-r7d"/>
+                                                <constraint firstItem="jFE-GC-D9a" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="16" id="2G6-CX-r7d"/>
                                                 <constraint firstItem="Jvd-yn-P54" firstAttribute="top" secondItem="jFE-GC-D9a" secondAttribute="bottom" constant="13" id="2V8-cc-Bxm"/>
                                                 <constraint firstItem="Ght-Ob-Ltp" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="15" id="6jT-vl-4EX"/>
                                                 <constraint firstAttribute="trailing" secondItem="VoI-Av-xbJ" secondAttribute="trailing" constant="8" id="8PE-rk-fTn"/>
@@ -1392,9 +1397,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ght-Ob-Ltp" secondAttribute="bottom" constant="53" id="XyH-eD-ET0"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ght-Ob-Ltp" secondAttribute="trailing" constant="15" id="dv3-er-Enf"/>
                                                 <constraint firstAttribute="bottom" secondItem="JBP-vM-26u" secondAttribute="bottom" constant="116" id="kkG-xj-bWs"/>
-                                                <constraint firstAttribute="trailing" secondItem="jFE-GC-D9a" secondAttribute="trailing" constant="8" id="naN-Dp-DWK"/>
+                                                <constraint firstAttribute="trailing" secondItem="jFE-GC-D9a" secondAttribute="trailing" constant="16" id="naN-Dp-DWK"/>
                                                 <constraint firstItem="Ght-Ob-Ltp" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="top" constant="412" id="pCC-Qi-3HV"/>
-                                                <constraint firstItem="JBP-vM-26u" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="15" id="rVG-0a-zkG"/>
+                                                <constraint firstItem="JBP-vM-26u" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="23" id="rVG-0a-zkG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -2095,7 +2100,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Kf-0Z-jam">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Kf-0Z-jam">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2137,7 +2142,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wsc-IJ-4ax">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wsc-IJ-4ax">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2158,7 +2163,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5vc-Gj-J0o">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5vc-Gj-J0o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2179,7 +2184,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="68S-Rk-1Rg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="68S-Rk-1Rg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2737,10 +2742,10 @@
         <image name="skateboarding-1224234_1920" width="1920" height="1440"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BZk-ix-VcM"/>
-        <segue reference="81q-W9-GO8"/>
-        <segue reference="vVR-Uv-ZER"/>
         <segue reference="l60-PI-ags"/>
-        <segue reference="4j9-rH-ahU"/>
+        <segue reference="81q-W9-GO8"/>
+        <segue reference="4Mx-Nn-IZR"/>
+        <segue reference="7Vk-xB-DQx"/>
+        <segue reference="vVR-Uv-ZER"/>
     </inferredMetricsTieBreakers>
 </document>
