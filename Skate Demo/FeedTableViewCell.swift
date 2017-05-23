@@ -106,7 +106,7 @@ class FeedTableViewCell: UITableViewCell {
 //            print("frame post Image: \(postImageView.frame)")
 //            
 //        }
-        
+//        
         //Getting photo url from database
         
         if let photoUrlString = post?.photoUrl {
@@ -247,11 +247,11 @@ class FeedTableViewCell: UITableViewCell {
         
         if count != 0 {
             
-            likeCountButton.setTitle("\(count) Respect", for: UIControlState.normal)
+            likeCountButton.setTitle("\(count) ", for: UIControlState.normal)
             
         } else {
             
-            likeCountButton.setTitle("Respect this first!", for: UIControlState.normal)
+            likeCountButton.setTitle("0", for: UIControlState.normal)
             
         }
         
