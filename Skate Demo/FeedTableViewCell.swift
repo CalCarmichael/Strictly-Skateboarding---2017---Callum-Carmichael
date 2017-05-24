@@ -106,14 +106,14 @@ class FeedTableViewCell: UITableViewCell {
         
         
         shadowView.layer.shadowColor = UIColor.black.cgColor
-        shadowView.layer.shadowOpacity = 0.3
+        shadowView.layer.shadowOpacity = 0.2
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 5)
         shadowView.layer.shadowRadius = 5
         shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 10).cgPath
         
         
         wholeCellShadow.layer.shadowColor = UIColor.black.cgColor
-        wholeCellShadow.layer.shadowOpacity = 0.3
+        wholeCellShadow.layer.shadowOpacity = 0.2
         wholeCellShadow.layer.shadowOffset = CGSize(width: 0, height: 5)
         wholeCellShadow.layer.shadowRadius = 5
         wholeCellShadow.layer.shadowPath = UIBezierPath(roundedRect: wholeCellShadow.bounds, cornerRadius: 10).cgPath

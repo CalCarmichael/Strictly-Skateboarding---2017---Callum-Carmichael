@@ -12,7 +12,7 @@ import Mapbox
 import MapboxDirections
 import MapKit
 
-class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
+class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     
     
     @IBOutlet weak var mapView: MGLMapView!
@@ -34,6 +34,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     var annotation = MGLAnnotationView()
     
     var pointAnnotation = MGLPointAnnotation()
+    
+    var delegate: SideBarDelegate?
     
     //Filtering annotations for sidebar
     
@@ -65,6 +67,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         
     }
 
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,11 +104,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         
         
-       
-        
-        
-       
-    
 
         //Sidebar
         
@@ -150,9 +149,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
                 self.skateparks.append(newSkatepark)
                 
                 self.addAnnotation(park: newSkatepark)
+                
             }
         })
     }
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -185,6 +186,26 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate {
     
     
 
+    @IBAction func sideBarButton(_ sender: Any) {
+        
+        if sideBar.isSideBarOpen == false {
+            
+            sideBar.showSideBar(true)
+            
+            sideBar.delegate?.sideBarWillOpen?()
+            
+        } else {
+            
+            if sideBar.isSideBarOpen == true {
+                
+                sideBar.showSideBar(false)
+                
+            }
+        
+        }
+        
+    }
+    
     
     
 //    //User can save their location

@@ -20,7 +20,9 @@ class ProfileUserViewController: UIViewController {
     
     var userId = ""
     
-    var skatepark: Skatepark!
+    var skateparks = [Skatepark]()
+    
+    var skatepark: Skatepark?
     
     var ref: FIRDatabaseReference!
     
@@ -88,7 +90,6 @@ class ProfileUserViewController: UIViewController {
     
     
     //Download the user you are visiting locations here
-    
     //Get the user id whos profile you are visiting T
     //Then go into their personal locations
     //Send to current user personal location
@@ -109,20 +110,31 @@ class ProfileUserViewController: UIViewController {
                 
                 
                 
+                
+                
+                
+                let uid = FIRAuth.auth()!.currentUser!.uid
+                
+                let addUserSpot = FIRDatabase.database().reference(withPath: "users/\(uid)/otherUserLocations")
+                
+                
+                // Adding the skatepark?
+                
+//              let addSkatepark = Skatepark(snapshot: snapshot)
+//                
+//              self.skateparks.append(addSkatepark)
+//                
+                
                 print(snapshot)
                 
                 
             }
             
             
-          
-            
-            
         })
         
-        
-        
     }
+    
     
     
     
