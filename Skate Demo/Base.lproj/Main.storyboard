@@ -1199,6 +1199,10 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ9-uj-dUb">
                                 <rect key="frame" x="75" y="555" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="QiZ-8b-fV9"/>
+                                    <constraint firstAttribute="height" constant="28" id="RVu-qt-OVD"/>
+                                </constraints>
                                 <state key="normal" image="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1209,6 +1213,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-ab-uwz">
                                 <rect key="frame" x="269.5" y="554" width="30.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2wK-G5-cVh"/>
+                                    <constraint firstAttribute="width" constant="30.5" id="sbA-iV-INn"/>
+                                </constraints>
                                 <state key="normal" image="TakePhoto">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1245,7 +1253,6 @@
                             <constraint firstItem="w9l-QQ-A2j" firstAttribute="top" secondItem="Lph-ab-uwz" secondAttribute="bottom" constant="34" id="DiW-6d-DXT"/>
                             <constraint firstItem="I7A-mW-gEy" firstAttribute="leading" secondItem="KQ9-uj-dUb" secondAttribute="trailing" constant="64.5" id="OtI-Ri-abm"/>
                             <constraint firstItem="XPA-tV-cvP" firstAttribute="top" secondItem="Y0e-wc-195" secondAttribute="bottom" id="Ph3-oC-1VU"/>
-                            <constraint firstAttribute="trailing" secondItem="Lph-ab-uwz" secondAttribute="trailing" constant="75" id="Rz5-lg-Yeh"/>
                             <constraint firstAttribute="trailing" secondItem="XPA-tV-cvP" secondAttribute="trailing" id="Vvp-Tn-E1y"/>
                             <constraint firstItem="w9l-QQ-A2j" firstAttribute="top" secondItem="KQ9-uj-dUb" secondAttribute="bottom" constant="35" id="b2i-Eo-Ydq"/>
                             <constraint firstItem="uvE-JB-6nJ" firstAttribute="centerX" secondItem="I7A-mW-gEy" secondAttribute="centerX" id="eGG-WD-2ZM"/>
@@ -1256,7 +1263,6 @@
                             <constraint firstAttribute="trailing" secondItem="uvE-JB-6nJ" secondAttribute="trailing" constant="16" id="tXc-MY-EcC"/>
                             <constraint firstItem="Y0e-wc-195" firstAttribute="top" secondItem="qeD-Bb-5BZ" secondAttribute="bottom" id="uB8-dj-Wy3"/>
                             <constraint firstItem="XPA-tV-cvP" firstAttribute="leading" secondItem="YUv-IS-36z" secondAttribute="leading" id="vkQ-Bh-yMx"/>
-                            <constraint firstItem="KQ9-uj-dUb" firstAttribute="leading" secondItem="YUv-IS-36z" secondAttribute="leading" constant="75" id="ypw-Gw-t5r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="Tuw-ti-yqt">
@@ -1272,6 +1278,8 @@
                         <outlet property="captionTextView" destination="GY8-XA-gCs" id="gcB-IS-H9R"/>
                         <outlet property="clearPostButton" destination="izq-Ff-XLo" id="Pj0-la-rVR"/>
                         <outlet property="commentViewShadow" destination="uvE-JB-6nJ" id="ysH-aY-sf4"/>
+                        <outlet property="leadingShareButton" destination="OtI-Ri-abm" id="y0Y-tU-ltT"/>
+                        <outlet property="leadingTakeImage" destination="nv5-cI-l9D" id="omi-y0-hJQ"/>
                         <outlet property="moreButton" destination="I7A-mW-gEy" id="5G8-Bn-sj3"/>
                         <outlet property="shadowViewCamera" destination="Y0e-wc-195" id="yDz-YD-gEb"/>
                         <outlet property="shareButton" destination="KQ9-uj-dUb" id="fCD-Ok-Kig"/>

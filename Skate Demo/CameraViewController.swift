@@ -29,6 +29,14 @@ class CameraViewController: UIViewController {
     
     @IBOutlet weak var takeImage: UIButton!
     
+    @IBOutlet weak var leadingTakeImage: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var leadingShareButton: NSLayoutConstraint!
+    
+    
+    var takeImageCenter: CGPoint!
+    var shareButtonCenter: CGPoint!
     
     var selectedImage: UIImage?
     
@@ -53,10 +61,15 @@ class CameraViewController: UIViewController {
         commentViewShadow.layer.shadowRadius = 5
         commentViewShadow.layer.shadowPath = UIBezierPath(roundedRect: commentViewShadow.bounds, cornerRadius: 10).cgPath
         
-        takeImage.alpha = 0
-        shareButton.alpha = 0
         moreButton.alpha = 0.5
         
+        takeImage.alpha = 0
+        shareButton.alpha = 0
+        
+        
+        leadingTakeImage.constant = 0
+        
+        leadingShareButton.constant = 0
         
     }
     
@@ -65,6 +78,12 @@ class CameraViewController: UIViewController {
         handleImagePost()
     }
     
+    override func viewDidLayoutSubviews() {
+        
+        
+        
+    }
+   
     
     //Animating the view
     
@@ -75,9 +94,13 @@ class CameraViewController: UIViewController {
             
             moreButton.alpha = 1
             
+            leadingTakeImage.constant = 62
+            
+            leadingShareButton.constant = 64.5
             
             UIView.animate(withDuration: 0.5, animations: {
                 
+                self.view.layoutIfNeeded()
                 
                 self.takeImage.alpha = 1
                 self.shareButton.alpha = 1
@@ -88,7 +111,13 @@ class CameraViewController: UIViewController {
             
             moreButton.alpha = 0.5
             
+            leadingTakeImage.constant = 0
+            
+            leadingShareButton.constant = 0
+            
             UIView.animate(withDuration: 0.5, animations: {
+                
+            self.view.layoutIfNeeded()
             
             self.takeImage.alpha = 0
             self.shareButton.alpha = 0
