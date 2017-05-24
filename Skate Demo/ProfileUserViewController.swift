@@ -89,11 +89,7 @@ class ProfileUserViewController: UIViewController {
     }
     
     
-    //Download the user you are visiting locations here
-    //Get the user id whos profile you are visiting T
-    //Then go into their personal locations
-    //Send to current user personal location
-    //Download spots like how you download locations spots?
+    //Downloading User Spots
     
     
     @IBAction func getUserSpots(_ sender: Any) {
@@ -119,17 +115,13 @@ class ProfileUserViewController: UIViewController {
                     
                     let uid = FIRAuth.auth()!.currentUser!.uid
                     
-                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
+                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("downloadUserLocations").childByAutoId()
                     
                     locationsRef.setValue(spot.dictionaryValues())
 
                     
                     
                 }
-                
-                
-
-                
                 
             }
             

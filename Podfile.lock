@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - CircleMenu (2.0.4)
   - FBSDKCoreKit (4.22.1):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.22.1):
@@ -71,6 +72,7 @@ PODS:
   - WCLShineButton (1.0.5)
 
 DEPENDENCIES:
+  - CircleMenu (~> 2.0.1)
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
@@ -93,6 +95,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CircleMenu: d047ba236a4595c30aaad45e331808c6c0f74343
   FBSDKCoreKit: 9c2daf0162214d6d2e21cf8208a9c6c2a2e42b9c
   FBSDKLoginKit: 00cf28916b9f0169763a3d61985d745b579fe304
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
@@ -120,6 +123,6 @@ SPEC CHECKSUMS:
   TKSubmitTransitionSwift3: fadd76eefa015542d0fe6d85424a43dd6f3354d2
   WCLShineButton: 44371dea1bd1bb5b81cec5958d6280170c178059
 
-PODFILE CHECKSUM: 2b93f0192727c6d582a006437a96f59654582c3a
+PODFILE CHECKSUM: e21f94de3e573360e9c4a90c23f9b144f15d6ecd
 
 COCOAPODS: 1.1.1

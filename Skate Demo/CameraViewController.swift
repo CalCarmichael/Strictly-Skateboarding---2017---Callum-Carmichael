@@ -15,11 +15,19 @@ class CameraViewController: UIViewController {
     
     @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var captionTextView: UITextView!
+    
     @IBOutlet weak var shareButton: UIButton!
+    
     @IBOutlet weak var clearPostButton: UIBarButtonItem!
     
+
+    @IBOutlet weak var shadowViewCamera: UIView!
     
+    @IBOutlet weak var commentViewShadow: UIView!
     
+    @IBOutlet weak var moreButton: UIButton!
+    
+    @IBOutlet weak var takeImage: UIButton!
     
     
     var selectedImage: UIImage?
@@ -32,6 +40,20 @@ class CameraViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleCameraPhoto))
         cameraImage.addGestureRecognizer(tapGesture)
         cameraImage.isUserInteractionEnabled = true
+        
+        shadowViewCamera.layer.shadowColor = UIColor.black.cgColor
+        shadowViewCamera.layer.shadowOpacity = 0.2
+        shadowViewCamera.layer.shadowOffset = CGSize(width: 0, height: 5)
+        shadowViewCamera.layer.shadowRadius = 5
+        shadowViewCamera.layer.shadowPath = UIBezierPath(roundedRect: shadowViewCamera.bounds, cornerRadius: 10).cgPath
+        
+        commentViewShadow.layer.shadowColor = UIColor.black.cgColor
+        commentViewShadow.layer.shadowOpacity = 0.1
+        commentViewShadow.layer.shadowOffset = CGSize(width: 0, height: 2)
+        commentViewShadow.layer.shadowRadius = 5
+        commentViewShadow.layer.shadowPath = UIBezierPath(roundedRect: commentViewShadow.bounds, cornerRadius: 10).cgPath
+        
+        
         
     }
     

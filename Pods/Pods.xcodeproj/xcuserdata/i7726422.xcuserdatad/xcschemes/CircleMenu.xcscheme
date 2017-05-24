@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '64DE72AD037C2ADBA286B41C0F9A92B0'
-               BlueprintName = 'TKSubmitTransitionSwift3'
+               BlueprintIdentifier = 'FE0EA4A854B31B97AB23A6135FCBFABD'
+               BlueprintName = 'CircleMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TKSubmitTransitionSwift3.framework'>
+               BuildableName = 'CircleMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

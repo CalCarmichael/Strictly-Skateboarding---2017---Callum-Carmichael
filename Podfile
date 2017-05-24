@@ -25,5 +25,6 @@ target 'Skate Demo' do
     pod 'Material', '~> 2.0'
     pod 'WCLShineButton'
     pod 'ShadowImageView'
+    pod 'CircleMenu', '~> 2.0.1' 
 
 end
