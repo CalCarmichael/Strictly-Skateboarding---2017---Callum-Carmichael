@@ -98,8 +98,9 @@ class ProfileUserViewController: UIViewController {
     
     @IBAction func getUserSpots(_ sender: Any) {
     
+        var spots = [Skatepark]()
         
-    ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations")
+    ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations/")
         
         ref.observe(.value, with: { (snapshot) in
             
@@ -108,24 +109,26 @@ class ProfileUserViewController: UIViewController {
                 
                 guard let snapshot = item as? FIRDataSnapshot else { continue }
                 
-                
-                
-                
-                
-                
+                let spot = Skatepark(snapshot: snapshot)
+                spots.append(spot)
+            
                 let uid = FIRAuth.auth()!.currentUser!.uid
                 
-                let addUserSpot = FIRDatabase.database().reference(withPath: "users/\(uid)/otherUserLocations")
+                for spot in spots {
+                    
+                    
+                    let uid = FIRAuth.auth()!.currentUser!.uid
+                    
+                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
+                    
+                    locationsRef.setValue(spot.dictionaryValues())
+
+                    
+                    
+                }
                 
                 
-                // Adding the skatepark?
-                
-//              let addSkatepark = Skatepark(snapshot: snapshot)
-//                
-//              self.skateparks.append(addSkatepark)
-//                
-                
-                print(snapshot)
+
                 
                 
             }

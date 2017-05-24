@@ -193,6 +193,7 @@ class SaveSpotViewController: UIViewController {
         
         let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
         
+    
         locationsRef.setValue(["lat": locationManager.location?.coordinate.latitude, "lng": locationManager.location?.coordinate.longitude, "name": skateTitleText, "subtitle": skateStyleText, "type": (selected - 1), "editable": true])
         
         
