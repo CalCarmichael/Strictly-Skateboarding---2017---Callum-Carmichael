@@ -85,6 +85,7 @@ class CameraViewController: UIViewController {
     }
    
     
+    
     //Animating the view
     
     
@@ -98,14 +99,16 @@ class CameraViewController: UIViewController {
             
             leadingShareButton.constant = 64.5
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
                 
                 self.view.layoutIfNeeded()
                 
                 self.takeImage.alpha = 1
                 self.shareButton.alpha = 1
                 
-            })
+                
+            }, completion: nil)
+            
             
         } else {
             
@@ -115,14 +118,18 @@ class CameraViewController: UIViewController {
             
             leadingShareButton.constant = 0
             
-            UIView.animate(withDuration: 0.5, animations: {
+            
+                
+                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
                 
             self.view.layoutIfNeeded()
             
             self.takeImage.alpha = 0
             self.shareButton.alpha = 0
+                    
+                     }, completion: nil)
                 
-            })
+          
             
             
         }
