@@ -120,7 +120,7 @@ class CameraViewController: UIViewController {
             
             
                 
-                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+                UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
                 
             self.view.layoutIfNeeded()
             
