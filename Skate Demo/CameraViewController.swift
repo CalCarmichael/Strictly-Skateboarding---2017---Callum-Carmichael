@@ -53,8 +53,9 @@ class CameraViewController: UIViewController {
         commentViewShadow.layer.shadowRadius = 5
         commentViewShadow.layer.shadowPath = UIBezierPath(roundedRect: commentViewShadow.bounds, cornerRadius: 10).cgPath
         
-        
-        
+        takeImage.alpha = 0
+        shareButton.alpha = 0
+        moreButton.alpha = 0.5
         
         
     }
@@ -64,26 +65,41 @@ class CameraViewController: UIViewController {
         handleImagePost()
     }
     
-    override func viewDidLayoutSubviews() {
-        
-        takeImage.center = moreButton.center
-        shareButton.center = moreButton.center
-        
-        
-    }
+    
+    //Animating the view
     
     
     @IBAction func openInfo(_ sender: UIButton) {
         
-        if sender.currentImage == #imageLiteral(resourceName: "CameraButton") {
+        if moreButton.currentImage == #imageLiteral(resourceName: "CameraButtonClose") {
             
-            sender.setImage(#imageLiteral(resourceName: "CameraButtonClose"), for: .normal)
+            moreButton.alpha = 1
+            
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                
+                
+                self.takeImage.alpha = 1
+                self.shareButton.alpha = 1
+                
+            })
             
         } else {
             
+            moreButton.alpha = 0.5
             
-            sender.setImage(#imageLiteral(resourceName: "CameraButton"), for: .normal)
+            UIView.animate(withDuration: 0.5, animations: {
+            
+            self.takeImage.alpha = 0
+            self.shareButton.alpha = 0
+                
+            })
+            
+            
         }
+        
+        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "CameraButton"), offImage: #imageLiteral(resourceName: "CameraButtonClose"))
+        
         
     }
     
@@ -94,6 +110,8 @@ class CameraViewController: UIViewController {
     @IBAction func shareButton(_ sender: UIButton) {
         
         toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "SendFill"), offImage: #imageLiteral(resourceName: "Send"))
+        
+        
         
     }
     
