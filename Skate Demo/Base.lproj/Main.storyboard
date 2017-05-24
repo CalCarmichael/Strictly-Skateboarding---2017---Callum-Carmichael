@@ -1197,28 +1197,27 @@
                                     <constraint firstAttribute="bottom" secondItem="GY8-XA-gCs" secondAttribute="bottom" id="l1s-JY-6Wd"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ9-uj-dUb">
-                                <rect key="frame" x="16" y="560" width="81.5" height="20"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Post Image">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ9-uj-dUb">
+                                <rect key="frame" x="75" y="555" width="28" height="28"/>
+                                <state key="normal" image="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="shareButton:" destination="4sL-eK-h64" eventType="touchUpInside" id="fFR-GM-39s"/>
                                     <action selector="shateButton_TouchUpInside:" destination="4sL-eK-h64" eventType="touchUpInside" id="xs4-vf-Hfb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-ab-uwz">
-                                <rect key="frame" x="270" y="560" width="88" height="20"/>
-                                <color key="backgroundColor" red="1" green="0.093880604103343465" blue="0.1618116469223409" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Snap Image">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-ab-uwz">
+                                <rect key="frame" x="269.5" y="554" width="30.5" height="30"/>
+                                <state key="normal" image="TakePhoto">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="snapImage:" destination="4sL-eK-h64" eventType="touchUpInside" id="lLs-Qn-pxe"/>
+                                    <action selector="takePhoto:" destination="4sL-eK-h64" eventType="touchUpInside" id="RcT-6f-AuP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-mW-gEy">
-                                <rect key="frame" x="162.5" y="549" width="40" height="40"/>
+                                <rect key="frame" x="167.5" y="549" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ejm-1Y-dm9"/>
@@ -1239,25 +1238,25 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I7A-mW-gEy" firstAttribute="top" secondItem="uvE-JB-6nJ" secondAttribute="bottom" constant="45" id="4fI-p1-4fp"/>
-                            <constraint firstItem="Lph-ab-uwz" firstAttribute="top" secondItem="uvE-JB-6nJ" secondAttribute="bottom" constant="56" id="7h9-jh-p6K"/>
+                            <constraint firstItem="Lph-ab-uwz" firstAttribute="top" secondItem="uvE-JB-6nJ" secondAttribute="bottom" constant="50" id="7h9-jh-p6K"/>
                             <constraint firstItem="uvE-JB-6nJ" firstAttribute="top" secondItem="Y0e-wc-195" secondAttribute="bottom" constant="15" id="95x-lp-FzN"/>
-                            <constraint firstItem="KQ9-uj-dUb" firstAttribute="top" secondItem="uvE-JB-6nJ" secondAttribute="bottom" constant="56" id="AaO-zJ-bNF"/>
+                            <constraint firstItem="KQ9-uj-dUb" firstAttribute="top" secondItem="uvE-JB-6nJ" secondAttribute="bottom" constant="51" id="AaO-zJ-bNF"/>
                             <constraint firstItem="Y0e-wc-195" firstAttribute="leading" secondItem="YUv-IS-36z" secondAttribute="leading" id="B2G-I4-aHa"/>
-                            <constraint firstItem="w9l-QQ-A2j" firstAttribute="top" secondItem="Lph-ab-uwz" secondAttribute="bottom" constant="38" id="DiW-6d-DXT"/>
-                            <constraint firstItem="I7A-mW-gEy" firstAttribute="leading" secondItem="KQ9-uj-dUb" secondAttribute="trailing" constant="65" id="OtI-Ri-abm"/>
+                            <constraint firstItem="w9l-QQ-A2j" firstAttribute="top" secondItem="Lph-ab-uwz" secondAttribute="bottom" constant="34" id="DiW-6d-DXT"/>
+                            <constraint firstItem="I7A-mW-gEy" firstAttribute="leading" secondItem="KQ9-uj-dUb" secondAttribute="trailing" constant="64.5" id="OtI-Ri-abm"/>
                             <constraint firstItem="XPA-tV-cvP" firstAttribute="top" secondItem="Y0e-wc-195" secondAttribute="bottom" id="Ph3-oC-1VU"/>
-                            <constraint firstAttribute="trailing" secondItem="Lph-ab-uwz" secondAttribute="trailing" constant="17" id="Rz5-lg-Yeh"/>
+                            <constraint firstAttribute="trailing" secondItem="Lph-ab-uwz" secondAttribute="trailing" constant="75" id="Rz5-lg-Yeh"/>
                             <constraint firstAttribute="trailing" secondItem="XPA-tV-cvP" secondAttribute="trailing" id="Vvp-Tn-E1y"/>
-                            <constraint firstItem="w9l-QQ-A2j" firstAttribute="top" secondItem="KQ9-uj-dUb" secondAttribute="bottom" constant="38" id="b2i-Eo-Ydq"/>
-                            <constraint firstItem="uvE-JB-6nJ" firstAttribute="centerX" secondItem="I7A-mW-gEy" secondAttribute="centerX" constant="5.5" id="eGG-WD-2ZM"/>
+                            <constraint firstItem="w9l-QQ-A2j" firstAttribute="top" secondItem="KQ9-uj-dUb" secondAttribute="bottom" constant="35" id="b2i-Eo-Ydq"/>
+                            <constraint firstItem="uvE-JB-6nJ" firstAttribute="centerX" secondItem="I7A-mW-gEy" secondAttribute="centerX" id="eGG-WD-2ZM"/>
                             <constraint firstItem="uvE-JB-6nJ" firstAttribute="leading" secondItem="YUv-IS-36z" secondAttribute="leading" constant="16" id="mHe-HL-SOy"/>
-                            <constraint firstItem="Lph-ab-uwz" firstAttribute="leading" secondItem="I7A-mW-gEy" secondAttribute="trailing" constant="67.5" id="nv5-cI-l9D"/>
+                            <constraint firstItem="Lph-ab-uwz" firstAttribute="leading" secondItem="I7A-mW-gEy" secondAttribute="trailing" constant="62" id="nv5-cI-l9D"/>
                             <constraint firstAttribute="trailing" secondItem="Y0e-wc-195" secondAttribute="trailing" id="pfu-zP-ejO"/>
                             <constraint firstItem="w9l-QQ-A2j" firstAttribute="top" secondItem="I7A-mW-gEy" secondAttribute="bottom" constant="29" id="sVG-9T-MbY"/>
                             <constraint firstAttribute="trailing" secondItem="uvE-JB-6nJ" secondAttribute="trailing" constant="16" id="tXc-MY-EcC"/>
                             <constraint firstItem="Y0e-wc-195" firstAttribute="top" secondItem="qeD-Bb-5BZ" secondAttribute="bottom" id="uB8-dj-Wy3"/>
                             <constraint firstItem="XPA-tV-cvP" firstAttribute="leading" secondItem="YUv-IS-36z" secondAttribute="leading" id="vkQ-Bh-yMx"/>
-                            <constraint firstItem="KQ9-uj-dUb" firstAttribute="leading" secondItem="YUv-IS-36z" secondAttribute="leading" constant="16" id="ypw-Gw-t5r"/>
+                            <constraint firstItem="KQ9-uj-dUb" firstAttribute="leading" secondItem="YUv-IS-36z" secondAttribute="leading" constant="75" id="ypw-Gw-t5r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="Tuw-ti-yqt">
@@ -2812,12 +2811,14 @@
         <image name="Like Filled" width="50" height="50"/>
         <image name="Mute" width="50" height="50"/>
         <image name="Rectangle" width="1500" height="200"/>
+        <image name="Send" width="150" height="129"/>
         <image name="Skate1" width="1920" height="1280"/>
         <image name="SkateIconPhoto1" width="25" height="25"/>
         <image name="SkateProfileTabBar" width="11" height="24"/>
         <image name="SkateTabBar" width="18" height="24"/>
         <image name="Speech Bubble Filled-50" width="50" height="50"/>
         <image name="Speech Bubble-50" width="50" height="50"/>
+        <image name="TakePhoto" width="150" height="150"/>
         <image name="Upload Filled-50" width="50" height="50"/>
         <image name="Upload-50" width="50" height="50"/>
         <image name="ic_add_location_white_48pt" width="48" height="48"/>

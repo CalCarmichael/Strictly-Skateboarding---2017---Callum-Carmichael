@@ -55,11 +55,21 @@ class CameraViewController: UIViewController {
         
         
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         handleImagePost()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        takeImage.center = moreButton.center
+        shareButton.center = moreButton.center
+        
+        
     }
     
     
@@ -75,11 +85,55 @@ class CameraViewController: UIViewController {
             sender.setImage(#imageLiteral(resourceName: "CameraButton"), for: .normal)
         }
         
-            
-            
+    }
+    
+    
+    //All the on/off toggles
+    
+    
+    @IBAction func shareButton(_ sender: UIButton) {
         
+        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "SendFill"), offImage: #imageLiteral(resourceName: "Send"))
         
     }
+    
+    @IBAction func takePhoto(_ sender: UIButton) {
+        
+        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "TakePhotoFill"), offImage: #imageLiteral(resourceName: "TakePhoto"))
+        
+    }
+    
+    func toggleTakePhoto(button: UIButton, onImage: UIImage, offImage: UIImage) {
+        
+        if button.currentImage == offImage {
+            
+            button.setImage(onImage, for: .normal)
+            
+        } else {
+            
+            button.setImage(offImage, for: .normal)
+            
+        }
+        
+    }
+    
+    //Opening camera for user
+    
+    
+    @IBAction func takePhoto1(_ sender: Any) {
+        
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        
+        pickerController.allowsEditing = false
+        pickerController.sourceType = UIImagePickerControllerSourceType.camera
+        pickerController.cameraCaptureMode = .photo
+        pickerController.modalPresentationStyle = .fullScreen
+        present(pickerController,animated: true,completion: nil)
+        
+    }
+    
+    
     
     
     
@@ -91,13 +145,15 @@ class CameraViewController: UIViewController {
             
             self.shareButton.isEnabled = true
             self.clearPostButton.isEnabled = true
-            self.shareButton.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            
+            //self.shareButton.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
             
         } else {
             
             self.shareButton.isEnabled = false
             self.clearPostButton.isEnabled = false
-            self.shareButton.backgroundColor = .lightGray
+            
+            //self.shareButton.backgroundColor = .red
         }
         
         
@@ -115,8 +171,6 @@ class CameraViewController: UIViewController {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         
-        pickerController.allowsEditing = true
-        
         //Picker can choose photos and video
         
         pickerController.mediaTypes = ["public.image", "public.movie"]
@@ -126,19 +180,7 @@ class CameraViewController: UIViewController {
     }
     
     
-    @IBAction func snapImage(_ sender: Any) {
-        
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        
-        pickerController.allowsEditing = false
-        pickerController.sourceType = UIImagePickerControllerSourceType.camera
-        pickerController.cameraCaptureMode = .photo
-        pickerController.modalPresentationStyle = .fullScreen
-        present(pickerController,animated: true,completion: nil)
-        
-        
-    }
+
     
     
     
