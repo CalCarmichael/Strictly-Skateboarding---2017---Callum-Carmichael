@@ -63,6 +63,24 @@ class CameraViewController: UIViewController {
     }
     
     
+    @IBAction func openInfo(_ sender: UIButton) {
+        
+        if sender.currentImage == #imageLiteral(resourceName: "CameraButton") {
+            
+            sender.setImage(#imageLiteral(resourceName: "CameraButtonClose"), for: .normal)
+            
+        } else {
+            
+            
+            sender.setImage(#imageLiteral(resourceName: "CameraButton"), for: .normal)
+        }
+        
+            
+            
+        
+        
+    }
+    
     
     
     //Checks if photo is in UIImage. Post button change colour dependant on this.

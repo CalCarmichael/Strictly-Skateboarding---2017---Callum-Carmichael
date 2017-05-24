@@ -1198,7 +1198,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ9-uj-dUb">
-                                <rect key="frame" x="16" y="560" width="81" height="20"/>
+                                <rect key="frame" x="16" y="560" width="81.5" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Post Image">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1208,7 +1208,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-ab-uwz">
-                                <rect key="frame" x="269.5" y="560" width="88.5" height="20"/>
+                                <rect key="frame" x="270" y="560" width="88" height="20"/>
                                 <color key="backgroundColor" red="1" green="0.093880604103343465" blue="0.1618116469223409" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Snap Image">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1217,19 +1217,23 @@
                                     <action selector="snapImage:" destination="4sL-eK-h64" eventType="touchUpInside" id="lLs-Qn-pxe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-mW-gEy">
-                                <rect key="frame" x="162" y="549" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-mW-gEy">
+                                <rect key="frame" x="162.5" y="549" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ejm-1Y-dm9"/>
                                     <constraint firstAttribute="width" constant="40" id="hJE-Kn-mfA"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="CameraButton"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="CameraButtonClose"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openInfo:" destination="4sL-eK-h64" eventType="touchUpInside" id="iIp-oh-R7u"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -2798,7 +2802,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CameraButton" width="149" height="149"/>
+        <image name="CameraButtonClose" width="150" height="149"/>
         <image name="CameraTabBar-1" width="25" height="25"/>
         <image name="Dislike Filled-50" width="50" height="50"/>
         <image name="Forward Punch-50" width="50" height="50"/>
