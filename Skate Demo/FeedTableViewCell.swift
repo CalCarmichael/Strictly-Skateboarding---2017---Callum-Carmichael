@@ -43,7 +43,9 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var wholeCellShadow: UIView!
     
+    @IBOutlet weak var exploreMainShadow: UIView!
 
+    @IBOutlet weak var exploreImageShadow: UIView!
     
     
     //DelegateCell = if reuse cell somewhere else dont need a switch implementation
@@ -117,6 +119,20 @@ class FeedTableViewCell: UITableViewCell {
         wholeCellShadow.layer.shadowOffset = CGSize(width: 0, height: 5)
         wholeCellShadow.layer.shadowRadius = 5
         wholeCellShadow.layer.shadowPath = UIBezierPath(roundedRect: wholeCellShadow.bounds, cornerRadius: 10).cgPath
+        
+        exploreMainShadow.layer.shadowColor = UIColor.black.cgColor
+        exploreMainShadow.layer.shadowOpacity = 0.2
+        exploreMainShadow.layer.shadowOffset = CGSize(width: 0, height: 5)
+        exploreMainShadow.layer.shadowRadius = 5
+        exploreMainShadow.layer.shadowPath = UIBezierPath(roundedRect: exploreMainShadow.bounds, cornerRadius: 2).cgPath
+        
+        exploreImageShadow.layer.shadowColor = UIColor.black.cgColor
+        exploreImageShadow.layer.shadowOpacity = 0.2
+        exploreImageShadow.layer.shadowOffset = CGSize(width: 0, height: 5)
+        exploreImageShadow.layer.shadowRadius = 5
+        exploreImageShadow.layer.shadowPath = UIBezierPath(roundedRect: exploreImageShadow.bounds, cornerRadius: 2).cgPath
+
+
 
         
 //        if let ratio = post?.ratio {
