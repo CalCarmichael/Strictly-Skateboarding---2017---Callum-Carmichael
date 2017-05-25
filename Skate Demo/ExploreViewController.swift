@@ -13,6 +13,8 @@ class ExploreViewController: UIViewController {
     
     var posts: [Post] = []
     
+    var refreshControl: UIRefreshControl = UIRefreshControl()
+    
     @IBOutlet weak var exploreCollectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -24,9 +26,18 @@ class ExploreViewController: UIViewController {
         exploreCollectionView.dataSource = self
         exploreCollectionView.delegate = self
         
+        refreshControl.addTarget(self, action: #selector(ExploreViewController.loadPopularPosts), for: .valueChanged)
+        
+        exploreCollectionView.refreshControl = refreshControl
+        exploreCollectionView.addSubview(refreshControl)
+        
         loadPopularPosts()
+        
+        
 
     }
+    
+  
     
     @IBAction func refreshButton_TouchUpInside(_ sender: Any) {
     
@@ -38,7 +49,7 @@ class ExploreViewController: UIViewController {
     
     func loadPopularPosts() {
         
-        ProgressHUD.show("Loading Posts...", interaction: false)
+       // ProgressHUD.show("Loading Posts...", interaction: false)
         
         self.posts.removeAll()
         
@@ -49,7 +60,9 @@ class ExploreViewController: UIViewController {
             self.posts.append(post)
             self.exploreCollectionView.reloadData()
             
-            ProgressHUD.dismiss()
+            self.refreshControl.endRefreshing()
+            
+          //  ProgressHUD.dismiss()
             
         }
         

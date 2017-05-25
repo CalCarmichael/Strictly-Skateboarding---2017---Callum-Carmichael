@@ -566,30 +566,16 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0I-zS-Y30">
-                                            <rect key="frame" x="150" y="147" width="75" height="34"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.92156862750000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" title="Edit">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="3"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="J0I-zS-Y30" secondAttribute="trailing" constant="150" id="01e-DC-8yd"/>
-                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="top" secondItem="1sB-em-fUv" secondAttribute="bottom" constant="8" symbolic="YES" id="86X-QO-4rG"/>
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="top" secondItem="yC1-vp-qp0" secondAttribute="topMargin" constant="19" id="BbF-uN-Inc"/>
                                         <constraint firstAttribute="trailing" secondItem="zei-FA-t6A" secondAttribute="trailing" id="KJr-P9-Iqz"/>
-                                        <constraint firstItem="J0I-zS-Y30" firstAttribute="top" secondItem="KZz-Hp-bNJ" secondAttribute="bottom" constant="16.5" id="Nb0-1G-qYB"/>
                                         <constraint firstItem="zei-FA-t6A" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" id="bPz-W6-uQs"/>
-                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leadingMargin" constant="159" id="dh0-We-goL"/>
+                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="top" secondItem="1sB-em-fUv" secondAttribute="bottom" constant="8" id="bT8-zG-oaR"/>
+                                        <constraint firstAttribute="trailing" secondItem="KZz-Hp-bNJ" secondAttribute="trailing" constant="168" id="bxK-AS-4Ir"/>
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="centerX" secondItem="zei-FA-t6A" secondAttribute="centerX" id="feB-Vd-Gj3"/>
                                         <constraint firstAttribute="bottom" secondItem="zei-FA-t6A" secondAttribute="bottom" id="fjh-33-hxz"/>
-                                        <constraint firstItem="J0I-zS-Y30" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" constant="150" id="qkF-9M-URO"/>
+                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" constant="167" id="uRh-bs-21Y"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="followButton" destination="5Ws-Sg-77N" id="iOv-qh-RJB"/>
