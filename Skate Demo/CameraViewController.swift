@@ -246,7 +246,7 @@ class CameraViewController: UIViewController {
         view.endEditing(true)
         
         ProgressHUD.show("Waiting...", interaction: false)
-        if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.5) {
+        if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
                         
             let ratio = profileImg.size.width / profileImg.size.height
             
@@ -361,7 +361,7 @@ extension CameraViewController: CameraFilterViewControllerDelegate {
     func updatePhotoFilter(image: UIImage) {
         
         self.cameraImage.image = image
-        
+        self.selectedImage = image
     }
     
 }

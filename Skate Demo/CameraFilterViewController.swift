@@ -106,7 +106,6 @@ extension CameraFilterViewController: UICollectionViewDelegate, UICollectionView
         
         let newImage = resizeImage(image: selectedFilterImage, newWidth: 150)
         
-
         
         // Create a filter object from filter class - core image filter class
         
