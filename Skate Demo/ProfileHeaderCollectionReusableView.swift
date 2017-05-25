@@ -34,6 +34,9 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var followButton: UIButton!
     
     
+    @IBOutlet weak var downloadButton: UIButton!
+    
+    
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
     
     var delegate2: ProfileHeaderCollectionReusableViewDelegateSwitchSettingVC?
@@ -131,6 +134,9 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         delegate2?.goToSettingVC()
         
     }
+    
+    
+    
     
     func updateStateFollowButton() {
         

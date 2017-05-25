@@ -37,14 +37,6 @@ class ExploreViewController: UIViewController {
 
     }
     
-  
-    
-    @IBAction func refreshButton_TouchUpInside(_ sender: Any) {
-    
-        loadPopularPosts()
-    
-    }
-    
     
     
     func loadPopularPosts() {
