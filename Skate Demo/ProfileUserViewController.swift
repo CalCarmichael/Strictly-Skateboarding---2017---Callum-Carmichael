@@ -118,10 +118,16 @@ class ProfileUserViewController: UIViewController {
                     let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("downloadUserLocations").childByAutoId()
                     
                     locationsRef.setValue(spot.dictionaryValues())
-
                     
+                    
+
+                
                     
                 }
+                
+                let alert = UIAlertController(title: "Get Skating", message: "Your new spots have been downloaded to the map!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 
             }
             

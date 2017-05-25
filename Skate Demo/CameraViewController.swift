@@ -61,7 +61,7 @@ class CameraViewController: UIViewController {
         commentViewShadow.layer.shadowRadius = 5
         commentViewShadow.layer.shadowPath = UIBezierPath(roundedRect: commentViewShadow.bounds, cornerRadius: 10).cgPath
         
-        moreButton.alpha = 0.5
+        moreButton.alpha = 1
         
         takeImage.alpha = 0
         shareButton.alpha = 0
@@ -91,7 +91,7 @@ class CameraViewController: UIViewController {
     
     @IBAction func openInfo(_ sender: UIButton) {
         
-        if moreButton.currentImage == #imageLiteral(resourceName: "CameraButtonClose") {
+        if moreButton.currentImage == #imageLiteral(resourceName: "ic_add_circle_outline_48pt") {
             
             moreButton.alpha = 1
             
@@ -134,7 +134,7 @@ class CameraViewController: UIViewController {
             
         }
         
-        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "CameraButton"), offImage: #imageLiteral(resourceName: "CameraButtonClose"))
+        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "XButton"), offImage: #imageLiteral(resourceName: "ic_add_circle_outline_48pt"))
         
         
     }

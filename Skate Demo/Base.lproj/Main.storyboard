@@ -447,7 +447,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-Pi-ZAK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.13116987179487183" green="0.13116987179487183" blue="0.13116987179487183" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8W2-9p-rZA">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="50" height="262"/>
@@ -562,14 +562,13 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZz-Hp-bNJ">
-                                            <rect key="frame" x="8" y="110" width="359" height="20.5"/>
+                                            <rect key="frame" x="167" y="110" width="40" height="20.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ws-Sg-77N">
-                                            <rect key="frame" x="150" y="137.5" width="75" height="30"/>
-                                            <color key="backgroundColor" red="1" green="0.89142002887361604" blue="0.90101993579800643" alpha="1" colorSpace="calibratedRGB"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0I-zS-Y30">
+                                            <rect key="frame" x="150" y="147" width="75" height="34"/>
+                                            <color key="backgroundColor" red="0.90588235289999997" green="0.92156862750000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Edit">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -581,17 +580,16 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5Ws-Sg-77N" firstAttribute="trailing" secondItem="1sB-em-fUv" secondAttribute="trailing" id="48B-3t-px6"/>
+                                        <constraint firstAttribute="trailing" secondItem="J0I-zS-Y30" secondAttribute="trailing" constant="150" id="01e-DC-8yd"/>
                                         <constraint firstItem="KZz-Hp-bNJ" firstAttribute="top" secondItem="1sB-em-fUv" secondAttribute="bottom" constant="8" symbolic="YES" id="86X-QO-4rG"/>
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="top" secondItem="yC1-vp-qp0" secondAttribute="topMargin" constant="19" id="BbF-uN-Inc"/>
-                                        <constraint firstItem="5Ws-Sg-77N" firstAttribute="top" secondItem="KZz-Hp-bNJ" secondAttribute="bottom" constant="7" id="EED-Qu-hop"/>
                                         <constraint firstAttribute="trailing" secondItem="zei-FA-t6A" secondAttribute="trailing" id="KJr-P9-Iqz"/>
-                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="centerX" secondItem="5Ws-Sg-77N" secondAttribute="centerX" id="X0e-Iv-wYm"/>
+                                        <constraint firstItem="J0I-zS-Y30" firstAttribute="top" secondItem="KZz-Hp-bNJ" secondAttribute="bottom" constant="16.5" id="Nb0-1G-qYB"/>
                                         <constraint firstItem="zei-FA-t6A" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" id="bPz-W6-uQs"/>
-                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leadingMargin" id="dh0-We-goL"/>
-                                        <constraint firstItem="5Ws-Sg-77N" firstAttribute="leading" secondItem="1sB-em-fUv" secondAttribute="leading" id="f5A-dP-GeK"/>
+                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leadingMargin" constant="159" id="dh0-We-goL"/>
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="centerX" secondItem="zei-FA-t6A" secondAttribute="centerX" id="feB-Vd-Gj3"/>
                                         <constraint firstAttribute="bottom" secondItem="zei-FA-t6A" secondAttribute="bottom" id="fjh-33-hxz"/>
+                                        <constraint firstItem="J0I-zS-Y30" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" constant="150" id="qkF-9M-URO"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="followButton" destination="5Ws-Sg-77N" id="iOv-qh-RJB"/>
@@ -618,6 +616,21 @@
                             <connections>
                                 <segue destination="IlI-1Y-3Df" kind="show" id="pcp-mG-5SH"/>
                             </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="3VH-uH-eR2">
+                            <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5Ws-Sg-77N">
+                                <rect key="frame" x="335" y="10" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.89142002887361604" blue="0.90101993579800643" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -646,7 +659,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/callumcarmichael/cj2lttjiq00182smtgcnaa9qy"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__">
+                                        <string key="value">mapbox://styles/callumcarmichael/cj34a6pwg002r2sqz9mkzodwe
+</string>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="latitude">
                                         <real key="value" value="50.720806000000003"/>
                                     </userDefinedRuntimeAttribute>
@@ -1212,7 +1228,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-ab-uwz">
-                                <rect key="frame" x="269.5" y="554" width="30.5" height="30"/>
+                                <rect key="frame" x="270" y="554" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2wK-G5-cVh"/>
                                     <constraint firstAttribute="width" constant="30.5" id="sbA-iV-INn"/>
@@ -1225,14 +1241,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-mW-gEy">
-                                <rect key="frame" x="167.5" y="549" width="40" height="40"/>
+                                <rect key="frame" x="168" y="549" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ejm-1Y-dm9"/>
                                     <constraint firstAttribute="width" constant="40" id="hJE-Kn-mfA"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="CameraButtonClose"/>
+                                <state key="normal" image="ic_add_circle_outline_48pt"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="0"/>
@@ -1267,7 +1283,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="Tuw-ti-yqt">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="izq-Ff-XLo">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="remove_TouchUpInside:" destination="4sL-eK-h64" id="lxH-dd-xjb"/>
                             </connections>
@@ -1638,11 +1654,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Top Posts" id="9yu-Gl-fxc">
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="zZ7-aj-Rj8">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="refreshButton_TouchUpInside:" destination="6Gc-Z7-vM8" id="56w-eF-p0M"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Szz-N3-lQ4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="5q9-RR-hm2" kind="show" id="Dxp-ts-2aT"/>
                             </connections>
@@ -2809,7 +2827,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CameraButtonClose" width="150" height="149"/>
         <image name="CameraTabBar-1" width="25" height="25"/>
         <image name="Dislike Filled-50" width="50" height="50"/>
         <image name="Forward Punch-50" width="50" height="50"/>
@@ -2829,6 +2846,7 @@
         <image name="TakePhoto" width="150" height="150"/>
         <image name="Upload Filled-50" width="50" height="50"/>
         <image name="Upload-50" width="50" height="50"/>
+        <image name="ic_add_circle_outline_48pt" width="48" height="48"/>
         <image name="ic_add_location_white_48pt" width="48" height="48"/>
         <image name="ic_close_white_48pt" width="72" height="72"/>
         <image name="ic_sort_white_48pt" width="48" height="48"/>
@@ -2838,10 +2856,10 @@
         <image name="skateboarding-1224234_1920" width="1920" height="1440"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l60-PI-ags"/>
         <segue reference="81q-W9-GO8"/>
+        <segue reference="vVR-Uv-ZER"/>
+        <segue reference="l60-PI-ags"/>
         <segue reference="4Mx-Nn-IZR"/>
         <segue reference="7Vk-xB-DQx"/>
-        <segue reference="vVR-Uv-ZER"/>
     </inferredMetricsTieBreakers>
 </document>

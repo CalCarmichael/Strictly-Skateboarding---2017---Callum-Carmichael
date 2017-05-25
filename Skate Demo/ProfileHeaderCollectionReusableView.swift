@@ -34,9 +34,6 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var followButton: UIButton!
     
     
-   
-    
-    
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
     
     var delegate2: ProfileHeaderCollectionReusableViewDelegateSwitchSettingVC?
@@ -98,7 +95,9 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         
         if user?.id == Api.User.CURRENT_USER?.uid {
             
-            followButton.setTitle("Edit", for: UIControlState.normal)
+            
+            
+          //  followButton.setTitle("Edit", for: UIControlState.normal)
             
             //Segue to setting VC
             
