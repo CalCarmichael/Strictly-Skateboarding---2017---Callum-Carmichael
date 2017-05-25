@@ -1332,6 +1332,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-OK-ArQ">
+                                                    <rect key="frame" x="67" y="173" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5M9-KS-Ss0">
+                                                    <rect key="frame" x="67" y="173" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoI-Av-xbJ" userLabel="CellBackground">
                                                     <rect key="frame" x="8" y="10" width="359" height="450"/>
                                                     <subviews>
@@ -1490,10 +1500,18 @@
                                                 <constraint firstItem="Ght-Ob-Ltp" firstAttribute="top" secondItem="9dB-zJ-NVC" secondAttribute="top" constant="412" id="pCC-Qi-3HV"/>
                                                 <constraint firstItem="JBP-vM-26u" firstAttribute="leading" secondItem="9dB-zJ-NVC" secondAttribute="leading" constant="23" id="rVG-0a-zkG"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="lRe-OK-ArQ"/>
+                                                    <exclude reference="5M9-KS-Ss0"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionLabel" destination="Jvd-yn-P54" id="HSv-z9-opG"/>
                                             <outlet property="commentView" destination="8r1-q2-eaF" id="E5P-Tf-9UM"/>
+                                            <outlet property="exploreImageShadow" destination="lRe-OK-ArQ" id="gaQ-Ik-Phx"/>
+                                            <outlet property="exploreMainShadow" destination="5M9-KS-Ss0" id="59I-5n-W1v"/>
                                             <outlet property="likeCountButton" destination="CaW-z1-TXn" id="vCO-QJ-fWK"/>
                                             <outlet property="likeImageView" destination="x7S-nk-354" id="7eB-16-52B"/>
                                             <outlet property="postImageView" destination="jFE-GC-D9a" id="nxu-AZ-hyU"/>
