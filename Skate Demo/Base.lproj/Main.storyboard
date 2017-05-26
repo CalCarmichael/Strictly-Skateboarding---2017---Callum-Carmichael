@@ -582,15 +582,14 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="TWK-Fy-Mx3" secondAttribute="trailing" id="09d-Vy-a7c"/>
                                         <constraint firstAttribute="bottom" secondItem="TWK-Fy-Mx3" secondAttribute="bottom" id="3FN-l2-fBw"/>
+                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="centerX" secondItem="zei-FA-t6A" secondAttribute="centerX" id="40v-5w-kzF"/>
+                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="top" secondItem="1sB-em-fUv" secondAttribute="bottom" constant="8" symbolic="YES" id="5yY-fa-AIf"/>
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="top" secondItem="yC1-vp-qp0" secondAttribute="topMargin" constant="15" id="BbF-uN-Inc"/>
                                         <constraint firstAttribute="trailing" secondItem="zei-FA-t6A" secondAttribute="trailing" constant="1" id="KJr-P9-Iqz"/>
                                         <constraint firstItem="zei-FA-t6A" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" id="bPz-W6-uQs"/>
-                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="top" secondItem="1sB-em-fUv" secondAttribute="bottom" constant="8" id="bT8-zG-oaR"/>
-                                        <constraint firstAttribute="trailing" secondItem="KZz-Hp-bNJ" secondAttribute="trailing" constant="168" id="bxK-AS-4Ir"/>
                                         <constraint firstItem="TWK-Fy-Mx3" firstAttribute="top" secondItem="zei-FA-t6A" secondAttribute="bottom" constant="9" id="eyU-bD-PDS"/>
                                         <constraint firstItem="1sB-em-fUv" firstAttribute="centerX" secondItem="zei-FA-t6A" secondAttribute="centerX" id="feB-Vd-Gj3"/>
                                         <constraint firstAttribute="bottom" secondItem="zei-FA-t6A" secondAttribute="bottom" constant="50" id="fjh-33-hxz"/>
-                                        <constraint firstItem="KZz-Hp-bNJ" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" constant="167" id="uRh-bs-21Y"/>
                                         <constraint firstItem="TWK-Fy-Mx3" firstAttribute="leading" secondItem="yC1-vp-qp0" secondAttribute="leading" id="uc4-N1-6XS"/>
                                     </constraints>
                                     <connections>
@@ -1184,7 +1183,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0e-wc-195">
                                 <rect key="frame" x="0.0" y="64" width="375" height="325"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skate1" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-OS-Zt3">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-OS-Zt3">
                                         <rect key="frame" x="8" y="8" width="359" height="309"/>
                                     </imageView>
                                 </subviews>
@@ -1285,7 +1284,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="Tuw-ti-yqt">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="izq-Ff-XLo">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             <connections>
                                 <action selector="remove_TouchUpInside:" destination="4sL-eK-h64" id="lxH-dd-xjb"/>
                             </connections>
@@ -1856,7 +1855,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <integer key="value" value="20"/>
+                                                            <integer key="value" value="40"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -2509,9 +2508,9 @@
                                         </label>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WL-PW-X9W">
                                             <rect key="frame" x="150" y="138.5" width="75" height="29"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                            <state key="normal" title="Loading...">
+                                            <state key="normal">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -2521,35 +2520,22 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iy-h1-yLg">
-                                            <rect key="frame" x="8" y="137.5" width="134" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="pSn-La-oSM"/>
-                                            </constraints>
+                                            <rect key="frame" x="8" y="164" width="105" height="30"/>
                                             <state key="normal" title="Download Spot"/>
                                             <connections>
                                                 <action selector="getUserSpots:" destination="hbx-BZ-ko3" eventType="touchUpInside" id="8Yv-vc-T6t"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-J8-AQQ">
-                                            <rect key="frame" x="22" y="164" width="99" height="30"/>
-                                            <state key="normal" title="Remove Spots"/>
-                                            <connections>
-                                                <action selector="removeUserSpots:" destination="hbx-BZ-ko3" eventType="touchUpInside" id="Laa-Vh-whI"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="5iy-h1-yLg" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="8" id="4ES-QD-Vjp"/>
                                         <constraint firstAttribute="trailing" secondItem="sXi-67-mNs" secondAttribute="trailing" id="7TU-Bz-GsM"/>
-                                        <constraint firstItem="5iy-h1-yLg" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="8" id="864-W0-Rl5"/>
                                         <constraint firstItem="sXi-67-mNs" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" id="8jt-cq-TZD"/>
                                         <constraint firstAttribute="bottom" secondItem="sXi-67-mNs" secondAttribute="bottom" id="8z6-vU-KD6"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="leading" secondItem="It1-yz-l2F" secondAttribute="leading" id="JwR-bB-G9F"/>
-                                        <constraint firstItem="5iy-h1-yLg" firstAttribute="baseline" secondItem="1WL-PW-X9W" secondAttribute="baseline" id="Waa-0P-kak"/>
                                         <constraint firstItem="9jf-Eh-8rs" firstAttribute="top" secondItem="It1-yz-l2F" secondAttribute="bottom" constant="8" symbolic="YES" id="bXC-iM-Tt9"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="centerX" secondItem="9jf-Eh-8rs" secondAttribute="centerX" id="hEV-C0-aS5"/>
-                                        <constraint firstItem="sXi-67-mNs" firstAttribute="top" secondItem="gEt-J8-AQQ" secondAttribute="bottom" constant="8" id="iyH-7b-F54"/>
-                                        <constraint firstItem="gEt-J8-AQQ" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="22" id="l9p-wx-TWM"/>
-                                        <constraint firstItem="1WL-PW-X9W" firstAttribute="leading" secondItem="5iy-h1-yLg" secondAttribute="trailing" constant="8" id="oKi-Ye-XOY"/>
+                                        <constraint firstItem="sXi-67-mNs" firstAttribute="top" secondItem="5iy-h1-yLg" secondAttribute="bottom" constant="8" id="iM2-Vx-8Ri"/>
                                         <constraint firstItem="It1-yz-l2F" firstAttribute="centerX" secondItem="sXi-67-mNs" secondAttribute="centerX" id="rFJ-zx-tVj"/>
                                         <constraint firstItem="It1-yz-l2F" firstAttribute="top" secondItem="dpF-Qb-iUs" secondAttribute="topMargin" constant="19" id="sw7-3V-cGJ"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="trailing" secondItem="It1-yz-l2F" secondAttribute="trailing" id="tIT-1e-ajC"/>
@@ -2868,7 +2854,6 @@
         <image name="Mute" width="50" height="50"/>
         <image name="Rectangle" width="1500" height="200"/>
         <image name="Send" width="150" height="129"/>
-        <image name="Skate1" width="1920" height="1280"/>
         <image name="SkateIconPhoto1" width="25" height="25"/>
         <image name="SkateProfileTabBar" width="11" height="24"/>
         <image name="SkateTabBar" width="18" height="24"/>
@@ -2880,15 +2865,16 @@
         <image name="ic_close_white_48pt" width="72" height="72"/>
         <image name="ic_sort_white_48pt" width="48" height="48"/>
         <image name="ic_volume_up_white_48pt" width="48" height="48"/>
+        <image name="image-placeholder" width="500" height="500"/>
         <image name="placeholderImage" width="250" height="250"/>
         <image name="skateboarding-1149507_1920" width="1920" height="1280"/>
         <image name="skateboarding-1224234_1920" width="1920" height="1440"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="e7E-bH-l0r"/>
         <segue reference="EXs-0K-k08"/>
-        <segue reference="4Mx-Nn-IZR"/>
         <segue reference="7Vk-xB-DQx"/>
-        <segue reference="vVR-Uv-ZER"/>
-        <segue reference="l60-PI-ags"/>
+        <segue reference="4Mx-Nn-IZR"/>
+        <segue reference="ePP-dP-end"/>
     </inferredMetricsTieBreakers>
 </document>
