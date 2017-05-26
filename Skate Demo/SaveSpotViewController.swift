@@ -11,7 +11,7 @@ import Firebase
 import Mapbox
 import IBAnimatable
 
-class SaveSpotViewController: UIViewController {
+class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var skateTitleText: UITextField!
     @IBOutlet weak var skateStyleText: UITextField!
@@ -49,6 +49,11 @@ class SaveSpotViewController: UIViewController {
         saveSpotPopUpView.layer.cornerRadius = 10
         saveSpotPopUpView.layer.masksToBounds = true
         
+        skateTitleText.delegate = self
+        skateStyleText.delegate = self
+        
+        
+        
         
         addButton.layer.borderWidth = 1
         addButton.layer.cornerRadius = 5
@@ -82,7 +87,11 @@ class SaveSpotViewController: UIViewController {
         
     }
     
-  
+    
+    func textFieldShouldReturn(_ skateTitleText: UITextField) -> Bool {
+        skateTitleText.resignFirstResponder()
+        return true
+    }
    
     
     

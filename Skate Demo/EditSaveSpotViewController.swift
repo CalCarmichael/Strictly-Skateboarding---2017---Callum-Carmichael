@@ -48,6 +48,8 @@ class EditSaveSpotViewController: UIViewController {
             
             
             
+            
+            
             self.setPickerView()
             
             
@@ -63,6 +65,8 @@ class EditSaveSpotViewController: UIViewController {
             if option == skatepark.type.getString() {
                 pickerView.selectRow(index, inComponent: 0, animated: false)
             }
+            
+            
         }
         
     }
@@ -107,6 +111,21 @@ class EditSaveSpotViewController: UIViewController {
     
     
     @IBAction func deleteSkateSpot(_ sender: Any) {
+        
+        ref = FIRDatabase.database().reference(withPath: "users").child(Api.User.CURRENT_USER!.uid).child("personalLocations/\(parkId!)")
+        
+        ref.observe(.value, with: {
+            
+            
+            
+            
+            
+            //Do an alert yes or no
+            
+            
+        })
+        
+        
     }
     
     
