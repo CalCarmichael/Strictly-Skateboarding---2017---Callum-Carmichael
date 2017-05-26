@@ -38,7 +38,7 @@ class ProfileViewController: UIViewController {
         
         let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
-        flow.sectionInset = UIEdgeInsetsMake(3, 0, 0, 0)
+        flow.sectionInset = UIEdgeInsetsMake(3, 0, 3, 0)
         
         
         

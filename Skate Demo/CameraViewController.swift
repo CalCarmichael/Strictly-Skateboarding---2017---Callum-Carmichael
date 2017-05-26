@@ -14,6 +14,7 @@ import ImagePicker
 class CameraViewController: UIViewController {
     
     @IBOutlet weak var cameraImage: UIImageView!
+    
     @IBOutlet weak var captionTextView: UITextView!
     
     @IBOutlet weak var shareButton: UIButton!
@@ -173,8 +174,10 @@ class CameraViewController: UIViewController {
     
     //Opening camera for user
     
+ 
     
-    @IBAction func takePhoto1(_ sender: Any) {
+    
+    @IBAction func snapImage(_ sender: Any) {
         
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
@@ -186,6 +189,7 @@ class CameraViewController: UIViewController {
         present(pickerController,animated: true,completion: nil)
         
     }
+
     
     
     

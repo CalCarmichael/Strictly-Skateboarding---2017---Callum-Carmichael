@@ -297,7 +297,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         let button = UIButton(type: .contactAdd)
         button.tag = 101
-        return button
+        return button 
         
 
     }
