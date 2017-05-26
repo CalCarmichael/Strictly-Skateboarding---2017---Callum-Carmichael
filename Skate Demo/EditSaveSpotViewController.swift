@@ -114,10 +114,9 @@ class EditSaveSpotViewController: UIViewController {
         
         ref = FIRDatabase.database().reference(withPath: "users").child(Api.User.CURRENT_USER!.uid).child("personalLocations/\(parkId!)")
         
-        ref.observe(.value, with: {
+        ref.observe(.value, with: { (snapshot) in
             
-            
-            
+            print(snapshot)
             
             
             //Do an alert yes or no
