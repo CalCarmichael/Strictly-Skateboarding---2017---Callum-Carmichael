@@ -128,7 +128,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
             }
             
             self.loadCustomLocations()
-            self.loadDownloadLocations()
+            
             
         })
     }
@@ -155,27 +155,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         })
     }
     
-    func loadDownloadLocations() {
-        
-        let uid = FIRAuth.auth()!.currentUser!.uid
-        
-        let userLocationsRef = FIRDatabase.database().reference(withPath: "users/\(uid)/downloadUserLocations")
-        
-        userLocationsRef.observe(.value, with: { snapshot in
-            
-            
-            for item in snapshot.children {
-                guard let snapshot = item as? FIRDataSnapshot else { continue }
-                
-                let newSkatepark = Skatepark(snapshot: snapshot)
-                
-                self.skateparks.append(newSkatepark)
-                
-                self.addAnnotation(park: newSkatepark)
-                
-            }
-        })
-    }
+   
     
     
     

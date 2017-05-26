@@ -115,7 +115,7 @@ class ProfileUserViewController: UIViewController {
                     
                     let uid = FIRAuth.auth()!.currentUser!.uid
                     
-                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("downloadUserLocations").childByAutoId()
+                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
                     
                     locationsRef.setValue(spot.dictionaryValues())
 
@@ -124,7 +124,7 @@ class ProfileUserViewController: UIViewController {
                 }
                 
                 let alert = UIAlertController(title: "Get Skating", message: "Your new spots have been downloaded to the map!", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 
             }

@@ -116,6 +116,11 @@ class EditSaveSpotViewController: UIViewController {
         
         ref.observe(.value, with: { (snapshot) in
             
+            
+            
+            self.ref.setValue(nil)
+            
+
             print(snapshot)
             
             
