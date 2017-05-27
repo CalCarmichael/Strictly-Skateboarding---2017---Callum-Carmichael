@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TableViewReloadAnimation
 
 class DiscoverUserViewController: UIViewController {
     
@@ -15,12 +16,17 @@ class DiscoverUserViewController: UIViewController {
     
     var users: [User] = []
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         loadUsers()
         
     }
+
+    
+    
     
     func loadUsers() {
         
@@ -32,7 +38,9 @@ class DiscoverUserViewController: UIViewController {
                 
                 self.users.append(user)
                 
-                self.tableView.reloadData()
+                self.tableView.reloadData(
+                    with: .spring(duration: 0.8, damping: 0.8, velocity: 0.7, direction: .left(useCellsFrame: false),
+                                  constantDelay: 0))
                 
             })
             
@@ -40,6 +48,8 @@ class DiscoverUserViewController: UIViewController {
         }
         
     }
+    
+    
     
     //Use user id input to look at database and see if current user is following user
     
@@ -74,6 +84,7 @@ extension DiscoverUserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
         //Reuses the cells shown rather than uploading all of them at once
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverUserTableViewCell", for: indexPath) as! DiscoverUserTableViewCell
@@ -86,8 +97,11 @@ extension DiscoverUserViewController: UITableViewDataSource {
         
         cell.delegate = self
         
+        
         return cell
     }
+    
+    
     
 }
 

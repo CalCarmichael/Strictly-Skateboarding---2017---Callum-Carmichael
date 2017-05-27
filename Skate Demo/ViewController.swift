@@ -181,6 +181,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         point.canEdit = park.editable
         
+        point.type = park.type
+        
         mapView.addAnnotation(point)
         
         mapView.selectAnnotation(point, animated: true)
@@ -311,6 +313,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     
      func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
         
+        
+        
+        
      //   return nil
       
         var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "SkateAnnotation1")
@@ -318,6 +323,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         if annotationImage == nil {
             
             var image = UIImage(named: "SkateAnnotation1")!
+            
+            
             
             
             image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: image.size.height / 2, right: 0))

@@ -33,6 +33,7 @@ class DiscoverUserTableViewCell: UITableViewCell {
     
     
     
+    
     func updateView() {
         
         //Set name label on cell to username of user variable
@@ -151,6 +152,7 @@ class DiscoverUserTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     
     
 

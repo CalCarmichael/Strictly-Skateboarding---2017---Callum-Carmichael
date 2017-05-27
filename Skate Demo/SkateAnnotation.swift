@@ -14,5 +14,6 @@ class SkateAnnotation: MGLPointAnnotation {
     
     var canEdit = false
     var id: String!
+    var type: SkateType!
     
 }

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AAD97535219FDDAA1B849D8A70EDC93B'
-               BlueprintName = 'WCLShineButton'
+               BlueprintIdentifier = 'F207AF6DB3A91997100321788D6F20A9'
+               BlueprintName = 'TableViewReloadAnimation'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'WCLShineButton.framework'>
+               BuildableName = 'TableViewReloadAnimation.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

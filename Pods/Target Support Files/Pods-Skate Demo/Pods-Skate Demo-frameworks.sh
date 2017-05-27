@@ -103,6 +103,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ShadowImageView/ShadowImageView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SidebarOverlay/SidebarOverlay.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKSubmitTransitionSwift3/TKSubmitTransitionSwift3.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TableViewReloadAnimation/TableViewReloadAnimation.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TextFieldEffects/TextFieldEffects.framework"
   install_framework "$BUILT_PRODUCTS_DIR/WCLShineButton/WCLShineButton.framework"
 fi
@@ -126,6 +127,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ShadowImageView/ShadowImageView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SidebarOverlay/SidebarOverlay.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKSubmitTransitionSwift3/TKSubmitTransitionSwift3.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TableViewReloadAnimation/TableViewReloadAnimation.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TextFieldEffects/TextFieldEffects.framework"
   install_framework "$BUILT_PRODUCTS_DIR/WCLShineButton/WCLShineButton.framework"
 fi

@@ -67,6 +67,7 @@ PODS:
   - SDWebImage/Core (3.8.2)
   - ShadowImageView (1.2.0)
   - SidebarOverlay (4.1)
+  - TableViewReloadAnimation (0.0.5)
   - TextFieldEffects (1.3.2)
   - TKSubmitTransitionSwift3 (0.5)
   - WCLShineButton (1.0.5)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8)
   - ShadowImageView
   - SidebarOverlay
+  - TableViewReloadAnimation (~> 0.0.5)
   - TextFieldEffects
   - TKSubmitTransitionSwift3
   - WCLShineButton
@@ -119,10 +121,11 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   ShadowImageView: ae863bf755f1ed849b501de0697e0ba5bf8b4348
   SidebarOverlay: b65f0a1d9331ce4bf81f82eea202b21cc8655c5a
+  TableViewReloadAnimation: f3a4c4048efbc56331be98075f26a2e533a14c16
   TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
   TKSubmitTransitionSwift3: fadd76eefa015542d0fe6d85424a43dd6f3354d2
   WCLShineButton: 44371dea1bd1bb5b81cec5958d6280170c178059
 
-PODFILE CHECKSUM: e21f94de3e573360e9c4a90c23f9b144f15d6ecd
+PODFILE CHECKSUM: f1d3a65cf45eabd57c6a594887820a309a69c341
 
 COCOAPODS: 1.1.1
