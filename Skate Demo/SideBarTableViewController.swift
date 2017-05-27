@@ -42,6 +42,7 @@ class SideBarTableViewController: UITableViewController {
             cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
             cell!.backgroundColor = UIColor.clear
             cell!.textLabel?.textColor = UIColor.darkText
+            cell!.textLabel?.font = UIFont(name:"HelveticaNeue-CondensedBold", size:16)
             
             let selectedView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: cell!.frame.size.width, height: cell!.frame.size.height))
             

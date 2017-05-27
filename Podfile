@@ -27,5 +27,6 @@ target 'Skate Demo' do
     pod 'ShadowImageView'
     pod 'CircleMenu', '~> 2.0.1'
     pod 'TableViewReloadAnimation', '~> 0.0.5'
+    pod 'AMScrollingNavbar'
 
 end

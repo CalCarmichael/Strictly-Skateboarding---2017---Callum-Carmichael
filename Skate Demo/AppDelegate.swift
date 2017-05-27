@@ -22,9 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         
+       
+        
         //Change colour of tab bar items
         
         UITabBar.appearance().tintColor = .red
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        
+        let navigationFont = UIFont(name: "HelveticaNeue-CondensedBold", size: 18)!
+        let navigationFontAttributes = [NSFontAttributeName : navigationFont, NSForegroundColorAttributeName : UIColor.white]
+        
+        UINavigationBar.appearance().titleTextAttributes = navigationFontAttributes
+       
+        UIBarButtonItem.appearance().setTitleTextAttributes(navigationFontAttributes, for: .normal)
+       
+       
     
                  
         return true

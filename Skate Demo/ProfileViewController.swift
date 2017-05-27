@@ -30,9 +30,6 @@ class ProfileViewController: UIViewController {
         getUserPosts()
         
         
-        navigationController?.navigationBar.barTintColor = UIColor.black
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        
         self.tabBarController?.tabBar.barTintColor = UIColor.black
         
         

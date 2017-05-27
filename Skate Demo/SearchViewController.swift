@@ -32,7 +32,17 @@ class SearchViewController: UIViewController {
         
         searchUser()
         
+        
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.navigationController?.hidesBarsOnSwipe = false
+        
+    }
+    
     
     func searchUser() {
         

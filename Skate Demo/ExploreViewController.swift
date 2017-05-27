@@ -20,8 +20,6 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = UIColor.black
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         exploreCollectionView.dataSource = self
         exploreCollectionView.delegate = self
@@ -37,9 +35,18 @@ class ExploreViewController: UIViewController {
         
         flow.sectionInset = UIEdgeInsetsMake(3, 0, 3, 0)
         
+        navigationController?.hidesBarsOnTap = false
+        
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnTap = false
+        self.navigationController?.hidesBarsOnSwipe = true
+        
+    }
     
     
     func loadPopularPosts() {

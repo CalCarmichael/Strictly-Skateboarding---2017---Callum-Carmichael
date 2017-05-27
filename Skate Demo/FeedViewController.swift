@@ -31,9 +31,9 @@ class FeedViewController: UIViewController {
         loadPosts()
         
         navigationController?.navigationBar.barTintColor = UIColor.black
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+      
         
-        
+        self.navigationController?.hidesBarsOnSwipe = true
         
     }
     

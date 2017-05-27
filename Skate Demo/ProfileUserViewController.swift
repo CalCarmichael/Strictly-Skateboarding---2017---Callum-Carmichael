@@ -41,6 +41,15 @@ class ProfileUserViewController: UIViewController {
         getUser()
         getUserPosts()
         
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        
+        
     }
     
     func getUser() {

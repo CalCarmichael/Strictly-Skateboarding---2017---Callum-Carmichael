@@ -128,7 +128,10 @@ class CommentViewController: UIViewController {
     }
     
     
-    
+    func textFieldShouldReturn(_ commentTextField: UITextField) -> Bool {
+        commentTextField.resignFirstResponder()
+        return true
+    }
     
     
     
