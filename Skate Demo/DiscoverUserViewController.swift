@@ -26,8 +26,6 @@ class DiscoverUserViewController: UIViewController {
     }
 
     
-    
-    
     func loadUsers() {
         
         Api.User.observeLoadUsers { (user) in
