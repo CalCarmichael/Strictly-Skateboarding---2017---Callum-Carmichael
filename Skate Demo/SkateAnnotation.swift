@@ -9,6 +9,9 @@
 import Foundation
 import Mapbox
 
+var skateparks = [Skatepark]()
+
+var skatepark: Skatepark?
 
 class SkateAnnotation: MGLPointAnnotation {
     
@@ -16,4 +19,7 @@ class SkateAnnotation: MGLPointAnnotation {
     var id: String!
     var type: SkateType!
     
+    
 }
+    
+

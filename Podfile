@@ -28,5 +28,6 @@ target 'Skate Demo' do
     pod 'CircleMenu', '~> 2.0.1'
     pod 'TableViewReloadAnimation', '~> 0.0.5'
     pod 'AMScrollingNavbar'
+    pod 'PKHUD', '~> 4.0'
 
 end

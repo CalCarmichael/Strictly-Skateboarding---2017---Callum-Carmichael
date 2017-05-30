@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '71F0C6211BDCE6332F61D468CA1046F8'
+               BlueprintIdentifier = '86B467A276A1C744D940BAD6865E0B77'
                BlueprintName = 'TableViewReloadAnimation'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TableViewReloadAnimation.framework'>

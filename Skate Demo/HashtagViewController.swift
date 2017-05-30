@@ -28,6 +28,11 @@ class HashtagViewController: UIViewController {
         loadPosts()
 
         
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        flow.sectionInset = UIEdgeInsetsMake(3, 0, 3, 0)
+        
+        
     }
     
     func loadPosts() {

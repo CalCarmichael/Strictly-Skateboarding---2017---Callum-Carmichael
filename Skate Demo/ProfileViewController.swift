@@ -41,6 +41,13 @@ class ProfileViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnTap = false
+        
+    }
+    
     
     
     //Getting user info and attributes from PHCRView

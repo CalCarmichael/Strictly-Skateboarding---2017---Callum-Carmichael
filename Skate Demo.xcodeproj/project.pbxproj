@@ -30,6 +30,7 @@
 		9F56A68B1E929BD900E8EDB9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56A68A1E929BD900E8EDB9 /* SignInViewController.swift */; };
 		9F56A68D1E929C8100E8EDB9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56A68C1E929C8100E8EDB9 /* SignUpViewController.swift */; };
 		9F67A36A1EACD46400AE606E /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67A3691EACD46400AE606E /* ProfileUserViewController.swift */; };
+		9F7D0E5F1EDA1A5000723D83 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D0E5E1EDA1A5000723D83 /* SwiftNotice.swift */; };
 		9F88E2881ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */; };
 		9F8D373C1E82A7DD003E36CB /* Skatepark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D373B1E82A7DD003E36CB /* Skatepark.swift */; };
 		9F9EAFA41E9E63BD00921147 /* SaveSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */; };
@@ -85,6 +86,7 @@
 		9F56A68A1E929BD900E8EDB9 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9F56A68C1E929C8100E8EDB9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9F67A3691EACD46400AE606E /* ProfileUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
+		9F7D0E5E1EDA1A5000723D83 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSaveSpotViewController.swift; sourceTree = "<group>"; };
 		9F8D373B1E82A7DD003E36CB /* Skatepark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skatepark.swift; sourceTree = "<group>"; };
 		9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveSpotViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD114FE1ED1E181007A9E58 /* ButtonBounce.swift */,
+				9F7D0E5E1EDA1A5000723D83 /* SwiftNotice.swift */,
 			);
 			name = AnimateClasses;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				9F56A68D1E929C8100E8EDB9 /* SignUpViewController.swift in Sources */,
 				9F1FA1C11ED359C3009DB1D5 /* FollowingTableViewController.swift in Sources */,
 				9F2B1E5B1EAA2EFA006BB363 /* DiscoverUserTableViewCell.swift in Sources */,
+				9F7D0E5F1EDA1A5000723D83 /* SwiftNotice.swift in Sources */,
 				9F9EAFA41E9E63BD00921147 /* SaveSpotViewController.swift in Sources */,
 				9F67A36A1EACD46400AE606E /* ProfileUserViewController.swift in Sources */,
 				9FBCA91B1E7C470700ADE283 /* SideBarTableViewController.swift in Sources */,

@@ -34,19 +34,18 @@ class EditSaveSpotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         ref = FIRDatabase.database().reference(withPath: "users").child(Api.User.CURRENT_USER!.uid).child("personalLocations/\(parkId!)")
        
         ref.observe(.value, with: { [unowned self] snapshot in
             
         
-
             self.skatepark = Skatepark(snapshot: snapshot)
             
             
             self.skateTitleText.text = self.skatepark.name
             self.skateStyleText.text = self.skatepark.subtitle
-            
-            
             
             
             
@@ -87,7 +86,7 @@ class EditSaveSpotViewController: UIViewController {
         skatepark.subtitle = skateStyleText.text!
         
         
-        
+        skatepark.type = SkateType(rawValue: pickerView.selectedRow(inComponent: 0) - 1)!
         
         
         

@@ -35,31 +35,50 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     
     var pointAnnotation = MGLPointAnnotation()
     
+    var marker: UIImage?
+    
+    
+    var ref: FIRDatabaseReference!
+    
+    var parkId: String!
+    
     var delegate: SideBarDelegate?
     
     //Filtering annotations for sidebar
     
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
-       mapView.removeAnnotations(mapView.annotations!)
+        
+    
+        if let annotations = mapView.annotations {
+            
+            mapView.removeAnnotations(annotations)
+            
+        }
         
         for park in skateparks {
             
             if index == 0 {
                 addAnnotation(park: park)
+                marker = #imageLiteral(resourceName: "SkateAnnotation1")
+                
             }
             
             if index == 1 && park.type == .park {
                 addAnnotation(park: park)
+                marker = #imageLiteral(resourceName: "PINGREEN")
+                
             }
             
             if index == 2 && park.type == .street {
                 addAnnotation(park: park)
+                marker = #imageLiteral(resourceName: "SkateAnnotation1")
             }
             
             //Change this to feature the users own personal spots they saved to firebase
             
             if index == 3 && park.type == .own {
                 addAnnotation(park: park)
+                marker = #imageLiteral(resourceName: "SkateAnnotation1")
             }
             
             
@@ -72,6 +91,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        marker = #imageLiteral(resourceName: "SkateAnnotation1")
         
         navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -165,6 +186,27 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     }
     
     
+//    func mapDirections() {
+//        
+//        
+//        let regionDistance: CLLocationDistance = 1000;
+//        let coordinates =  skatepark?.coordinate
+//        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates!, regionDistance, regionDistance)
+//        
+//        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+//        
+//        let placemark = MKPlacemark(coordinate: coordinates!, addressDictionary: nil)
+//        let mapItem = MKMapItem(placemark: placemark)
+//        mapItem.name = skatepark?.name
+//        mapItem.openInMaps(launchOptions: options)
+//        
+//    }
+//    
+//    
+//    
+    
+    
+    
     //Adding annotations on map
     
     func addAnnotation(park: Skatepark) {
@@ -181,13 +223,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         point.canEdit = park.editable
         
-        point.type = park.type
-        
         mapView.addAnnotation(point)
         
         mapView.selectAnnotation(point, animated: true)
         
     }
+    
+    
     
     
 
@@ -265,7 +307,16 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
             
         } else if control.tag == 101 {
             
-            self.performSegue(withIdentifier: "InviteUserSegue", sender: view)
+         //   self.performSegue(withIdentifier: "InviteUserSegue", sender: view)
+            
+            
+//                mapDirections()
+            
+
+            
+            
+            
+            
             
         }
         
@@ -322,14 +373,14 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         if annotationImage == nil {
             
-            var image = UIImage(named: "SkateAnnotation1")!
+           // var image = UIImage(named: "SkateAnnotation1")!
             
             
             
             
-            image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: image.size.height / 2, right: 0))
+            marker = marker?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: (marker?.size.height)! / 2, right: 0))
             
-            annotationImage = MGLAnnotationImage(image: image, reuseIdentifier: "SkateAnnotation1")
+            annotationImage = MGLAnnotationImage(image: marker!, reuseIdentifier: "SkateAnnotation1")
             
             
             

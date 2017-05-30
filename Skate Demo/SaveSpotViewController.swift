@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import Mapbox
 import IBAnimatable
+import ProgressHUD
+import PKHUD
 
 class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     
@@ -184,13 +186,21 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         let selected = pickerView.selectedRow(inComponent: 0)
         
         guard selected > 0 else {
+            
+            ProgressHUD.showError("Select A SkateType")
+            
             print("select a type")
-            return
+            
+            return 
+            
         }
         
       guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
     
         guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
+            
+            
+            ProgressHUD.showError("Enter all fields")
             
             return
             
@@ -205,6 +215,8 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     
         locationsRef.setValue(["lat": locationManager.location?.coordinate.latitude, "lng": locationManager.location?.coordinate.longitude, "name": skateTitleText, "subtitle": skateStyleText, "type": (selected - 1), "editable": true])
         
+        
+        ProgressHUD.showSuccess("Skate Spot Added")
         
     }
     

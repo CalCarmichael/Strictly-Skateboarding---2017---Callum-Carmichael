@@ -61,6 +61,7 @@ PODS:
   - Material (2.6.3):
     - Material/Core (= 2.6.3)
   - Material/Core (2.6.3)
+  - PKHUD (4.2.2)
   - Polyline (4.1.1)
   - ProgressHUD (2.4)
   - SDWebImage (3.8.2):
@@ -88,6 +89,7 @@ DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 3.5)
   - MapboxDirections.swift (~> 0.9)
   - Material (~> 2.0)
+  - PKHUD (~> 4.0)
   - ProgressHUD
   - SDWebImage (~> 3.8)
   - ShadowImageView
@@ -119,6 +121,7 @@ SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 81197829dcf4c4ed9a593b7a95462881b5f1309a
   MapboxDirections.swift: 7ce85544621940cc94692e97ddbc36e48f1f6070
   Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
+  PKHUD: 9a3599e04d57676ec14746c40e423a52fb6588c0
   Polyline: 381d1e699fd12508f97cfc468478dfbab67edf1f
   ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
@@ -129,6 +132,6 @@ SPEC CHECKSUMS:
   TKSubmitTransitionSwift3: fadd76eefa015542d0fe6d85424a43dd6f3354d2
   WCLShineButton: 44371dea1bd1bb5b81cec5958d6280170c178059
 
-PODFILE CHECKSUM: c97fb7616993f444e77cca426ee726f903d848b7
+PODFILE CHECKSUM: f501f66d7816948f2a1d4fc180867003087f34db
 
 COCOAPODS: 1.1.1
