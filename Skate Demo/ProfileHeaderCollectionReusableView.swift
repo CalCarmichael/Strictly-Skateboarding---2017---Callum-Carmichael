@@ -221,6 +221,10 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
             
         }
     }
+    
+    
+    
+    
 
     
 }
