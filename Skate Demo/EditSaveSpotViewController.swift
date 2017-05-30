@@ -40,6 +40,7 @@ class EditSaveSpotViewController: UIViewController {
        
         ref.observe(.value, with: { [unowned self] snapshot in
             
+            guard let _ = snapshot.value as? [String: Any] else { return }
         
             self.skatepark = Skatepark(snapshot: snapshot)
             
@@ -115,9 +116,11 @@ class EditSaveSpotViewController: UIViewController {
         
         ref.observe(.value, with: { (snapshot) in
             
-            
+
             
             self.ref.setValue(nil)
+            
+            
             
 
             print(snapshot)

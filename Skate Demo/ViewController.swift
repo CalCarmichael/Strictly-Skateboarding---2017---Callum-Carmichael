@@ -135,23 +135,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         // Passing firebase annotation data
         
-        locationsRef.observe(.value, with: { snapshot in
-            self.skateparks.removeAll()
-            
-            for item in snapshot.children {
-                guard let snapshot = item as? FIRDataSnapshot else { continue }
-                
-                let newSkatepark = Skatepark(snapshot: snapshot)
-                
-                self.skateparks.append(newSkatepark)
-
-                self.addAnnotation(park: newSkatepark)
-            }
-            
-            self.loadCustomLocations()
-            
-            
-        })
+        
     }
     
     func loadCustomLocations() {
@@ -183,6 +167,32 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         view.sendSubview(toBack: mapView)
+        
+        locationsRef.observe(.value, with: { snapshot in
+            self.skateparks.removeAll()
+            
+            if let annotations = self.mapView.annotations {
+                
+                self.mapView.removeAnnotations(annotations)
+                
+            }
+            
+            for item in snapshot.children {
+                guard let snapshot = item as? FIRDataSnapshot else { continue }
+                
+                let newSkatepark = Skatepark(snapshot: snapshot)
+                
+                self.skateparks.append(newSkatepark)
+                
+                self.addAnnotation(park: newSkatepark)
+            }
+            
+            self.loadCustomLocations()
+            
+            
+        })
+        
+        
     }
     
     
