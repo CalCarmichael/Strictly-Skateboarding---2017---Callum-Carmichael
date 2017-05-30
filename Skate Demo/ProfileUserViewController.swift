@@ -14,6 +14,8 @@ class ProfileUserViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    
     var user: User!
     
     var posts: [Post] = []
@@ -100,50 +102,107 @@ class ProfileUserViewController: UIViewController {
     
     //Downloading User Spots
     
-    
-    @IBAction func getUserSpots(_ sender: Any) {
-    
-        var spots = [Skatepark]()
+    @IBAction func switchDownload(_ sender: UISwitch) {
         
-    ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations/")
-        
-        ref.observe(.value, with: { (snapshot) in
+        if (sender.isOn == true) {
             
-            for item in snapshot.children {
-                
-                
-                guard let snapshot = item as? FIRDataSnapshot else { continue }
-                
-                let spot = Skatepark(snapshot: snapshot)
-                spots.append(spot)
+            var spots = [Skatepark]()
             
-                let uid = FIRAuth.auth()!.currentUser!.uid
+            ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations/")
+            
+            ref.observe(.value, with: { (snapshot) in
                 
-                for spot in spots {
+                for item in snapshot.children {
                     
+                    
+                    guard let snapshot = item as? FIRDataSnapshot else { continue }
+                    
+                    let spot = Skatepark(snapshot: snapshot)
+                    spots.append(spot)
                     
                     let uid = FIRAuth.auth()!.currentUser!.uid
                     
-                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
+                    for spot in spots {
+                        
+                        
+                        let uid = FIRAuth.auth()!.currentUser!.uid
+                        
+                        let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
+                        
+                        locationsRef.setValue(spot.dictionaryValues())
+                        
+                        
+                        
+                    }
                     
-                    locationsRef.setValue(spot.dictionaryValues())
-
-                
+                    let alert = UIAlertController(title: "Get Skating", message: "Your new spots have been downloaded to the map!", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                     
                 }
                 
-                let alert = UIAlertController(title: "Get Skating", message: "Your new spots have been downloaded to the map!", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
                 
-            }
+            })
+
+            
+        } else {
             
             
-        })
+            print("Undownload")
+            
+            
+        }
+        
         
         
         
     }
+    
+    
+    
+//    @IBAction func getUserSpots(_ sender: Any) {
+//    
+//        var spots = [Skatepark]()
+//        
+//    ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations/")
+//        
+//        ref.observe(.value, with: { (snapshot) in
+//            
+//            for item in snapshot.children {
+//                
+//                
+//                guard let snapshot = item as? FIRDataSnapshot else { continue }
+//                
+//                let spot = Skatepark(snapshot: snapshot)
+//                spots.append(spot)
+//            
+//                let uid = FIRAuth.auth()!.currentUser!.uid
+//                
+//                for spot in spots {
+//                    
+//                    
+//                    let uid = FIRAuth.auth()!.currentUser!.uid
+//                    
+//                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
+//                    
+//                    locationsRef.setValue(spot.dictionaryValues())
+//
+//                
+//                    
+//                }
+//                
+//                let alert = UIAlertController(title: "Get Skating", message: "Your new spots have been downloaded to the map!", preferredStyle: UIAlertControllerStyle.alert)
+//                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//                
+//            }
+//            
+//            
+//        })
+//        
+//        
+//        
+//    }
     
     
     

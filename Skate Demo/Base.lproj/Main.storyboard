@@ -2221,7 +2221,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Kf-0Z-jam">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Kf-0Z-jam">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2242,7 +2242,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jlf-jj-gR9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jlf-jj-gR9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2537,13 +2537,21 @@
                                                 <action selector="getUserSpots:" destination="hbx-BZ-ko3" eventType="touchUpInside" id="8Yv-vc-T6t"/>
                                             </connections>
                                         </button>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bb-rX-WTW">
+                                            <rect key="frame" x="36" y="125" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="switchDownload:" destination="hbx-BZ-ko3" eventType="valueChanged" id="cVi-uc-3hH"/>
+                                            </connections>
+                                        </switch>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="8bb-rX-WTW" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="36" id="0yL-0H-D8h"/>
                                         <constraint firstItem="5iy-h1-yLg" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="8" id="4ES-QD-Vjp"/>
                                         <constraint firstAttribute="trailing" secondItem="sXi-67-mNs" secondAttribute="trailing" id="7TU-Bz-GsM"/>
                                         <constraint firstItem="sXi-67-mNs" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" id="8jt-cq-TZD"/>
                                         <constraint firstAttribute="bottom" secondItem="sXi-67-mNs" secondAttribute="bottom" id="8z6-vU-KD6"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="leading" secondItem="It1-yz-l2F" secondAttribute="leading" id="JwR-bB-G9F"/>
+                                        <constraint firstItem="5iy-h1-yLg" firstAttribute="top" secondItem="8bb-rX-WTW" secondAttribute="bottom" constant="8" id="afG-z0-rLV"/>
                                         <constraint firstItem="9jf-Eh-8rs" firstAttribute="top" secondItem="It1-yz-l2F" secondAttribute="bottom" constant="8" symbolic="YES" id="bXC-iM-Tt9"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="centerX" secondItem="9jf-Eh-8rs" secondAttribute="centerX" id="hEV-C0-aS5"/>
                                         <constraint firstItem="sXi-67-mNs" firstAttribute="top" secondItem="5iy-h1-yLg" secondAttribute="bottom" constant="8" id="iM2-Vx-8Ri"/>
