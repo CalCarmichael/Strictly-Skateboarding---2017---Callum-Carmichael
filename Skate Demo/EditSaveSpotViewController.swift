@@ -59,6 +59,17 @@ class EditSaveSpotViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        animateVisualEffect()
+        
+        
+    }
+    
+
+    
     func setPickerView() {
         
         for (index, option) in options.enumerated() {
@@ -105,6 +116,37 @@ class EditSaveSpotViewController: UIViewController {
    
     
     }
+    
+    
+    @IBAction func cancelView(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    func animateVisualEffect() {
+        
+        
+        editSpotPopUP.center = self.editSpotPopUP.center
+        editSpotPopUP.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
+        
+        
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseIn, animations: {
+            
+            
+            self.editSpotPopUP.alpha = 1
+            self.editSpotPopUP.transform = CGAffineTransform.identity
+            
+            
+        }, completion: nil)
+        
+        
+    }
+
+    
+    
 
     
     @IBAction func deleteSkateSpot(_ sender: Any) {

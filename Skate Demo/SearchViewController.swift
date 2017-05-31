@@ -141,7 +141,9 @@ extension SearchViewController: UITableViewDataSource {
         
         cell.delegate = self
         
+        cell.alpha = 0
         
+        UIView.animate(withDuration: 0.4, animations: { cell.alpha = 1 })
         
         return cell
     }
