@@ -39,6 +39,7 @@ class Skatepark {
     var type: SkateType
     var editable: Bool!
     var id: String!
+    var did: String?
     var ref: FIRDatabaseReference?
     
     init(snapshot: FIRDataSnapshot) {
@@ -46,6 +47,7 @@ class Skatepark {
         let snapshotValue = snapshot.value as! [String: Any]
         
         id = snapshot.key
+        did = snapshotValue["did"] as? String
         ref = snapshot.ref
         name = snapshotValue["name"] as! String
         subtitle = snapshotValue["subtitle"] as! String
@@ -68,7 +70,8 @@ class Skatepark {
             "subtitle": subtitle,
             "type": type.rawValue,
             "editable": editable,
-            "id": id
+            "id": id,
+            "did": id
         ]
         
         return data

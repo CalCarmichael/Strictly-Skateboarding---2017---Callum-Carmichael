@@ -172,38 +172,48 @@ class ProfileUserViewController: UIViewController {
                     let uid = FIRAuth.auth()!.currentUser!.uid
                     
                     for spot in spots {
+                        
+    
 
                     self.downloadedSpots.append(spot.id)
                         
                     
+                }
                     
+                    let dids = self.downloadedSpots.joined(separator: ",")
+                    
+                    let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations")
+                    
+                    locationsRef.observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+                       
+                        
+                        for item in snapshot.children {
+                            
+                            guard let snapshot = item as? FIRDataSnapshot else { continue }
+                            
+                            let spot = Skatepark(snapshot: snapshot)
+                            
+                            spots.append(spot)
+                            
+                            if dids.contains(spot.did!) {
+                                
+                                locationsRef.removeValue()
+                                
+                                print("match")
+                                
+                            }
+                        
+                            
+                        }
+                    
+                        
+                    })
                     
                     
                 }
-                
-                    print(self.downloadedSpots)
-                
-                //Loop through the user your looking at and get id of all locations.
-                //Put there location id into array.
-                //Loop through own locations
-                //Compare to array
-                //Those that match = delete
-                
-                
-                
-                // ref = FIRDatabase.database().reference().child("users").child(Api.User.CURRENT_USER!.uid).child("personalLocations")
-
             
-            
-           // print("Undownload")
-            
-            
-        }
-        
-        
-        
-        
-    })
+                
+            })
             
         }
         
