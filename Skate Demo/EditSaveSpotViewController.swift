@@ -106,9 +106,6 @@ class EditSaveSpotViewController: UIViewController {
     
     }
 
-
-
-    
     
     @IBAction func deleteSkateSpot(_ sender: Any) {
         
@@ -131,10 +128,7 @@ class EditSaveSpotViewController: UIViewController {
             
         })
         
-        
     }
-    
-    
 
 }
 

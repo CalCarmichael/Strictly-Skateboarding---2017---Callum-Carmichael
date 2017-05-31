@@ -66,8 +66,9 @@ class Skatepark {
             "lng": coordinate.longitude,
             "name": name,
             "subtitle": subtitle,
-            "type":type.rawValue,
-            "editable": editable
+            "type": type.rawValue,
+            "editable": editable,
+            "id": id
         ]
         
         return data

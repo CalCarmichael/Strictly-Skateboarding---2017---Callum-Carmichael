@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.black
         
         let navigationFont = UIFont(name: "HelveticaNeue-CondensedBold", size: 18)!
+        
         let navigationFontAttributes = [NSFontAttributeName : navigationFont, NSForegroundColorAttributeName : UIColor.white]
         
         UINavigationBar.appearance().titleTextAttributes = navigationFontAttributes

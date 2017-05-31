@@ -131,6 +131,9 @@ class ProfileUserViewController: UIViewController {
                         let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
                         
                         
+                        
+                       
+                        
                         locationsRef.setValue(spot.dictionaryValues())
                         
                         
@@ -155,6 +158,8 @@ class ProfileUserViewController: UIViewController {
             ref = FIRDatabase.database().reference().child("users").child(Api.User.CURRENT_USER!.uid).child("personalLocations")
             
             ref.observe(.value, with: { (snapshot) in
+                
+                
                 
                 
                 
