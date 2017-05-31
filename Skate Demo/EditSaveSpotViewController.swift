@@ -65,16 +65,22 @@ class EditSaveSpotViewController: UIViewController {
             
             
             self.updateButton.layer.shadowColor = UIColor.black.cgColor
-            self.updateButton.layer.shadowOpacity = 0.1
+            self.updateButton.layer.shadowOpacity = 0.2
             self.updateButton.layer.shadowOffset = CGSize(width: 0, height: 5)
             self.updateButton.layer.shadowRadius = 5
             self.updateButton.layer.shadowPath = UIBezierPath(roundedRect: self.updateButton.bounds, cornerRadius: 10).cgPath
             
             self.deleteButton.layer.shadowColor = UIColor.red.cgColor
-            self.deleteButton.layer.shadowOpacity = 0.1
+            self.deleteButton.layer.shadowOpacity = 0.2
             self.deleteButton.layer.shadowOffset = CGSize(width: 0, height: 5)
             self.deleteButton.layer.shadowRadius = 5
             self.deleteButton.layer.shadowPath = UIBezierPath(roundedRect: self.deleteButton.bounds, cornerRadius: 10).cgPath
+            
+            self.blackBackgroundView.layer.shadowColor = UIColor.black.cgColor
+            self.blackBackgroundView.layer.shadowOpacity = 0.5
+            self.blackBackgroundView.layer.shadowOffset = CGSize(width: 0, height: 5)
+            self.blackBackgroundView.layer.shadowRadius = 5
+            self.blackBackgroundView.layer.shadowPath = UIBezierPath(roundedRect: self.blackBackgroundView.bounds, cornerRadius: 10).cgPath
 
             
             
