@@ -21,8 +21,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     
     var skateparks = [Skatepark]()
     
-    var skatepark: Skatepark?
-    
     var user: FIRUser!
     
     let locationManager = CLLocationManager()
@@ -196,24 +194,28 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     }
     
     
-//    func mapDirections() {
-//        
-//        
-//        let regionDistance: CLLocationDistance = 1000;
-//        let coordinates =  skatepark?.coordinate
-//        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates!, regionDistance, regionDistance)
-//        
-//        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
-//        
-//        let placemark = MKPlacemark(coordinate: coordinates!, addressDictionary: nil)
-//        let mapItem = MKMapItem(placemark: placemark)
-//        mapItem.name = skatepark?.name
-//        mapItem.openInMaps(launchOptions: options)
-//        
-//    }
-//    
-//    
-//    
+    func mapDirections(for park: Skatepark) {
+        
+        
+        let regionDistance: CLLocationDistance = 1000;
+
+        
+        let regionSpan = MKCoordinateRegionMakeWithDistance(park.coordinate, regionDistance, regionDistance)
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        let placemark = MKPlacemark(coordinate: park.coordinate, addressDictionary: nil)
+        
+        let mapItem = MKMapItem(placemark: placemark)
+        
+        mapItem.name = park.name
+        
+        mapItem.openInMaps(launchOptions: options)
+        
+    }
+    
+    
+    
     
     
     
@@ -222,6 +224,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     func addAnnotation(park: Skatepark) {
 
         let point = SkateAnnotation()
+        
+        point.skatepark = park
         
         point.coordinate = park.coordinate
 
@@ -320,7 +324,12 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
          //   self.performSegue(withIdentifier: "InviteUserSegue", sender: view)
             
             
-//                mapDirections()
+            guard let skateAnnotation = annotation as? SkateAnnotation else { return }
+            
+            mapDirections(for: skateAnnotation.skatepark)
+            
+            
+            
             
 
             
@@ -360,6 +369,10 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     //Information button - turn this into 360 image
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        
+        
+        
+        
         
         let button = UIButton(type: .contactAdd)
         button.tag = 101

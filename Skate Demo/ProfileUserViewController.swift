@@ -14,8 +14,6 @@ class ProfileUserViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
-    
     var user: User!
     
     var posts: [Post] = []
@@ -27,6 +25,8 @@ class ProfileUserViewController: UIViewController {
     var skatepark: Skatepark?
     
     var ref: FIRDatabaseReference!
+    
+    var parkId: String!
     
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
     
@@ -108,7 +108,7 @@ class ProfileUserViewController: UIViewController {
             
             var spots = [Skatepark]()
             
-            ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations/")
+            ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations")
             
             ref.observe(.value, with: { (snapshot) in
                 
@@ -118,6 +118,7 @@ class ProfileUserViewController: UIViewController {
                     guard let snapshot = item as? FIRDataSnapshot else { continue }
                     
                     let spot = Skatepark(snapshot: snapshot)
+                    
                     spots.append(spot)
                     
                     let uid = FIRAuth.auth()!.currentUser!.uid
@@ -128,6 +129,7 @@ class ProfileUserViewController: UIViewController {
                         let uid = FIRAuth.auth()!.currentUser!.uid
                         
                         let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
+                        
                         
                         locationsRef.setValue(spot.dictionaryValues())
                         
@@ -148,7 +150,21 @@ class ProfileUserViewController: UIViewController {
         } else {
             
             
-            print("Undownload")
+            var spots = [Skatepark]()
+            
+            ref = FIRDatabase.database().reference().child("users").child(Api.User.CURRENT_USER!.uid).child("personalLocations")
+            
+            ref.observe(.value, with: { (snapshot) in
+                
+                
+                
+                print(snapshot)
+                
+                
+            })
+            
+            
+           // print("Undownload")
             
             
         }
@@ -170,7 +186,7 @@ class ProfileUserViewController: UIViewController {
 //            
 //            for item in snapshot.children {
 //                
-//                
+//
 //                guard let snapshot = item as? FIRDataSnapshot else { continue }
 //                
 //                let spot = Skatepark(snapshot: snapshot)
