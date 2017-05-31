@@ -26,6 +26,8 @@ class ProfileUserViewController: UIViewController {
     
     var ref: FIRDatabaseReference!
     
+    var downloadedSpots = [String]()
+    
     var parkId: String!
     
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
@@ -132,8 +134,6 @@ class ProfileUserViewController: UIViewController {
                         
                         
                         
-                       
-                        
                         locationsRef.setValue(spot.dictionaryValues())
                         
                         
@@ -155,18 +155,44 @@ class ProfileUserViewController: UIViewController {
             
             var spots = [Skatepark]()
             
-            ref = FIRDatabase.database().reference().child("users").child(Api.User.CURRENT_USER!.uid).child("personalLocations")
+            ref = FIRDatabase.database().reference().child("users").child(userId).child("personalLocations")
+            
             
             ref.observe(.value, with: { (snapshot) in
                 
                 
+                for item in snapshot.children {
+                    
+                    guard let snapshot = item as? FIRDataSnapshot else { continue }
+                    
+                    let spot = Skatepark(snapshot: snapshot)
+                    
+                    spots.append(spot)
+                    
+                    let uid = FIRAuth.auth()!.currentUser!.uid
+                    
+                    for spot in spots {
+
+                    self.downloadedSpots.append(spot.id)
+                        
+                    
+                    
+                    
+                    
+                }
+                
+                    print(self.downloadedSpots)
+                
+                //Loop through the user your looking at and get id of all locations.
+                //Put there location id into array.
+                //Loop through own locations
+                //Compare to array
+                //Those that match = delete
                 
                 
                 
-                print(snapshot)
-                
-                
-            })
+                // ref = FIRDatabase.database().reference().child("users").child(Api.User.CURRENT_USER!.uid).child("personalLocations")
+
             
             
            // print("Undownload")
@@ -176,6 +202,10 @@ class ProfileUserViewController: UIViewController {
         
         
         
+        
+    })
+            
+        }
         
     }
     
