@@ -20,6 +20,12 @@ class EditSaveSpotViewController: UIViewController {
     
     @IBOutlet weak var editSpotPopUP: UIView!
     
+    @IBOutlet weak var updateButton: UIButton!
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBOutlet weak var blackBackgroundView: UIView!
+    
     var user: FIRUser!
     
     var skatepark: Skatepark!
@@ -52,6 +58,25 @@ class EditSaveSpotViewController: UIViewController {
             
             self.setPickerView()
             
+            //UI
+            
+            self.updateButton.layer.cornerRadius = 6
+            self.deleteButton.layer.cornerRadius = 6
+            
+            
+            self.updateButton.layer.shadowColor = UIColor.black.cgColor
+            self.updateButton.layer.shadowOpacity = 0.1
+            self.updateButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+            self.updateButton.layer.shadowRadius = 5
+            self.updateButton.layer.shadowPath = UIBezierPath(roundedRect: self.updateButton.bounds, cornerRadius: 10).cgPath
+            
+            self.deleteButton.layer.shadowColor = UIColor.red.cgColor
+            self.deleteButton.layer.shadowOpacity = 0.1
+            self.deleteButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+            self.deleteButton.layer.shadowRadius = 5
+            self.deleteButton.layer.shadowPath = UIBezierPath(roundedRect: self.deleteButton.bounds, cornerRadius: 10).cgPath
+
+            
             
             
         })
@@ -63,7 +88,7 @@ class EditSaveSpotViewController: UIViewController {
         super.viewDidAppear(animated)
         
         
-        animateVisualEffect()
+        
         
         
     }
@@ -125,26 +150,7 @@ class EditSaveSpotViewController: UIViewController {
     }
     
     
-    func animateVisualEffect() {
-        
-        
-        editSpotPopUP.center = self.editSpotPopUP.center
-        editSpotPopUP.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        
-        
-        
-        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseIn, animations: {
-            
-            
-            self.editSpotPopUP.alpha = 1
-            self.editSpotPopUP.transform = CGAffineTransform.identity
-            
-            
-        }, completion: nil)
-        
-        
-    }
-
+   
     
     
 
