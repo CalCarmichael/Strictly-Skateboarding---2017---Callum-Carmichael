@@ -41,6 +41,7 @@ class SearchViewController: UIViewController {
         
         self.navigationController?.hidesBarsOnSwipe = false
         
+        
     }
     
     
@@ -63,9 +64,7 @@ class SearchViewController: UIViewController {
                     
                     self.users.append(user)
                     
-                    self.tableView.reloadData(
-                        with: .spring(duration: 0.8, damping: 0.8, velocity: 0.7, direction: .left(useCellsFrame: false),
-                                      constantDelay: 0))
+                    self.tableView.reloadData()
                     
                 })
                 
@@ -142,9 +141,7 @@ extension SearchViewController: UITableViewDataSource {
         
         cell.delegate = self
         
-        cell.alpha = 0
         
-        UIView.animate(withDuration: 0.4, animations: { cell.alpha = 1 })
         
         return cell
     }

@@ -327,14 +327,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
             guard let skateAnnotation = annotation as? SkateAnnotation else { return }
             
             mapDirections(for: skateAnnotation.skatepark)
-            
-            
-            
-            
-
-            
-            
-            
+    
             
             
         }
