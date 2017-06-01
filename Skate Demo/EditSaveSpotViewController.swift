@@ -62,6 +62,8 @@ class EditSaveSpotViewController: UIViewController {
             
             self.setPickerView()
             
+            
+            
             //UI
             
             self.updateButton.layer.cornerRadius = 6
@@ -156,6 +158,17 @@ class EditSaveSpotViewController: UIViewController {
             return
         }
         
+        
+        //        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
+        //
+        //        guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
+        //
+        //            return
+        //            
+        //        }
+        
+        
+        
         skatepark.name = skateTitleText.text!
         
         skatepark.subtitle = skateStyleText.text!
@@ -163,16 +176,6 @@ class EditSaveSpotViewController: UIViewController {
         
         skatepark.type = SkateType(rawValue: pickerView.selectedRow(inComponent: 0) - 1)!
         
-        
-        
-//        guard let skateTitleText = skateTitleText.text, let skateStyleText = skateStyleText.text else { return }
-//        
-//        guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
-//            
-//            return
-//            
-//        }
-            
         
         ref.setValue(skatepark.dictionaryValues())
         
@@ -195,6 +198,9 @@ class EditSaveSpotViewController: UIViewController {
     
     @IBAction func deleteSkateSpot(_ sender: Any) {
         
+        
+        
+        
         ref = FIRDatabase.database().reference(withPath: "users").child(Api.User.CURRENT_USER!.uid).child("personalLocations/\(parkId!)")
         
         ref.observe(.value, with: { (snapshot) in
@@ -203,8 +209,7 @@ class EditSaveSpotViewController: UIViewController {
             
             self.ref.setValue(nil)
             
-            
-            
+        
 
             print(snapshot)
             

@@ -69,9 +69,6 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         self.shadowView.layer.shadowRadius = 5
         self.shadowView.layer.shadowPath = UIBezierPath(roundedRect: self.shadowView.bounds, cornerRadius: 10).cgPath
         
-      
-
-        
     
     }
     
@@ -81,10 +78,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         
         animateVisualEffectView()
         
-       animateVisualEffect()
-        
-        
-        
+        animateVisualEffect()
         
         
     }
