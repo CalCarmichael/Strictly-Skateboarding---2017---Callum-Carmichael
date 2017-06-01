@@ -46,6 +46,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         saveSpotPopUpView.alpha = 0
+        shadowView.alpha = 0
         
        
         saveSpotPopUpView.layer.masksToBounds = true
@@ -111,6 +112,9 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     
     func animateVisualEffect() {
         
+        shadowView.center = self.shadowView.center
+        shadowView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
       
         saveSpotPopUpView.center = self.saveSpotPopUpView.center
         saveSpotPopUpView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -119,6 +123,9 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseIn, animations: {
             
+            
+            self.shadowView.alpha = 1
+            self.shadowView.transform = CGAffineTransform.identity
             
             self.saveSpotPopUpView.alpha = 1
             self.saveSpotPopUpView.transform = CGAffineTransform.identity

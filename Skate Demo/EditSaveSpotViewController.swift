@@ -41,6 +41,10 @@ class EditSaveSpotViewController: UIViewController {
         super.viewDidLoad()
         
         
+        editSpotPopUP.alpha = 0
+        blackBackgroundView.alpha = 0
+        
+        editSpotPopUP.layer.masksToBounds = true
         
         ref = FIRDatabase.database().reference(withPath: "users").child(Api.User.CURRENT_USER!.uid).child("personalLocations/\(parkId!)")
        
@@ -94,10 +98,38 @@ class EditSaveSpotViewController: UIViewController {
         super.viewDidAppear(animated)
         
         
-        
+        animateVisualEffect()
         
         
     }
+    
+    func animateVisualEffect() {
+        
+        blackBackgroundView.center = self.blackBackgroundView.center
+        blackBackgroundView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
+        
+        editSpotPopUP.center = self.editSpotPopUP.center
+        editSpotPopUP.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
+        
+        
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseIn, animations: {
+            
+            
+            self.blackBackgroundView.alpha = 1
+            self.blackBackgroundView.transform = CGAffineTransform.identity
+            
+            self.editSpotPopUP.alpha = 1
+            self.editSpotPopUP.transform = CGAffineTransform.identity
+            
+            
+        }, completion: nil)
+        
+        
+    }
+    
+
     
 
     
