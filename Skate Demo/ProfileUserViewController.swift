@@ -45,7 +45,9 @@ class ProfileUserViewController: UIViewController {
         getUser()
         getUserPosts()
         
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
+        flow.sectionInset = UIEdgeInsetsMake(3, 0, 3, 0)
         
     }
     
@@ -345,11 +347,11 @@ extension ProfileUserViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 3 , height: collectionView.frame.size.width / 3)
+        return CGSize(width: collectionView.frame.size.width / 3 - 2 , height: collectionView.frame.size.width / 3 - 2)
     }
     
 }

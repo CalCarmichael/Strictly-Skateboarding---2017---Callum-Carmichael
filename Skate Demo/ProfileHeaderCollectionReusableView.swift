@@ -33,6 +33,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var followButton: UIButton!
     
+    @IBOutlet weak var shadowTest: UIView!
     
     @IBOutlet weak var downloadButton: UIButton!
     
@@ -55,9 +56,6 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         clear()
         
     }
-    
-    
-    
     
     
     func updateView() {
@@ -157,11 +155,11 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         //UI Button
         
         followButton.layer.borderWidth = 1
-        followButton.layer.borderColor = UIColor(red: 226/255, green: 228/255, blue: 232.255, alpha: 1).cgColor
-        followButton.layer.cornerRadius = 5
+        followButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
+        followButton.layer.cornerRadius = 6
         followButton.clipsToBounds = true
         followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        followButton.backgroundColor = UIColor(red: 69/255, green: 142/255, blue: 255/255, alpha: 1)
+        followButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         
         followButton.setTitle("Follow", for: UIControlState.normal)
         followButton.addTarget(self, action: #selector(self.followAction), for: UIControlEvents.touchUpInside)
@@ -174,11 +172,11 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         //UI Button
         
         followButton.layer.borderWidth = 1
-        followButton.layer.borderColor = UIColor(red: 226/255, green: 228/255, blue: 232.255, alpha: 1).cgColor
-        followButton.layer.cornerRadius = 5
+        followButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
+        followButton.layer.cornerRadius = 6
         followButton.clipsToBounds = true
         followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        followButton.backgroundColor = UIColor(red: 66/255, green: 244/255, blue: 75/255, alpha: 1)
+        followButton.backgroundColor = UIColor(red: 225/255, green: 51/255, blue: 51/255, alpha: 1)
         
         followButton.setTitle("Following", for: UIControlState.normal)
         followButton.addTarget(self, action: #selector(self.unfollowAction), for: UIControlEvents.touchUpInside)
@@ -221,6 +219,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
             
         }
     }
+    
     
     
     
