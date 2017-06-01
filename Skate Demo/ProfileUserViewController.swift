@@ -206,14 +206,14 @@ class ProfileUserViewController: UIViewController {
                             if dids.contains(spot.did!) {
                                 
                                 
-                                for locToRemove in self.downloadedSpots {
+                         //       for locToRemove in self.downloadedSpots {
                                     
                                     
                                     
                                     let ref = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").child(key)
                                     
                                     ref.removeValue()
-                                }
+                              //  }
                                 
                                 print("match")
                                 
