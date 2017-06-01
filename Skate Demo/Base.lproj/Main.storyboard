@@ -764,13 +764,53 @@
                                     <blurEffect style="dark"/>
                                 </vibrancyEffect>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOU-RI-vLg">
+                                <rect key="frame" x="16" y="147" width="343" height="372"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oho-f3-Y8t" customClass="ButtonBounce" customModule="Skate_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="156" y="3" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="BWJ-P6-FiC"/>
+                                            <constraint firstAttribute="width" constant="25" id="q45-sw-jnC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" image="ic_close_white_48pt">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoRun" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="closeButton_TouchUpInside:" destination="nlc-38-EC9" eventType="touchUpInside" id="uxf-bj-tUu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oho-f3-Y8t" firstAttribute="centerX" secondItem="gOU-RI-vLg" secondAttribute="centerX" constant="-3" id="GWt-ge-Qpm"/>
+                                    <constraint firstItem="oho-f3-Y8t" firstAttribute="top" secondItem="gOU-RI-vLg" secondAttribute="top" constant="3" id="POq-m3-oLK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrn-8W-1a3">
                                 <rect key="frame" x="15" y="179" width="345" height="308"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BZ9-OU-C8c">
-                                        <rect key="frame" x="-10" y="-11" width="2113" height="328"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9u-Aa-mUn">
                                         <rect key="frame" x="5" y="145" width="335" height="98"/>
                                         <constraints>
@@ -785,7 +825,8 @@
                                         <rect key="frame" x="5" y="258" width="335" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToZ-j4-svr" customClass="ButtonBounce" customModule="Skate_Demo" customModuleProvider="target">
-                                                <rect key="frame" x="80" y="8" width="30" height="29"/>
+                                                <rect key="frame" x="137" y="8" width="60" height="29"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
                                                 <state key="normal" title="Add">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -803,41 +844,14 @@
                                                     <action selector="addPinAndSaveLocation:" destination="nlc-38-EC9" eventType="touchUpInside" id="sZ5-Xa-Z0G"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oho-f3-Y8t" customClass="ButtonBounce" customModule="Skate_Demo" customModuleProvider="target">
-                                                <rect key="frame" x="222" y="8" width="33" height="29"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
-                                                <state key="normal" title="Close">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoRun" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="closeButton_TouchUpInside:" destination="nlc-38-EC9" eventType="touchUpInside" id="uxf-bj-tUu"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="5RQ-ae-2Sc"/>
-                                            <constraint firstAttribute="bottom" secondItem="ToZ-j4-svr" secondAttribute="bottom" constant="8" id="6J3-HF-sef"/>
-                                            <constraint firstAttribute="trailing" secondItem="oho-f3-Y8t" secondAttribute="trailing" constant="80" id="92D-Wq-Ah0"/>
-                                            <constraint firstItem="ToZ-j4-svr" firstAttribute="leading" secondItem="uDb-Du-Rbw" secondAttribute="leading" constant="80" id="DCw-8M-bd9"/>
-                                            <constraint firstAttribute="bottom" secondItem="oho-f3-Y8t" secondAttribute="bottom" constant="8" id="VnG-lC-70X"/>
-                                            <constraint firstItem="oho-f3-Y8t" firstAttribute="top" secondItem="uDb-Du-Rbw" secondAttribute="top" constant="8" id="dAB-td-d5B"/>
-                                            <constraint firstItem="ToZ-j4-svr" firstAttribute="top" secondItem="uDb-Du-Rbw" secondAttribute="top" constant="8" id="h7b-c8-1PS"/>
+                                            <constraint firstItem="ToZ-j4-svr" firstAttribute="leading" secondItem="uDb-Du-Rbw" secondAttribute="leading" constant="137" id="8sG-Pl-mIw"/>
+                                            <constraint firstAttribute="bottom" secondItem="ToZ-j4-svr" secondAttribute="bottom" constant="8" id="IRM-qx-aQc"/>
+                                            <constraint firstAttribute="trailing" secondItem="ToZ-j4-svr" secondAttribute="trailing" constant="138" id="rgE-Np-Q1A"/>
+                                            <constraint firstItem="ToZ-j4-svr" firstAttribute="top" secondItem="uDb-Du-Rbw" secondAttribute="top" constant="8" id="rvH-zA-Osw"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yln-uP-1db">
@@ -890,7 +904,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="b9u-Aa-mUn" secondAttribute="trailing" constant="5" id="3bI-I7-Uh8"/>
                                     <constraint firstItem="uDb-Du-Rbw" firstAttribute="leading" secondItem="qrn-8W-1a3" secondAttribute="leading" constant="5" id="G5S-rN-DrF"/>
@@ -907,9 +921,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gOU-RI-vLg" firstAttribute="leading" secondItem="gO9-85-U6P" secondAttribute="leading" constant="16" id="1kq-cs-b3c"/>
                             <constraint firstAttribute="trailing" secondItem="xXv-7T-rHy" secondAttribute="trailing" id="P79-lu-pOH"/>
+                            <constraint firstItem="Nmn-yg-hhJ" firstAttribute="top" secondItem="gOU-RI-vLg" secondAttribute="bottom" constant="148" id="P9g-zP-7QJ"/>
+                            <constraint firstAttribute="trailing" secondItem="gOU-RI-vLg" secondAttribute="trailing" constant="16" id="bIa-z1-LtX"/>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="leading" secondItem="gO9-85-U6P" secondAttribute="leading" constant="15" id="dVU-4e-2UM"/>
                             <constraint firstItem="Nmn-yg-hhJ" firstAttribute="top" secondItem="xXv-7T-rHy" secondAttribute="bottom" id="dnL-Kg-fJE"/>
+                            <constraint firstItem="gOU-RI-vLg" firstAttribute="top" secondItem="p8M-Kh-6jW" secondAttribute="bottom" constant="127" id="eLP-rB-yTO"/>
                             <constraint firstItem="xXv-7T-rHy" firstAttribute="leading" secondItem="gO9-85-U6P" secondAttribute="leading" id="gVL-Mb-1wV"/>
                             <constraint firstAttribute="trailing" secondItem="qrn-8W-1a3" secondAttribute="trailing" constant="15" id="iKp-4Z-GHY"/>
                             <constraint firstItem="qrn-8W-1a3" firstAttribute="top" secondItem="gO9-85-U6P" secondAttribute="top" constant="179" id="p1D-OT-mjb"/>
@@ -919,9 +937,9 @@
                     <connections>
                         <outlet property="addButton" destination="ToZ-j4-svr" id="6Tr-Gx-UYU"/>
                         <outlet property="closeButton" destination="oho-f3-Y8t" id="3vq-TY-GIN"/>
-                        <outlet property="gradientView" destination="BZ9-OU-C8c" id="dsW-gh-AjX"/>
                         <outlet property="pickerView" destination="b9u-Aa-mUn" id="ZAJ-Yg-DmG"/>
                         <outlet property="saveSpotPopUpView" destination="qrn-8W-1a3" id="0kN-ng-1Y9"/>
+                        <outlet property="shadowView" destination="gOU-RI-vLg" id="mHI-io-zUO"/>
                         <outlet property="skateStyleText" destination="o7Z-tN-9mM" id="MOe-50-l3S"/>
                         <outlet property="skateTitleText" destination="veW-xh-NnX" id="SDu-ld-3FK"/>
                         <outlet property="visualEffect" destination="xXv-7T-rHy" id="HpI-3r-bdc"/>
@@ -975,7 +993,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-po-oYA">
-                                        <rect key="frame" x="16" y="180" width="343" height="308"/>
+                                        <rect key="frame" x="16" y="180.5" width="343" height="307"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skate Spot Style:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-FM-g3z">
                                                 <rect key="frame" x="8" y="57" width="327" height="30"/>
@@ -983,7 +1001,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skate Spot Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-CK-q0D">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skate Spot Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-CK-q0D" customClass="YoshikoTextField">
                                                 <rect key="frame" x="8" y="19" width="327" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1000,12 +1018,12 @@
                                                 </connections>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71u-Ch-gZ3">
-                                                <rect key="frame" x="141" y="260" width="60" height="30"/>
+                                                <rect key="frame" x="141" y="260" width="60" height="29"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="aAd-Sz-Zf9"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
                                                 <state key="normal" title="Update">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1016,12 +1034,12 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-QH-IQC">
-                                                <rect key="frame" x="10" y="260" width="60" height="30"/>
+                                                <rect key="frame" x="10" y="260" width="60" height="29"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="QYU-qt-ibO"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
                                                 <state key="normal" title="Delete">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -2911,7 +2929,6 @@
         <image name="CameraTabBar-1" width="25" height="25"/>
         <image name="Forward Punch-50" width="50" height="50"/>
         <image name="GnarlyIcon" width="25" height="19"/>
-        <image name="GradientBackground" width="1500" height="500"/>
         <image name="Like" width="50" height="50"/>
         <image name="Like Filled" width="50" height="50"/>
         <image name="Mute" width="50" height="50"/>
@@ -2936,9 +2953,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EXs-0K-k08"/>
-        <segue reference="vVR-Uv-ZER"/>
-        <segue reference="l60-PI-ags"/>
         <segue reference="BZk-ix-VcM"/>
         <segue reference="4j9-rH-ahU"/>
+        <segue reference="ePP-dP-end"/>
+        <segue reference="e7E-bH-l0r"/>
     </inferredMetricsTieBreakers>
 </document>

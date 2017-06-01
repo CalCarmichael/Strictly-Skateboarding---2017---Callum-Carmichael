@@ -26,10 +26,9 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var closeButton: UIButton!
     
-    @IBOutlet weak var gradientView: UIImageView!
-    
     @IBOutlet weak var visualEffect: UIVisualEffectView!
     
+    @IBOutlet weak var shadowView: UIView!
     
     var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
     
@@ -48,26 +47,28 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
 
         saveSpotPopUpView.alpha = 0
         
-        saveSpotPopUpView.layer.cornerRadius = 10
+       
         saveSpotPopUpView.layer.masksToBounds = true
         
         skateTitleText.delegate = self
         skateStyleText.delegate = self
         
         
+        addButton.layer.cornerRadius = 6
         
+        self.addButton.layer.shadowColor = UIColor.black.cgColor
+        self.addButton.layer.shadowOpacity = 0.2
+        self.addButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+        self.addButton.layer.shadowRadius = 5
+        self.addButton.layer.shadowPath = UIBezierPath(roundedRect: self.addButton.bounds, cornerRadius: 10).cgPath
         
-        addButton.layer.borderWidth = 1
-        addButton.layer.cornerRadius = 5
-        addButton.clipsToBounds = true
-        addButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        addButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        self.shadowView.layer.shadowColor = UIColor.black.cgColor
+        self.shadowView.layer.shadowOpacity = 0.5
+        self.shadowView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        self.shadowView.layer.shadowRadius = 5
+        self.shadowView.layer.shadowPath = UIBezierPath(roundedRect: self.shadowView.bounds, cornerRadius: 10).cgPath
         
-        closeButton.layer.borderWidth = 1
-        closeButton.layer.cornerRadius = 5
-        closeButton.clipsToBounds = true
-        closeButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        closeButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+      
 
         
     
@@ -75,13 +76,11 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
-        animateBackgroundGradient()
+
         
         animateVisualEffectView()
         
-        animateVisualEffect()
+       animateVisualEffect()
         
         
         
@@ -131,18 +130,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func animateBackgroundGradient() {
-        
-        UIView.animate(withDuration: 15, delay: 0, options: [.autoreverse, .curveLinear, .repeat], animations: {
-            
-            let x = -(self.gradientView.frame.width - self.view.frame.width)
-            
-            self.gradientView.transform = CGAffineTransform(translationX: x, y: 0)
-            
-        })
-        
-        
-    }
+
     
     
     
@@ -213,7 +201,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
         
     
-        locationsRef.setValue(["lat": locationManager.location?.coordinate.latitude, "lng": locationManager.location?.coordinate.longitude, "name": skateTitleText, "subtitle": skateStyleText, "type": (selected - 1), "editable": true])
+        locationsRef.setValue(["lat": locationManager.location?.coordinate.latitude, "lng": locationManager.location?.coordinate.longitude, "name": skateTitleText, "subtitle": skateStyleText, "type": (selected - 1), "editable": true, "did": "test"])
         
         
         ProgressHUD.showSuccess("Skate Spot Added")

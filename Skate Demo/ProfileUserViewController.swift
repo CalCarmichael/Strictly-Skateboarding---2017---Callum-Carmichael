@@ -182,6 +182,8 @@ class ProfileUserViewController: UIViewController {
                     
                     let dids = self.downloadedSpots.joined(separator: ",")
                     
+                    print(dids)
+                    
                     let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations")
                     
                     locationsRef.observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
@@ -197,9 +199,12 @@ class ProfileUserViewController: UIViewController {
                             
                             if dids.contains(spot.did!) {
                                 
+                                
                                 locationsRef.removeValue()
                                 
                                 print("match")
+                                
+                                
                                 
                             }
                         
