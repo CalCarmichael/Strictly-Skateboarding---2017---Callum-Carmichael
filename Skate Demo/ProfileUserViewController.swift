@@ -199,6 +199,8 @@ class ProfileUserViewController: UIViewController {
                             
                             let spot = Skatepark(snapshot: snapshot)
                             
+                            let key = snapshot.key
+                            
                             spots.append(spot)
                             
                             if dids.contains(spot.did!) {
@@ -206,7 +208,9 @@ class ProfileUserViewController: UIViewController {
                                 
                                 for locToRemove in self.downloadedSpots {
                                     
-                                    let ref = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").child(locToRemove)
+                                    
+                                    
+                                    let ref = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").child(key)
                                     
                                     ref.removeValue()
                                 }
