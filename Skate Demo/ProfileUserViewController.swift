@@ -49,6 +49,8 @@ class ProfileUserViewController: UIViewController {
         
         flow.sectionInset = UIEdgeInsetsMake(3, 0, 3, 0)
         
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -202,7 +204,12 @@ class ProfileUserViewController: UIViewController {
                             if dids.contains(spot.did!) {
                                 
                                 
-                                locationsRef.removeValue()
+                                for locToRemove in self.downloadedSpots {
+                                    
+                                    let ref = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").child(locToRemove)
+                                    
+                                    ref.removeValue()
+                                }
                                 
                                 print("match")
                                 
