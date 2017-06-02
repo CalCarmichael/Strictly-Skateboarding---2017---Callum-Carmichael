@@ -17,6 +17,7 @@ class SkateAnnotation: MGLPointAnnotation {
     var type: SkateType!
     var skatepark: Skatepark!
     
+    var image: UIImage?
     
 }
     

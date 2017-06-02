@@ -33,7 +33,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     
     var pointAnnotation = MGLPointAnnotation()
     
-    var marker: UIImage?
+    var marker: String?
     
     
     var ref: FIRDatabaseReference!
@@ -57,26 +57,26 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
             
             if index == 0 {
                 addAnnotation(park: park)
-                marker = #imageLiteral(resourceName: "SkateAnnotation1")
+                marker = "SkateAnnotation1"
                 
             }
             
             if index == 1 && park.type == .park {
                 addAnnotation(park: park)
-                marker = #imageLiteral(resourceName: "PINGREEN")
+                marker = "PINGREEN"
                 
             }
             
             if index == 2 && park.type == .street {
                 addAnnotation(park: park)
-                marker = #imageLiteral(resourceName: "SkateAnnotation1")
+                marker = "SkateAnnotation1"
             }
             
             //Change this to feature the users own personal spots they saved to firebase
             
             if index == 3 && park.type == .own {
                 addAnnotation(park: park)
-                marker = #imageLiteral(resourceName: "SkateAnnotation1")
+                marker = "SkateAnnotation1"
             }
             
             
@@ -90,7 +90,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        marker = #imageLiteral(resourceName: "SkateAnnotation1")
+        marker = "SkateAnnotation1"
         
         navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -237,14 +237,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         point.canEdit = park.editable
         
+        point.image = UIImage(named: "SkateAnnotation1")
+        
         mapView.addAnnotation(point)
         
         mapView.selectAnnotation(point, animated: true)
         
     }
-    
-    
-    
     
 
     @IBAction func sideBarButton(_ sender: Any) {
@@ -383,20 +382,21 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         
         
-     //   return nil
+
+//     //   return nil
       
-        var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "SkateAnnotation1")
+        var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: marker!)
         
         if annotationImage == nil {
             
            // var image = UIImage(named: "SkateAnnotation1")!
             
             
+            var image = UIImage(named: marker!)
             
+            image = image?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: (image?.size.height)! / 2, right: 0))
             
-            marker = marker?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: (marker?.size.height)! / 2, right: 0))
-            
-            annotationImage = MGLAnnotationImage(image: marker!, reuseIdentifier: "SkateAnnotation1")
+            annotationImage = MGLAnnotationImage(image: image!, reuseIdentifier: marker!)
             
             
             
