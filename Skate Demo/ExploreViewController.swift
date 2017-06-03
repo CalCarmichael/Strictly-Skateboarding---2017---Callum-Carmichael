@@ -44,7 +44,6 @@ class ExploreViewController: UIViewController {
         super.viewDidAppear(animated)
         
         navigationController?.hidesBarsOnTap = false
-        self.navigationController?.hidesBarsOnSwipe = true
         
     }
     

@@ -126,6 +126,8 @@ class SignUpViewController: UIViewController {
     
     //Signing up the users and sending information to database
     
+    
+    
     @IBAction func signUpButton_TouchUpInside(_ sender: Any) {
         
         view.endEditing(true)
