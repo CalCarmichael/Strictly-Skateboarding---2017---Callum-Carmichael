@@ -2693,38 +2693,36 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iy-h1-yLg">
-                                            <rect key="frame" x="8" y="164" width="105" height="30"/>
-                                            <state key="normal" title="Download Spot"/>
-                                            <connections>
-                                                <action selector="getUserSpots:" destination="hbx-BZ-ko3" eventType="touchUpInside" id="8Yv-vc-T6t"/>
-                                            </connections>
-                                        </button>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bb-rX-WTW">
-                                            <rect key="frame" x="36" y="125" width="51" height="31"/>
+                                            <rect key="frame" x="8" y="163" width="51" height="31"/>
                                             <connections>
                                                 <action selector="switchDownload:" destination="hbx-BZ-ko3" eventType="valueChanged" id="cVi-uc-3hH"/>
                                             </connections>
                                         </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-gH-ppG">
+                                            <rect key="frame" x="11" y="144" width="43.5" height="11"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8bb-rX-WTW" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="36" id="0yL-0H-D8h"/>
-                                        <constraint firstItem="5iy-h1-yLg" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="8" id="4ES-QD-Vjp"/>
                                         <constraint firstAttribute="trailing" secondItem="sXi-67-mNs" secondAttribute="trailing" id="7TU-Bz-GsM"/>
                                         <constraint firstItem="sXi-67-mNs" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" id="8jt-cq-TZD"/>
                                         <constraint firstAttribute="bottom" secondItem="sXi-67-mNs" secondAttribute="bottom" id="8z6-vU-KD6"/>
+                                        <constraint firstItem="OwW-gH-ppG" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="11" id="95y-A2-zTo"/>
+                                        <constraint firstItem="8bb-rX-WTW" firstAttribute="leading" secondItem="dpF-Qb-iUs" secondAttribute="leading" constant="8" id="BU8-oy-2jn"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="leading" secondItem="It1-yz-l2F" secondAttribute="leading" id="JwR-bB-G9F"/>
-                                        <constraint firstItem="5iy-h1-yLg" firstAttribute="top" secondItem="8bb-rX-WTW" secondAttribute="bottom" constant="8" id="afG-z0-rLV"/>
+                                        <constraint firstItem="8bb-rX-WTW" firstAttribute="top" secondItem="OwW-gH-ppG" secondAttribute="bottom" constant="8" id="RTT-wk-4Pb"/>
                                         <constraint firstItem="9jf-Eh-8rs" firstAttribute="top" secondItem="It1-yz-l2F" secondAttribute="bottom" constant="10" id="bXC-iM-Tt9"/>
+                                        <constraint firstItem="sXi-67-mNs" firstAttribute="top" secondItem="8bb-rX-WTW" secondAttribute="bottom" constant="8" id="giZ-4i-3Cl"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="centerX" secondItem="9jf-Eh-8rs" secondAttribute="centerX" id="hEV-C0-aS5"/>
-                                        <constraint firstItem="sXi-67-mNs" firstAttribute="top" secondItem="5iy-h1-yLg" secondAttribute="bottom" constant="8" id="iM2-Vx-8Ri"/>
                                         <constraint firstItem="It1-yz-l2F" firstAttribute="centerX" secondItem="sXi-67-mNs" secondAttribute="centerX" id="rFJ-zx-tVj"/>
                                         <constraint firstItem="It1-yz-l2F" firstAttribute="top" secondItem="dpF-Qb-iUs" secondAttribute="topMargin" constant="15" id="sw7-3V-cGJ"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="trailing" secondItem="It1-yz-l2F" secondAttribute="trailing" id="tIT-1e-ajC"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="top" secondItem="9jf-Eh-8rs" secondAttribute="bottom" constant="20" id="vVK-0q-FQy"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="downloadButton" destination="5iy-h1-yLg" id="MmV-tH-OFk"/>
                                         <outlet property="followButton" destination="1WL-PW-X9W" id="GLL-fH-6Rx"/>
                                         <outlet property="followerCounterLabel" destination="zQ3-ch-HVg" id="qNE-f7-VTi"/>
                                         <outlet property="followingCountLabel" destination="2AL-6N-KAM" id="dsm-6P-wA0"/>
@@ -3060,8 +3058,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="81q-W9-GO8"/>
-        <segue reference="vVR-Uv-ZER"/>
-        <segue reference="l60-PI-ags"/>
+        <segue reference="ePP-dP-end"/>
+        <segue reference="e7E-bH-l0r"/>
         <segue reference="4Mx-Nn-IZR"/>
         <segue reference="7Vk-xB-DQx"/>
     </inferredMetricsTieBreakers>

@@ -11,7 +11,7 @@ import ProgressHUD
 import AVFoundation
 import ImagePicker
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var cameraImage: UIImageView!
     
@@ -72,6 +72,12 @@ class CameraViewController: UIViewController {
         
         leadingShareButton.constant = 0
         
+        captionTextView.delegate = self
+        
+        captionTextView.text = "Caption your photo!"
+        captionTextView.textColor = UIColor.lightGray
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +92,19 @@ class CameraViewController: UIViewController {
     }
    
     
+    func textViewDidBeginEditing(_ captionTextView: UITextView) {
+        if captionTextView.textColor == UIColor.lightGray {
+            captionTextView.text = nil
+            captionTextView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ captionTextView: UITextView) {
+        if captionTextView.text.isEmpty {
+            captionTextView.text = "Caption your photo!"
+            captionTextView.textColor = UIColor.lightGray
+        }
+    }
     
     //Animating the view
     
