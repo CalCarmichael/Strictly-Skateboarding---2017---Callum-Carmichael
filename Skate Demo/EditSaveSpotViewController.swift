@@ -9,7 +9,11 @@
 import UIKit
 import Firebase
 
-class EditSaveSpotViewController: UIViewController {
+protocol DeleteVCDelegate {
+    func mainRefresh()
+}
+
+class EditSaveSpotViewController: UIViewController  {
     
     
     @IBOutlet weak var skateTitleText: UITextField!
@@ -36,9 +40,16 @@ class EditSaveSpotViewController: UIViewController {
     
     var options = ["Select Type", "Skatepark", "Street Skating", "Favourite Spots"]
     
+    var delegate: DeleteVCDelegate?
+
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         
         
         editSpotPopUP.alpha = 0
@@ -62,6 +73,7 @@ class EditSaveSpotViewController: UIViewController {
             
             self.setPickerView()
             
+           
             
             
             //UI
@@ -95,6 +107,7 @@ class EditSaveSpotViewController: UIViewController {
         
         
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -186,13 +199,22 @@ class EditSaveSpotViewController: UIViewController {
     
     @IBAction func cancelView(_ sender: Any) {
         
+        
+        
         dismiss(animated: true, completion: nil)
         
     }
     
     
    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        
+        
+        
+    }
     
 
     
@@ -209,19 +231,20 @@ class EditSaveSpotViewController: UIViewController {
             
             self.ref.setValue(nil)
             
-        
-
-            print(snapshot)
+            self.delegate?.mainRefresh()
             
-            
-            //Do an alert yes or no
+            print(self.delegate)
             
             
         })
         
+        
+        
     }
 
 }
+
+
 
 
 extension EditSaveSpotViewController: UIPickerViewDelegate {

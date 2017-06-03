@@ -12,7 +12,9 @@ import Mapbox
 import MapboxDirections
 import MapKit
 
-class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
+
+
+class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, DeleteVCDelegate {
     
     
     @IBOutlet weak var mapView: MGLMapView!
@@ -35,7 +37,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     
     var marker: String?
     
-    
     var ref: FIRDatabaseReference!
     
     var parkId: String!
@@ -43,6 +44,10 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     var delegate: SideBarDelegate?
     
     //Filtering annotations for sidebar
+    
+    
+    let EditSaveSpotController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EditVC") as! EditSaveSpotViewController
+    
     
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
         
@@ -57,27 +62,30 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
             
             if index == 0 {
                 addAnnotation(park: park)
-                marker = "SkateAnnotation1"
+              //  marker = "AllBlack"
                 
             }
             
             if index == 1 && park.type == .park {
                 addAnnotation(park: park)
-                marker = "PINGREEN"
+             //   marker = "AllSkateparks1"
                 
             }
             
             if index == 2 && park.type == .street {
                 addAnnotation(park: park)
-                marker = "SkateAnnotation1"
+             //   marker = "Skateparks"
             }
             
             //Change this to feature the users own personal spots they saved to firebase
             
             if index == 3 && park.type == .own {
                 addAnnotation(park: park)
-                marker = "SkateAnnotation1"
+              //  marker = "Fav"
             }
+            
+            
+            
             
             
         }
@@ -90,7 +98,12 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        marker = "SkateAnnotation1"
+        
+        EditSaveSpotController.delegate = self
+        
+        
+        
+          marker = "AllBlack"
         
         navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -101,6 +114,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         let logo = UIImage(named: "SkateHeaderIcon1")
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
+        
+       
+        
         
         
         
@@ -133,37 +149,18 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
         // Passing firebase annotation data
         
+    
+        loadLocations()
+        
+        
+        
         
     }
     
-    func loadCustomLocations() {
+    
+    
+    func loadLocations() {
         
-        let uid = FIRAuth.auth()!.currentUser!.uid
-        
-        let userLocationsRef = FIRDatabase.database().reference(withPath: "users/\(uid)/personalLocations")
-        
-        userLocationsRef.observe(.value, with: { snapshot in
-            
-            
-            for item in snapshot.children {
-                guard let snapshot = item as? FIRDataSnapshot else { continue }
-                
-                let newSkatepark = Skatepark(snapshot: snapshot)
-                
-                self.skateparks.append(newSkatepark)
-                
-                self.addAnnotation(park: newSkatepark)
-                
-            }
-        })
-    }
-    
-   
-    
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         view.sendSubview(toBack: mapView)
         
         locationsRef.observe(.value, with: { snapshot in
@@ -188,7 +185,89 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
             self.loadCustomLocations()
             
             
+            
         })
+        
+
+        
+        
+    }
+    
+    func loadCustomLocations() {
+        
+        let uid = FIRAuth.auth()!.currentUser!.uid
+        
+        let userLocationsRef = FIRDatabase.database().reference(withPath: "users/\(uid)/personalLocations")
+        
+        userLocationsRef.observe(.value, with: { snapshot in
+            
+            
+            for item in snapshot.children {
+                guard let snapshot = item as? FIRDataSnapshot else { continue }
+                
+                let newSkatepark = Skatepark(snapshot: snapshot)
+                
+                self.skateparks.append(newSkatepark)
+                
+                self.addAnnotation(park: newSkatepark)
+                
+                
+            }
+        })
+    }
+    
+    
+    func mainRefresh() {
+        
+        
+            
+            loadLocations()
+            
+            annotationRefresh()
+            
+       
+        
+        
+        
+    }
+    
+  
+    func annotationRefresh() {
+    
+        if let annotations = mapView.annotations {
+            
+            mapView.removeAnnotations(annotations)
+            
+        }
+        
+        for item in skateparks {
+            
+            self.addAnnotation(park: item)
+            
+        }
+    
+    }
+    
+    @IBAction func refresh(_ sender: Any) {
+        
+        loadLocations()
+        
+        annotationRefresh()
+        
+    }
+    
+
+        
+        
+    
+
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        
         
         
     }
@@ -318,6 +397,10 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
             self.performSegue(withIdentifier: "EditSaveSpotSegue", sender: annotation.id)
             
             
+            
+            
+            
+            
         } else if control.tag == 101 {
             
          //   self.performSegue(withIdentifier: "InviteUserSegue", sender: view)
@@ -372,6 +455,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate  {
         
 
     }
+    
+    
     
     
 

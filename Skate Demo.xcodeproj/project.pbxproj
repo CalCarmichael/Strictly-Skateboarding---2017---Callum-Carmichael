@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F160E5F1EE3207A00C9F6B0 /* LocationImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F160E5E1EE3207A00C9F6B0 /* LocationImageViewController.swift */; };
 		9F1FA1C11ED359C3009DB1D5 /* FollowingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FA1C01ED359C3009DB1D5 /* FollowingTableViewController.swift */; };
 		9F266AA91EBD1D7E000A4D2C /* ExploreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */; };
 		9F2B1E501EAA0ECA006BB363 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		483438A8696DFED5EDC6AD7C /* Pods_Skate_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Skate_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F160E5E1EE3207A00C9F6B0 /* LocationImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationImageViewController.swift; sourceTree = "<group>"; };
 		9F1FA1C01ED359C3009DB1D5 /* FollowingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingTableViewController.swift; sourceTree = "<group>"; };
 		9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDetailViewController.swift; sourceTree = "<group>"; };
 		9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9FE94C191E796B75009B7B3F /* ViewController.swift */,
+				9F160E5E1EE3207A00C9F6B0 /* LocationImageViewController.swift */,
 				9F9EAFA31E9E63BD00921147 /* SaveSpotViewController.swift */,
 				9F88E2871ECB2AB900DB3DA8 /* EditSaveSpotViewController.swift */,
 				9F8D373B1E82A7DD003E36CB /* Skatepark.swift */,
@@ -488,6 +491,7 @@
 				9FD114FF1ED1E181007A9E58 /* ButtonBounce.swift in Sources */,
 				9FDDF87F1EAB775B0010198D /* SearchViewController.swift in Sources */,
 				9F56A68B1E929BD900E8EDB9 /* SignInViewController.swift in Sources */,
+				9F160E5F1EE3207A00C9F6B0 /* LocationImageViewController.swift in Sources */,
 				9F2B1E521EAA197E006BB363 /* HelperService.swift in Sources */,
 				9FB1086D1EA7C8C900AD5AF6 /* Post_CommentApi.swift in Sources */,
 				9FBCA91D1E7C4B6700ADE283 /* SideBar.swift in Sources */,
