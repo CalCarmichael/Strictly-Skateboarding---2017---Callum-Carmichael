@@ -273,7 +273,7 @@ class FeedTableViewCell: UITableViewCell {
     
     func updateLike(post: Post) {
         
-        let imageName = post.likes == nil  || !post.isLiked! ? "Like1" : "Like Filled1"
+        let imageName = post.likes == nil  || !post.isLiked! ? "Like1" : "LikeActive"
         
         likeImageView.image = UIImage(named: imageName)
         
