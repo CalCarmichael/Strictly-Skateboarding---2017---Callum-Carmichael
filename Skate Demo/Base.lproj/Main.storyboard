@@ -980,110 +980,124 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gus-A2-n9k">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxD-AG-oxp">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-EL-tXE" userLabel="WholeView">
                                         <rect key="frame" x="16" y="147" width="343" height="372"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-gf-Hbx">
-                                                <rect key="frame" x="159" y="4" width="25" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="dSh-wg-N4g"/>
-                                                    <constraint firstAttribute="height" constant="25" id="eBH-ax-M03"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" image="ic_close_white_48pt"/>
-                                                <connections>
-                                                    <action selector="cancelView:" destination="kfl-S4-ZgT" eventType="touchUpInside" id="erk-IY-rpO"/>
-                                                </connections>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-po-oYA">
-                                                <rect key="frame" x="0.0" y="37" width="343" height="308"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxD-AG-oxp">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="372"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Skate Spot Style:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-FM-g3z" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                                        <rect key="frame" x="8" y="70" width="327" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="B9B-Ba-J8W"/>
-                                                        </constraints>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Skate Spot Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-CK-q0D" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                                        <rect key="frame" x="8" y="8" width="327" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="oEM-Qj-Ck5"/>
-                                                        </constraints>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-Ka-NJY">
-                                                        <rect key="frame" x="8" y="137" width="327" height="100"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="xz7-dn-v4C"/>
-                                                        </constraints>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-gf-Hbx">
+                                                        <rect key="frame" x="159" y="4" width="25" height="25"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" image="ic_close_white_48pt"/>
                                                         <connections>
-                                                            <outlet property="dataSource" destination="kfl-S4-ZgT" id="v0V-aw-h0g"/>
-                                                            <outlet property="delegate" destination="kfl-S4-ZgT" id="0o2-HV-74f"/>
-                                                        </connections>
-                                                    </pickerView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71u-Ch-gZ3">
-                                                        <rect key="frame" x="141" y="260" width="60" height="29"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="Ath-c8-tmL"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
-                                                        <state key="normal" title="Update">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="addButton_TouchUpInside:" destination="nlc-38-EC9" eventType="touchUpInside" id="LQ8-eK-x3A"/>
-                                                            <action selector="addPinAndSaveLocation:" destination="nlc-38-EC9" eventType="touchUpInside" id="4Pq-1E-haC"/>
-                                                            <action selector="updateSkateSpot:" destination="kfl-S4-ZgT" eventType="touchUpInside" id="0Lc-4d-XjA"/>
+                                                            <action selector="cancelView:" destination="kfl-S4-ZgT" eventType="touchUpInside" id="erk-IY-rpO"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-QH-IQC">
-                                                        <rect key="frame" x="10" y="260" width="60" height="29"/>
-                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-po-oYA">
+                                                        <rect key="frame" x="0.0" y="37" width="343" height="308"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Skate Spot Style:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-FM-g3z" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                                                <rect key="frame" x="8" y="70" width="327" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="Ezz-w2-v1d"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Skate Spot Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-CK-q0D" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                                                <rect key="frame" x="8" y="8" width="327" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="8qM-Qv-H0i"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-Ka-NJY">
+                                                                <rect key="frame" x="8" y="137" width="327" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="OH4-1c-kCE"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="kfl-S4-ZgT" id="v0V-aw-h0g"/>
+                                                                    <outlet property="delegate" destination="kfl-S4-ZgT" id="0o2-HV-74f"/>
+                                                                </connections>
+                                                            </pickerView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71u-Ch-gZ3">
+                                                                <rect key="frame" x="141" y="260" width="60" height="29"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="cMM-m9-XkC"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                                                                <state key="normal" title="Update">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="addButton_TouchUpInside:" destination="nlc-38-EC9" eventType="touchUpInside" id="LQ8-eK-x3A"/>
+                                                                    <action selector="addPinAndSaveLocation:" destination="nlc-38-EC9" eventType="touchUpInside" id="4Pq-1E-haC"/>
+                                                                    <action selector="updateSkateSpot:" destination="kfl-S4-ZgT" eventType="touchUpInside" id="0Lc-4d-XjA"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-QH-IQC">
+                                                                <rect key="frame" x="10" y="260" width="60" height="29"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="lfg-9e-XMc"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                                                                <state key="normal" title="Delete">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="deleteSkateSpot:" destination="kfl-S4-ZgT" eventType="touchUpInside" id="dse-2S-6ed"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="AWl-JR-VQO"/>
+                                                            <constraint firstItem="S3o-Ka-NJY" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="6IK-fu-fn3"/>
+                                                            <constraint firstItem="1Fs-FM-g3z" firstAttribute="top" secondItem="BZZ-CK-q0D" secondAttribute="bottom" constant="12" id="JIp-1u-Pl4"/>
+                                                            <constraint firstItem="BZZ-CK-q0D" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="Ld2-tQ-vhk"/>
+                                                            <constraint firstItem="BZZ-CK-q0D" firstAttribute="top" secondItem="NLf-po-oYA" secondAttribute="top" constant="8" id="UgB-Ml-16n"/>
+                                                            <constraint firstAttribute="trailing" secondItem="1Fs-FM-g3z" secondAttribute="trailing" constant="8" id="V2H-vi-dud"/>
+                                                            <constraint firstItem="71u-Ch-gZ3" firstAttribute="leading" secondItem="6MP-QH-IQC" secondAttribute="trailing" constant="71" id="XnR-J0-dEe"/>
+                                                            <constraint firstItem="6MP-QH-IQC" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="10" id="dOt-lp-zaP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="BZZ-CK-q0D" secondAttribute="trailing" constant="8" id="ePe-kd-dZv"/>
+                                                            <constraint firstAttribute="bottom" secondItem="71u-Ch-gZ3" secondAttribute="bottom" constant="19" id="emf-ro-SNK"/>
+                                                            <constraint firstAttribute="trailing" secondItem="S3o-Ka-NJY" secondAttribute="trailing" constant="8" id="lSF-k9-xxv"/>
+                                                            <constraint firstItem="1Fs-FM-g3z" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="qua-LE-9Nx"/>
+                                                            <constraint firstAttribute="bottom" secondItem="6MP-QH-IQC" secondAttribute="bottom" constant="19" id="rUk-x5-aYH"/>
+                                                            <constraint firstItem="S3o-Ka-NJY" firstAttribute="top" secondItem="1Fs-FM-g3z" secondAttribute="bottom" constant="17" id="tsZ-cb-w5a"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
-                                                        <state key="normal" title="Delete">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="deleteSkateSpot:" destination="kfl-S4-ZgT" eventType="touchUpInside" id="dse-2S-6ed"/>
-                                                        </connections>
-                                                    </button>
+                                                    </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="S3o-Ka-NJY" secondAttribute="trailing" constant="8" id="A8f-ku-ddN"/>
-                                                    <constraint firstAttribute="bottom" secondItem="71u-Ch-gZ3" secondAttribute="bottom" constant="19" id="BAt-9k-B0N"/>
-                                                    <constraint firstItem="1Fs-FM-g3z" firstAttribute="top" secondItem="BZZ-CK-q0D" secondAttribute="bottom" constant="12" id="FJY-k3-QZP"/>
-                                                    <constraint firstItem="S3o-Ka-NJY" firstAttribute="top" secondItem="1Fs-FM-g3z" secondAttribute="bottom" constant="17" id="Juj-9r-Dv5"/>
-                                                    <constraint firstItem="1Fs-FM-g3z" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="MTv-UD-lPM"/>
-                                                    <constraint firstAttribute="trailing" secondItem="BZZ-CK-q0D" secondAttribute="trailing" constant="8" id="P5Z-Pq-K1w"/>
-                                                    <constraint firstItem="S3o-Ka-NJY" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="QMq-T4-52P"/>
-                                                    <constraint firstItem="BZZ-CK-q0D" firstAttribute="top" secondItem="NLf-po-oYA" secondAttribute="top" constant="8" id="SaP-ai-DoG"/>
-                                                    <constraint firstItem="6MP-QH-IQC" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="10" id="aEj-9P-tES"/>
-                                                    <constraint firstAttribute="bottom" secondItem="6MP-QH-IQC" secondAttribute="bottom" constant="19" id="ecF-5g-Wl6"/>
-                                                    <constraint firstItem="71u-Ch-gZ3" firstAttribute="leading" secondItem="6MP-QH-IQC" secondAttribute="trailing" constant="71" id="hbk-ma-23P"/>
-                                                    <constraint firstItem="BZZ-CK-q0D" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="wMu-ph-vpV"/>
-                                                    <constraint firstAttribute="trailing" secondItem="1Fs-FM-g3z" secondAttribute="trailing" constant="8" id="xbE-8M-KrR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="NLf-po-oYA" secondAttribute="bottom" constant="27" id="49M-fW-577"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Rh9-gf-Hbx" secondAttribute="trailing" constant="159" id="I8v-9l-8ij"/>
+                                                    <constraint firstItem="NLf-po-oYA" firstAttribute="top" secondItem="XxD-AG-oxp" secondAttribute="top" constant="37" id="K2H-lj-snd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NLf-po-oYA" secondAttribute="trailing" id="ZO1-Tc-DKo"/>
+                                                    <constraint firstItem="Rh9-gf-Hbx" firstAttribute="top" secondItem="XxD-AG-oxp" secondAttribute="top" constant="4" id="dYT-pR-xg5"/>
+                                                    <constraint firstItem="Rh9-gf-Hbx" firstAttribute="leading" secondItem="XxD-AG-oxp" secondAttribute="leading" constant="159" id="nR0-TH-45N"/>
+                                                    <constraint firstItem="NLf-po-oYA" firstAttribute="top" secondItem="Rh9-gf-Hbx" secondAttribute="bottom" constant="8" id="tR5-Kc-muh"/>
+                                                    <constraint firstItem="NLf-po-oYA" firstAttribute="leading" secondItem="XxD-AG-oxp" secondAttribute="leading" id="zFd-kw-sIt"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Rh9-gf-Hbx" firstAttribute="leading" secondItem="XxD-AG-oxp" secondAttribute="leading" constant="159" id="2Uy-yc-lIk"/>
-                                            <constraint firstItem="NLf-po-oYA" firstAttribute="top" secondItem="Rh9-gf-Hbx" secondAttribute="bottom" constant="8" id="OOO-kb-Hsr"/>
-                                            <constraint firstItem="NLf-po-oYA" firstAttribute="leading" secondItem="XxD-AG-oxp" secondAttribute="leading" id="SVv-0t-jGV"/>
-                                            <constraint firstAttribute="trailing" secondItem="NLf-po-oYA" secondAttribute="trailing" id="ZX7-ix-2Gd"/>
-                                            <constraint firstAttribute="bottom" secondItem="NLf-po-oYA" secondAttribute="bottom" constant="27" id="bUl-zK-39H"/>
-                                            <constraint firstAttribute="trailing" secondItem="Rh9-gf-Hbx" secondAttribute="trailing" constant="159" id="gbS-0K-bOk"/>
-                                            <constraint firstItem="Rh9-gf-Hbx" firstAttribute="top" secondItem="XxD-AG-oxp" secondAttribute="top" constant="4" id="p7f-4z-PxP"/>
+                                            <constraint firstItem="XxD-AG-oxp" firstAttribute="top" secondItem="tdg-EL-tXE" secondAttribute="top" id="CtW-if-hFd"/>
+                                            <constraint firstItem="XxD-AG-oxp" firstAttribute="leading" secondItem="tdg-EL-tXE" secondAttribute="leading" id="GNE-R9-q5w"/>
+                                            <constraint firstAttribute="trailing" secondItem="XxD-AG-oxp" secondAttribute="trailing" id="Gwf-hk-Xu9"/>
+                                            <constraint firstAttribute="bottom" secondItem="XxD-AG-oxp" secondAttribute="bottom" id="m8V-25-Nin"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1094,19 +1108,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="XxD-AG-oxp" firstAttribute="leading" secondItem="Gus-A2-n9k" secondAttribute="leading" constant="16" id="Omp-jY-1Tx"/>
-                                    <constraint firstAttribute="bottom" secondItem="XxD-AG-oxp" secondAttribute="bottom" constant="148" id="cEq-kW-VwY"/>
-                                    <constraint firstAttribute="trailing" secondItem="XxD-AG-oxp" secondAttribute="trailing" constant="16" id="dFd-dQ-BcA"/>
-                                    <constraint firstItem="XxD-AG-oxp" firstAttribute="top" secondItem="Gus-A2-n9k" secondAttribute="top" constant="147" id="uyG-Xd-ylm"/>
+                                    <constraint firstItem="tdg-EL-tXE" firstAttribute="top" secondItem="Gus-A2-n9k" secondAttribute="top" constant="147" id="0GO-Kz-V96"/>
+                                    <constraint firstItem="tdg-EL-tXE" firstAttribute="leading" secondItem="Gus-A2-n9k" secondAttribute="leading" constant="16" id="FN5-XV-Yhx"/>
+                                    <constraint firstAttribute="bottom" secondItem="tdg-EL-tXE" secondAttribute="bottom" constant="148" id="gfy-qw-SnC"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdg-EL-tXE" secondAttribute="trailing" constant="16" id="tUl-Tj-vda"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gus-A2-n9k" firstAttribute="top" secondItem="65m-Go-v3W" secondAttribute="top" id="0Rw-2F-MuE"/>
-                            <constraint firstAttribute="trailing" secondItem="Gus-A2-n9k" secondAttribute="trailing" id="DPW-aQ-pYc"/>
-                            <constraint firstItem="Gus-A2-n9k" firstAttribute="leading" secondItem="65m-Go-v3W" secondAttribute="leading" id="G30-yr-VHA"/>
-                            <constraint firstItem="Gus-A2-n9k" firstAttribute="bottom" secondItem="7mA-93-Arr" secondAttribute="top" id="TGL-nU-K0e"/>
+                            <constraint firstItem="Gus-A2-n9k" firstAttribute="top" secondItem="65m-Go-v3W" secondAttribute="top" id="BdV-CX-3o7"/>
+                            <constraint firstItem="7mA-93-Arr" firstAttribute="top" secondItem="Gus-A2-n9k" secondAttribute="bottom" id="mBW-yD-wIa"/>
+                            <constraint firstAttribute="trailing" secondItem="Gus-A2-n9k" secondAttribute="trailing" id="mZc-lM-5SF"/>
+                            <constraint firstItem="Gus-A2-n9k" firstAttribute="leading" secondItem="65m-Go-v3W" secondAttribute="leading" id="oYr-dO-who"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1117,6 +1131,7 @@
                         <outlet property="skateStyleText" destination="1Fs-FM-g3z" id="TPf-5L-hOs"/>
                         <outlet property="skateTitleText" destination="BZZ-CK-q0D" id="5id-yZ-Orr"/>
                         <outlet property="updateButton" destination="71u-Ch-gZ3" id="FCI-zw-tjp"/>
+                        <outlet property="wholeViewAnim" destination="tdg-EL-tXE" id="4S1-Yx-ty2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHX-L2-bRH" userLabel="First Responder" sceneMemberID="firstResponder"/>

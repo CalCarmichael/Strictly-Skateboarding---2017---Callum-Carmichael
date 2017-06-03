@@ -30,6 +30,9 @@ class EditSaveSpotViewController: UIViewController  {
     
     @IBOutlet weak var blackBackgroundView: UIView!
     
+    @IBOutlet weak var wholeViewAnim: UIView!
+    
+    
     var user: FIRUser!
     
     var skatepark: Skatepark!
@@ -50,12 +53,9 @@ class EditSaveSpotViewController: UIViewController  {
         
         
         
+        wholeViewAnim.alpha = 0
         
-        
-        editSpotPopUP.alpha = 0
-        blackBackgroundView.alpha = 0
-        
-        editSpotPopUP.layer.masksToBounds = true
+        wholeViewAnim.layer.masksToBounds = true
         
         ref = FIRDatabase.database().reference(withPath: "users").child(Api.User.CURRENT_USER!.uid).child("personalLocations/\(parkId!)")
        
@@ -94,11 +94,11 @@ class EditSaveSpotViewController: UIViewController  {
             self.deleteButton.layer.shadowRadius = 5
             self.deleteButton.layer.shadowPath = UIBezierPath(roundedRect: self.deleteButton.bounds, cornerRadius: 10).cgPath
             
-            self.blackBackgroundView.layer.shadowColor = UIColor.black.cgColor
-            self.blackBackgroundView.layer.shadowOpacity = 0.5
-            self.blackBackgroundView.layer.shadowOffset = CGSize(width: 0, height: 5)
-            self.blackBackgroundView.layer.shadowRadius = 5
-            self.blackBackgroundView.layer.shadowPath = UIBezierPath(roundedRect: self.blackBackgroundView.bounds, cornerRadius: 10).cgPath
+            self.wholeViewAnim.layer.shadowColor = UIColor.black.cgColor
+            self.wholeViewAnim.layer.shadowOpacity = 0.5
+            self.wholeViewAnim.layer.shadowOffset = CGSize(width: 0, height: 5)
+            self.wholeViewAnim.layer.shadowRadius = 5
+            self.wholeViewAnim.layer.shadowPath = UIBezierPath(roundedRect: self.wholeViewAnim.bounds, cornerRadius: 10).cgPath
 
             
             
@@ -120,23 +120,21 @@ class EditSaveSpotViewController: UIViewController  {
     
     func animateVisualEffect() {
         
-        blackBackgroundView.center = self.blackBackgroundView.center
-        blackBackgroundView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        wholeViewAnim.center = self.wholeViewAnim.center
+        wholeViewAnim.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         
         
-        editSpotPopUP.center = self.editSpotPopUP.center
-        editSpotPopUP.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
         
         
         
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseIn, animations: {
             
             
-            self.blackBackgroundView.alpha = 1
-            self.blackBackgroundView.transform = CGAffineTransform.identity
+            self.wholeViewAnim.alpha = 1
+            self.wholeViewAnim.transform = CGAffineTransform.identity
             
-            self.editSpotPopUP.alpha = 1
-            self.editSpotPopUP.transform = CGAffineTransform.identity
+           
             
             
         }, completion: nil)
