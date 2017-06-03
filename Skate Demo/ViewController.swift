@@ -41,6 +41,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     
     var parkId: String!
     
+    var skateId: String!
+    
     var delegate: SideBarDelegate?
     
     //Filtering annotations for sidebar
@@ -114,11 +116,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         let logo = UIImage(named: "SkateHeaderIcon1")
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
-        
-       
-        
-        
-        
+    
         
         let SkateIcon = MGLPointAnnotation()
         mapView.addAnnotation(SkateIcon)
@@ -424,6 +422,10 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         }
     }
     
+
+    
+
+    
     func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
         
         guard let skateAnnotation = annotation as? SkateAnnotation else { return nil }
@@ -460,6 +462,13 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
         
         self.performSegue(withIdentifier: "SegueLocation", sender: nil)
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "SegueLocation" {
+                let destination = segue.destination as! LocationImageViewController
+                destination.skateId = sender as! String
+            }
+        }
         
     }
     

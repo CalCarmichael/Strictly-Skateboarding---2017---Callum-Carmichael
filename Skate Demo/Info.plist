@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Allow this</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -26,6 +24,8 @@
 	<true/>
 	<key>MGLMapboxAccessToken</key>
 	<string>pk.eyJ1IjoiY2FsbHVtY2FybWljaGFlbCIsImEiOiJjajBwZGY5NTYwMDBqMnFxcXU0Z213bXVtIn0.1wsZPZy2CH8_2Drt-D4tVg</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow this</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Accept to recieve skate locations!</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -41,8 +41,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
