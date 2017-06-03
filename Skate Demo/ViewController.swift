@@ -457,7 +457,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     }
     
     
-    
+    func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
+        
+        self.performSegue(withIdentifier: "SegueLocation", sender: nil)
+        
+    }
     
 
     //Image for Annotation - Change this for Skatepark/StreetSkating
