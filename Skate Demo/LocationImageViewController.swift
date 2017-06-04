@@ -14,8 +14,6 @@ class LocationImageViewController: UIViewController {
     @IBOutlet weak var skateLocationImage: UIImageView!
     
 
-    
-    var skateId: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +31,11 @@ class LocationImageViewController: UIViewController {
         
         let uid = FIRAuth.auth()!.currentUser!.uid
         
-        let locationsRef = FIRDatabase.database().reference(withPath: "users/\(uid)/personalLocations")
+        let locationsRef = FIRDatabase.database().reference(withPath: "users").child("locations")
         
         locationsRef.observe(.value, with: { (snapshot) in
             
-            print(snapshot)
+            
             
         })
     

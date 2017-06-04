@@ -314,6 +314,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
         point.canEdit = park.editable
         
+        point.photoUrl = park.photoUrl
+        
         point.image = UIImage(named: "SkateAnnotation1")
         
         mapView.addAnnotation(point)
@@ -463,12 +465,15 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
         self.performSegue(withIdentifier: "SegueLocation", sender: nil)
         
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "SegueLocation" {
-                let destination = segue.destination as! LocationImageViewController
-                destination.skateId = sender as! String
-            }
+        if let annotation = annotation as? SkateAnnotation {
+            
+            print("YourAnnotation: \(annotation.photoUrl)")
+            
         }
+        
+        
+        
+        
         
     }
     

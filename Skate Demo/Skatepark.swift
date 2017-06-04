@@ -41,6 +41,7 @@ class Skatepark {
     var id: String!
     var did: String?
     var ref: FIRDatabaseReference?
+    var photoUrl: String?
     
     init(snapshot: FIRDataSnapshot) {
         
@@ -54,6 +55,7 @@ class Skatepark {
         coordinate = CLLocationCoordinate2D(latitude: snapshotValue["lat"] as! Double, longitude: snapshotValue["lng"] as! Double)
         type = SkateType(rawValue: snapshotValue["type"] as! Int)!
         editable = snapshotValue["editable"] as! Bool
+        photoUrl = snapshotValue["photoUrl"] as? String
         
     
     }
