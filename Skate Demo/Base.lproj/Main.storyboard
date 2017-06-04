@@ -729,7 +729,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="IconD"/>
+                                <state key="normal" image="DownloadLocation"/>
                                 <connections>
                                     <segue destination="nlc-38-EC9" kind="presentation" animates="NO" id="1Pp-zI-taA"/>
                                 </connections>
@@ -2685,7 +2685,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WL-PW-X9W">
-                                            <rect key="frame" x="150" y="140" width="75" height="29"/>
+                                            <rect key="frame" x="150" y="140.5" width="75" height="29"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                             <state key="normal">
@@ -3051,9 +3051,9 @@
     </scenes>
     <resources>
         <image name="CameraTabBar-1" width="25" height="25"/>
+        <image name="DownloadLocation" width="40" height="39"/>
         <image name="Forward Punch-50" width="50" height="50"/>
         <image name="GnarlyIcon" width="25" height="19"/>
-        <image name="IconD" width="34" height="28"/>
         <image name="Like" width="50" height="50"/>
         <image name="Like Filled" width="50" height="50"/>
         <image name="Mute" width="50" height="50"/>

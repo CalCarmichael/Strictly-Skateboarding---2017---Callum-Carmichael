@@ -106,7 +106,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         EditSaveSpotController.delegate = self
         
         
-        
           marker = "SSPin"
         
         navigationController?.navigationBar.barTintColor = UIColor.black
@@ -497,9 +496,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     //Information button - turn this into 360 image
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
-        
-        
-        
         
         
         let button = UIButton(type: .detailDisclosure)
