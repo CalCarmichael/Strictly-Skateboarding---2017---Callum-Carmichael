@@ -15,18 +15,19 @@ class SkateImageViewController: UIViewController {
     
     var parkId: String!
     
+    @IBOutlet weak var imageContain: UIView!
+    
     @IBOutlet weak var skateLocation: UIImageView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
         getLocationImage()
         
         
     }
+    
 
     
     func getLocationImage() {

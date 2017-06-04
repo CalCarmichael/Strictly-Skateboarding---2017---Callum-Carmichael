@@ -745,7 +745,7 @@
                         <outlet property="refreshButton" destination="twd-tD-lpn" id="etD-Fk-UAg"/>
                         <segue destination="D7j-XG-fZp" kind="presentation" identifier="InviteUserSegue" animates="NO" id="ZcD-kk-PAi"/>
                         <segue destination="kfl-S4-ZgT" kind="presentation" identifier="EditSaveSpotSegue" animates="NO" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="sbx-3a-dNU"/>
-                        <segue destination="FVB-5g-Ua8" kind="show" identifier="SkateImageSegue" id="W4y-5k-rRU"/>
+                        <segue destination="FVB-5g-Ua8" kind="presentation" identifier="SkateImageSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="W4y-5k-rRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2Y-8a-euS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1171,30 +1171,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagesComingSoonPhotoFinal" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-Br-K47">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="position">
-                                        <point key="value" x="0.0" y="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha0-gk-nX3">
+                                <rect key="frame" x="16" y="206" width="343" height="255"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagesComingSoonPhotoFinal" translatesAutoresizingMaskIntoConstraints="NO" id="oXK-61-yVL">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="255"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oXK-61-yVL" secondAttribute="trailing" id="KeP-ey-2T3"/>
+                                    <constraint firstAttribute="bottom" secondItem="oXK-61-yVL" secondAttribute="bottom" id="ko4-GI-v7N"/>
+                                    <constraint firstItem="oXK-61-yVL" firstAttribute="leading" secondItem="ha0-gk-nX3" secondAttribute="leading" id="wEE-FK-IuP"/>
+                                    <constraint firstItem="oXK-61-yVL" firstAttribute="top" secondItem="ha0-gk-nX3" secondAttribute="top" id="zG6-Bd-YDR"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bP0-Br-K47" firstAttribute="top" secondItem="NH1-Lk-Nsv" secondAttribute="bottom" id="20b-Dm-6V9"/>
-                            <constraint firstItem="bP0-Br-K47" firstAttribute="leading" secondItem="BhA-TZ-Z6m" secondAttribute="leading" id="Eb5-PI-iVE"/>
-                            <constraint firstItem="wfq-Ww-oAa" firstAttribute="top" secondItem="bP0-Br-K47" secondAttribute="bottom" id="Kuj-w1-7pT"/>
-                            <constraint firstAttribute="trailing" secondItem="bP0-Br-K47" secondAttribute="trailing" id="luh-e0-N4r"/>
+                            <constraint firstItem="ha0-gk-nX3" firstAttribute="leading" secondItem="BhA-TZ-Z6m" secondAttribute="leading" constant="16" id="2vd-qh-xKo"/>
+                            <constraint firstItem="wfq-Ww-oAa" firstAttribute="top" secondItem="ha0-gk-nX3" secondAttribute="bottom" constant="206" id="Y7d-9F-q1v"/>
+                            <constraint firstAttribute="trailing" secondItem="ha0-gk-nX3" secondAttribute="trailing" constant="16" id="bZx-UW-Jz6"/>
+                            <constraint firstItem="ha0-gk-nX3" firstAttribute="top" secondItem="NH1-Lk-Nsv" secondAttribute="bottom" constant="186" id="fLf-la-rc2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="skateLocation" destination="bP0-Br-K47" id="btV-A6-4ml"/>
+                        <outlet property="imageContain" destination="ha0-gk-nX3" id="RR8-sm-D0F"/>
+                        <outlet property="skateLocation" destination="oXK-61-yVL" id="x4N-dm-PMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnC-up-RVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3284" y="2328.4857571214393"/>
+            <point key="canvasLocation" x="3237.5999999999999" y="2327.5862068965521"/>
         </scene>
         <!--Following Table View Controller-->
         <scene sceneID="wb1-pq-qLN">
