@@ -176,7 +176,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         
         guard selected > 0 else {
             
-            ProgressHUD.showError("Select A SkateType")
+            self.noticeOnlyText("Please select a skatetype")
             
             print("select a type")
             
@@ -189,7 +189,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
             
             
-            ProgressHUD.showError("Please Fill All Fields")
+            self.noticeOnlyText("Please fill all fields")
             
             return
             
