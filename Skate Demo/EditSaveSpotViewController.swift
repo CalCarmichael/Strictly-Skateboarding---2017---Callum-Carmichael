@@ -32,6 +32,9 @@ class EditSaveSpotViewController: UIViewController  {
     
     @IBOutlet weak var wholeViewAnim: UIView!
     
+    @IBOutlet weak var shadowlayer2: UIView!
+    
+    
     
     var user: FIRUser!
     
@@ -54,6 +57,8 @@ class EditSaveSpotViewController: UIViewController  {
         
         
         wholeViewAnim.alpha = 0
+        
+        shadowlayer2.alpha = 0
         
         wholeViewAnim.layer.masksToBounds = true
         
@@ -99,6 +104,12 @@ class EditSaveSpotViewController: UIViewController  {
             self.wholeViewAnim.layer.shadowOffset = CGSize(width: 0, height: 5)
             self.wholeViewAnim.layer.shadowRadius = 5
             self.wholeViewAnim.layer.shadowPath = UIBezierPath(roundedRect: self.wholeViewAnim.bounds, cornerRadius: 10).cgPath
+            
+            self.shadowlayer2.layer.shadowColor = UIColor.black.cgColor
+            self.shadowlayer2.layer.shadowOpacity = 0.5
+            self.shadowlayer2.layer.shadowOffset = CGSize(width: 0, height: 5)
+            self.shadowlayer2.layer.shadowRadius = 5
+            self.shadowlayer2.layer.shadowPath = UIBezierPath(roundedRect: self.shadowlayer2.bounds, cornerRadius: 10).cgPath
 
             
             
@@ -125,7 +136,7 @@ class EditSaveSpotViewController: UIViewController  {
         
         
         
-        
+        shadowlayer2.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         
         
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveEaseIn, animations: {
@@ -133,6 +144,9 @@ class EditSaveSpotViewController: UIViewController  {
             
             self.wholeViewAnim.alpha = 1
             self.wholeViewAnim.transform = CGAffineTransform.identity
+            
+            self.shadowlayer2.alpha = 1
+            self.shadowlayer2.transform = CGAffineTransform.identity
             
            
             

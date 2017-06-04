@@ -482,7 +482,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
        
         if skateAnnotation.canEdit {
             
-            let button = UIButton(type: .infoDark)
+            let button = UIButton(type: .contactAdd)
             button.tag = 100
             return button
         }

@@ -983,6 +983,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gus-A2-n9k">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R67-AQ-utY">
+                                        <rect key="frame" x="16" y="147" width="343" height="372"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-EL-tXE" userLabel="WholeView">
                                         <rect key="frame" x="16" y="147" width="343" height="372"/>
                                         <subviews>
@@ -1001,7 +1010,7 @@
                                                         <rect key="frame" x="0.0" y="37" width="343" height="308"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Skate Spot Style:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-FM-g3z" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                                                <rect key="frame" x="8" y="70" width="327" height="50"/>
+                                                                <rect key="frame" x="8" y="78" width="327" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="Ezz-w2-v1d"/>
                                                                 </constraints>
@@ -1010,7 +1019,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Skate Spot Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-CK-q0D" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                                                <rect key="frame" x="8" y="8" width="327" height="50"/>
+                                                                <rect key="frame" x="8" y="16" width="327" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="8qM-Qv-H0i"/>
                                                                 </constraints>
@@ -1019,17 +1028,17 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-Ka-NJY">
-                                                                <rect key="frame" x="8" y="137" width="327" height="100"/>
+                                                                <rect key="frame" x="8" y="144" width="327" height="101"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="100" id="OH4-1c-kCE"/>
+                                                                    <constraint firstAttribute="height" constant="101" id="OH4-1c-kCE"/>
                                                                 </constraints>
                                                                 <connections>
                                                                     <outlet property="dataSource" destination="kfl-S4-ZgT" id="v0V-aw-h0g"/>
                                                                     <outlet property="delegate" destination="kfl-S4-ZgT" id="0o2-HV-74f"/>
                                                                 </connections>
                                                             </pickerView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71u-Ch-gZ3">
-                                                                <rect key="frame" x="141" y="260" width="60" height="29"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71u-Ch-gZ3" customClass="ButtonBounce" customModule="Skate_Demo" customModuleProvider="target">
+                                                                <rect key="frame" x="181" y="261" width="60" height="29"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="cMM-m9-XkC"/>
@@ -1044,8 +1053,8 @@
                                                                     <action selector="updateSkateSpot:" destination="kfl-S4-ZgT" eventType="touchUpInside" id="0Lc-4d-XjA"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-QH-IQC">
-                                                                <rect key="frame" x="10" y="260" width="60" height="29"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MP-QH-IQC" customClass="ButtonBounce" customModule="Skate_Demo" customModuleProvider="target">
+                                                                <rect key="frame" x="101" y="261" width="60" height="29"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="lfg-9e-XMc"/>
@@ -1064,16 +1073,16 @@
                                                             <constraint firstItem="S3o-Ka-NJY" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="6IK-fu-fn3"/>
                                                             <constraint firstItem="1Fs-FM-g3z" firstAttribute="top" secondItem="BZZ-CK-q0D" secondAttribute="bottom" constant="12" id="JIp-1u-Pl4"/>
                                                             <constraint firstItem="BZZ-CK-q0D" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="Ld2-tQ-vhk"/>
-                                                            <constraint firstItem="BZZ-CK-q0D" firstAttribute="top" secondItem="NLf-po-oYA" secondAttribute="top" constant="8" id="UgB-Ml-16n"/>
+                                                            <constraint firstItem="BZZ-CK-q0D" firstAttribute="top" secondItem="NLf-po-oYA" secondAttribute="top" constant="16" id="UgB-Ml-16n"/>
                                                             <constraint firstAttribute="trailing" secondItem="1Fs-FM-g3z" secondAttribute="trailing" constant="8" id="V2H-vi-dud"/>
-                                                            <constraint firstItem="71u-Ch-gZ3" firstAttribute="leading" secondItem="6MP-QH-IQC" secondAttribute="trailing" constant="71" id="XnR-J0-dEe"/>
-                                                            <constraint firstItem="6MP-QH-IQC" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="10" id="dOt-lp-zaP"/>
+                                                            <constraint firstItem="71u-Ch-gZ3" firstAttribute="leading" secondItem="6MP-QH-IQC" secondAttribute="trailing" constant="20" id="XnR-J0-dEe"/>
+                                                            <constraint firstItem="6MP-QH-IQC" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="101" id="dOt-lp-zaP"/>
                                                             <constraint firstAttribute="trailing" secondItem="BZZ-CK-q0D" secondAttribute="trailing" constant="8" id="ePe-kd-dZv"/>
-                                                            <constraint firstAttribute="bottom" secondItem="71u-Ch-gZ3" secondAttribute="bottom" constant="19" id="emf-ro-SNK"/>
+                                                            <constraint firstAttribute="bottom" secondItem="71u-Ch-gZ3" secondAttribute="bottom" constant="18" id="emf-ro-SNK"/>
                                                             <constraint firstAttribute="trailing" secondItem="S3o-Ka-NJY" secondAttribute="trailing" constant="8" id="lSF-k9-xxv"/>
                                                             <constraint firstItem="1Fs-FM-g3z" firstAttribute="leading" secondItem="NLf-po-oYA" secondAttribute="leading" constant="8" id="qua-LE-9Nx"/>
-                                                            <constraint firstAttribute="bottom" secondItem="6MP-QH-IQC" secondAttribute="bottom" constant="19" id="rUk-x5-aYH"/>
-                                                            <constraint firstItem="S3o-Ka-NJY" firstAttribute="top" secondItem="1Fs-FM-g3z" secondAttribute="bottom" constant="17" id="tsZ-cb-w5a"/>
+                                                            <constraint firstAttribute="bottom" secondItem="6MP-QH-IQC" secondAttribute="bottom" constant="18" id="rUk-x5-aYH"/>
+                                                            <constraint firstItem="S3o-Ka-NJY" firstAttribute="top" secondItem="1Fs-FM-g3z" secondAttribute="bottom" constant="16" id="tsZ-cb-w5a"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -1112,7 +1121,11 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="tdg-EL-tXE" firstAttribute="top" secondItem="Gus-A2-n9k" secondAttribute="top" constant="147" id="0GO-Kz-V96"/>
+                                    <constraint firstItem="R67-AQ-utY" firstAttribute="top" secondItem="Gus-A2-n9k" secondAttribute="top" constant="147" id="60L-wJ-8DR"/>
+                                    <constraint firstAttribute="bottom" secondItem="R67-AQ-utY" secondAttribute="bottom" constant="148" id="6kD-vY-S6i"/>
+                                    <constraint firstItem="R67-AQ-utY" firstAttribute="leading" secondItem="Gus-A2-n9k" secondAttribute="leading" constant="16" id="8AQ-NF-tMm"/>
                                     <constraint firstItem="tdg-EL-tXE" firstAttribute="leading" secondItem="Gus-A2-n9k" secondAttribute="leading" constant="16" id="FN5-XV-Yhx"/>
+                                    <constraint firstAttribute="trailing" secondItem="R67-AQ-utY" secondAttribute="trailing" constant="16" id="diS-Yt-PX6"/>
                                     <constraint firstAttribute="bottom" secondItem="tdg-EL-tXE" secondAttribute="bottom" constant="148" id="gfy-qw-SnC"/>
                                     <constraint firstAttribute="trailing" secondItem="tdg-EL-tXE" secondAttribute="trailing" constant="16" id="tUl-Tj-vda"/>
                                 </constraints>
@@ -1131,6 +1144,7 @@
                         <outlet property="deleteButton" destination="6MP-QH-IQC" id="KKb-WM-coe"/>
                         <outlet property="editSpotPopUP" destination="NLf-po-oYA" id="zr9-Pw-6CB"/>
                         <outlet property="pickerView" destination="S3o-Ka-NJY" id="I0w-KM-sdP"/>
+                        <outlet property="shadowlayer2" destination="R67-AQ-utY" id="h5R-vl-UC0"/>
                         <outlet property="skateStyleText" destination="1Fs-FM-g3z" id="TPf-5L-hOs"/>
                         <outlet property="skateTitleText" destination="BZZ-CK-q0D" id="5id-yZ-Orr"/>
                         <outlet property="updateButton" destination="71u-Ch-gZ3" id="FCI-zw-tjp"/>
