@@ -663,7 +663,11 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twd-tD-lpn">
-                                        <rect key="frame" x="334" y="478" width="23" height="30"/>
+                                        <rect key="frame" x="347" y="489" width="19" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="19" id="RMz-Ep-yV9"/>
+                                            <constraint firstAttribute="height" constant="26" id="x6J-bF-uA0"/>
+                                        </constraints>
                                         <state key="normal" image="ReloadMap Copy"/>
                                         <connections>
                                             <action selector="refresh:" destination="e0I-DB-JwP" eventType="touchUpInside" id="Zn5-OG-OmN"/>
@@ -672,8 +676,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="twd-tD-lpn" secondAttribute="bottom" constant="46" id="MNq-E6-ObS"/>
-                                    <constraint firstAttribute="trailing" secondItem="twd-tD-lpn" secondAttribute="trailing" constant="18" id="ODg-vD-RDI"/>
+                                    <constraint firstAttribute="trailing" secondItem="twd-tD-lpn" secondAttribute="trailing" constant="9" id="Fok-qC-UUI"/>
+                                    <constraint firstAttribute="bottom" secondItem="twd-tD-lpn" secondAttribute="bottom" constant="39" id="GGG-05-uU0"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__">
