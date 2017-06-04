@@ -482,7 +482,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
        
         if skateAnnotation.canEdit {
             
-            let button = UIButton(type: .detailDisclosure)
+            let button = UIButton(type: .infoDark)
             button.tag = 100
             return button
         }
@@ -496,6 +496,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     //Information button - turn this into 360 image
     
     func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        
         
         
         let button = UIButton(type: .detailDisclosure)
