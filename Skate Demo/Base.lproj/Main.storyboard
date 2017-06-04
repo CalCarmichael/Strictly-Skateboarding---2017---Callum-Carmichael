@@ -1171,16 +1171,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-Br-K47">
-                                <rect key="frame" x="16" y="72" width="343" height="538"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagesComingSoonPhotoFinal" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-Br-K47">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="position">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfq-Ww-oAa" firstAttribute="top" secondItem="bP0-Br-K47" secondAttribute="bottom" constant="8" id="Cmv-hx-YPW"/>
-                            <constraint firstItem="bP0-Br-K47" firstAttribute="leading" secondItem="BhA-TZ-Z6m" secondAttribute="leading" constant="16" id="FVd-G4-0RK"/>
-                            <constraint firstAttribute="trailing" secondItem="bP0-Br-K47" secondAttribute="trailing" constant="16" id="hJC-zu-F4v"/>
-                            <constraint firstItem="bP0-Br-K47" firstAttribute="top" secondItem="NH1-Lk-Nsv" secondAttribute="bottom" constant="8" id="vV4-7w-hDv"/>
+                            <constraint firstItem="bP0-Br-K47" firstAttribute="top" secondItem="NH1-Lk-Nsv" secondAttribute="bottom" id="20b-Dm-6V9"/>
+                            <constraint firstItem="bP0-Br-K47" firstAttribute="leading" secondItem="BhA-TZ-Z6m" secondAttribute="leading" id="Eb5-PI-iVE"/>
+                            <constraint firstItem="wfq-Ww-oAa" firstAttribute="top" secondItem="bP0-Br-K47" secondAttribute="bottom" id="Kuj-w1-7pT"/>
+                            <constraint firstAttribute="trailing" secondItem="bP0-Br-K47" secondAttribute="trailing" id="luh-e0-N4r"/>
                         </constraints>
                     </view>
                     <connections>
@@ -3072,6 +3077,7 @@
         <image name="DownloadLocation" width="40" height="39"/>
         <image name="Forward Punch-50" width="50" height="50"/>
         <image name="GnarlyIcon" width="25" height="19"/>
+        <image name="ImagesComingSoonPhotoFinal" width="1920" height="1440"/>
         <image name="Like" width="50" height="50"/>
         <image name="Like Filled" width="50" height="50"/>
         <image name="Mute" width="50" height="50"/>
