@@ -663,8 +663,8 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twd-tD-lpn">
-                                        <rect key="frame" x="343" y="494" width="24" height="24"/>
-                                        <state key="normal" image="ic_autorenew_white"/>
+                                        <rect key="frame" x="334" y="478" width="23" height="30"/>
+                                        <state key="normal" image="ReloadMap Copy"/>
                                         <connections>
                                             <action selector="refresh:" destination="e0I-DB-JwP" eventType="touchUpInside" id="Zn5-OG-OmN"/>
                                         </connections>
@@ -672,8 +672,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="twd-tD-lpn" secondAttribute="bottom" constant="36" id="MYF-5f-fSD"/>
-                                    <constraint firstAttribute="trailing" secondItem="twd-tD-lpn" secondAttribute="trailing" constant="8" id="aXT-C2-ZjI"/>
+                                    <constraint firstAttribute="bottom" secondItem="twd-tD-lpn" secondAttribute="bottom" constant="46" id="MNq-E6-ObS"/>
+                                    <constraint firstAttribute="trailing" secondItem="twd-tD-lpn" secondAttribute="trailing" constant="18" id="ODg-vD-RDI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__">
@@ -3072,6 +3072,7 @@
         <image name="Like Filled" width="50" height="50"/>
         <image name="Mute" width="50" height="50"/>
         <image name="Rectangle" width="1500" height="200"/>
+        <image name="ReloadMap Copy" width="23" height="30"/>
         <image name="Send" width="150" height="129"/>
         <image name="SkateIconPhoto1" width="25" height="25"/>
         <image name="SkateProfileTabBar" width="11" height="24"/>
@@ -3080,7 +3081,6 @@
         <image name="Speech Bubble-50" width="50" height="50"/>
         <image name="TakePhoto" width="150" height="150"/>
         <image name="ic_add_circle_outline_48pt" width="48" height="48"/>
-        <image name="ic_autorenew_white" width="24" height="24"/>
         <image name="ic_close_white_48pt" width="72" height="72"/>
         <image name="ic_person_white" width="24" height="24"/>
         <image name="ic_settings_white" width="24" height="24"/>
