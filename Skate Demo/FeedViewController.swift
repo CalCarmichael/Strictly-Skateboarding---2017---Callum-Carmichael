@@ -33,11 +33,7 @@ class FeedViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.black
       
         
-        self.navigationController?.hidesBarsOnSwipe = true
-        
     }
-    
-   
     
     
     

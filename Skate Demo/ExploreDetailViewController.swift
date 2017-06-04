@@ -25,7 +25,7 @@ class ExploreDetailViewController: UIViewController {
         
        loadSpecificPost()
         
-        navigationController?.hidesBarsOnTap = true
+        
         
         
     }

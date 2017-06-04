@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 protocol DeleteVCDelegate {
-    func mainRefresh()
+    func wholeRefresh()
 }
 
 class EditSaveSpotViewController: UIViewController  {
@@ -190,7 +190,8 @@ class EditSaveSpotViewController: UIViewController  {
         
         ref.setValue(skatepark.dictionaryValues())
         
-   
+        dismiss(animated: true, completion: nil)
+        
     
     }
     
@@ -229,9 +230,22 @@ class EditSaveSpotViewController: UIViewController  {
             
             self.ref.setValue(nil)
             
-            self.delegate?.mainRefresh()
+            let alert = UIAlertController(title: "Spot Deleted!", message: "Hit refresh to see the changes on your map!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+
             
-            print(self.delegate)
+            self.dismiss(animated: true, completion: nil)
+            
+            
+            
+            
+            
+            self.delegate?.wholeRefresh()
+            
+         //   self.delegate?.mainRefresh()
+            
+            print("CheckWorking")
             
             
         })

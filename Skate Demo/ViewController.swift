@@ -11,6 +11,7 @@ import Firebase
 import Mapbox
 import MapboxDirections
 import MapKit
+import UserNotifications
 
 
 
@@ -47,6 +48,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     
     //Filtering annotations for sidebar
     
+    @IBOutlet weak var refreshButton: UIButton!
     
     let EditSaveSpotController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EditVC") as! EditSaveSpotViewController
     
@@ -105,7 +107,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
         
         
-          marker = "AllBlack"
+          marker = "SSPin"
         
         navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -154,6 +156,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
         
     }
+    
+    
     
     
     
@@ -215,6 +219,46 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     }
     
     
+    
+    func wholeRefresh() {
+        
+        let uid = FIRAuth.auth()!.currentUser!.uid
+        
+        let userLocationsRef = FIRDatabase.database().reference(withPath: "users/\(uid)/personalLocations")
+        
+        userLocationsRef.observe(.value, with: { snapshot in
+            
+            
+            for item in snapshot.children {
+                guard let snapshot = item as? FIRDataSnapshot else { continue }
+                
+                let newSkatepark = Skatepark(snapshot: snapshot)
+                
+                self.skateparks.append(newSkatepark)
+                
+                self.addAnnotation(park: newSkatepark)
+                
+                
+            }
+        })
+
+        if let annotations = mapView.annotations {
+            
+            mapView.removeAnnotations(annotations)
+            
+        }
+        
+        for item in skateparks {
+            
+            self.addAnnotation(park: item)
+            
+        }
+
+        
+        
+    }
+    
+    
     func mainRefresh() {
         
         
@@ -248,6 +292,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     
     @IBAction func refresh(_ sender: Any) {
         
+        
+        buttonAnimate()
+        
         loadLocations()
         
         annotationRefresh()
@@ -256,16 +303,25 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     
 
         
+    func buttonAnimate() {
         
+        refreshButton.transform = CGAffineTransform.identity
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            
+            self.refreshButton.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+            
+        })
+
+        
+    }
     
 
     
     
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        
+        super.viewDidAppear(animated)
         
         
     }
@@ -291,10 +347,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
     }
     
-    
-    
-    
-    
+
     
     //Adding annotations on map
     
@@ -397,9 +450,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
             self.performSegue(withIdentifier: "EditSaveSpotSegue", sender: annotation.id)
             
             
-            
-            
-            
+
             
         } else if control.tag == 101 {
             
@@ -423,8 +474,6 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
             destination.parkId = sender as! String
         }
     }
-    
-
     
 
     
@@ -453,7 +502,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
         
         
-        let button = UIButton(type: .contactAdd)
+        let button = UIButton(type: .detailDisclosure)
         button.tag = 101
         return button 
         
@@ -463,19 +512,18 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     
     func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
         
-        self.performSegue(withIdentifier: "SegueLocation", sender: nil)
+        
         
         if let annotation = annotation as? SkateAnnotation {
+            
+            self.performSegue(withIdentifier: "SkateImageSegue", sender: annotation.id)
             
             print("YourAnnotation: \(annotation.photoUrl)")
             
         }
-        
-        
-        
-        
-        
     }
+        
+        
     
 
     //Image for Annotation - Change this for Skatepark/StreetSkating
@@ -510,5 +558,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     }
     
 }
+
+
+
 
 

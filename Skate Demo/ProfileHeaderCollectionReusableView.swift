@@ -37,6 +37,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var downloadButton: UIButton!
     
+    @IBOutlet weak var image2: UIImageView!
     
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
     
@@ -67,6 +68,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
             let photoUrl = URL(string: photoUrlString)
                 
             self.profileImage.sd_setImage(with: photoUrl)
+                
                 
             }
         

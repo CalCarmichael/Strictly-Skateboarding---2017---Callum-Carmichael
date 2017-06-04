@@ -189,7 +189,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         guard skateTitleText.characters.count > 0, skateStyleText.characters.count > 0 else {
             
             
-            ProgressHUD.showError("Enter all fields")
+            ProgressHUD.showError("Please Fill All Fields")
             
             return
             
@@ -200,12 +200,10 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
         let uid = FIRAuth.auth()!.currentUser!.uid
         
         let locationsRef = FIRDatabase.database().reference().child("users").child(uid).child("personalLocations").childByAutoId()
-        
+    
     
         locationsRef.setValue(["lat": locationManager.location?.coordinate.latitude, "lng": locationManager.location?.coordinate.longitude, "name": skateTitleText, "subtitle": skateStyleText, "type": (selected - 1), "editable": true, "did": "test"])
-        
-        
-        ProgressHUD.showSuccess("Skate Spot Added")
+    
         
     }
     
@@ -213,6 +211,7 @@ class SaveSpotViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func addButton_TouchUpInside(_ sender: Any) {
+        
     
         dismiss(animated: true, completion: nil)
     
