@@ -2298,7 +2298,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWJ-Tk-4Xh">
-                                <rect key="frame" x="0.0" y="54" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="128"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="etg-Yp-YNU">
                                         <rect key="frame" x="137" y="14" width="100" height="100"/>
@@ -2318,7 +2318,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKI-Hg-Pmd">
-                                <rect key="frame" x="0.0" y="246" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="286" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ed4-bH-4ZG" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="20" y="11" width="335" height="50"/>
@@ -2331,6 +2331,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
@@ -2345,7 +2348,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sho-cf-fvB">
-                                <rect key="frame" x="0.0" y="320" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="360" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eq-Lx-NBL" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="20" y="11" width="335" height="50"/>
@@ -2360,6 +2363,9 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
@@ -2373,7 +2379,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nl5-z7-LxV">
-                                <rect key="frame" x="0.0" y="390" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="430" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16D-Br-dWk" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="20" y="0.0" width="335" height="50"/>
@@ -2386,6 +2392,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
@@ -2400,7 +2409,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxb-8F-saU">
-                                <rect key="frame" x="0.0" y="463" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="503" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scc-cK-uyj" customClass="TKTransitionSubmitButton" customModule="TKSubmitTransitionSwift3">
                                         <rect key="frame" x="20" y="3" width="335" height="44"/>
@@ -2427,7 +2436,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="l3l-om-mYN" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="00h-mu-Qg9"/>
-                            <constraint firstItem="mWJ-Tk-4Xh" firstAttribute="top" secondItem="fUN-NN-kkm" secondAttribute="bottom" constant="34" id="2sK-Xi-Cea"/>
+                            <constraint firstItem="mWJ-Tk-4Xh" firstAttribute="top" secondItem="fUN-NN-kkm" secondAttribute="bottom" constant="54" id="2sK-Xi-Cea"/>
                             <constraint firstItem="nl5-z7-LxV" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="2ue-gA-vWW"/>
                             <constraint firstAttribute="trailing" secondItem="Oxb-8F-saU" secondAttribute="trailing" id="3JW-zw-K45"/>
                             <constraint firstItem="mWJ-Tk-4Xh" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="7JO-lS-7gO"/>
@@ -2443,7 +2452,7 @@
                             <constraint firstItem="sho-cf-fvB" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="es4-wM-enc"/>
                             <constraint firstAttribute="trailing" secondItem="l3l-om-mYN" secondAttribute="trailing" id="fC4-Jr-7KF"/>
                             <constraint firstItem="sho-cf-fvB" firstAttribute="top" secondItem="bKI-Hg-Pmd" secondAttribute="bottom" constant="24" id="fJM-dx-FIa"/>
-                            <constraint firstItem="bKI-Hg-Pmd" firstAttribute="top" secondItem="mWJ-Tk-4Xh" secondAttribute="bottom" constant="64" id="phl-C9-mI6"/>
+                            <constraint firstItem="bKI-Hg-Pmd" firstAttribute="top" secondItem="mWJ-Tk-4Xh" secondAttribute="bottom" constant="84" id="phl-C9-mI6"/>
                             <constraint firstAttribute="trailing" secondItem="nl5-z7-LxV" secondAttribute="trailing" id="sHY-fW-qZm"/>
                             <constraint firstItem="Oxb-8F-saU" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="t7g-Ro-wSD"/>
                             <constraint firstItem="EXY-yZ-q4g" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="tPg-tR-clq"/>
@@ -3178,7 +3187,7 @@
         <image name="takephoto32" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EXs-0K-k08"/>
+        <segue reference="81q-W9-GO8"/>
         <segue reference="l60-PI-ags"/>
         <segue reference="vVR-Uv-ZER"/>
         <segue reference="4Mx-Nn-IZR"/>
