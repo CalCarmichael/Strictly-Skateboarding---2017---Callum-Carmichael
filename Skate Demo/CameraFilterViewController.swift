@@ -20,6 +20,9 @@ class CameraFilterViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+
+    
+    
     var delegate: CameraFilterViewControllerDelegate?
     
     var selectedFilterImage: UIImage!
@@ -52,6 +55,9 @@ class CameraFilterViewController: UIViewController {
         super.viewDidLoad()
 
         filterImage.image = selectedFilterImage
+        
+        
+        
         
         // Do any additional setup after loading the view.
     }

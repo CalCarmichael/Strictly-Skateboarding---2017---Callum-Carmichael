@@ -13,7 +13,9 @@ class FilterCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var filterForPhoto: UIImageView!
     
-  
+    
+    @IBOutlet weak var shadowFilter: UIView!
+    
 
 }
 

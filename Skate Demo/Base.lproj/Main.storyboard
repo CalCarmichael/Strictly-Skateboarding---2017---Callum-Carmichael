@@ -1440,7 +1440,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="I7A-mW-gEy" firstAttribute="top" secondItem="uvE-JB-6nJ" secondAttribute="bottom" constant="45" id="4fI-p1-4fp"/>
                             <constraint firstItem="Lph-ab-uwz" firstAttribute="top" secondItem="uvE-JB-6nJ" secondAttribute="bottom" constant="50" id="7h9-jh-p6K"/>
@@ -1982,21 +1982,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oW-qp-0Gm">
-                                        <rect key="frame" x="335" y="27" width="32" height="30"/>
-                                        <state key="normal" title="Next"/>
+                                        <rect key="frame" x="336" y="25.5" width="31" height="33"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="nextButton_TouchUpInside:" destination="6gB-NR-HKc" eventType="touchUpInside" id="ftc-gh-8fy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVV-7c-K3U">
-                                        <rect key="frame" x="8" y="27" width="48" height="30"/>
-                                        <state key="normal" title="Cancel"/>
+                                        <rect key="frame" x="8" y="25.5" width="46" height="33"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="cancelButton_TouchUpInside:" destination="6gB-NR-HKc" eventType="touchUpInside" id="Qys-fH-6I1"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5oW-qp-0Gm" secondAttribute="trailing" constant="8" id="Eh7-Lm-7kj"/>
                                     <constraint firstItem="wVV-7c-K3U" firstAttribute="leading" secondItem="BB7-YJ-PDv" secondAttribute="leading" constant="8" id="G14-Td-7TX"/>
@@ -2013,7 +2019,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gDb-1y-59h">
                                 <rect key="frame" x="0.0" y="465" width="375" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="4S4-aP-hd0"/>
                                 </constraints>
@@ -2031,6 +2037,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdQ-GO-Ek1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KOt-3v-12Y">
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <userDefinedRuntimeAttributes>
@@ -2045,10 +2055,15 @@
                                             <constraint firstItem="KOt-3v-12Y" firstAttribute="leading" secondItem="gou-GE-h5k" secondAttribute="leading" id="7Fb-pM-Gbh"/>
                                             <constraint firstAttribute="bottom" secondItem="KOt-3v-12Y" secondAttribute="bottom" id="87y-fH-qZl"/>
                                             <constraint firstAttribute="trailing" secondItem="KOt-3v-12Y" secondAttribute="trailing" id="Axb-rs-P8c"/>
+                                            <constraint firstItem="gdQ-GO-Ek1" firstAttribute="top" secondItem="gou-GE-h5k" secondAttribute="top" id="dZA-Ek-2bX"/>
+                                            <constraint firstItem="gdQ-GO-Ek1" firstAttribute="leading" secondItem="gou-GE-h5k" secondAttribute="leading" id="ds4-yw-6mc"/>
                                             <constraint firstItem="KOt-3v-12Y" firstAttribute="top" secondItem="gou-GE-h5k" secondAttribute="top" id="pFZ-ee-yBu"/>
+                                            <constraint firstAttribute="trailing" secondItem="gdQ-GO-Ek1" secondAttribute="trailing" id="pWw-4z-ork"/>
+                                            <constraint firstAttribute="bottom" secondItem="gdQ-GO-Ek1" secondAttribute="bottom" id="qGL-MM-fof"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="filterForPhoto" destination="KOt-3v-12Y" id="0mN-aX-2lh"/>
+                                            <outlet property="shadowFilter" destination="gdQ-GO-Ek1" id="8Hv-cc-GeT"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -2058,7 +2073,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4MB-VR-JEZ" secondAttribute="trailing" id="6g1-oe-nIV"/>
                             <constraint firstItem="BB7-YJ-PDv" firstAttribute="top" secondItem="tZi-VM-VVc" secondAttribute="top" id="DEh-tj-2Qs"/>
