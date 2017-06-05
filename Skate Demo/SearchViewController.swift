@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TableViewReloadAnimation
 
 class SearchViewController: UIViewController {
     
@@ -64,7 +65,8 @@ class SearchViewController: UIViewController {
                     
                     self.users.append(user)
                     
-                    self.tableView.reloadData()
+                    self.tableView.reloadData(with: .spring(duration: 0.8, damping: 0.8, velocity: 0.7, direction: .left(useCellsFrame: false),
+                                                            constantDelay: 0))
                     
                 })
                 
