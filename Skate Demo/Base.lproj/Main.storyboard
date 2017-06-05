@@ -1363,7 +1363,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0e-wc-195">
                                 <rect key="frame" x="0.0" y="64" width="375" height="325"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-OS-Zt3">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-placeholdercaption" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-OS-Zt3">
                                         <rect key="frame" x="8" y="8" width="359" height="309"/>
                                     </imageView>
                                 </subviews>
@@ -3128,7 +3128,7 @@
         <image name="ic_settings_white" width="24" height="24"/>
         <image name="ic_sort_white_48pt" width="48" height="48"/>
         <image name="ic_volume_up_white_48pt" width="48" height="48"/>
-        <image name="image-placeholder" width="500" height="500"/>
+        <image name="image-placeholdercaption" width="500" height="500"/>
         <image name="placeholderImage" width="250" height="250"/>
         <image name="sendb32" width="25" height="25"/>
         <image name="skateboarding-1149507_1920" width="1920" height="1280"/>
