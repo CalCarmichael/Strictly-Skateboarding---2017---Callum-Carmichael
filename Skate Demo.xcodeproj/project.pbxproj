@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1399E91EE5DC7C00390EA2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F1399E81EE5DC7C00390EA2 /* Settings.bundle */; };
 		9F1FA1C11ED359C3009DB1D5 /* FollowingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FA1C01ED359C3009DB1D5 /* FollowingTableViewController.swift */; };
 		9F266AA91EBD1D7E000A4D2C /* ExploreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */; };
 		9F2B1E501EAA0ECA006BB363 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		483438A8696DFED5EDC6AD7C /* Pods_Skate_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Skate_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1399E81EE5DC7C00390EA2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9F1FA1C01ED359C3009DB1D5 /* FollowingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingTableViewController.swift; sourceTree = "<group>"; };
 		9F266AA81EBD1D7E000A4D2C /* ExploreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDetailViewController.swift; sourceTree = "<group>"; };
 		9F2B1E4F1EAA0ECA006BB363 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				9F34896D1E9650D9003A85BE /* Feed */,
 				9FD115001ED1E258007A9E58 /* AnimateClasses */,
 				9FE94C1B1E796B75009B7B3F /* Main.storyboard */,
+				9F1399E81EE5DC7C00390EA2 /* Settings.bundle */,
 				9FE94C1E1E796B75009B7B3F /* Assets.xcassets */,
 				9FE94C201E796B75009B7B3F /* LaunchScreen.storyboard */,
 				9FE825391E796C33008E39C4 /* GoogleService-Info.plist */,
@@ -413,6 +416,7 @@
 			files = (
 				9FE94C221E796B75009B7B3F /* LaunchScreen.storyboard in Resources */,
 				9FE8253A1E796C33008E39C4 /* GoogleService-Info.plist in Resources */,
+				9F1399E91EE5DC7C00390EA2 /* Settings.bundle in Resources */,
 				9FE94C1F1E796B75009B7B3F /* Assets.xcassets in Resources */,
 				9FE94C1D1E796B75009B7B3F /* Main.storyboard in Resources */,
 			);

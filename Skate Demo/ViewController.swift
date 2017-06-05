@@ -104,6 +104,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.logoView.isHidden = true
+        
+        mapView.attributionButton.isHidden = true 
         
         EditSaveSpotController.delegate = self
         
@@ -518,18 +521,18 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     }
     
     
-    func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
-        
-        
-        
-        if let annotation = annotation as? SkateAnnotation {
-            
-            self.performSegue(withIdentifier: "SkateImageSegue", sender: annotation.id)
-            
-            print("YourAnnotation: \(annotation.photoUrl)")
-            
-        }
-    }
+//    func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
+//
+//
+//
+//        if let annotation = annotation as? SkateAnnotation {
+//
+//            self.performSegue(withIdentifier: "SkateImageSegue", sender: annotation.id)
+//
+//            print("YourAnnotation: \(annotation.photoUrl)")
+//
+ //       }
+//    }
         
         
     
