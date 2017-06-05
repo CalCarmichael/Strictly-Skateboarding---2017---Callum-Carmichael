@@ -2379,10 +2379,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nl5-z7-LxV">
-                                <rect key="frame" x="0.0" y="430" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="434" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16D-Br-dWk" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="50"/>
+                                        <rect key="frame" x="20" y="11" width="335" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -2401,15 +2401,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="16D-Br-dWk" secondAttribute="bottom" id="LCs-QT-nVG"/>
+                                    <constraint firstAttribute="bottom" secondItem="16D-Br-dWk" secondAttribute="bottom" constant="-11" id="LCs-QT-nVG"/>
                                     <constraint firstItem="16D-Br-dWk" firstAttribute="leading" secondItem="nl5-z7-LxV" secondAttribute="leading" constant="20" id="OEN-5N-UfV"/>
-                                    <constraint firstItem="16D-Br-dWk" firstAttribute="top" secondItem="nl5-z7-LxV" secondAttribute="top" id="c8U-H8-6dF"/>
+                                    <constraint firstItem="16D-Br-dWk" firstAttribute="top" secondItem="nl5-z7-LxV" secondAttribute="top" constant="11" id="c8U-H8-6dF"/>
                                     <constraint firstAttribute="height" constant="50" id="dIN-j0-qm7"/>
                                     <constraint firstAttribute="trailing" secondItem="16D-Br-dWk" secondAttribute="trailing" constant="20" id="wRo-Rv-sgh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxb-8F-saU">
-                                <rect key="frame" x="0.0" y="503" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="536" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scc-cK-uyj" customClass="TKTransitionSubmitButton" customModule="TKSubmitTransitionSwift3">
                                         <rect key="frame" x="20" y="3" width="335" height="44"/>
@@ -2445,8 +2445,8 @@
                             <constraint firstItem="bKI-Hg-Pmd" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="Em0-5Q-haE"/>
                             <constraint firstAttribute="trailing" secondItem="bKI-Hg-Pmd" secondAttribute="trailing" id="Izr-xX-euO"/>
                             <constraint firstAttribute="trailing" secondItem="sho-cf-fvB" secondAttribute="trailing" id="Mid-61-oM7"/>
-                            <constraint firstItem="nl5-z7-LxV" firstAttribute="top" secondItem="sho-cf-fvB" secondAttribute="bottom" constant="20" id="Umw-lo-YSh"/>
-                            <constraint firstItem="Oxb-8F-saU" firstAttribute="top" secondItem="nl5-z7-LxV" secondAttribute="bottom" constant="23" id="WLu-zf-KoW"/>
+                            <constraint firstItem="nl5-z7-LxV" firstAttribute="top" secondItem="sho-cf-fvB" secondAttribute="bottom" constant="24" id="Umw-lo-YSh"/>
+                            <constraint firstItem="Oxb-8F-saU" firstAttribute="top" secondItem="nl5-z7-LxV" secondAttribute="bottom" constant="52" id="WLu-zf-KoW"/>
                             <constraint firstItem="EhD-RO-7hJ" firstAttribute="top" secondItem="l3l-om-mYN" secondAttribute="bottom" constant="8" id="cQv-WY-WTs"/>
                             <constraint firstItem="EXY-yZ-q4g" firstAttribute="top" secondItem="y6y-EG-TYr" secondAttribute="top" id="ceO-kU-St5"/>
                             <constraint firstItem="sho-cf-fvB" firstAttribute="leading" secondItem="y6y-EG-TYr" secondAttribute="leading" id="es4-wM-enc"/>
