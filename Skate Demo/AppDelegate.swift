@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         UIBarButtonItem.appearance().setTitleTextAttributes(navigationFontAttributes, for: .normal)
        
-       
+        IQKeyboardManager.sharedManager().enable = true
     
                  
         return true

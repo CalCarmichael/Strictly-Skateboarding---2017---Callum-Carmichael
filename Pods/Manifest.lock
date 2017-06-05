@@ -54,6 +54,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.9)
   - IBAnimatable (4.1.0)
   - ImagePicker (2.1.1)
+  - IQKeyboardManagerSwift (4.0.10)
   - KILabel (1.0.0)
   - Mapbox-iOS-SDK (3.5.4)
   - MapboxDirections.swift (0.9.0):
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - GlidingCollection
   - IBAnimatable
   - ImagePicker
+  - IQKeyboardManagerSwift
   - KILabel (= 1.0.0)
   - Mapbox-iOS-SDK (~> 3.5)
   - MapboxDirections.swift (~> 0.9)
@@ -117,6 +119,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   IBAnimatable: 0fd2c9fd38c4798d71bcc18dbd87d473a7df2577
   ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
+  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   KILabel: 84049969642d4ac1061ebe38ad4c0da37fed108b
   Mapbox-iOS-SDK: 81197829dcf4c4ed9a593b7a95462881b5f1309a
   MapboxDirections.swift: 7ce85544621940cc94692e97ddbc36e48f1f6070
@@ -132,6 +135,6 @@ SPEC CHECKSUMS:
   TKSubmitTransitionSwift3: fadd76eefa015542d0fe6d85424a43dd6f3354d2
   WCLShineButton: 44371dea1bd1bb5b81cec5958d6280170c178059
 
-PODFILE CHECKSUM: f501f66d7816948f2a1d4fc180867003087f34db
+PODFILE CHECKSUM: cca2fcc3389708f7169ad7a54e2bfc2cf1f3b8aa
 
 COCOAPODS: 1.1.1

@@ -29,5 +29,6 @@ target 'Skate Demo' do
     pod 'TableViewReloadAnimation', '~> 0.0.5'
     pod 'AMScrollingNavbar'
     pod 'PKHUD', '~> 4.0'
+    pod 'IQKeyboardManagerSwift'
 
 end
