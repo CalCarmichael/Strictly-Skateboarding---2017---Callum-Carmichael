@@ -312,6 +312,11 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
             
             self.refreshButton.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
             
+            UIView.animate(withDuration: 0.5, delay: 0.45, options: .curveEaseIn, animations: { () -> Void in
+                
+                self.refreshButton.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 2))
+            }, completion: nil)
+            
         })
 
         
@@ -505,7 +510,7 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        button.setImage(UIImage(named: "edit11"), for: .normal)
+        button.setImage(UIImage(named: "findskate"), for: .normal)
         button.tag = 101
         return button 
         
