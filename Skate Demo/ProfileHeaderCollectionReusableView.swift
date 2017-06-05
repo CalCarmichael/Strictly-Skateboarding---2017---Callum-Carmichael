@@ -42,8 +42,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var slideView: UIView!
     
-    
-    
+
     
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
     
@@ -65,6 +64,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     }
     
     
+ 
     
     func updateView() {
             
@@ -141,6 +141,10 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         delegate2?.goToSettingVC()
         
     }
+    
+    
+    
+    
     
     
     

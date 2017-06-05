@@ -484,7 +484,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
        
         if skateAnnotation.canEdit {
             
-            let button = UIButton(type: .contactAdd)
+            let button = UIButton(type: .custom)
+            button.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+            button.setImage(UIImage(named: "edit11"), for: .normal)
             button.tag = 100
             return button
         }
@@ -501,7 +503,9 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
         
         
         
-        let button = UIButton(type: .detailDisclosure)
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        button.setImage(UIImage(named: "edit11"), for: .normal)
         button.tag = 101
         return button 
         

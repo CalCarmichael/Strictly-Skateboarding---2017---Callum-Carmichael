@@ -14,6 +14,10 @@ class ProfileUserViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+
+    
+    
     var user: User!
     
     var posts: [Post] = []
@@ -51,12 +55,13 @@ class ProfileUserViewController: UIViewController {
         
         
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        
+       
         
     }
     
@@ -106,12 +111,20 @@ class ProfileUserViewController: UIViewController {
     }
     
     
+    
+    
+    
+    
+    
     //Downloading User Spots
     
     @IBAction func switchDownload(_ sender: UISwitch) {
         
         
+        
         if (sender.isOn == true) {
+            
+            
             
             var spots = [Skatepark]()
             
@@ -217,7 +230,12 @@ class ProfileUserViewController: UIViewController {
                                 
                                 
                             }
-                        
+                            
+                            let alert = UIAlertController(title: "Spots Remove", message: "You have removed the users spots from your map!", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+
+                            
                             
                         }
                     
