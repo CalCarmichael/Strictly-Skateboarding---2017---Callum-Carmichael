@@ -110,6 +110,7 @@ class ProfileUserViewController: UIViewController {
     
     @IBAction func switchDownload(_ sender: UISwitch) {
         
+        
         if (sender.isOn == true) {
             
             var spots = [Skatepark]()

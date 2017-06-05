@@ -584,7 +584,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZz-Hp-bNJ">
-                                            <rect key="frame" x="8" y="106" width="359" height="21"/>
+                                            <rect key="frame" x="8" y="106" width="359" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="359" id="Vr3-7Y-F7I"/>
                                             </constraints>
@@ -2677,7 +2677,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="It1-yz-l2F">
-                                            <rect key="frame" x="150" y="20" width="75" height="75"/>
+                                            <rect key="frame" x="150" y="16" width="75" height="75"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="75" id="Bd4-TL-CgQ"/>
                                                 <constraint firstAttribute="width" constant="75" id="E8t-Y1-eTh"/>
@@ -2757,7 +2757,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jf-Eh-8rs">
-                                            <rect key="frame" x="8" y="106" width="359" height="21"/>
+                                            <rect key="frame" x="8" y="102" width="359" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="359" id="swt-Xc-oki"/>
                                             </constraints>
@@ -2787,6 +2787,20 @@
                                                         <action selector="switchDownload:" destination="hbx-BZ-ko3" eventType="valueChanged" id="cVi-uc-3hH"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miu-sv-VN9">
+                                                    <rect key="frame" x="94" y="13" width="61" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oq3-MT-jYK">
+                                                    <rect key="frame" x="220" y="13" width="72" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -2813,9 +2827,9 @@
                                         <constraint firstAttribute="trailing" secondItem="hwW-Rn-fDF" secondAttribute="trailing" id="qkA-Dm-s7y"/>
                                         <constraint firstItem="It1-yz-l2F" firstAttribute="centerX" secondItem="sXi-67-mNs" secondAttribute="centerX" id="rFJ-zx-tVj"/>
                                         <constraint firstAttribute="trailing" secondItem="GCJ-qx-NmN" secondAttribute="trailing" id="rT1-6t-adN"/>
-                                        <constraint firstItem="It1-yz-l2F" firstAttribute="top" secondItem="dpF-Qb-iUs" secondAttribute="topMargin" constant="12" id="sw7-3V-cGJ"/>
+                                        <constraint firstItem="It1-yz-l2F" firstAttribute="top" secondItem="dpF-Qb-iUs" secondAttribute="topMargin" constant="8" id="sw7-3V-cGJ"/>
                                         <constraint firstItem="1WL-PW-X9W" firstAttribute="trailing" secondItem="It1-yz-l2F" secondAttribute="trailing" id="tIT-1e-ajC"/>
-                                        <constraint firstItem="1WL-PW-X9W" firstAttribute="top" secondItem="9jf-Eh-8rs" secondAttribute="bottom" constant="13.5" id="vVK-0q-FQy"/>
+                                        <constraint firstItem="1WL-PW-X9W" firstAttribute="top" secondItem="9jf-Eh-8rs" secondAttribute="bottom" constant="17" id="vVK-0q-FQy"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="followButton" destination="1WL-PW-X9W" id="GLL-fH-6Rx"/>
@@ -2823,6 +2837,7 @@
                                         <outlet property="followingCountLabel" destination="2AL-6N-KAM" id="dsm-6P-wA0"/>
                                         <outlet property="nameLabel" destination="9jf-Eh-8rs" id="1RX-1J-ohQ"/>
                                         <outlet property="profileImage" destination="It1-yz-l2F" id="NuS-Fg-ib5"/>
+                                        <outlet property="slideView" destination="GCJ-qx-NmN" id="MfF-Rs-xTa"/>
                                         <outlet property="userPostCountLabel" destination="lpb-CR-OcR" id="G2g-Te-6Vq"/>
                                     </connections>
                                 </collectionReusableView>
@@ -3157,8 +3172,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="81q-W9-GO8"/>
-        <segue reference="l60-PI-ags"/>
-        <segue reference="vVR-Uv-ZER"/>
+        <segue reference="ePP-dP-end"/>
+        <segue reference="e7E-bH-l0r"/>
         <segue reference="4Mx-Nn-IZR"/>
         <segue reference="7Vk-xB-DQx"/>
     </inferredMetricsTieBreakers>

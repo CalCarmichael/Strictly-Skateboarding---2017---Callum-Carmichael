@@ -39,6 +39,12 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var image2: UIImageView!
     
+    
+    @IBOutlet weak var slideView: UIView!
+    
+    
+    
+    
     var delegate: ProfileHeaderCollectionReusableViewDelegate?
     
     var delegate2: ProfileHeaderCollectionReusableViewDelegateSwitchSettingVC?
@@ -57,6 +63,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         clear()
         
     }
+    
     
     
     func updateView() {
@@ -157,7 +164,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         //UI Button
         
         followButton.layer.borderWidth = 1
-        followButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
+        followButton.layer.borderColor = UIColor(red: 225/255, green: 51/255, blue: 51/255, alpha: 1).cgColor
         followButton.layer.cornerRadius = 6
         followButton.clipsToBounds = true
         followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
@@ -174,13 +181,13 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         //UI Button
         
         followButton.layer.borderWidth = 1
-        followButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
+        followButton.layer.borderColor = UIColor(red: 225/255, green: 51/255, blue: 51/255, alpha: 1).cgColor
         followButton.layer.cornerRadius = 6
         followButton.clipsToBounds = true
         followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        followButton.backgroundColor = UIColor(red: 225/255, green: 51/255, blue: 51/255, alpha: 1)
+        followButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         
-        followButton.setTitle("Following", for: UIControlState.normal)
+        followButton.setTitle("Unfollow", for: UIControlState.normal)
         followButton.addTarget(self, action: #selector(self.unfollowAction), for: UIControlEvents.touchUpInside)
         
     }

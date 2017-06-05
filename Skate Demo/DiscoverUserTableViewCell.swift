@@ -71,7 +71,7 @@ class DiscoverUserTableViewCell: UITableViewCell {
             //UI Button
             
             followButton.layer.borderWidth = 1
-            followButton.layer.borderColor = UIColor(red: 0/255, green: 0/0, blue: 0/0, alpha: 1).cgColor
+            followButton.layer.borderColor = UIColor(red: 225/255, green: 51/255, blue: 51/255, alpha: 1).cgColor
             followButton.layer.cornerRadius = 6
             followButton.clipsToBounds = true
             followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
@@ -81,6 +81,7 @@ class DiscoverUserTableViewCell: UITableViewCell {
             followButton.addTarget(self, action: #selector(self.followAction), for: UIControlEvents.touchUpInside)
             
             
+            
         }
         
         func configureUnFollowButton() {
@@ -88,13 +89,13 @@ class DiscoverUserTableViewCell: UITableViewCell {
             //UI Button
             
             followButton.layer.borderWidth = 1
-            followButton.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0, alpha: 1).cgColor
+            followButton.layer.borderColor = UIColor(red: 225/255, green: 51/255, blue: 51/255, alpha: 1).cgColor
             followButton.layer.cornerRadius = 6
             followButton.clipsToBounds = true
             followButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-            followButton.backgroundColor = UIColor(red: 225/255, green: 51/255, blue: 51/255, alpha: 1)
+            followButton.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
             
-            followButton.setTitle("Following", for: UIControlState.normal)
+            followButton.setTitle("Unfollow", for: UIControlState.normal)
             followButton.addTarget(self, action: #selector(self.unfollowAction), for: UIControlEvents.touchUpInside)
             
         }
