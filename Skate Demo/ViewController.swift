@@ -46,6 +46,8 @@ class ViewController: UIViewController, SideBarDelegate, MGLMapViewDelegate, Del
     
     var delegate: SideBarDelegate?
     
+    
+    
     //Filtering annotations for sidebar
     
     @IBOutlet weak var refreshButton: UIButton!
