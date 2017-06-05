@@ -32,8 +32,7 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
         
          btn = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
         
-        
-       
+
         
         
         //Editing the text fields UI
@@ -137,6 +136,7 @@ class SignInViewController: UIViewController, UIViewControllerTransitioningDeleg
              self.leaveAnimation()
             
             AuthService.signIn(email: self.emailTextField.text!, password: self.passwordTextField.text!, onSuccess: {
+                
                 
              
                 //Sending to main tabbar page when successful sign in

@@ -29,6 +29,11 @@ class SkateImageViewController: UIViewController {
         
     }
     
+    @IBAction func closeButton(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
 
     
     func getLocationImage() {

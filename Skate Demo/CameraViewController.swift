@@ -165,7 +165,7 @@ class CameraViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func shareButton(_ sender: UIButton) {
         
-        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "SendFill"), offImage: #imageLiteral(resourceName: "Send"))
+        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "send32"), offImage: #imageLiteral(resourceName: "sendb32"))
         
         
         
@@ -173,7 +173,7 @@ class CameraViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func takePhoto(_ sender: UIButton) {
         
-        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "TakePhotoFill"), offImage: #imageLiteral(resourceName: "TakePhoto"))
+        toggleTakePhoto(button: sender, onImage: #imageLiteral(resourceName: "takephotofill32"), offImage: #imageLiteral(resourceName: "takephoto32"))
         
     }
     
